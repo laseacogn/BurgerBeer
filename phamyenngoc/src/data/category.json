@@ -1,34 +1,42 @@
 [
     {
         "id": 1,
-        "name": "Combo"
+        "name": "Combo",
+        "image": "01.jpg"
     },
     {
         "id": 2,
-        "name": "SideDish"
+        "name": "SideDish",
+        "image": "2.jpg"
     },
     {
         "id": 3,
-        "name": "Burger"
+        "name": "Burger",
+        "image": "3.jpg"
     },
     {
         "id": 4,
-        "name": "Sandwich"
+        "name": "Sandwich",
+        "image": "4.jpg"
     },
     {
         "id": 5,
-        "name": "Pizza"
+        "name": "Pizza",
+        "image": "5.jpg"
     },
     {
         "id": 6,
-        "name": "HotDog"
+        "name": "HotDog",
+        "image": "6.jpg"
     },
     {
         "id": 7,
-        "name": "Baguette"
+        "name": "Baguette",
+        "image": "7.jpg"
     },
     {
         "id": 8,
-        "name": "Drink"
+        "name": "Drink",
+        "image": "8.jpg"
     }
 ]

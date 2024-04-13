@@ -8,6 +8,8 @@ import { BsTwitter } from "react-icons/bs";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
+
 function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -91,6 +93,16 @@ function Header() {
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
+          <Link to="/love">
+                      <div className="w-10 h-10 rounded-full border border-black flex items-center justify-center mr-3 mt-2 hover:bg-btnprimary hover:text-[#B4E9D6] ">
+                        <FaHeart />
+                      </div>
+                    </Link>
+          <Link to="/cart">
+                      <div className="w-10 h-10 rounded-full border border-black flex items-center justify-center mr-3 mt-2 hover:bg-btnprimary hover:text-[#B4E9D6] ">
+                        <FaShoppingCart />
+                      </div>
+                    </Link>
           <Dropdown
             arrowIcon={false}
             inline
@@ -122,12 +134,10 @@ function Header() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/">
-            HOME
-          </Navbar.Link>
-          <Navbar.Link href="/product">SHOP</Navbar.Link>
-          <Navbar.Link href="/https://www.siliconii.com/">LOCATION</Navbar.Link>
-          <Navbar.Link href="/contact">CONTACT US</Navbar.Link>
+          <Navbar.Link href="/" className="font-semibold text-center text-[18px] hover:text-red-500 transition-all">HOME</Navbar.Link>
+          <Navbar.Link href="/product" className="font-semibold text-center text-[18px] hover:text-red-500 transition-all">SHOP</Navbar.Link>
+          <Navbar.Link href="/" className="font-semibold text-center text-[18px] hover:text-red-500 transition-all">LOCATION</Navbar.Link>
+          <Navbar.Link href="/contact" className="font-semibold text-center text-[18px] hover:text-red-500 transition-all">CONTACT US</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </div>

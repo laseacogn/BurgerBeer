@@ -2,6 +2,7 @@ import {
   Home, Admin, ContactUs, Product,
   Login,
   Register,
+  Cart
 } from '../page';
 
 
@@ -13,6 +14,7 @@ const router = [
   { path: '/login', component: Login },
   { path: '/register', component: Register },
   { path: '/product', component: Product },
+  { path: '/cart', component: Cart },
 
 
 
