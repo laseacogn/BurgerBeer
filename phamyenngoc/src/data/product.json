@@ -3,7 +3,24 @@
         "id": 1,
         "name": "PERFECT BREAD",
         "categoryId": 1,
-        "note": "1 Baguette + 1 Coffee",
+        "note": [
+            {
+                "id": 24,
+                "name": "Chicken Club Sandwich",
+                "categoryId": 4,
+                "image": "14.jpg",
+                "originalPrice": 99.00,
+                "discountPercent": 15
+            },
+            {
+                "id": 25,
+                "name": "Bacon & Egg Grilled Cheese Sandwich",
+                "categoryId": 4,
+                "image": "15.jpg",
+                "originalPrice": 80.00,
+                "discountPercent": 5
+            }
+        ],
         "image": "62.jpg",
         "originalPrice": 50.00,
         "discountPercent": 5
