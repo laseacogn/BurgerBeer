@@ -9,7 +9,6 @@ function App() {
     <Routes>
       {router.map((route, index) => {
         const Page = route.component;
-
         let LayoutDynamic = Layout;
         if (route.layout) LayoutDynamic = route.layout;
         else if (route.layout === null) LayoutDynamic = Fragment;

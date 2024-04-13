@@ -125,7 +125,7 @@ function Header() {
           <Navbar.Link href="/">
             HOME
           </Navbar.Link>
-          <Navbar.Link href="/combo">SHOP</Navbar.Link>
+          <Navbar.Link href="/product">SHOP</Navbar.Link>
           <Navbar.Link href="/https://www.siliconii.com/">LOCATION</Navbar.Link>
           <Navbar.Link href="/contact">CONTACT US</Navbar.Link>
         </Navbar.Collapse>

@@ -1,0 +1,564 @@
+[
+    {
+        "id": 1,
+        "name": "PERFECT BREAD",
+        "categoryId": 1,
+        "note": "1 Baguette + 1 Coffee",
+        "image": "62.jpg",
+        "originalPrice": 50.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 2,
+        "name": "COMBO CHIMAEK",
+        "categoryId": 1,
+        "note": "1 Chicken Burger + 1 Chicken Nugget + 1 Beer",
+        "image": "68.jpg",
+        "originalPrice": 150.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 3,
+        "name": "COMBO SINGLE 1 ",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Soft Drink",
+        "image": "1.jpg",
+        "originalPrice": 120.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 4,
+        "name": "COMBO SINGLE 2",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Soft Drink",
+        "image": "60.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 5,
+        "name": "COMBO SINGLE 3",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 SoftDrink",
+        "image": "61.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 6,
+        "name": "COMBO BB 1",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Beer",
+        "image": "63.jpg",
+        "originalPrice": 130.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 7,
+        "name": "COMBO BB 2",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Beer",
+        "image": "64.jpg",
+        "originalPrice": 150.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 8,
+        "name": "COMBO FRESH 1",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Juice",
+        "image": "65.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 9,
+        "name": "COMBO FRESH 2",
+        "categoryId": 1,
+        "note": "1 Side Dish + 1 Burger + 1 Juice",
+        "image": "66.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 10,
+        "name": "COMBO COUPLE",
+        "categoryId": 1,
+        "note": "1 Side Dish + 2 Burger + 1 Pizza + 2 Soft Drink ",
+        "image": "67.jpg",
+        "originalPrice": 300.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 11,
+        "name": "French Fries With Classic Seasoning",
+        "categoryId": 2,
+        "image": "2.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 12,
+        "name": "French Fries With Cheese Powder",
+        "categoryId": 2,
+        "image": "2.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 13,
+        "name": "Coleslaw Salad",
+        "categoryId": 2,
+        "image": "3.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 14,
+        "name": "Chicken Nugget",
+        "categoryId": 2,
+        "image": "4.jpg",
+        "originalPrice": 60.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 15,
+        "name": "Potato Cheese Balls",
+        "categoryId": 2,
+        "image": "5.jpg",
+        "originalPrice": 50.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 16,
+        "name": "BBQ Pull Pork Burger",
+        "categoryId": 3,
+        "image": "6.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 17,
+        "name": "Cheese Burger",
+        "categoryId": 3,
+        "image": "7.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 18,
+        "name": "Double Cheese Burger",
+        "categoryId": 3,
+        "image": "8.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 19,
+        "name": "Bacon & Egg Burger",
+        "categoryId": 3,
+        "image": "9.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 20,
+        "name": "The Classic Burger",
+        "categoryId": 3,
+        "image": "10.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 21,
+        "name": "Fries Fish Burger",
+        "categoryId": 3,
+        "image": "11.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 22,
+        "name": "Japanese Chicken Burger",
+        "categoryId": 3,
+        "image": "12.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 23,
+        "name": "Black Bean Burger",
+        "categoryId": 3,
+        "image": "13.jpg",
+        "originalPrice": 70.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 24,
+        "name": "Chicken Club Sandwich",
+        "categoryId": 4,
+        "image": "14.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 25,
+        "name": "Bacon & Egg Grilled Cheese Sandwich",
+        "categoryId": 4,
+        "image": "15.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 26,
+        "name": "Carnitas & Corn Pizza",
+        "categoryId": 5,
+        "image": "16.jpg",
+        "originalPrice": 130.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 27,
+        "name": "Hawaiian Pizza",
+        "categoryId": 5,
+        "image": "17.jpg",
+        "originalPrice": 130.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 28,
+        "name": "Cheese Pizza",
+        "categoryId": 5,
+        "image": "18.jpg",
+        "originalPrice": 160.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 29,
+        "name": "Carnitas Hotdog",
+        "categoryId": 6,
+        "image": "19.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 30,
+        "name": "Meaty & Bacon Cheese Hotdog",
+        "categoryId": 6,
+        "image": "20.jpg",
+        "originalPrice": 100.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 31,
+        "name": "Baguette Chasiu",
+        "categoryId": 7,
+        "image": "21.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 32,
+        "name": "Baguette Grilled Pork",
+        "categoryId": 7,
+        "image": "22.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 33,
+        "name": "Baguette Mixed",
+        "categoryId": 7,
+        "image": "23.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 34,
+        "name": "Pineapple Juice",
+        "categoryId": 8,
+        "image": "24.jpg",
+        "originalPrice": 35.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 35,
+        "name": "Lemonade (Hot/Cold)",
+        "categoryId": 8,
+        "image": "25.jpg",
+        "originalPrice": 35.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 36,
+        "name": "Apple Juice",
+        "categoryId": 8,
+        "image": "26.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 37,
+        "name": "Orange Juice",
+        "categoryId": 8,
+        "image": "27.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 38,
+        "name": "Watermelon Juice",
+        "categoryId": 8,
+        "image": "28.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 39,
+        "name": "Mango Smoothies",
+        "categoryId": 8,
+        "image": "29.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 40,
+        "name": "Avocado Smoothies",
+        "categoryId": 8,
+        "image": "30.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 41,
+        "name": "Strawberry Smoothies",
+        "categoryId": 8,
+        "image": "31.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 42,
+        "name": "Strawberry Yogurt",
+        "categoryId": 8,
+        "image": "32.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 43,
+        "name": "Blueberry Yogurt",
+        "categoryId": 8,
+        "image": "33.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 44,
+        "name": "Peach Yogurt",
+        "categoryId": 8,
+        "image": "34.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 45,
+        "name": "Passion Fruit Yogurt",
+        "categoryId": 8,
+        "image": "35.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 46,
+        "name": "Mango Yogurt",
+        "categoryId": 8,
+        "image": "36.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 47,
+        "name": "Lemon Tea",
+        "categoryId": 8,
+        "image": "37.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 48,
+        "name": "Peach Tea",
+        "categoryId": 8,
+        "image": "38.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 49,
+        "name": "Lychee Tea",
+        "categoryId": 8,
+        "image": "39.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 50,
+        "name": "Apple Tea",
+        "categoryId": 8,
+        "image": "40.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 51,
+        "name": "Ginger Tea",
+        "categoryId": 8,
+        "image": "41.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 52,
+        "name": "Strawberry Soda",
+        "categoryId": 8,
+        "image": "42.jpg",
+        "originalPrice": 45.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 53,
+        "name": "Blueberry Soda",
+        "categoryId": 8,
+        "image": "43.jpg",
+        "originalPrice": 45.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 54,
+        "name": "Peach Soda",
+        "categoryId": 8,
+        "image": "44.jpg",
+        "originalPrice": 45.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 55,
+        "name": "Passion Fruit Soda",
+        "categoryId": 8,
+        "image": "45.jpg",
+        "originalPrice": 45.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 56,
+        "name": "Saigon Black Coffee",
+        "categoryId": 8,
+        "image": "55.jpg",
+        "originalPrice": 25.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 57,
+        "name": "Saigon Milk Coffee",
+        "categoryId": 8,
+        "image": "56.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 58,
+        "name": "White Coffee",
+        "categoryId": 8,
+        "image": "57.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 59,
+        "name": "Salt Coffee",
+        "categoryId": 8,
+        "image": "58.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 60,
+        "name": "Coconut Coffee",
+        "categoryId": 8,
+        "image": "59.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 61,
+        "name": "Mango Soda",
+        "categoryId": 8,
+        "image": "46.jpg",
+        "originalPrice": 45.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 62,
+        "name": "Larue Beer",
+        "categoryId": 8,
+        "image": "50.jpg",
+        "originalPrice": 25.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 63,
+        "name": "Huda Beer",
+        "categoryId": 8,
+        "image": "51.jpg",
+        "originalPrice": 25.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 64,
+        "name": "Saigon Red Beer",
+        "categoryId": 8,
+        "image": "52.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 65,
+        "name": "Heiniken Beer",
+        "categoryId": 8,
+        "image": "53.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15
+    },
+    {
+        "id": 66,
+        "name": "Budweiser Beer",
+        "categoryId": 8,
+        "image": "54.jpg",
+        "originalPrice": 50.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 67,
+        "name": "Coca Cola",
+        "categoryId": 8,
+        "image": "47.jpg",
+        "originalPrice": 20.00,
+        "discountPercent": 10
+    },
+    {
+        "id": 68,
+        "name": "Pepsi",
+        "categoryId": 8,
+        "image": "48.jpg",
+        "originalPrice": 20.00,
+        "discountPercent": 5
+    },
+    {
+        "id": 69,
+        "name": "7up",
+        "categoryId": 8,
+        "image": "49.jpg",
+        "originalPrice": 20.00,
+        "discountPercent": 5
+    }
+]
