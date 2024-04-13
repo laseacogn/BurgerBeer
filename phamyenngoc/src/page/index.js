@@ -6,6 +6,9 @@ export { default as Home } from './Home/Home';
 export { default as Login } from './Home/Login';
 export { default as Register } from './Home/Register';
 export { default as Product } from './Product/Product';
+export { default as ComboDetail } from './Product/ComboDetail';
+export { default as ItemDetail } from './Product/ItemDetail';
+
 
 // export { Product } from './Admin/Product';
 // export { Category } from './Admin/Category';
