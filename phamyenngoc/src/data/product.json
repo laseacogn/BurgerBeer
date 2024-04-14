@@ -112,7 +112,8 @@
         "categoryId": 2,
         "image": "2.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description": "French fries with a classic seasoning from Burger N' Beer would likely consist of crispy potato fries seasoned with a blend of salt, pepper, and possibly other savory spices like garlic powder, onion powder, or paprika. This seasoning blend aims to enhance the natural flavors of the potato while adding a delicious savory kick. Pairing these fries with a burger and a cold beer would make for a classic and satisfying meal."
     },
     {
         "id": 12,
@@ -120,7 +121,8 @@
         "categoryId": 2,
         "image": "2.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"French fries with cheese powder from Burger N' Beer would feature golden-brown fries coated in a delectable cheese powder. The cheese powder might be a combination of cheddar, Parmesan, or other cheeses, blended with savory spices to create a rich and flavorful topping. Each crispy fry would be dusted with this cheesy goodness, offering a tantalizing combination of savory flavors with a hint of creamy indulgence. Enjoying these fries alongside a burger and a refreshing beer would surely elevate the dining experience to a whole new level of satisfaction."
     },
     {
         "id": 13,
@@ -128,7 +130,8 @@
         "categoryId": 2,
         "image": "3.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"Coleslaw salad from Burger N' Beer would likely be a fresh and crunchy mix of shredded cabbage, carrots, and sometimes other vegetables like onions or bell peppers. Tossed in a creamy dressing, which could be mayonnaise-based or a lighter vinaigrette, this coleslaw would offer a balance of tangy and slightly sweet flavors. The dressing might also include a hint of vinegar or lemon juice for acidity, along with a sprinkle of salt and pepper for seasoning. This refreshing side dish would provide a cool contrast to the hearty flavors of a burger and the crispiness of fries, making it a perfect accompaniment to a satisfying meal at Burger N' Beer."
     },
     {
         "id": 14,
@@ -136,7 +139,8 @@
         "categoryId": 2,
         "image": "4.jpg",
         "originalPrice": 60.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":"Chicken nuggets are bite-sized pieces of chicken meat that are breaded and fried until golden brown and crispy. Typically made from chicken breast or thigh meat, they are seasoned with salt, pepper, and other spices for flavor. The breading can vary but often includes a mixture of flour, breadcrumbs, and sometimes cornmeal or other grains for added texture."
     },
     {
         "id": 15,
@@ -144,7 +148,8 @@
         "categoryId": 2,
         "image": "5.jpg",
         "originalPrice": 50.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"Potato cheese balls from Burger N' Beer are delectable savory snacks crafted from a blend of creamy mashed potatoes and rich cheese, seasoned to perfection with a medley of herbs and spices. These delectable orbs are carefully shaped by hand, ensuring a uniform texture throughout, and then coated in a crispy golden shell that promises a satisfying crunch with every bite."
     },
     {
         "id": 16,
@@ -152,7 +157,8 @@
         "categoryId": 3,
         "image": "6.jpg",
         "originalPrice": 99.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 17,
@@ -160,7 +166,8 @@
         "categoryId": 3,
         "image": "7.jpg",
         "originalPrice": 99.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 18,
@@ -168,7 +175,8 @@
         "categoryId": 3,
         "image": "8.jpg",
         "originalPrice": 140.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 19,
@@ -176,7 +184,8 @@
         "categoryId": 3,
         "image": "9.jpg",
         "originalPrice": 99.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 20,
@@ -184,7 +193,8 @@
         "categoryId": 3,
         "image": "10.jpg",
         "originalPrice": 80.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 21,
@@ -192,7 +202,8 @@
         "categoryId": 3,
         "image": "11.jpg",
         "originalPrice": 80.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 22,
@@ -200,7 +211,8 @@
         "categoryId": 3,
         "image": "12.jpg",
         "originalPrice": 80.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 23,
@@ -208,7 +220,8 @@
         "categoryId": 3,
         "image": "13.jpg",
         "originalPrice": 70.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 24,
@@ -216,7 +229,8 @@
         "categoryId": 4,
         "image": "14.jpg",
         "originalPrice": 99.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 25,
@@ -224,7 +238,8 @@
         "categoryId": 4,
         "image": "15.jpg",
         "originalPrice": 80.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 26,
@@ -232,7 +247,8 @@
         "categoryId": 5,
         "image": "16.jpg",
         "originalPrice": 130.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 27,
@@ -240,7 +256,8 @@
         "categoryId": 5,
         "image": "17.jpg",
         "originalPrice": 130.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 28,
@@ -248,7 +265,8 @@
         "categoryId": 5,
         "image": "18.jpg",
         "originalPrice": 160.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 29,
@@ -256,7 +274,8 @@
         "categoryId": 6,
         "image": "19.jpg",
         "originalPrice": 80.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 30,
@@ -264,7 +283,8 @@
         "categoryId": 6,
         "image": "20.jpg",
         "originalPrice": 100.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 31,
@@ -272,7 +292,8 @@
         "categoryId": 7,
         "image": "21.jpg",
         "originalPrice": 30.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 32,
@@ -280,7 +301,8 @@
         "categoryId": 7,
         "image": "22.jpg",
         "originalPrice": 30.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 33,
@@ -288,7 +310,8 @@
         "categoryId": 7,
         "image": "23.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 34,
@@ -296,7 +319,8 @@
         "categoryId": 8,
         "image": "24.jpg",
         "originalPrice": 35.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 35,
@@ -304,7 +328,8 @@
         "categoryId": 8,
         "image": "25.jpg",
         "originalPrice": 35.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 36,
@@ -312,7 +337,8 @@
         "categoryId": 8,
         "image": "26.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 37,
@@ -320,7 +346,8 @@
         "categoryId": 8,
         "image": "27.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 38,
@@ -328,7 +355,8 @@
         "categoryId": 8,
         "image": "28.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 39,
@@ -336,7 +364,8 @@
         "categoryId": 8,
         "image": "29.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 40,
@@ -344,7 +373,8 @@
         "categoryId": 8,
         "image": "30.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 41,
@@ -352,7 +382,8 @@
         "categoryId": 8,
         "image": "31.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 42,
@@ -360,7 +391,8 @@
         "categoryId": 8,
         "image": "32.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 43,
@@ -368,7 +400,8 @@
         "categoryId": 8,
         "image": "33.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 44,
@@ -376,7 +409,8 @@
         "categoryId": 8,
         "image": "34.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 45,
@@ -384,7 +418,8 @@
         "categoryId": 8,
         "image": "35.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 46,
@@ -392,7 +427,8 @@
         "categoryId": 8,
         "image": "36.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 47,
@@ -400,7 +436,8 @@
         "categoryId": 8,
         "image": "37.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 48,
@@ -408,7 +445,8 @@
         "categoryId": 8,
         "image": "38.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 49,
@@ -416,7 +454,8 @@
         "categoryId": 8,
         "image": "39.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 50,
@@ -424,7 +463,8 @@
         "categoryId": 8,
         "image": "40.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 51,
@@ -432,7 +472,8 @@
         "categoryId": 8,
         "image": "41.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 52,
@@ -440,7 +481,8 @@
         "categoryId": 8,
         "image": "42.jpg",
         "originalPrice": 45.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 53,
@@ -448,7 +490,8 @@
         "categoryId": 8,
         "image": "43.jpg",
         "originalPrice": 45.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 54,
@@ -456,7 +499,8 @@
         "categoryId": 8,
         "image": "44.jpg",
         "originalPrice": 45.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 55,
@@ -464,7 +508,8 @@
         "categoryId": 8,
         "image": "45.jpg",
         "originalPrice": 45.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 56,
@@ -472,7 +517,8 @@
         "categoryId": 8,
         "image": "55.jpg",
         "originalPrice": 25.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 57,
@@ -480,7 +526,8 @@
         "categoryId": 8,
         "image": "56.jpg",
         "originalPrice": 30.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 58,
@@ -488,7 +535,8 @@
         "categoryId": 8,
         "image": "57.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 59,
@@ -496,7 +544,8 @@
         "categoryId": 8,
         "image": "58.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 60,
@@ -504,7 +553,8 @@
         "categoryId": 8,
         "image": "59.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 61,
@@ -512,7 +562,8 @@
         "categoryId": 8,
         "image": "46.jpg",
         "originalPrice": 45.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 62,
@@ -520,7 +571,8 @@
         "categoryId": 8,
         "image": "50.jpg",
         "originalPrice": 25.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 63,
@@ -528,7 +580,8 @@
         "categoryId": 8,
         "image": "51.jpg",
         "originalPrice": 25.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 64,
@@ -536,7 +589,8 @@
         "categoryId": 8,
         "image": "52.jpg",
         "originalPrice": 30.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 65,
@@ -544,7 +598,8 @@
         "categoryId": 8,
         "image": "53.jpg",
         "originalPrice": 40.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":""
     },
     {
         "id": 66,
@@ -552,7 +607,8 @@
         "categoryId": 8,
         "image": "54.jpg",
         "originalPrice": 50.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 67,
@@ -560,7 +616,8 @@
         "categoryId": 8,
         "image": "47.jpg",
         "originalPrice": 20.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":""
     },
     {
         "id": 68,
@@ -568,7 +625,8 @@
         "categoryId": 8,
         "image": "48.jpg",
         "originalPrice": 20.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     },
     {
         "id": 69,
@@ -576,6 +634,7 @@
         "categoryId": 8,
         "image": "49.jpg",
         "originalPrice": 20.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":""
     }
 ]

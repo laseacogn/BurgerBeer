@@ -9,9 +9,9 @@ export { default as Register } from './Home/Register';
 export { default as Product } from './Product/Product';
 export { default as Cart } from './Cart/Cart';
 export { default as ComboDetail } from './Product/ComboDetail';
-export { default as ItemDetail } from './Product/ItemDetail';
 
 
+export { default as ProductDetail } from './Product/ProductDetail';
 
 
 // export { Product } from './Admin/Product';
