@@ -32,8 +32,8 @@ const MoneyCart = ({ product }) => {
   ).toFixed(2);
 
   return (
-    <div className="pt-[200px]">
-      <div className="w-550 h-77 border-b border-black flex items-center pb-[10px]">
+    <div className="pt-[50px]">
+      <div className="w-550 h-77 border-b border-zinc-300 flex items-center pb-[10px]">
         <div className="font-sans font-medium text-lg text-black ml-[100px] ">
           Total
         </div>
@@ -41,7 +41,7 @@ const MoneyCart = ({ product }) => {
           250.000 $
         </div>
       </div>
-      <div className="w-550 h-77 border-b border-black flex items-center pt-[10px] pb-[10px]">
+      <div className="w-550 h-77 border-b border-zinc-300 flex items-center pt-[10px] pb-[10px]">
         <div className="font-sans font-medium text-lg text-black ml-[100px]">
           Shipping Fee (0km)
         </div>
@@ -49,7 +49,7 @@ const MoneyCart = ({ product }) => {
           0 $
         </div>
       </div>
-      <div className="w-550 h-77 border-b border-black flex items-center pt-[20px] pb-[10px]">
+      <div className="w-550 h-77 border-b border-zinc-300 flex items-center pt-[20px] pb-[10px]">
         <div className="font-sans font-medium text-lg text-black ml-[100px]">
           MONEY TO PAID
         </div>

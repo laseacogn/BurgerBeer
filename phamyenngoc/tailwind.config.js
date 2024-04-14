@@ -5,5 +5,20 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), flowbite.plugin(),],
+  plugins: [require("daisyui"), flowbite.plugin(),
+function ({ addUtilities }) {
+      const newUtilities = {
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none',
+        },
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+        '.fill-available': {
+          width: '-webkit-fill-available',
+        },
+      };
+      addUtilities(newUtilities);
+    },],
 }
