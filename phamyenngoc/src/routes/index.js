@@ -1,8 +1,5 @@
-import {
-  Home, Admin, ContactUs, Product,
-  Login,
-  Register,
-  Cart
+import { Home, Admin, ContactUs, Product, Login,
+  Register, ComboDetail, ItemDetail, Cart
 } from '../page';
 
 
@@ -16,6 +13,8 @@ const router = [
   { path: '/product', component: Product },
   { path: '/cart', component: Cart },
 
+  { path: '/combo-detail', component: ComboDetail },
+  { path: '/item-detail', component: ItemDetail },
 
 
 ];
