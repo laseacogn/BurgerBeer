@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import {
-  Button,
-  Timeline,
-  Checkbox,
-  Label,
-  TextInput,
-  Datepicker,
-} from "flowbite-react";
+import { Button, Timeline, TextInput } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { FaClock, FaPenSquare } from "react-icons/fa";
 import { BiSolidDiscount } from "react-icons/bi";
@@ -15,13 +8,21 @@ import ItemCart from "./ItemCart";
 import MoneyCart from "./MoneyCart";
 import cart from "../../data/cart.json";
 import ModalPaymentMethod from "./ModalPaymentMethod";
-
+import ModalCustomer from "./ModalCustomer";
 const Cart = () => {
   const money = [1];
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpenCustomer, setModalOpenCustomer] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('No information')
+  const [fullName, setFullName] = useState('No information')
+  const [addres, setAddress] = useState('No information')
+
   const [payment, setPayment] = useState("Choose payment method");
   const handleViewDetail = () => {
     setModalOpen(true)
+  }
+  const handleModalCustomer = () => {
+    setModalOpenCustomer(true)
   }
 
   return (
@@ -98,87 +99,34 @@ const Cart = () => {
                       color: "#000000",
                     }}
                   >
-                    {" "}
                     Customer Information{" "}
                   </p>
 
-                  <button
-                    className=""
-                    onClick={() =>
-                      document.getElementById("my_modal_3").showModal()
-                    }
-                  >
+                  <button onClick={(e) => { handleModalCustomer() }}    >
                     <p className="ml-[320px] text-sm font-normal text-slate-500">
-                      {" "}
                       Edit
                     </p>
                   </button>
-                  <dialog id="my_modal_3" className="modal">
-                    <div className="modal-box">
-                      <form method="dialog">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-[20px]">
-                          ✕
-                        </button>
-                      </form>
-                      <h3 className="font-bold text-lg mb-[15px]">
-                        Delivery Information
-                      </h3>
-                      <form className="flex max-w-md flex-col gap-4">
-                        <div className="flex flex-col-2 gap-8">
-                          <div>
-                            <div className="mb-2 block">
-                              <Label htmlFor="name" value="Full Name" />
-                            </div>
-                            <TextInput
-                              id="name"
-                              type="name"
-                              placeholder="Enter your full name..."
-                              required
-                              shadow
-                            />
-                          </div>
-                          <div>
-                            <div className="mb-2 block">
-                              <Label htmlFor="phone" value="Phone Number" />
-                            </div>
-                            <TextInput
-                              id="phone"
-                              type="phone"
-                              placeholder="Enter your phone number..."
-                              required
-                              shadow
-                            />
-                          </div>
-                        </div>
-
-                        <div>
-                          <div className="mb-2 block">
-                            <Label htmlFor="address" value="Delivery Address" />
-                          </div>
-                          <TextInput
-                            id="address"
-                            type="adress"
-                            placeholder="Address, Building, Floor No..."
-                            required
-                            shadow
-                          />
-                          <TextInput
-                            className="mt-[10px]"
-                            id="address"
-                            type="adress"
-                            placeholder="Add detailed address..."
-                            required
-                            shadow
-                          />
-                        </div>
-
-                        <Button type="submit" color="dark">
-                          Confirm Order
-                        </Button>
-                      </form>
-                    </div>
-                  </dialog>
+                  {
+                    modalOpenCustomer && <ModalCustomer modalOpen={setModalOpenCustomer} setFullName={setFullName} setPhoneNumber={setPhoneNumber} setAddress={setAddress} />
+                  }
                 </Timeline.Title>
+                {fullName !== 'No information' && (
+                  <Timeline.Item className="mb-2">
+                    <span>Full Name : {fullName}</span>
+                  </Timeline.Item>
+                )}
+                {phoneNumber !== 'No information' && (
+                  <Timeline.Item className="mb-2">
+                    <span>Phone Number : {phoneNumber}</span>
+                  </Timeline.Item>
+                )}
+                {addres !== 'No information' && (
+                  <Timeline.Item>
+                    <span>Address : {addres}</span>
+                  </Timeline.Item>
+
+                )}
               </Timeline.Content>
             </Timeline.Item>
           </Timeline>
