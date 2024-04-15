@@ -14,16 +14,15 @@ import { BiSolidDiscount } from "react-icons/bi";
 import ItemCart from "./ItemCart";
 import MoneyCart from "./MoneyCart";
 import cart from "../../data/cart.json";
+import ModalPaymentMethod from "./ModalPaymentMethod";
 
 const Cart = () => {
   const money = [1];
+  const [modalOpen, setModalOpen] = useState(false);
   const [payment, setPayment] = useState("Choose payment method");
-  const listPaymentMethod = [
-    "Pay on delivery",
-    "Pay on card",
-    "Pay on Momo/ Zalo Pay/ VNPay",
-  ];
-  
+  const handleViewDetail = () => {
+    setModalOpen(true)
+  }
 
   return (
     <div className="max-w-[1200px] mx-auto grid grid-cols-2">
@@ -186,62 +185,15 @@ const Cart = () => {
           <div className="mt-[-15px] ml-[13px]">
             <div className="flex">
               <div className="text-slate-500 w-5 h-5">
-                {" "}
-                <FaClock />{" "}
+                <FaClock />
               </div>
-              <p
-                style={{
-                  marginTop: "-5px",
-                  marginLeft: "10px",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  lineHeight: "24px",
-                  display: "flex",
-                  alignItems: "center",
-                  color: "#000000",
-                }}
-              >
+              <p style={{ marginTop: "-5px", marginLeft: "10px", fontStyle: "normal", fontWeight: "500", fontSize: "18px", lineHeight: "24px", display: "flex", alignItems: "center", color: "#000000", }} >
                 Time to receive
               </p>
-              <button
-                className=""
-                onClick={() =>
-                  document.getElementById("my_modal_4").showModal()
-                }
-              >
-                <p className="ml-[378px] text-sm font-normal text-slate-500">
-                  {" "}
-                  Edit
-                </p>
-              </button>
-              <dialog id="my_modal_4" className="modal">
-                <div className="modal-box">
-                  <form method="dialog">
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-[20px]">
-                      ✕
-                    </button>
-                  </form>
-                  <h3 className="font-bold text-lg mb-[15px]">
-                    Time To Receive
-                  </h3>
-                  <form className="flex max-w-md flex-col gap-4">
-                    <Datepicker />
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="time" />
-                      <Label htmlFor="time">As soon as possible</Label>
-                    </div>
-                    <Button type="submit" color="dark">
-                      Confirm Order
-                    </Button>
-                  </form>
-                </div>
-              </dialog>
             </div>
-            <p className=" text-sm font-medium text-slate-400 ml-[30px] pb-[20px]">
-              {" "}
-              As soon as possible
-            </p>
+            <div className="flex items-center justify-center p-3">
+              <input type="datetime-local" className="w-full rounded-lg border-gray-400" />
+            </div>
           </div>
         </div>
         <div
@@ -254,67 +206,15 @@ const Cart = () => {
         >
           <div className="mt-[20px] ml-[13px]">
             <div className="flex">
-              <p
-                style={{
-                  marginTop: "15px",
-                  marginLeft: "10px",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  lineHeight: "24px",
-                  display: "flex",
-                  alignItems: "center",
-                  color: "#000000",
-                }}
-              >
-                Payment Method
-              </p>
-              <button
-                className=""
-                onClick={() =>
-                  document.getElementById("my_modal_5").showModal()
-                }
-              >
+              <p className="mt-4 ml-2 font-medium text-lg leading-6 flex items-center text-black">Payment Method</p>
+              <button onClick={(e) => { handleViewDetail() }} >
                 <p className="ml-[370px] text-sm font-normal text-slate-500 mt-[15px]">
-                  {" "}
                   Choose
                 </p>
               </button>
-              <dialog id="my_modal_5" className="modal">
-                <div className="modal-box">
-                  <form method="dialog">
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-[20px]">
-                      ✕
-                    </button>
-                  </form>
-                  <h3 className="font-bold text-lg mb-[15px]">
-                    Payment Method
-                  </h3>
-                  <div className="flex max-w-md flex-col gap-4" >
-                    {listPaymentMethod.map((item) => (
-                      <div class="flex items-center mb-4">
-                        <input
-                          id="default-radio-1"
-                          type="radio"
-                          value={item}
-                          checked={payment === item}
-                          name="default-radio"
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="default-radio-1"
-                          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >
-                          {item}
-                        </label>
-                      </div>
-                    ))}
-                    <Button type="submit" color="dark">
-                      Confirm Order
-                    </Button>
-                  </div>
-                </div>
-              </dialog>
+              {
+                modalOpen && <ModalPaymentMethod modalOpen={setModalOpen} setPayment={setPayment} />
+              }
             </div>
             <p className=" text-sm font-medium text-slate-400 ml-[10px] pb-[20px] mt-[5px]">
               {payment}
@@ -471,7 +371,7 @@ const Cart = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import { toast } from "react-toastify";
-import fs from "fs";
+
 
 const MethodContext = createContext({});
 
@@ -96,24 +96,24 @@ export const MethodProvider = ({ children }) => {
         return parts.join(".");
     };
 
-    const readFile = (filePath) => {
-        try {
-            const fileContent = fs.readFileSync(filePath, "utf8");
-            return JSON.parse(fileContent);
-        } catch (error) {
-            console.error("Error reading file:", error);
-            return null;
-        }
-    };
+    // const readFile = (filePath) => {
+    //     try {
+    //         const fileContent = fs.readFileSync(filePath, "utf8");
+    //         return JSON.parse(fileContent);
+    //     } catch (error) {
+    //         console.error("Error reading file:", error);
+    //         return null;
+    //     }
+    // };
 
-    const writeFile = (filePath, data) => {
-        try {
-            fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
-            console.log("File has been written:", filePath);
-        } catch (error) {
-            console.error("Error writing file:", error);
-        }
-    };
+    // const writeFile = (filePath, data) => {
+    //     try {
+    //         fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+    //         console.log("File has been written:", filePath);
+    //     } catch (error) {
+    //         console.error("Error writing file:", error);
+    //     }
+    // };
 
     return (
         <MethodContext.Provider
@@ -124,8 +124,8 @@ export const MethodProvider = ({ children }) => {
                 notify,
                 toastLoadingId,
                 toastUpdateLoadingId,
-                readFile,
-                writeFile,
+                // readFile,
+                // writeFile,
             }}
         >
             {children}
