@@ -8,6 +8,7 @@ export { default as Login } from './Home/Login';
 export { default as Register } from './Home/Register';
 export { default as Product } from './Product/Product';
 export { default as Cart } from './Cart/Cart';
+export { default as Cart2 } from './Cart/Cart2';
 export { default as ComboDetail } from './Product/ComboDetail';
 
 

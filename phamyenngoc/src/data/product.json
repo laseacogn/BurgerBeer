@@ -23,7 +23,8 @@
         ],
         "image": "62.jpg",
         "originalPrice": 50.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"For the Combo PERFECT BREAD at Burger N' Beer, imagine sinking your teeth into a tantalizing assortment of freshly baked bread, perfectly paired with an array of delectable accompaniments. Picture a basket brimming with warm, crusty baguettes, fluffy dinner rolls, and golden brown focaccia, each offering a unique texture and flavor profile. Accompanied by creamy butter, tangy olive tapenade, and savory garlic aioli, this bread basket is the perfect way to start your dining experience. Whether you're enjoying it as an appetizer or alongside your main course, the Combo PERFECT BREAD is sure to delight your taste buds and set the stage for a memorable meal."
     },
     {
         "id": 2,
@@ -32,7 +33,8 @@
         "note": "1 Chicken Burger + 1 Chicken Nugget + 1 Beer",
         "image": "68.jpg",
         "originalPrice": 150.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"For the Combo CHIMAEK at Burger N' Beer, envision a mouthwatering feast inspired by the flavors of Korea. Imagine sinking your teeth into crispy, golden fried chicken, perfectly seasoned and cooked to perfection. Each bite offers a satisfying crunch followed by tender, juicy meat bursting with flavor. Paired with a side of savory soy garlic sauce or spicy gochujang sauce for dipping, this combo takes your taste buds on a culinary journey to Seoul. To complete the experience, enjoy your chicken alongside a refreshing pint of ice-cold beer, creating the perfect harmony of flavors and textures. Whether you're enjoying it as a snack with friends or as a hearty meal, the Combo CHIMAEK is sure to satisfy your cravings and leave you craving for more."
     },
     {
         "id": 3,
@@ -41,7 +43,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Soft Drink",
         "image": "1.jpg",
         "originalPrice": 120.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":"For the Combo SINGLE 1 at Burger N' Beer, imagine a satisfying meal that's perfect for one. Picture sinking your teeth into a juicy burger, crafted with a perfectly grilled beef patty, topped with melted cheese, crisp lettuce, ripe tomato slices, and tangy pickles, all nestled between soft, toasted buns. Accompanied by a generous serving of golden, crispy fries and your choice of dipping sauce, this combo offers a symphony of flavors and textures that are sure to tantalize your taste buds. Whether you're dining in or grabbing a quick bite on the go, the Combo SINGLE 1 is a delicious and satisfying option for any occasion."
     },
     {
         "id": 4,
@@ -50,7 +53,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Soft Drink",
         "image": "60.jpg",
         "originalPrice": 140.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":"For the Combo SINGLE 2 at Burger N' Beer, envision a delectable meal designed for one. Imagine sinking your teeth into a succulent grilled chicken sandwich, featuring tender, juicy chicken breast grilled to perfection and served on a toasted bun. Topped with crisp lettuce, ripe tomato slices, and creamy mayonnaise, this sandwich is a delightful symphony of flavors and textures. Accompanied by a generous portion of crispy fries and your choice of dipping sauce, this combo promises to satisfy your cravings and leave you feeling fully satisfied. Whether you're dining solo or grabbing a quick bite, the Combo SINGLE 2 is the perfect choice for a delicious and satisfying meal."
     },
     {
         "id": 5,
@@ -59,7 +63,8 @@
         "note": "1 Side Dish + 1 Burger + 1 SoftDrink",
         "image": "61.jpg",
         "originalPrice": 140.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"For the Combo SINGLE 3 at Burger N' Beer, imagine treating yourself to a mouthwatering meal designed just for you. Picture sinking your teeth into a classic grilled cheese sandwich, featuring perfectly melted cheese sandwiched between slices of toasted bread. Each bite offers a comforting blend of gooey cheese and crispy bread, creating a delightful harmony of flavors and textures. Accompanied by a generous serving of golden, crispy fries and your choice of dipping sauce, this combo is the perfect choice for a satisfying and indulgent meal. Whether you're dining in or taking your meal to go, the Combo SINGLE 3 is sure to satisfy your cravings and leave you feeling fully satisfied."
     },
     {
         "id": 6,
@@ -68,7 +73,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Beer",
         "image": "63.jpg",
         "originalPrice": 130.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":"For the Combo BB 1 at Burger N' Beer, imagine indulging in a hearty and satisfying meal that's perfect for any burger lover. Picture sinking your teeth into a juicy BBQ pulled pork burger, featuring tender, slow-cooked pulled pork smothered in rich and tangy barbecue sauce, topped with crisp lettuce and sliced onions, all nestled between soft, toasted buns. Accompanied by a generous serving of golden, crispy fries and your choice of dipping sauce, this combo offers a symphony of flavors and textures that will tantalize your taste buds. Whether you're dining in or taking your meal to go, the Combo BB 1 is sure to satisfy your cravings and leave you feeling fully satisfied."
     },
     {
         "id": 7,
@@ -77,7 +83,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Beer",
         "image": "64.jpg",
         "originalPrice": 150.00,
-        "discountPercent": 15
+        "discountPercent": 15,
+        "description":"For the Combo BB 2 at Burger N' Beer, envision treating yourself to a mouthwatering BBQ feast. Picture sinking your teeth into a succulent BBQ pulled pork sandwich, featuring tender, slow-cooked pulled pork slathered in smoky barbecue sauce, served on a toasted bun. Each bite offers a harmonious blend of sweet and savory flavors that will delight your taste buds. Accompanied by a generous serving of crispy fries and your choice of dipping sauce, this combo promises a satisfying and indulgent meal experience. Whether you're dining in or grabbing a quick bite on the go, the Combo BB 2 is the perfect choice for barbecue lovers craving a delicious and fulfilling meal."
     },
     {
         "id": 8,
@@ -86,7 +93,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Juice",
         "image": "65.jpg",
         "originalPrice": 140.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"For the Combo FRESH 1 at Burger N' Beer, imagine immersing yourself in a vibrant and nutritious meal bursting with freshness. Picture enjoying a crisp and refreshing garden salad, featuring a colorful array of mixed greens, ripe cherry tomatoes, crisp cucumbers, crunchy carrots, and tangy red onions, all tossed in a light and zesty vinaigrette dressing. Accompanied by a side of warm and fluffy dinner rolls, this combo offers a delightful balance of flavors and textures that will leave you feeling revitalized and satisfied. Whether you're looking for a light lunch option or a healthy side dish to complement your meal, the Combo FRESH 1 is the perfect choice for those seeking a nutritious and delicious dining experience."
     },
     {
         "id": 9,
@@ -95,7 +103,8 @@
         "note": "1 Side Dish + 1 Burger + 1 Juice",
         "image": "66.jpg",
         "originalPrice": 140.00,
-        "discountPercent": 10
+        "discountPercent": 10,
+        "description":"For the Combo FRESH 2 at Burger N' Beer, envision treating yourself to a light and invigorating meal that's bursting with freshness. Picture indulging in a crisp and vibrant Caesar salad, featuring crisp romaine lettuce, savory Parmesan cheese, crunchy croutons, and tangy Caesar dressing, all perfectly tossed together for a harmonious blend of flavors. Accompanied by a side of warm and fluffy dinner rolls, this combo offers a delightful balance of textures and tastes that will leave you feeling refreshed and satisfied. Whether you're looking for a lighter meal option or a healthy side dish to accompany your main course, the Combo FRESH 2 is the perfect choice for those craving a nutritious and delicious dining experience."
     },
     {
         "id": 10,
@@ -104,7 +113,8 @@
         "note": "1 Side Dish + 2 Burger + 1 Pizza + 2 Soft Drink ",
         "image": "67.jpg",
         "originalPrice": 300.00,
-        "discountPercent": 5
+        "discountPercent": 5,
+        "description":"For the Combo COUPLE at Burger N' Beer, envision a delightful meal designed to be shared with your special someone. Picture indulging in a mouthwatering assortment of our most popular dishes, carefully curated to satisfy both of your cravings. Start your culinary journey with a tantalizing appetizer, such as crispy onion rings or cheesy loaded fries, perfect for sharing and setting the tone for your meal. Then, feast on a pair of our signature burgers, each crafted with juicy beef patties, melted cheese, fresh lettuce, ripe tomato slices, and savory toppings, all nestled between soft, toasted buns. Accompanied by a generous serving of golden, crispy fries and your choice of dipping sauces, this combo promises a dining experience that's both satisfying and memorable. Whether you're celebrating a special occasion or simply enjoying a romantic night out, the Combo COUPLE is the perfect choice for sharing great food and creating lasting memories together."
     },
     {
         "id": 11,
@@ -158,7 +168,7 @@
         "image": "6.jpg",
         "originalPrice": 99.00,
         "discountPercent": 5,
-        "description":""
+        "description":"The BBQ Pulled Pork Burger from Burger N' Beer is a mouthwatering delight that brings together the smoky, savory flavors of barbecue pulled pork with the satisfying indulgence of a burger. Here's a description: Imagine sinking your teeth into a soft, toasted brioche bun, perfectly holding together a generous heap of tender, slow-cooked pulled pork, bathed in rich, tangy barbecue sauce. The pork is so tender it practically melts in your mouth, with every bite bursting with a harmonious blend of sweet and savory flavors. Topping off this masterpiece are crisp, fresh lettuce leaves and slices of juicy tomatoes, adding a refreshing crunch and a burst of freshness that perfectly complements the hearty richness of the pork. Each bite is a journey through layers of flavor and texture, from the succulent pork to the crisp vegetables, all held together by the buttery bun. Whether you're a barbecue aficionado or a burger enthusiast, the BBQ Pulled Pork Burger from Burger N' Beer is sure to satisfy your cravings and leave you craving for more."
     },
     {
         "id": 17,
@@ -167,7 +177,7 @@
         "image": "7.jpg",
         "originalPrice": 99.00,
         "discountPercent": 5,
-        "description":""
+        "description":"At Burger N' Beer, the Cheeseburger is an iconic classic promising to delight your taste buds with its unbeatable combination of juicy beef, gooey cheese, and fresh ingredients. Imagine a soft, golden-brown brioche bun sandwiching a perfectly grilled, tender, and flavorful beef patty, meticulously seasoned and grilled to perfection. As you sink your teeth into the first bite, you'll experience the aromatic blend of beef mingling with the enticing aroma of the grill. But the star of the show is undoubtedly the cheese – warm, melted, enveloping and embracing every inch of the beef patty in a velvety layer of creaminess. Whether it's classic American cheese, sharp cheddar, or soft mozzarella, the cheese adds a rich flavor that elevates the burger to new heights of perfection."
     },
     {
         "id": 18,
@@ -176,7 +186,7 @@
         "image": "8.jpg",
         "originalPrice": 140.00,
         "discountPercent": 10,
-        "description":""
+        "description":"As you step into Burger N' Beer, prepare yourself for a culinary adventure like no other. Our menu boasts an array of mouthwatering delights, each crafted with the finest ingredients and a passion for flavor. Whether you're craving the classic simplicity of a Cheeseburger or the bold indulgence of a Double Cheeseburger, we've got something to satisfy every appetite. Each bite is a journey through layers of taste and texture, leaving you craving more with every mouthful. So come on in, take a seat, and prepare to experience burger perfection at Burger N' Beer."
     },
     {
         "id": 19,
@@ -185,7 +195,7 @@
         "image": "9.jpg",
         "originalPrice": 99.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Sink your teeth into the savory goodness of the Bacon & Egg Burger at Burger N' Beer, where breakfast meets burger in a delicious fusion of flavors. Picture a perfectly grilled beef patty topped with crispy bacon strips, a golden sunny-side-up egg, and a slice of gooey melted cheese, all nestled between two fluffy brioche buns. With each bite, you'll experience the smoky saltiness of the bacon, the richness of the egg yolk, and the juicy tenderness of the beef, all coming together in a symphony of taste. Whether you're starting your day off right or craving breakfast for dinner, the Bacon & Egg Burger is sure to satisfy your hunger and leave you craving for more."
     },
     {
         "id": 20,
@@ -194,7 +204,7 @@
         "image": "10.jpg",
         "originalPrice": 80.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Indulge in the timeless deliciousness of the Classic Burger at Burger N' Beer, where simplicity meets perfection. Imagine sinking your teeth into a juicy beef patty, grilled to perfection and nestled between two soft, toasted brioche buns. Each bite is a celebration of flavor, with the savory richness of the beef complemented by the fresh crunch of lettuce, slices of ripe tomato, and tangy pickles. Topped off with a dollop of our signature Burger N' Beer sauce, this burger is a true classic that never goes out of style. Whether you're a burger connoisseur or simply craving a taste of nostalgia, the Classic Burger is sure to hit the spot every time."
     },
     {
         "id": 21,
@@ -203,7 +213,7 @@
         "image": "11.jpg",
         "originalPrice": 80.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Dive into a delightful combination of flavors with the Fries Fish Burger from Burger N' Beer. Picture a crispy, golden-brown fish fillet, fried to perfection and nestled between two soft brioche buns. Each bite offers a symphony of textures, from the crunch of the batter to the tender flakiness of the fish inside. But what sets this burger apart is the addition of a generous helping of thick-cut fries right inside the bun, adding a delightful crunch and an extra layer of indulgence. Topped with crisp lettuce, juicy tomato slices, and a tangy tartar sauce, this burger is a seafood lover's dream come true. Whether you're craving a taste of the coast or simply looking for something a little different, the Fries Fish Burger is sure to satisfy your cravings and leave you wanting more."
     },
     {
         "id": 22,
@@ -212,7 +222,7 @@
         "image": "12.jpg",
         "originalPrice": 80.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Transport your taste buds to the vibrant streets of Japan with Burger N' Beer's Japanese Chicken Burger. This culinary masterpiece combines the bold flavors of Japanese cuisine with the comforting indulgence of a classic burger. Picture a tender, juicy chicken patty, marinated in a savory blend of soy sauce, ginger, and garlic, perfectly grilled to seal in all the delicious flavors. Nestled between two fluffy brioche buns, the chicken patty is accompanied by a symphony of toppings inspired by Japanese cuisine. Crisp lettuce, slices of fresh cucumber, and tangy pickled ginger add a refreshing crunch, while a drizzle of creamy Japanese-style mayonnaise and a sprinkle of sesame seeds elevate the burger to new heights of flavor. With each bite, you'll be transported to the bustling streets of Tokyo, where bold flavors and culinary innovation reign supreme. Whether you're a fan of Japanese cuisine or simply looking to tantalize your taste buds with something new, the Japanese Chicken Burger is sure to delight and satisfy."
     },
     {
         "id": 23,
@@ -221,7 +231,7 @@
         "image": "13.jpg",
         "originalPrice": 70.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Savor the wholesome goodness of the Black Bean Burger at Burger N' Beer, a delicious option that's perfect for vegetarians and burger enthusiasts alike. Imagine sinking your teeth into a hearty black bean patty, crafted from a flavorful blend of black beans, spices, and herbs, all held together in a perfectly grilled brioche bun. Each bite offers a symphony of flavors and textures, with the earthy richness of the black beans complemented by the subtle heat of spices and the savory goodness of the grill. Topped with crisp lettuce, juicy tomato slices, and creamy avocado, this burger is a celebration of fresh ingredients and bold flavors. Whether you're a devoted vegetarian or simply looking to expand your culinary horizons, the Black Bean Burger is sure to satisfy your cravings and leave you wanting more."
     },
     {
         "id": 24,
@@ -230,7 +240,7 @@
         "image": "14.jpg",
         "originalPrice": 99.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Get ready to indulge in the ultimate comfort food experience with the Chicken Club Sandwich at Burger N' Beer. This iconic sandwich combines tender, juicy grilled chicken breast with crispy bacon, fresh lettuce, ripe tomato slices, and creamy mayonnaise, all layered between slices of toasted bread. Each bite offers a perfect balance of flavors and textures, with the smoky saltiness of the bacon complementing the savory goodness of the chicken. The crisp lettuce and juicy tomatoes add a refreshing crunch, while the creamy mayonnaise brings everything together in a symphony of taste. Whether you're craving a satisfying lunch or a hearty dinner, the Chicken Club Sandwich is sure to hit the spot every time."
     },
     {
         "id": 25,
@@ -239,7 +249,7 @@
         "image": "15.jpg",
         "originalPrice": 80.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Elevate your breakfast game with the Bacon & Egg Grilled Cheese Sandwich from Burger N' Beer. This mouthwatering creation combines the classic comfort of a grilled cheese sandwich with the indulgent flavors of bacon and eggs. Imagine biting into a perfectly grilled sandwich oozing with melted cheese, crispy bacon, and a golden, gooey fried egg. Each bite offers a heavenly combination of savory, smoky, and creamy flavors that will tantalize your taste buds. Whether you're starting your day off right or craving a satisfying brunch, the Bacon & Egg Grilled Cheese Sandwich is sure to satisfy your cravings and leave you wanting more."
     },
     {
         "id": 26,
@@ -248,7 +258,7 @@
         "image": "16.jpg",
         "originalPrice": 130.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Treat your taste buds to a fiesta of flavors with the Carnitas & Corn Pizza from Burger N' Beer. This tantalizing creation brings together the savory goodness of carnitas with the sweetness of corn for a pizza experience like no other. Picture a crispy, golden crust topped with tender, slow-cooked carnitas, juicy corn kernels, and a blend of melted cheeses. Each slice is a symphony of flavors, with the rich, savory pork complemented by the sweet pop of corn and the gooey goodness of melted cheese. Whether you're enjoying it as a meal on its own or sharing it with friends, the Carnitas & Corn Pizza is sure to be a hit at any gathering."
     },
     {
         "id": 27,
@@ -257,7 +267,7 @@
         "image": "17.jpg",
         "originalPrice": 130.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Indulge in a taste of the tropics with the Hawaiian Pizza from Burger N' Beer. This classic favorite combines the savory flavors of ham and bacon with the sweetness of pineapple for a truly delightful culinary experience. Picture a crispy, golden crust topped with tangy tomato sauce, gooey melted cheese, savory ham, crispy bacon, and juicy pineapple chunks. Each bite is a perfect balance of sweet and savory, with the tropical sweetness of the pineapple complementing the salty richness of the ham and bacon. Whether you're enjoying it as a meal on its own or sharing it with friends, the Hawaiian Pizza is sure to transport your taste buds to paradise."
     },
     {
         "id": 28,
@@ -266,7 +276,7 @@
         "image": "18.jpg",
         "originalPrice": 160.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Savor the simplicity and timeless appeal of the Cheese Pizza at Burger N' Beer. This classic favorite celebrates the beauty of minimalism, allowing the quality of the ingredients to shine. Picture a golden-brown crust topped with a generous layer of tangy tomato sauce and a melty blanket of gooey mozzarella cheese. Each bite is a symphony of flavors, with the savory richness of the cheese perfectly complementing the bright acidity of the tomato sauce. Whether you're a purist who appreciates the classics or simply craving a delicious slice of pizza, the Cheese Pizza at Burger N' Beer is sure to satisfy your cravings and leave you wanting more."
     },
     {
         "id": 29,
@@ -275,7 +285,7 @@
         "image": "19.jpg",
         "originalPrice": 80.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Treat your taste buds to a flavor-packed fiesta with the Carnitas Hotdog from Burger N' Beer. This mouthwatering creation combines the smoky richness of carnitas with the classic comfort of a hotdog. Imagine sinking your teeth into a juicy hotdog nestled in a soft, toasted bun, topped with tender, slow-cooked carnitas. Each bite bursts with savory goodness, with the bold flavors of the carnitas blending perfectly with the juicy hotdog. Topped with your favorite condiments and served with a side of crispy fries or crunchy coleslaw, the Carnitas Hotdog is a delicious twist on a classic favorite that's sure to leave you craving more."
     },
     {
         "id": 30,
@@ -284,34 +294,34 @@
         "image": "20.jpg",
         "originalPrice": 100.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Prepare your taste buds for a flavor explosion with the Meaty & Bacon Cheese Hotdog from Burger N' Beer. This indulgent creation takes the classic hotdog to new heights with a hearty dose of meaty goodness and crispy bacon. Imagine sinking your teeth into a juicy hotdog nestled in a warm, toasted bun, generously topped with savory meats like pepperoni, sausage, and bacon. Each bite is a symphony of flavors, with the smoky richness of the bacon complementing the bold, meaty goodness of the toppings. And let's not forget about the gooey melted cheese that ties everything together in a blanket of creamy deliciousness. Served with your choice of condiments and a side of crispy fries or crunchy coleslaw, the Meaty & Bacon Cheese Hotdog is a carnivore's dream come true."
     },
     {
         "id": 31,
-        "name": "Baguette Chasiu",
+        "name": "Vietnamese Baguette Chasiu",
         "categoryId": 7,
         "image": "21.jpg",
         "originalPrice": 30.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Experience the fusion of Vietnamese and Chinese flavors with the Vietnamese Baguette Chasiu at Burger N' Beer. This delectable creation combines the iconic Vietnamese baguette with the savory sweetness of chasiu, a traditional Chinese barbecued pork. Imagine sinking your teeth into a crispy, flaky baguette, generously filled with succulent slices of tender chasiu pork, marinated in a blend of aromatic spices and sauces. Each bite is a harmony of flavors, with the smoky richness of the pork complemented by the freshness of pickled vegetables, fragrant herbs, and a drizzle of tangy sauce. Whether you're craving a taste of Vietnam or simply looking for a delicious and satisfying meal, the Vietnamese Baguette Chasiu is sure to tantalize your taste buds and leave you craving for more."
     },
     {
         "id": 32,
-        "name": "Baguette Grilled Pork",
+        "name": "Vietnamese Baguette Grilled Pork",
         "categoryId": 7,
         "image": "22.jpg",
         "originalPrice": 30.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in the tantalizing flavors of Vietnam with the Vietnamese Baguette Grilled Pork at Burger N' Beer. This mouthwatering creation combines the crispy texture of a traditional Vietnamese baguette with the savory goodness of grilled pork. Picture sinking your teeth into a warm, crusty baguette, filled with succulent slices of tender grilled pork, marinated in a blend of aromatic spices and herbs. Each bite is a symphony of flavors, with the smoky richness of the pork complemented by the freshness of crisp vegetables, fragrant herbs, and a drizzle of tangy sauce. Whether you're craving a taste of Vietnam or simply looking for a delicious and satisfying meal, the Vietnamese Baguette Grilled Pork is sure to satisfy your cravings and leave you wanting more."
     },
     {
         "id": 33,
-        "name": "Baguette Mixed",
+        "name": "Vietnamese Baguette Mixed",
         "categoryId": 7,
         "image": "23.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Delight in the diverse flavors of Vietnam with the Vietnamese Baguette Mixed at Burger N' Beer. This culinary masterpiece combines the best of Vietnamese cuisine into one irresistible package. Imagine sinking your teeth into a crispy, golden-brown baguette, generously filled with an array of savory delights. From tender grilled pork and succulent chasiu to flavorful slices of Vietnamese sausage and crunchy pickled vegetables, each bite offers a symphony of flavors and textures. Fragrant herbs, crisp lettuce, and a drizzle of tangy sauce complete this culinary adventure, transporting your taste buds to the bustling streets of Vietnam. Whether you're a fan of grilled meats, crave the sweetness of chasiu, or savor the tangy pickles, the Vietnamese Baguette Mixed is sure to satisfy your cravings and leave you craving for more."
     },
     {
         "id": 34,
@@ -320,7 +330,7 @@
         "image": "24.jpg",
         "originalPrice": 35.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Quench your thirst and refresh your senses with the Pineapple Juice at Burger N' Beer. Made from freshly squeezed, ripe pineapples bursting with tropical flavor, this beverage is the perfect accompaniment to any meal. Imagine sipping on a cool glass of golden liquid, with each sip delivering a burst of sweet and tangy pineapple goodness. Whether you're enjoying a hearty burger, a savory sandwich, or a flavorful pizza, the Pineapple Juice is sure to complement your meal and leave you feeling refreshed and revitalized. So sit back, relax, and enjoy the taste of paradise with every sip."
     },
     {
         "id": 35,
@@ -329,7 +339,7 @@
         "image": "25.jpg",
         "originalPrice": 35.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Quench your thirst with the classic refreshment of Lemonade at Burger N' Beer. Whether you prefer it hot or cold, our Lemonade is crafted to perfection to provide a burst of citrusy goodness with every sip. For a cold Lemonade, imagine a tall glass filled with ice-cold lemonade, made from freshly squeezed lemons, pure cane sugar, and just the right amount of water. With its bright, tangy flavor and refreshing chill, it's the perfect beverage to cool you down on a hot day or accompany your meal with a burst of zest. If you prefer a warm option, our hot Lemonade offers a comforting twist. Picture a steaming mug of lemonade infused with hints of warmth and comfort, perfect for cozying up on a chilly evening or soothing your throat when you need a little TLC. Whether you're in the mood for a refreshing cold drink or a comforting hot beverage, our Lemonade at Burger N' Beer is sure to hit the spot and leave you feeling refreshed and revitalized."
     },
     {
         "id": 36,
@@ -338,7 +348,7 @@
         "image": "26.jpg",
         "originalPrice": 40.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Burger N' Beer is not just a restaurant; it's an experience. From our mouthwatering burgers to our refreshing beverages, every bite and sip is crafted with care and passion. Step into our cozy atmosphere and let our friendly staff take care of you while you indulge in a culinary journey like no other. Whether you're craving the classic simplicity of a cheeseburger or the bold flavors of our specialty pizzas, there's something for everyone to enjoy at Burger N' Beer. So come on in, take a seat, and let us show you why we're not just a restaurant – we're an experience."
     },
     {
         "id": 37,
@@ -356,7 +366,7 @@
         "image": "28.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"At Burger N' Beer, we believe in crafting culinary experiences that go beyond just a meal. With every dish we serve and every drink we pour, we aim to create moments of delight and satisfaction for our customers. From our juicy burgers to our refreshing beverages, each item on our menu is made with the finest ingredients and a passion for flavor. So come join us and indulge in a culinary journey like no other, where every bite and sip is a celebration of good food and great company."
     },
     {
         "id": 39,
@@ -365,7 +375,7 @@
         "image": "29.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Quench your thirst and transport yourself to a tropical paradise with the Mango Smoothie at Burger N' Beer. Crafted from the freshest, ripe mangoes, our smoothie is a symphony of sweet and tangy flavors blended to perfection. With each sip, you'll experience the velvety smoothness of mango puree dancing on your palate, accompanied by a refreshing burst of tropical sunshine. Whether you're cooling down on a hot summer day or treating yourself to a fruity indulgence, our Mango Smoothie is the perfect companion for any occasion, delivering a taste of paradise with every sip."
     },
     {
         "id": 40,
@@ -374,7 +384,7 @@
         "image": "30.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in creamy decadence with the Avocado Smoothie at Burger N' Beer. Crafted from ripe, velvety avocados, our smoothie is a luxurious blend of richness and freshness. Picture sipping on a tall glass filled with the smooth, creamy texture of avocado puree, each sip bursting with the delicate sweetness of this beloved fruit. Whether you're seeking a refreshing treat on a hot day or a satisfyingly wholesome beverage, our Avocado Smoothie is the perfect choice, offering a creamy delight that will tantalize your taste buds and leave you feeling refreshed and rejuvenated with every sip."
     },
     {
         "id": 41,
@@ -383,7 +393,7 @@
         "image": "31.jpg",
         "originalPrice": 40.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Treat yourself to a burst of fruity delight with the Strawberry Smoothie at Burger N' Beer. Made from plump, ripe strawberries, our smoothie is a refreshing blend of sweetness and tanginess that will invigorate your senses. Imagine sipping on a tall glass filled with the vibrant pink hue of freshly blended strawberries, each sip delivering the luscious essence of this beloved fruit. Whether you're cooling off on a warm summer day or simply craving a wholesome indulgence, our Strawberry Smoothie is the perfect choice, offering a deliciously fruity escape with every sip."
     },
     {
         "id": 42,
@@ -392,7 +402,7 @@
         "image": "32.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in creamy goodness with the Strawberry Yogurt at Burger N' Beer. Made with velvety smooth yogurt and ripe, juicy strawberries, our yogurt is a delightful fusion of tangy and sweet flavors. Imagine dipping your spoon into a creamy bowl of yogurt topped with vibrant strawberry compote, each bite offering a burst of fruity freshness. Whether you're looking for a refreshing snack or a satisfyingly wholesome dessert, our Strawberry Yogurt is the perfect choice, offering a creamy and refreshing treat that will leave you craving for more."
     },
     {
         "id": 43,
@@ -401,7 +411,7 @@
         "image": "33.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Dive into a bowl of creamy bliss with the Blueberry Yogurt at Burger N' Beer. Made with velvety smooth yogurt and plump, juicy blueberries, our yogurt is a tantalizing blend of tangy and sweet flavors. Imagine spooning into a luxurious bowl of yogurt adorned with a vibrant swirl of blueberry compote, each bite bursting with the natural sweetness of ripe berries. Whether you're in need of a refreshing snack or a wholesome dessert option, our Blueberry Yogurt is the perfect choice, offering a creamy and indulgent treat that will leave your taste buds singing with delight."
     },
     {
         "id": 44,
@@ -410,7 +420,7 @@
         "image": "34.jpg",
         "originalPrice": 40.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Delight in the creamy goodness of Peach Yogurt at Burger N' Beer. Made with velvety smooth yogurt and succulent, ripe peaches, our yogurt is a harmonious blend of tangy and sweet flavors. Picture dipping your spoon into a bowl of creamy yogurt adorned with chunks of juicy peach, each bite offering a burst of fruity freshness. Whether you're craving a refreshing snack or a satisfyingly wholesome dessert, our Peach Yogurt is the perfect choice, providing a creamy and flavorful treat that will leave you feeling refreshed and rejuvenated with every spoonful."
     },
     {
         "id": 45,
@@ -419,7 +429,7 @@
         "image": "35.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Immerse yourself in tropical bliss with the Passion Fruit Yogurt at Burger N' Beer. Crafted with luxurious yogurt and exotic passion fruit, our yogurt offers a tantalizing fusion of tangy and sweet flavors. Envision spooning into a bowl of creamy yogurt adorned with swirls of vibrant passion fruit puree, each bite delivering a burst of tropical sunshine to your taste buds. Whether you're seeking a refreshing snack or a wholesome dessert option, our Passion Fruit Yogurt is the perfect choice, providing a creamy and indulgent treat that will transport you to a tropical paradise with every mouthful."
     },
     {
         "id": 46,
@@ -428,7 +438,7 @@
         "image": "36.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Savor the luscious sweetness of Mango Yogurt at Burger N' Beer. Made with velvety smooth yogurt and ripe, juicy mangoes, our yogurt is a harmonious blend of creamy and fruity flavors. Imagine indulging in a bowl of creamy yogurt topped with chunks of succulent mango, each spoonful bursting with the tropical essence of this beloved fruit. Whether you're craving a refreshing snack or a satisfyingly wholesome dessert, our Mango Yogurt is the perfect choice, offering a creamy and delightful treat that will leave you feeling refreshed and rejuvenated with every spoonful."
     },
     {
         "id": 47,
@@ -437,7 +447,7 @@
         "image": "37.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Quench your thirst and invigorate your senses with the refreshing taste of Lemon Tea at Burger N' Beer. Made with premium tea leaves and freshly squeezed lemon juice, our Lemon Tea is a harmonious blend of bold tea flavor and zesty citrus notes. Picture sipping on a tall glass filled with the golden hue of freshly brewed tea infused with the bright acidity of lemon, each sip offering a burst of revitalizing refreshment. Whether you're cooling off on a hot summer day or seeking a soothing beverage to accompany your meal, our Lemon Tea is the perfect choice, providing a refreshing and invigorating experience with every sip."
     },
     {
         "id": 48,
@@ -446,7 +456,7 @@
         "image": "38.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in the delicate sweetness of Peach Tea at Burger N' Beer. Crafted with premium tea leaves and the essence of ripe peaches, our Peach Tea is a delightful fusion of floral tea flavor and juicy peach essence. Imagine sipping on a tall glass filled with the golden hue of freshly brewed tea, subtly infused with the luscious aroma and flavor of sun-ripened peaches. Each sip offers a harmonious balance of refreshing tea and fruity sweetness, providing a satisfyingly wholesome beverage that will quench your thirst and tantalize your taste buds. Whether you're unwinding after a long day or enjoying a meal with friends, our Peach Tea is the perfect choice for a refreshing and rejuvenating drink."
     },
     {
         "id": 49,
@@ -455,7 +465,7 @@
         "image": "39.jpg",
         "originalPrice": 40.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Transport yourself to a tropical oasis with the Lychee Tea at Burger N' Beer. Crafted with premium tea leaves and the exotic essence of ripe lychees, our Lychee Tea is a tantalizing blend of floral tea flavor and juicy lychee sweetness. Picture sipping on a tall glass filled with the golden hue of freshly brewed tea, delicately infused with the aromatic fragrance and refreshing taste of lychee. Each sip offers a delightful balance of floral notes and tropical fruitiness, providing a rejuvenating beverage that will invigorate your senses and quench your thirst. Whether you're seeking a moment of relaxation or a flavorful accompaniment to your meal, our Lychee Tea is the perfect choice for a refreshing and revitalizing drink."
     },
     {
         "id": 50,
@@ -473,7 +483,7 @@
         "image": "41.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in the warm and comforting flavors of Ginger Tea at Burger N' Beer. Crafted with premium tea leaves and the spicy essence of ginger, our Ginger Tea is a delightful fusion of robust tea flavor and invigorating ginger heat. Imagine sipping on a steaming cup filled with the rich amber hue of freshly brewed tea, subtly infused with the aromatic warmth and zesty tang of ginger. Each sip offers a soothing embrace for your senses, providing a rejuvenating beverage that will warm you from the inside out. Whether you're seeking a moment of relaxation or a flavorful accompaniment to your meal, our Ginger Tea is the perfect choice for a comforting and revitalizing drink."
     },
     {
         "id": 52,
@@ -482,7 +492,7 @@
         "image": "42.jpg",
         "originalPrice": 45.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Quench your thirst with the fizzy sweetness of Strawberry Soda at Burger N' Beer. Crafted with the essence of ripe strawberries and sparkling soda water, our Strawberry Soda is a delightful burst of fruity refreshment. Picture sipping on a tall glass filled with effervescent bubbles dancing amidst the vibrant pink hue of strawberry-flavored soda, each sip delivering the luscious sweetness of sun-ripened strawberries. Whether you're cooling off on a hot summer day or celebrating a special occasion, our Strawberry Soda is the perfect choice for a refreshing and uplifting beverage that will leave you feeling invigorated and ready to enjoy every moment."
     },
     {
         "id": 53,
@@ -491,7 +501,7 @@
         "image": "43.jpg",
         "originalPrice": 45.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in the delightful fizziness of Blueberry Soda at Burger N' Beer. Crafted with the essence of ripe blueberries and sparkling soda water, our Blueberry Soda is a refreshing burst of fruity goodness. Imagine sipping on a tall glass filled with effervescent bubbles swirling amidst the deep purple hue of blueberry-flavored soda, each sip delivering the juicy sweetness of plump blueberries. Whether you're cooling off on a sunny day or simply craving a flavorful pick-me-up, our Blueberry Soda is the perfect choice for a refreshing and satisfying beverage that will leave you feeling revitalized and ready to savor every moment."
     },
     {
         "id": 54,
@@ -500,7 +510,7 @@
         "image": "44.jpg",
         "originalPrice": 45.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Quench your thirst with the tantalizing sweetness of Peach Soda at Burger N' Beer. Crafted with the essence of ripe peaches and sparkling soda water, our Peach Soda is a delightful explosion of fruity refreshment. Picture sipping on a tall glass filled with effervescent bubbles swirling amidst the golden hue of peach-flavored soda, each sip delivering the luscious sweetness of sun-kissed peaches. Whether you're cooling off on a hot summer day or simply craving a flavorful indulgence, our Peach Soda is the perfect choice for a refreshing and uplifting beverage that will leave you feeling invigorated and ready to savor every moment."
     },
     {
         "id": 55,
@@ -509,7 +519,7 @@
         "image": "45.jpg",
         "originalPrice": 45.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Quench your thirst with the exotic tanginess of Passion Fruit Soda at Burger N' Beer. Crafted with the essence of ripe passion fruits and sparkling soda water, our Passion Fruit Soda is a tantalizing burst of tropical refreshment. Imagine sipping on a tall glass filled with effervescent bubbles swirling amidst the vibrant orange hue of passion fruit-flavored soda, each sip delivering the zesty sweetness of ripe passion fruits. Whether you're cooling off on a warm day or simply seeking a flavorful escape, our Passion Fruit Soda is the perfect choice for a refreshing and invigorating beverage that will transport you to a tropical paradise with every sip."
     },
     {
         "id": 56,
@@ -518,7 +528,7 @@
         "image": "55.jpg",
         "originalPrice": 25.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Experience the bold richness of Saigon Black Coffee at Burger N' Beer. Crafted with the finest Vietnamese coffee beans and brewed to perfection, our Saigon Black Coffee is a true testament to the art of coffee-making. Imagine savoring a steaming cup filled with the deep, dark brew of Vietnamese coffee, each sip awakening your senses with its robust flavor and aromatic intensity. Whether you're in need of a morning pick-me-up or seeking a moment of indulgence, our Saigon Black Coffee is the perfect choice for a satisfying and invigorating beverage that will fuel your day with its bold and complex character."
     },
     {
         "id": 57,
@@ -527,7 +537,7 @@
         "image": "56.jpg",
         "originalPrice": 30.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Experience the creamy indulgence of Saigon Milk Coffee at Burger N' Beer. Crafted with the finest Vietnamese coffee beans and rich, creamy milk, our Saigon Milk Coffee is a delightful fusion of bold coffee flavor and silky smoothness. Imagine sipping on a steaming cup filled with the aromatic brew of Vietnamese coffee, infused with the velvety richness of milk, each sip enveloping your palate in a decadent embrace. Whether you're starting your day off right or craving a comforting treat, our Saigon Milk Coffee is the perfect choice for a satisfying and indulgent beverage that will tantalize your taste buds and leave you feeling energized and refreshed."
     },
     {
         "id": 58,
@@ -536,7 +546,7 @@
         "image": "57.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Indulge in the creamy richness of White Coffee at Burger N' Beer. Crafted with the finest coffee beans and velvety smooth milk, our White Coffee offers a delightful balance of robust coffee flavor and luxurious creaminess. Picture sipping on a warm cup filled with the aromatic essence of freshly brewed coffee, enhanced by the silky texture and subtle sweetness of milk. Whether you're seeking a comforting beverage to start your day or a soothing treat to unwind, our White Coffee is the perfect choice for a satisfying and indulgent drink that will awaken your senses and leave you feeling refreshed and revitalized."
     },
     {
         "id": 59,
@@ -554,7 +564,7 @@
         "image": "59.jpg",
         "originalPrice": 40.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Experience a unique twist on the classic with Salt Coffee at Burger N' Beer. Crafted with precision and creativity, our Salt Coffee offers a delightful combination of rich coffee flavor with a subtle hint of savory saltiness. Picture savoring a warm cup filled with the aromatic essence of freshly brewed coffee, perfectly balanced by a touch of salt that enhances its depth and complexity. Each sip tantalizes your taste buds with a harmonious blend of bold coffee notes and the subtle interplay of salt, creating a truly memorable drinking experience. Whether you're a coffee aficionado looking to explore new flavors or simply seeking a deliciously unconventional beverage, our Salt Coffee promises to surprise and delight, leaving you craving another sip."
     },
     {
         "id": 61,
@@ -563,7 +573,7 @@
         "image": "46.jpg",
         "originalPrice": 45.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in a taste of the tropics with Coconut Coffee at Burger N' Beer. Crafted with the finest coffee beans and creamy coconut milk, our Coconut Coffee is a delightful fusion of bold coffee flavor and tropical sweetness. Imagine sipping on a warm cup filled with the rich aroma of freshly brewed coffee, perfectly complemented by the velvety texture and subtle nuttiness of coconut milk. Each sip offers a tantalizing balance of robust coffee notes and the exotic essence of coconut, transporting you to a sun-kissed paradise with every taste. Whether you're starting your day with a touch of indulgence or treating yourself to a midday pick-me-up, our Coconut Coffee is the perfect choice for a satisfying and rejuvenating beverage that will awaken your senses and leave you feeling refreshed and invigorated."
     },
     {
         "id": 62,
@@ -572,7 +582,7 @@
         "image": "50.jpg",
         "originalPrice": 25.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Savor the crisp and refreshing taste of Larue Beer at Burger N' Beer. Brewed with the finest ingredients and a commitment to quality, Larue Beer offers a delightful balance of smoothness and flavor that is sure to please any beer enthusiast. Imagine taking a sip of this golden brew and experiencing its light and crisp mouthfeel, followed by subtle notes of hops and malt that dance on your palate. Whether you're enjoying it with a meal or unwinding after a long day, Larue Beer is the perfect choice for a satisfying and enjoyable drinking experience that will leave you coming back for more."
     },
     {
         "id": 63,
@@ -581,7 +591,7 @@
         "image": "51.jpg",
         "originalPrice": 25.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Savor the distinctive flavor of Huda Beer at Burger N' Beer. Brewed with care and precision, Huda Beer offers a taste of Vietnam's brewing heritage, known for its crispness and refreshing character. Imagine taking a sip of this golden brew and experiencing its clean and smooth texture, followed by a subtle balance of malt and hops that linger on your palate. Whether you're enjoying it with friends or pairing it with your favorite burger, Huda Beer is the perfect choice for a satisfying and enjoyable drinking experience that captures the essence of Vietnamese brewing traditions."
     },
     {
         "id": 64,
@@ -590,7 +600,7 @@
         "image": "52.jpg",
         "originalPrice": 30.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Indulge in the robust flavor of Saigon Red Beer at Burger N' Beer. Brewed with passion and expertise, Saigon Red Beer offers a rich and full-bodied drinking experience that embodies the spirit of Vietnam's brewing culture. Imagine savoring a sip of this deep amber brew and being greeted by its complex aroma, with hints of caramel and roasted malt. Each taste reveals layers of flavor, from the initial sweetness to the subtle bitterness that lingers on the palate. Whether you're enjoying it with a hearty meal or unwinding after a long day, Saigon Red Beer is the perfect choice for those seeking a bold and satisfying drinking experience that leaves a lasting impression."
     },
     {
         "id": 65,
@@ -599,7 +609,7 @@
         "image": "53.jpg",
         "originalPrice": 40.00,
         "discountPercent": 15,
-        "description":""
+        "description":"Enjoy the timeless taste of Heineken Beer at Burger N' Beer. With its crisp and refreshing flavor profile, Heineken is a beloved classic that's perfect for any occasion. Picture sipping on a chilled bottle of this iconic brew and experiencing its smooth, balanced taste, characterized by subtle notes of hops and malt. Each sip delivers a refreshing burst of flavor that's both satisfying and invigorating. Whether you're celebrating with friends or simply unwinding after a long day, Heineken Beer is the ideal choice for those who appreciate quality craftsmanship and a taste that never goes out of style."
     },
     {
         "id": 66,
@@ -608,7 +618,7 @@
         "image": "54.jpg",
         "originalPrice": 50.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Indulge in the classic taste of Budweiser Beer at Burger N' Beer. Renowned for its iconic flavor and crispness, Budweiser is a staple choice for beer enthusiasts around the world. Picture enjoying a cold bottle of Budweiser and experiencing its smooth, refreshing taste with every sip. With its clean finish and subtle hints of hops and barley, Budweiser is the perfect accompaniment to any meal or social gathering. Whether you're celebrating with friends or simply unwinding after a long day, Budweiser Beer offers a timeless drinking experience that's sure to satisfy."
     },
     {
         "id": 67,
@@ -617,7 +627,7 @@
         "image": "47.jpg",
         "originalPrice": 20.00,
         "discountPercent": 10,
-        "description":""
+        "description":"Quench your thirst with the classic refreshment of Coca-Cola at Burger N' Beer. Made with the original Coca-Cola recipe, our Coke is a timeless favorite that's loved by people of all ages. Imagine sipping on a chilled glass filled with the effervescent bubbles and bold flavor of Coca-Cola, each sip delivering the perfect balance of sweetness and tanginess. Whether you're enjoying it with a hearty meal or as a refreshing pick-me-up, Coca-Cola is the perfect choice for a satisfying and uplifting beverage that will leave you feeling refreshed and invigorated."
     },
     {
         "id": 68,
@@ -626,7 +636,7 @@
         "image": "48.jpg",
         "originalPrice": 20.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Enjoy the refreshing taste of Pepsi at Burger N' Beer. With its bold and invigorating flavor, Pepsi is a beloved choice for those seeking a crisp and satisfying beverage. Picture sipping on a cold glass filled with the smooth and effervescent bubbles of Pepsi, each sip delivering a perfect balance of sweetness and fizz. Whether you're enjoying it with your favorite burger or simply craving a refreshing drink, Pepsi is the perfect choice for a satisfying and uplifting beverage experience that will leave you feeling refreshed and energized."
     },
     {
         "id": 69,
@@ -635,6 +645,6 @@
         "image": "49.jpg",
         "originalPrice": 20.00,
         "discountPercent": 5,
-        "description":""
+        "description":"Quench your thirst with the crisp and refreshing taste of 7UP at Burger N' Beer. Made with a blend of lemon and lime flavors, 7UP is a classic choice for those seeking a bubbly and invigorating beverage. Picture sipping on a chilled glass filled with the effervescent bubbles and zesty citrus flavor of 7UP, each sip delivering a delightful burst of refreshment. Whether you're enjoying it on its own or as a refreshing mixer, 7UP is the perfect choice for a satisfying and uplifting beverage experience that will leave you feeling refreshed and revitalized."
     }
 ]

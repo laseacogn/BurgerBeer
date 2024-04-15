@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ItemProduct = (product) => {
 
@@ -13,7 +13,7 @@ const ItemProduct = (product) => {
     };
     return (
         <div className="w-60 flex item-center flex-col mx-auto " key={product.id}>
-            <NavLink to={`${product.id}`}>
+            <Link to={`/product/${product?.product?.id}`}>
                 <img
                     className="w-full self-center"
                     style={{ borderRadius: '60px' }}
@@ -27,7 +27,7 @@ const ItemProduct = (product) => {
                         <p style={{ color: '#000000', fontFamily: '"Inter", sans-serif', fontSize: '17px', fontWeight: '600' }}>$ {calculateDiscountedPrice(product?.product?.originalPrice, product?.product?.discountPercent)}</p>
                     </div>
                 </div>
-            </NavLink>
+            </Link>
         </div>
     )
 }

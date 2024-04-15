@@ -1,5 +1,5 @@
 import { Home, Admin, ContactUs, Product, Login,
-  Register, ComboDetail,  Cart, ProductDetail
+  Register, ComboDetail,  Cart, Cart2, ProductDetail
 } from '../page';
 
 
@@ -12,10 +12,11 @@ const router = [
   { path: '/register', component: Register },
   { path: '/product', component: Product },
   { path: '/cart', component: Cart },
+  { path: '/cart2', component: Cart2},
 
   { path: '/combo-detail', component: ComboDetail },
 
-  { path: '/:productId', component:ProductDetail  },
+  { path: '/product/:productId', component:ProductDetail  },
 
 
 ];

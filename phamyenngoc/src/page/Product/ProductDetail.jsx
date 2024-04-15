@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
-import { Button, Tabs  } from "flowbite-react";
+import { Button, Tabs } from "flowbite-react";
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
-import { HiAdjustments } from "react-icons/hi";
 import { MdDescription } from "react-icons/md";
+import { HiHome } from "react-icons/hi";
+import { GrNext } from "react-icons/gr";
+import { Link } from "react-router-dom";
+import Search from "../../components/Search Product/Search";
 
 export default function ProductDT() {
   const [products, setProducts] = useState([]);
@@ -50,6 +53,36 @@ export default function ProductDT() {
     <div className="">
       <div className="px-20">
         <div className="max-w-[1200px] mx-auto pb-2">
+          <div className="w-full flex justify-between items-center">
+            <div className="flex">
+              <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
+            <Link to="./">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Home{" "}
+              </p>
+            </Link>
+
+            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+            <Link to="./product">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Products
+              </p>
+            </Link>
+            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+            {prd && (
+              <Link to="./product">
+                <p className="font-inter font-bold text-[20px] mb-[20px]">
+                  {" "}
+                  {prd.name}
+                </p>
+              </Link>
+            )}
+            </div>
+            <Search/>
+          </div>
+
           <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
             <div className="flex items-center justify-center gap-14">
               <button
@@ -92,17 +125,17 @@ export default function ProductDT() {
           className="max-w-[1200px] mx-auto "
           style={{ paddingLeft: "-55px", paddingRight: "5rem" }}
         >
-             <div
-          style={{
-            position: "relative",
-            width: "1200px",
-            marginTop: "20px",
-            marginBottom: "20px",
-            background: "#FFF1F1",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            borderRadius: "15px",
-          }}
-        >
+          <div
+            style={{
+              position: "relative",
+              width: "1200px",
+              marginTop: "20px",
+              marginBottom: "20px",
+              background: "#FFF1F1",
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+              borderRadius: "15px",
+            }}
+          >
             <div className="w-full flex pt-[5px]">
               {prd && (
                 <img
@@ -204,7 +237,7 @@ export default function ProductDT() {
                         </tr>
                         <tr>
                           <td>QTY</td>
-                          <td className="pt-[20px] pb-[20px] flex ">
+                          <td className="pt-[20px] flex ">
                             <Button
                               color="gray"
                               onClick={handleDecrease}
@@ -222,6 +255,16 @@ export default function ProductDT() {
                               {" "}
                               +{" "}
                             </Button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>NOTE</td>
+                          <td className="pt-[20px] pb-[20px] flex ">
+                            <input
+                              type="text"
+                              placeholder="Enter your notes here..."
+                              className="input input-bordered border-stone-200 w-full max-w-xs"
+                            />
                           </td>
                         </tr>
                       </tbody>
@@ -306,6 +349,7 @@ export default function ProductDT() {
                         fontFamily: '"Roboto", sans-serif',
                         color: "#323232",
                         fontSize: "13px",
+                        marginBottom:"20px"
                       }}
                     >
                       {" "}
@@ -323,40 +367,70 @@ export default function ProductDT() {
         </div>
 
         <div className="max-w-[1200px] mx-auto ">
-             <div
-          style={{
-            width: "1200px",
-            marginTop: "20px",
-            background: "#FFF1F1",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            borderRadius: "15px",
-          }}
-        >
+          <div
+            style={{
+              width: "1200px",
+              marginTop: "20px",
+              marginBottom: "20px",
+              background: "#FFF1F1",
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+              borderRadius: "15px",
+            }}
+          >
             <Tabs aria-label="Tabs with icons" style="underline">
-      <Tabs.Item active title= {<p className="font-bold text-lg">Description</p>} icon={MdDescription}>
-        {prd && (
-        <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"> {prd.description}
-        </p>)}
-      </Tabs.Item>
-      <Tabs.Item title= {<p className="font-bold text-lg">Shipping</p>} icon={FaShippingFast}>
-        <p className="ml-[20px] mr-[20px] font-normal text-base font-sans">
-            Burger N' Beer offers two different methods of transportation to ensure that everyone can enjoy their burgers in the most convenient way possible: 
-            <br/>
-            1. <span className="font-medium text-gray-800 dark:text-white">Delivery</span>: For customers who want to enjoy their burgers at home or at work, Burger N Beer provides fast and convenient delivery service. Customers can place orders through the mobile app or online on the store's website and select the delivery option. Delivery drivers will deliver the products to the designated address, saving customers time and effort.
-            <br/>
-            2. <span className="font-medium text-gray-800 dark:text-white">Self Pick-up</span>: For those who want to save time waiting and want to have full control over the pickup time, Burger N Beer offers a self-pickup service. Customers can pre-order through the mobile app or online, then come to the store at the predetermined time to pick up their food without having to wait.
-        </p>
-      </Tabs.Item>
-      <Tabs.Item title= {<p className="font-bold text-lg">Review</p>} icon={FaComments}>
-        <p className="ml-[20px] mr-[20px] font-normal text-base font-sans">
-            
-        </p>
-      </Tabs.Item>
-    </Tabs>
+              <Tabs.Item
+                active
+                title={<p className="font-bold text-lg">Description</p>}
+                icon={MdDescription}
+              >
+                {prd && (
+                  <p className="ml-[20px] mr-[20px] font-normal text-base font-sans">
+                    {" "}
+                    {prd.description}
+                  </p>
+                )}
+              </Tabs.Item>
+              <Tabs.Item
+                title={<p className="font-bold text-lg">Shipping</p>}
+                icon={FaShippingFast}
+              >
+                <p className="ml-[20px] mr-[20px] font-normal text-base font-sans">
+                  Burger N' Beer offers two different methods of transportation
+                  to ensure that everyone can enjoy their burgers in the most
+                  convenient way possible:
+                  <br />
+                  1.{" "}
+                  <span className="font-medium text-gray-800 dark:text-white">
+                    Delivery
+                  </span>
+                  : For customers who want to enjoy their burgers at home or at
+                  work, Burger N Beer provides fast and convenient delivery
+                  service. Customers can place orders through the mobile app or
+                  online on the store's website and select the delivery option.
+                  Delivery drivers will deliver the products to the designated
+                  address, saving customers time and effort.
+                  <br />
+                  2.{" "}
+                  <span className="font-medium text-gray-800 dark:text-white">
+                    Self Pick-up
+                  </span>
+                  : For those who want to save time waiting and want to have
+                  full control over the pickup time, Burger N Beer offers a
+                  self-pickup service. Customers can pre-order through the
+                  mobile app or online, then come to the store at the
+                  predetermined time to pick up their food without having to
+                  wait.
+                </p>
+              </Tabs.Item>
+              <Tabs.Item
+                title={<p className="font-bold text-lg">Review</p>}
+                icon={FaComments}
+              >
+                <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"></p>
+              </Tabs.Item>
+            </Tabs>
+          </div>
         </div>
-            
-        </div>
-
       </div>
     </div>
   );

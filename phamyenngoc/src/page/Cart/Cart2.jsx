@@ -9,13 +9,13 @@ import MoneyCart from "./MoneyCart";
 import cart from "../../data/cart.json";
 import ModalPaymentMethod from "./ModalPaymentMethod";
 import ModalCustomer from "./ModalCustomer";
-const Cart = () => {
+const Cart2 = () => {
   const money = [1];
   const [modalOpen, setModalOpen] = useState(false);
   const [modalOpenCustomer, setModalOpenCustomer] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('No information')
   const [fullName, setFullName] = useState('No information')
-  const [address, setAddress] = useState('No information')
+  const [addres, setAddress] = useState('No information')
 
   const [payment, setPayment] = useState("Choose payment method");
   const handleViewDetail = () => {
@@ -43,12 +43,12 @@ const Cart = () => {
         </div>
         <div className="flex">
           <Link to="/cart">
-            <Button className="w-[300px]" color="dark">
+            <Button className="w-[300px]" color="light">
               Delivery
             </Button>
           </Link>
           <Link to="/cartt">
-            <Button className="w-[300px]" color="light">
+            <Button className="w-[300px]" color="dark">
               Self Pick-up
             </Button>
           </Link>
@@ -63,28 +63,8 @@ const Cart = () => {
           }}
         >
           <Timeline className="pt-[20px] ml-[20px]">
+            
             <Timeline.Item>
-              <Timeline.Point className=" text-black" />
-              <Timeline.Content>
-                <Timeline.Title
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                    fontSize: "18px",
-                    lineHeight: "24px",
-                    display: "flex",
-                    alignItems: "center",
-                    color: "#000000",
-                  }}
-                >
-                  BURGER N' BEER
-                </Timeline.Title>
-                <Timeline.Body className=" text-sm font-medium text-slate-500 mt-[5px]">
-                  31 AN THUONG 4, MY AN, NGU HANH SON, DA NANG
-                </Timeline.Body>
-              </Timeline.Content>
-            </Timeline.Item>
-            <Timeline.Item className="mt-[-20px]">
               <Timeline.Point />
               <Timeline.Content>
                 <Timeline.Title className="flex">
@@ -122,12 +102,33 @@ const Cart = () => {
                     <span className="ml-[-20px] text-[15px] font-medium text-slate-500 mt-[5px]">Phone Number : {phoneNumber}</span>
                   </Timeline.Item>
                 )}
-                {address !== 'No information' && (
+                {addres !== 'No information' && (
                   <Timeline.Item>
-                    <span className="ml-[-20px] text-[15px] font-medium text-slate-500 mt-[5px]">Address : {address}</span>
+                    <span className="ml-[-20px] text-[15px] font-medium text-slate-500 mt-[5px]">Address : {addres}</span>
                   </Timeline.Item>
 
                 )}
+              </Timeline.Content>
+            </Timeline.Item>
+            <Timeline.Item>
+              <Timeline.Point className=" text-black" />
+              <Timeline.Content>
+                <Timeline.Title
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    lineHeight: "24px",
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#000000",
+                  }}
+                >
+                  BURGER N' BEER
+                </Timeline.Title>
+                <Timeline.Body className=" text-sm font-medium text-slate-500 mt-[5px]">
+                  31 AN THUONG 4, MY AN, NGU HANH SON, DA NANG
+                </Timeline.Body>
               </Timeline.Content>
             </Timeline.Item>
           </Timeline>
@@ -137,7 +138,7 @@ const Cart = () => {
                 <FaClock />
               </div>
               <p style={{ marginTop: "-5px", marginLeft: "10px", fontStyle: "normal", fontWeight: "500", fontSize: "18px", lineHeight: "24px", display: "flex", alignItems: "center", color: "#000000", }} >
-                Time to receive
+                Schedule Delivery
               </p>
             </div>
             <div className="flex items-center justify-center p-3">
@@ -324,4 +325,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Cart2;
