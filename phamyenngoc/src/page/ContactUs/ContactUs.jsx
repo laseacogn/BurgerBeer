@@ -1,98 +1,118 @@
-import React from 'react';
-import { FiPhoneCall } from 'react-icons/fi';
-import { MdOutlineMailOutline } from 'react-icons/md';
-import { FaLocationDot } from 'react-icons/fa6';
+import React from "react";
+import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
+import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
+import { MdEmail, MdDriveFileRenameOutline  } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
+import { AiTwotoneMessage } from "react-icons/ai";
 
 export function ContactUs() {
   return (
-    <div>
-      <div>
-        <h1 className="text-center uppercase font-bold text-slate-600 text-2xl">
-          contact us
-        </h1>
-        <p className="text-center font-semibold text-slate-500">
-          Any question or remakes? Just write us a message!
+    <div className="max-w-[1200px] mx-auto">
+      <div
+      style={{
+        width: "1200px",
+        marginTop: "-20px",
+        marginBottom: "10px",
+        background: "#FFFEFE",
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        borderRadius: "15px",
+      }}
+    >
+      <div className="w-[90%] border-b border-zinc-400 ml-[60px]">
+        <p className="font-sans font-extrabold text-xl text-black pt-[20px] pb-[10px] ">
+          CONTACT US
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 p-8" >
-        <div className="bg-[#4B4949] text-white font-bold text-xl text-center flex gap-3 flex-col rounded-xl py-4" style={{ padding: '25px 15px 0 0', margin: '0 -20px -15px 190px' }}>
-          <p>Contact Infomation</p>
-          <p className="font-medium text-sm">
-            Say something to start live chat!
+      <div className="w-[90%] mx-auto grid grid-cols-2">
+        <div className="w-[540px] mx-auto justify-center items-center">
+          <p className="font-sans font-extrabold text-xl text-black pt-[20px] pb-[10px]">
+            Contact Information{" "}
           </p>
-          <div style={{ marginLeft: '-30px', marginTop: '35px' }} className="flex flex-col my-auto gap-8">
-            <div className="grid grid-cols-3 ">
-              <p className="mx-auto text-lg">
-                <FiPhoneCall />
-              </p>
-              <p className="col-span-2 font-medium text-base text-left">
-                +84-564-751-400
-              </p>
-            </div>
-            <div className="grid grid-cols-3 ">
-              <p className="mx-auto text-lg">
-                <MdOutlineMailOutline />
-              </p>
-              <p className="col-span-2 font-medium text-base text-left">
-                phamyenngoc.02@gmail.com
-              </p>
-            </div>
-            <div className="grid grid-cols-3 ">
-              <p className="mx-auto text-lg">
-                <FaLocationDot />
-              </p>
-              <p className="col-span-2 font-medium text-base text-left">
-                31 An Thuong 4
-              </p>
-            </div>
+          <div className="flex mt-[20px]">
+            <FaLocationDot className="w-[15px] h-[15px] mr-[5px]" />
+            <p className="font-sans font-medium text-[15px] text-black mr-[5px]">
+              Address:{" "}
+            </p>
+            <p className="font-sans font-normal text-[15px] text-black">
+              31 An Thuong 4, My An Ward, Ngu Hanh Son District, Da Nang
+            </p>
+          </div>
+          <div className="flex mt-[15px]">
+            <FaPhoneVolume className="w-[15px] h-[15px] mr-[5px] mt-[3px]" />
+            <p className="font-sans font-medium text-[15px] text-black mr-[5px]">
+              Phone:{" "}
+            </p>
+            <p className="font-sans font-normal text-[15px] text-black">
+              (+84) 564751400
+            </p>
+          </div>
+          <div className="flex mt-[15px]">
+            <MdEmail className="w-[17px] h-[17px] mr-[5px] mt-[2px]" />
+            <p className="font-sans font-medium text-[15px] text-black mr-[5px]">
+              Email:{" "}
+            </p>
+            <p className="font-sans font-normal text-[15px] text-black">
+              phamyenngoc.02@gmail.com
+            </p>
           </div>
         </div>
-        <form className=" flex flex-col col-span-2 w-3/4" style={{ padding: '12px 15px 0 0', margin: '0 15px 0 50px' }}>
-          <div className="flex flex-col text-slate-500 font-medium gap-2 mt-4">
-            <label>Your name</label>
-            <input
-              type="text"
-              className="bg-slate-100 p-1 ring-1 focus:ring-slate-200 ring-offset-0 focus:outline-none rounded ring-slate-200 placeholder:font-normal"
-              placeholder="Enter your name here"
-            />
+
+        <div className="w-[540px] mx-auto justify-center items-center">
+          <p className="font-sans font-extrabold text-xl text-black pt-[20px] pb-[10px]">
+            Send Us A Message{" "}
+          </p>
+          <div className="mt-[20px]">
+            <div className="max-w">
+              <div className="mb-2 block">
+                <Label htmlFor="email" value="Your email" className="font-sans font-medium text-[15px] text-black"/>
+              </div>
+              <TextInput
+                id="email"
+                type="email"
+                icon={HiMail}
+                placeholder="Enter your email here..."
+                required
+              />
+            </div>
+            <div className="mt-[20px]">
+              <div className="mb-2 block">
+                <Label htmlFor="name" value="Full Name" className="font-sans font-medium text-[15px] text-black"/>
+              </div>
+              <TextInput
+                id="name"
+                type="name"
+                icon={MdDriveFileRenameOutline }
+                placeholder="Enter your full name here..."
+                required
+              />
+            </div>
+
+            <div className="mt-[20px]">
+              <div className="mb-2 block">
+                <Label htmlFor="content" value="Content" className="font-sans font-medium text-[15px] text-black"/>
+              </div>
+              <TextInput
+                id="content"
+                type="content"
+                icon={ AiTwotoneMessage}
+                placeholder="Enter your content here..."
+                required
+              />
+            </div>
           </div>
-          <div className="flex flex-col text-slate-500 font-medium gap-2 mt-4">
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="your-email@example.com"
-              className="bg-slate-100 p-1 ring-1 focus:ring-slate-200 ring-offset-0 focus:outline-none rounded ring-slate-200 placeholder:font-normal"
-            />
-          </div>
-          <div className="flex flex-col text-slate-500 font-medium gap-2 mt-4">
-            <label>Phone Number</label>
-            <input
-              type="text"
-              className="bg-slate-100 p-1 ring-1 focus:ring-slate-200 ring-offset-0 focus:outline-none rounded ring-slate-200 placeholder:font-normal"
-              placeholder="+84-***-***-***"
-            />
-          </div>
-          <div className="flex flex-col text-slate-500 font-medium gap-2 mt-4">
-            <label>Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              className="bg-slate-100 p-2 rounded ring-1 ring-slate-200 focus:ring-slate-200 focus:outline-none placeholder:font-normal"
-              placeholder="Enter your message here"
-            ></textarea>
-          </div>
-          <button
-            className="rounded bg-[#4B4949] text-white font-medium px-4 py-2 mt-4 self-end"
-            type="submit"
-          >
-            Send message
-          </button>
-        </form>
+          <Button className="w-1/4 h-[45px] mt-[30px] mb-[20px]" color="dark"> 
+          <p className="font-sans font-extrabold text-[17px] text-white"> Submit </p>
+          </Button>
+        </div>
       </div>
     </div>
+
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3202928921733!2d108.24396867459957!3d16.04886063998392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217de9efd7169%3A0x3b0b042ca72a853f!2sBurger%20n%E2%80%99%20Beer!5e0!3m2!1svi!2s!4v1713211007572!5m2!1svi!2s" 
+      style={{width:"1200px", height:"450px", style:"border:0;", allowfullscreen:"", loading:"lazy", referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
+    </div>
+    </div>
+    
+    
   );
 }
-
-

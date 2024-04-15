@@ -17,14 +17,15 @@ const Footer = () => {
           </div>
         </div>
         <div style={{ marginTop: '-6px', width: '780px', float: 'right', lineHeight: '20px', marginRight: '40px' }}>
+        <div></div>
           <div>
             <ul style={{ width: '1000px', float: 'left', padding: '10px 15px 0 0', margin: '0 15px 0 0', color: '#e0e0e0', fontFamily: '"inter", sans-serif', fontWeight: 'bold', fontSize: '15px', display: 'flex' }}>
-              <li style={{ paddingLeft: '0', important: true, borderRight: '1px solid #646464', marginRight: '40px', paddingRight: '40px' }}>SILICON2 CO.,LTD - STYLE</li>
+              <li style={{ paddingLeft: '0', important: true, borderRight: '1px solid #646464', marginRight: '40px', paddingRight: '40px' }}>BURGER N' BEER</li>
               <li style={{ borderRight: '1px solid #646464', marginRight: '40px', paddingRight: '40px' }}>CEO Pham Yen Ngoc</li>
               <li style={{ borderRight: '0', important: true }}>Business Licence No. 214-87-03359</li>
             </ul>
           </div>
-          <p style={{ float: 'left', padding: '12px 15px 0 0', margin: '0 15px 0 0', color: '#e0e0e0', fontFamily: '"inter", sans-serif', fontWeight: 'bold', fontSize: '15px', display: 'flex' }}>#907, Phase S. H-SQUARE, 680 Sampyeong-Dong, Bundang-Gu, Seongnam-City, Gyeonggi-Do, Korea</p>
+          <p style={{ float: 'left', padding: '12px 15px 0 0', margin: '0 15px 0 0', color: '#e0e0e0', fontFamily: '"inter", sans-serif', fontWeight: 'bold', fontSize: '15px', display: 'flex' }}>31 An Thuong 4, My An Ward, Ngu Hanh Son District, Da Nang</p>
 
           <div style={{ float: 'left', padding: '12px 15px 0 0', margin: '0 15px 0 0', color: '#e0e0e0', fontFamily: '"Inter", sans-serif', fontWeight: 'bold', fontSize: '15px', display: 'flex' }}>Copyright © Since 2024           All Rights Reserved.</div>
 
@@ -61,5 +62,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

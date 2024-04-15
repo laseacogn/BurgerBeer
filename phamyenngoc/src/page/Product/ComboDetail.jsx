@@ -36,9 +36,7 @@ export default function ComboDetail() {
   const params = useParams();
   const productId = params.productId;
   const prd = products.find((prd) => prd.id === +productId);
-
   const accessToken = localStorage.getItem("token");
-
   const handleIncrease = () => {
     setQuantity(quantity + 1);
   };
