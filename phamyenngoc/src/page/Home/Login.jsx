@@ -1,290 +1,155 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
+import { HiMail } from "react-icons/hi";
+import { FaFacebook } from "react-icons/fa6";
+import { FaGooglePlus } from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
+import Register from "./Register";
+import ForgotPassword from "./ForgotPassword";
 
 const Login = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [openModal2, setOpenModal2] = useState(false);
   return (
-    <div>
-        <div style={{ width: '1200px', height:'154px', margin: '10px auto', position: 'relative', backgroundColor:'#F9DBDB',  color: '#FFFFFF', }} >
-            <div>
-                <div style={{ marginTop: '-20px', marginLeft:'60px',float: 'left', width:'160px', height:'140px' }}>
-                <img src={require(`./web_logo.png`)} alt=""/>
-            </div>
-            <div>
-                <p style={{width:'300px', paddingTop:'9px',marginLeft:'0px',fontFamily: '"inter", sans-serif', fontWeight: 'bold', fontSize: '25px', textAlign: 'center', color: 'black'}}> BURGER N' BEER</p>
-            </div>
-            </div>
-            <div className='flex'>
-                <p style={{position: 'absolute',
-                        width: '324px',
-                        height: '128px',
-                        left: '350px',
-                        top: '67px',
-                        fontFamily: '"Inter", sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: '700',
-                        fontSize: '35px',
-                        lineHeight: '48px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        color: '#FF0707',}}> Log In
-                </p>
-                <p style={{position: 'absolute',
-                        width: '324px',
-                        height: '128px',
-                        left: '1010px',
-                        top: '70px',
-                        fontFamily: '"Inter", sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: '400',
-                        fontSize: '20px',
-                        lineHeight: '29px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        color: '#000000'}}> You need help?
-                </p>
-            </div>
-        </div>
-
-    <div>
+    <div className="max-w-[1200px] mx-auto">
       <div
-          style={{
-            position: 'relative',
-            width: '1200px',
-            height: '640px',
-            zIndex: '1',
-            marginLeft: '158px',
-          }}
-        >
-          <img src={require(`./pic4.jpg`)} alt="" style={{ width: '100%', height: '100%' }} />
-
+        style={{
+          width: "1200px",
+          marginTop: "-10px",
+          marginBottom: "20px",
+          background: "#FFFEFE",
+          boxShadow: "0px 4px 10px rgba(0, 0.2, 0, 0.2)",
+        }}
+      >
+        <div className="w-[90%] border-b border-zinc-400 ml-[60px]">
+          <p className="font-sans font-extrabold text-xl text-black pt-[20px] pb-[10px] ">
+            MEMBER LOGIN
+          </p>
+        </div>
+        <div className="w-[90%] mx-auto grid grid-cols-2">
+          <div className="w-[540px] mx-auto justify-center items-center">
+            <div className="w-[500px] mb-[20px] mt-[15px] bg-[#FFFEFE] shadow-xl rounded-lg">
+              <div className="w-[90%] border-b border-zinc-400 ml-[25px] mb-[15px]">
+                <p className="font-sans font-extrabold text-xl text-black pt-[15px] pb-[15px] ">
+                  SIGN IN
+                </p>
+              </div>
+              <div className="w-[90%] ml-[25px]">
+                <div className="max-w">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="email"
+                      value="Email Address"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput id="email" type="email" icon={HiMail} required />
+                </div>
+                <div className="mt-[20px]">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="password"
+                      value="Password"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput
+                    id="password"
+                    type="password"
+                    icon={RiLockPasswordFill}
+                    required
+                  />
+                </div>
+                <div className="flex items-center gap-2 mt-[20px] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Checkbox id="remember" className="w-[15px] h-[15px]" />
+                    <Label htmlFor="remember">
+                      {" "}
+                      <p className="font-sans font-medium text-[13px] text-black">
+                        Remember me
+                      </p>
+                    </Label>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-[13px] text-black hover:text-red-500 " onClick={() => setOpenModal2(true)}>
+                      {" "}
+                      Forgot your password?{" "}
+                    </p>
+                    <Modal show={openModal2} onClose={() => setOpenModal2(false)}>
+                      <div className="space-y-6 bg-[#FFFEFE]">
+                        <ForgotPassword />
+                      </div>
+                    </Modal>
+                  </div>
+                    
+                </div>
+                <Link to="">
+                  <Button className="w-full mt-[20px]" color="dark">
+                    <p className="font-sans font-medium text-[20px] text-white">
+                      {" "}
+                      SIGN IN{" "}
+                    </p>
+                  </Button>
+                </Link>
+                <div className="flex w-full mt-[20px] pb-[20px] justify-center items-center">
+                  <Button
+                    className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+                    color="light"
+                  >
+                    <FaFacebook className="w-[20px] h-[20px] mr-[5px]" />
+                    <p className="font-sans font-medium text-[17px] text-black">
+                      {" "}
+                      Facebook{" "}
+                    </p>
+                  </Button>
+                  <div className="w-[50px] h-[40px] text-center pt-[7px]">
+                    OR
+                  </div>
+                  <Button
+                    className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+                    color="light"
+                  >
+                    <FaGooglePlus className="w-[20px] h-[20px] mr-[5px]" />
+                    <p className="font-sans font-medium text-[17px] text-black">
+                      {" "}
+                      Google{" "}
+                    </p>
+                  </Button>
+                </div>
+                <div className="border-t border-zinc-400 mb-[15px] pb-[15px]">
+                  <div>
+                    <Button
+                      onClick={() => setOpenModal(true)}
+                      className="w-full mt-[20px] mb-[20px]"
+                      color="dark"
+                    >
+                      <p className="font-sans font-medium text-[20px] text-white">
+                        {" "}
+                        REGITER{" "}
+                      </p>
+                    </Button>
+                    <Modal show={openModal} onClose={() => setOpenModal(false)}>
+                      <div className="space-y-6 bg-[#FFFEFE]">
+                        <Register />
+                      </div>
+                    </Modal>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+                    className="w-full self-center h-[565px]"
+                    
+                    src={require(`../../page/Home/login.png`)}
+                    alt={''} />
+          </div>
+        </div>
       </div>
-
-      <div style={{
-        position: 'absolute',
-        width: '458px',
-        height: '550px',
-        marginLeft: '790px',
-        top: '408px',
-        background: '#FFFFFF',
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-        borderRadius: '15px',
-        zIndex: '2'
-      }}>
-        <div style={{
-          position: 'absolute',
-          width: '175px',
-          height: '55px',
-          left: '34px',
-          top: '16px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '750',
-          fontSize: '32px',
-          lineHeight: '39px',
-          display: 'flex',
-          alignItems: 'flex-end',
-          color: '#000000'
-        }}>Log In</div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '405px',
-          height: '58px',
-          left: '25px',
-          top: '98px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '375px',
-            height: '58px',
-            left: '40px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#6E6262'
-          }}>Email / Phone number</div>
-          <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '405px',
-          height: '58px',
-          marginLeft: '-2px',
-          top: '85px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '375px',
-            height: '58px',
-            left: '40px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#6E6262'
-          }}>Password</div>
-        </div>
-        <div style={{
-          position: 'absolute',
-          width: '405px',
-          height: '58px',
-          marginLeft: '-2px',
-          top: '170px',
-          background: '#DF4141'}}>
-            <div style={{
-          paddingTop: '15px',
-          marginLeft:'170px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '600',
-          fontSize: '20px',
-          color: '#FFFFFF',
-           alignItems: 'center',
-        }}><Link to="/home">LOG IN</Link></div>
-        </div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '195px',
-          height: '55px',
-          marginLeft: '-2px',
-          top: '300px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '195px',
-            height: '55px',
-            marginLeft: '75px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#000000'
-          }}>Facebook</div>
-          <img src={require(`./logo_fb.png`)} alt="" style={{ marginLeft: '22px', marginTop:'8px', width: '40px', height: '40px' }} />
-        </div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '195px',
-          height: '55px',
-          left: '204px',
-          marginTop: '300px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '195px',
-            height: '55px',
-            left: '85px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#000000'
-          }}>Google</div>
-          <img src={require(`./logo_gg.png`)} alt="" style={{ marginLeft: '29px', marginTop:'8px', width: '40px', height: '40px' }} />
-        </div>
-        <div ></div>
-        <div style={{
-        position: 'absolute',
-        width: '170px',
-        height: '0px',
-        marginLeft: '-2px',
-        marginTop: '265px',
-        border: '0.5px solid #000000',
-        transform: 'rotate(-0.43deg)'
-      }}></div>
-      <div style={{
-        position: 'absolute',
-        width: '170px',
-        height: '0px',
-        left: '230px',
-        marginTop: '265px',
-        border: '0.5px solid #000000',
-        transform: 'rotate(-0.43deg)'
-      }}></div>
-      <div style={{
-        position: 'absolute',
-        width: '78px',
-        height: '42px',
-        left: '186px',
-        marginTop: '245px',
-        fontFamily: '"Inter", sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '200',
-        fontSize: '16px',
-        lineHeight: '19px',
-        display: 'flex',
-        alignItems: 'center',
-        textAlign: 'center',
-        color: '#000000'
-      }}>OR</div>
-      <div style={{
-          position: 'absolute',
-          width: '322px',
-          height: '76px',
-          Left: '50px',
-          top: '375px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '400',
-          fontSize: '16px',
-          lineHeight: '16px',
-          display: 'flex',
-          alignItems: 'center',
-          color: '#927E7E'
-        }}>New to Burger n' Beer?</div>
-        <div style={{
-          position: 'absolute',
-          width: '98px',
-          height: '76px',
-          left: '240px',
-          top: '375px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '600',
-          fontSize: '20px',
-          lineHeight: '29px',
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          color: '#E90202'
-        }}> <Link to="/register">Register</Link></div>
-
-        </div>
-
-        
-
-        
-
-        
-    </div>
-    </div>
-    
     </div>
   );
-}
+};
 
 export default Login;

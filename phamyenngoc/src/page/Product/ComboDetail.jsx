@@ -135,7 +135,7 @@ export default function ComboDetail() {
               width: "1200px",
               marginTop: "20px",
               marginBottom: "20px",
-              background: "#FFF1F1",
+              background: "#FFFEFE",
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
               borderRadius: "15px",
             }}
@@ -943,7 +943,7 @@ export default function ComboDetail() {
               width: "1200px",
               marginTop: "20px",
               marginBottom: "20px",
-              background: "#FFF1F1",
+              background: "#FFFEFE",
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
               borderRadius: "15px",
             }}

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Carousel, Button} from "flowbite-react";
 import { HiShoppingCart } from "react-icons/hi";
+import { RiTableAltFill } from "react-icons/ri";
 
 
 const Home = () => {
@@ -54,7 +55,7 @@ const Home = () => {
                   <div
                     style={{
                       top: "200px",
-                      left: "155px",
+                      left: "165px",
                       width: "890px",
                       height: "90px",
                       position: "relative",
@@ -87,32 +88,25 @@ const Home = () => {
                     </p>
                   </div>
                     
-                  <div
-                    style={{
-                      width: "190px",
-                      height: "50px",
-                      marginTop: "225px",
-                      marginLeft: "505px",
-                      textAlign: "center",
-                      fontSize: "30px",
-                      fontWeight: "800",
-                      lineHeight: "42.5px",
-                      cursor: "pointer",
-                      fontFamily: "Inter, sans-serif",
-                      fontStyle: "italic",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    className="text-white hover:text-red-500 flex flex-wrap gap-2"
-                  >
-                    {" "}
-                    <Link to="/product">
-                      <Button>
-                      <HiShoppingCart className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
-                      <p style={{fontSize: "20px", fontFamily: "Inter, sans-serif", fontStyle: "semi-bold", alignItems: "center", marginTop: "5px" }}> Order Now </p>
-                    </Button>
-                    </Link>
-                  </div>
+                   
+                  
+
+                <div>
+                  <div className="flex mt-[225px] ml-[355px]">
+          <Link to="/product">
+            <Button className="w-[250px] mr-[20px]" color="dark">
+              <HiShoppingCart className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
+              <p class="text-lg font-sans font-bold justify-center items-center">Order Now</p>
+            </Button>
+          </Link>
+          <Link to="/booking">
+            <Button className="w-[250px]" color="dark">
+              <RiTableAltFill className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
+              <p class="text-lg font-sans font-bold justify-center items-center">Reservate Now</p>
+            </Button>
+          </Link>
+        </div>
+                </div>
                 </div>
               </div>
             <img

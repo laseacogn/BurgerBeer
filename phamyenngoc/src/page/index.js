@@ -3,6 +3,8 @@
 export { ContactUs } from './ContactUs/ContactUs';
 export { Admin } from './Admin/Admin';
 
+
+export { default as AboutUs } from './AboutUs/AboutUs';
 export { default as Home } from './Home/Home';
 export { default as Login } from './Home/Login';
 export { default as Register } from './Home/Register';
@@ -13,6 +15,7 @@ export { default as ComboDetail } from './Product/ComboDetail';
 
 
 export { default as ProductDetail } from './Product/ProductDetail';
+export { default as Booking } from './Booking/Booking';
 
 
 // export { Product } from './Admin/Product';

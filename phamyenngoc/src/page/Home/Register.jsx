@@ -1,271 +1,162 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import ReCaptach from "../../components/Capcha/Captcha";
+import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
+import { MdEmail, MdDriveFileRenameOutline } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
+import { IoMdClose } from 'react-icons/io';
+import { FaFacebook } from "react-icons/fa6";
+import { FaGooglePlus } from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const Register = () => {
+  const socialMediaPlatforms = [
+    { name: "Google" },
+    { name: "Facebook" },
+    { name: "Instagram" },
+    { name: "Tiktok" },
+    { name: "Youtube" },
+    { name: "Snapchat" },
+    { name: "Twitter" },
+    { name: "Friend" },
+  ];
   return (
-    <div>
-        <div style={{ width: '1200px', height:'154px', margin: '10px auto', position: 'relative', backgroundColor:'#F9DBDB',  color: '#FFFFFF', }} >
-            <div>
-                <div style={{ marginTop: '-20px', marginLeft:'60px',float: 'left', width:'160px', height:'140px' }}>
-                <img src={require(`./web_logo.png`)} alt=""/>
-            </div>
-            <div>
-                <p style={{width:'300px', paddingTop:'9px',marginLeft:'0px',fontFamily: '"inter", sans-serif', fontWeight: 'bold', fontSize: '25px', textAlign: 'center', color: 'black'}}> BURGER N' BEER</p>
-            </div>
-            </div>
-            <div className='flex'>
-                <p style={{position: 'absolute',
-                        width: '324px',
-                        height: '128px',
-                        left: '350px',
-                        top: '67px',
-                        fontFamily: '"Inter", sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: '700',
-                        fontSize: '35px',
-                        lineHeight: '48px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        color: '#FF0707',}}> Register
+          <div className="w-full mx-auto justify-center items-center">
+            <div className="w-full mb-[20px] shadow-xl rounded-lg">
+              <div className="w-[90%] border-b border-zinc-400 ml-[30px] mb-[15px] flex justify-between items-center">
+                <p className="font-sans font-extrabold text-xl text-black pt-[15px] pb-[15px] ">
+                  CREATE AN ACCOUNT
                 </p>
-                <p style={{position: 'absolute',
-                        width: '324px',
-                        height: '128px',
-                        left: '1010px',
-                        top: '70px',
-                        fontFamily: '"Inter", sans-serif',
-                        fontStyle: 'normal',
-                        fontWeight: '400',
-                        fontSize: '20px',
-                        lineHeight: '29px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        color: '#000000'}}> You need help?
-                </p>
+                <button>
+                        <IoMdClose className="ml-2 cursor-pointer shrink-0 fill-black hover:fill-red-500 text-2xl" />
+                    </button>
+              </div>
+              <div className="w-[90%] ml-[30px]">
+                <div className="max-w">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="name"
+                      value="Full Name"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput
+                    id="name"
+                    type="name"
+                    icon={MdDriveFileRenameOutline}
+                    required
+                  />
+                </div>
+                <div className="mt-[20px]">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="email"
+                      value="Email Address"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput id="email" type="email" icon={HiMail} required />
+                </div>
+                <div className="mt-[20px]">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="password"
+                      value="Password"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput
+                    id="password"
+                    type="password"
+                    icon={RiLockPasswordFill}
+                    required
+                  />
+                </div>
+                <div className="mt-[20px]">
+                  <div className="mb-2 block">
+                    <Label
+                      htmlFor="password"
+                      value="Confirm Password"
+                      className="font-sans font-medium text-[15px] text-black"
+                    />
+                  </div>
+                  <TextInput
+                    id="password"
+                    type="password"
+                    icon={RiLockPasswordFill}
+                    required
+                  />
+                </div>
+                <div className="items-center gap-2 mt-[20px] justify-between">
+                  <p className="font-sans font-medium text-[15px] text-black">
+                    {" "}
+                    How dis you get our website?
+                  </p>
+                  <div class="grid grid-cols-4 gap-[10px]">
+                  {socialMediaPlatforms.map((platform, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 mt-[10px] ml-[20px]"
+                    >
+                      <Checkbox
+                        id={`platform-${index}`}
+                        className="w-[15px] h-[15px]  border-slate-600 "
+                      />
+                      <Label htmlFor={`platform-${index}`} >
+                        <p className="font-sans font-normal text-[15px] text-black ">
+                          {platform.name}
+                        </p>
+                      </Label>
+                    </div>
+                    
+                  ))}
+                  </div>
+                </div>
+                <div className="items-center gap-2 mt-[20px] justify-between">
+                  <p className="font-sans font-medium text-[15px] text-black">
+                    {" "}
+                    Captcha
+                  </p>
+                  <ReCaptach/>
+                </div>
+                <Link to="">
+                  <Button className="w-full mt-[20px]" color="dark">
+                    <p className="font-sans font-medium text-[20px] text-white">
+                      {" "}
+                      REGISTER
+                    </p>
+                  </Button>
+                </Link>
+                <div className="flex w-full mt-[20px] justify-center items-center">
+                  <Button
+                    className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+                    color="light"
+                  >
+                    <FaFacebook className="w-[20px] h-[20px] mr-[5px]" />
+                    <p className="font-sans font-medium text-[17px] text-black">
+                      {" "}
+                      Facebook{" "}
+                    </p>
+                  </Button>
+                  <div className="w-[50px] h-[40px] text-center pt-[7px]">
+                    OR
+                  </div>
+                  <Button
+                    className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+                    color="light"
+                  >
+                    <FaGooglePlus className="w-[20px] h-[20px] mr-[5px]" />
+                    <p className="font-sans font-medium text-[17px] text-black">
+                      {" "}
+                      Google{" "}
+                    </p>
+                  </Button>
+                </div>
+                <p className="font-sans font-medium text-[13px] text-black mt-[20px] pb-[20px] text-center">By creating an account, you agree to burgernbeer.com's Terms of Use and Privacy Policy.</p>
+              </div>
             </div>
-        </div>
-
-    <div>
-      <div
-          style={{
-            position: 'relative',
-            width: '1200px',
-            height: '640px',
-            zIndex: '1',
-            marginLeft: '158px',
-          }}
-        >
-          <img src={require(`./pic4.jpg`)} alt="" style={{ width: '100%', height: '100%' }} />
-
-      </div>
-
-      <div style={{
-        position: 'absolute',
-        width: '458px',
-        height: '550px',
-        marginLeft: '790px',
-        top: '360px',
-        background: '#FFFFFF',
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-        borderRadius: '15px',
-        zIndex: '2'
-      }}>
-        <div style={{
-          position: 'absolute',
-          width: '175px',
-          height: '55px',
-          left: '34px',
-          top: '15px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '750',
-          fontSize: '32px',
-          lineHeight: '39px',
-          display: 'flex',
-          alignItems: 'flex-end',
-          color: '#000000'
-        }}>Register</div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '405px',
-          height: '58px',
-          left: '25px',
-          top: '96px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '375px',
-            height: '58px',
-            left: '40px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#6E6262'
-          }}>Phone number</div>
-        </div>
-        <div style={{
-          position: 'absolute',
-          width: '405px',
-          height: '58px',
-          left: '25px',
-          top: '182px',
-          background: '#DF4141'}}>
-            <div style={{
-          paddingTop: '15px',
-          marginLeft:'170px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '600',
-          fontSize: '20px',
-          color: '#FFFFFF',
-           alignItems: 'center',
-        }}>NEXT</div>
-        </div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '195px',
-          height: '55px',
-          left: '25px',
-          top: '325px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '195px',
-            height: '55px',
-            left: '75px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#000000'
-          }}>Facebook</div>
-          <img src={require(`./logo_fb.png`)} alt="" style={{ marginLeft: '22px', marginTop:'8px', width: '40px', height: '40px' }} />
-        </div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'absolute',
-          width: '195px',
-          height: '55px',
-          marginLeft: '240px',
-          top: '325px',
-          border: '1px solid #000000'
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '195px',
-            height: '55px',
-            left: '85px',
-            top: '0px',
-            fontFamily: '"Inter", sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '300',
-            fontSize: '20px',
-            lineHeight: '29px',
-            display: 'flex',
-            alignItems: 'center',
-            color: '#000000'
-          }}>Google</div>
-          <img src={require(`./logo_gg.png`)} alt="" style={{ marginLeft: '29px', marginTop:'8px', width: '40px', height: '40px' }} />
-        </div>
-        <div style={{
-          position: 'absolute',
-          width: '390px',
-          height: '76px',
-          marginLeft: '33px',
-          top: '396px',
-          fontFamily:  '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '400',
-          fontSize: '16px',
-          lineHeight: '24px',
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          color: '#000000'
-        }}>By registering, you agree to Burger n’ Beer’s term of Service & Privacy Policy</div>
-        <div style={{
-        position: 'absolute',
-        width: '170px',
-        height: '0px',
-        marginLeft: '25px',
-        top: '282px',
-        border: '0.5px solid #000000',
-        transform: 'rotate(-0.43deg)'
-      }}></div>
-      <div style={{
-        position: 'absolute',
-        width: '170px',
-        height: '0px',
-    marginLeft: '260px',
-        top: '282px',
-        border: '0.5px solid #000000',
-        transform: 'rotate(-0.43deg)'
-      }}></div>
-      <div style={{
-        position: 'absolute',
-        width: '78px',
-        height: '42px',
-        marginLeft: '215px',
-        top: '263px',
-        fontFamily: '"Inter", sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '200',
-        fontSize: '16px',
-        lineHeight: '19px',
-        display: 'flex',
-        alignItems: 'center',
-        textAlign: 'center',
-        color: '#000000'
-      }}>OR</div>
-      <div style={{
-          position: 'absolute',
-          MarginLeft: '60px',
-          width: '322px',
-          height: '76px',
-          top: '462px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '400',
-          fontSize: '16px',
-          lineHeight: '16px',
-          display: 'flex',
-          alignItems: 'center',
-          color: '#927E7E'
-        }}>Do you already have an account?</div>
-        <div style={{
-          position: 'absolute',
-          width: '98px',
-          height: '76px',
-          marginLeft: '319px',
-          top: '462px',
-          fontFamily: '"Inter", sans-serif',
-          fontStyle: 'normal',
-          fontWeight: '600',
-          fontSize: '20px',
-          lineHeight: '29px',
-          display: 'flex',
-          alignItems: 'center',
-          textAlign: 'center',
-          color: '#E90202'
-        }}> <Link to="/login">Log In</Link></div>
-        </div>
-    </div>
-    </div>
+          </div>
   );
-}
+};
+
 export default Register;
