@@ -4,8 +4,15 @@ import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail, MdDriveFileRenameOutline  } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { AiTwotoneMessage } from "react-icons/ai";
+import { Alert } from "flowbite-react";
 
 export function ContactUs() {
+  const showAlert = () => {
+    alert(
+      "Your message has been sent. We'll respond to you as soon as possible.\n\n" +
+      "Thank you!"
+    );
+  };
   return (
     <div className="max-w-[1200px] mx-auto">
       <div
@@ -100,7 +107,9 @@ export function ContactUs() {
               />
             </div>
           </div>
-          <Button className="w-1/4 h-[45px] mt-[30px] mb-[20px]" color="dark"> 
+          <Button className="w-1/4 h-[45px] mt-[30px] mb-[20px]" color="dark" onClick={() => {
+                  showAlert();
+                }}> 
           <p className="font-sans font-extrabold text-[17px] text-white"> Submit </p>
           </Button>
         </div>

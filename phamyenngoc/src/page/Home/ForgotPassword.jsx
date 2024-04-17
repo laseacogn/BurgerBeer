@@ -7,7 +7,7 @@ import { Alert } from "flowbite-react";
 const ForgotPassword = () => {
   const showAlert = () => {
     alert(
-      "phamyenngoc.02@gmail.com Member ID and Password verification Email has been sent.\n\n" +
+      "Member ID and Password verification Email has been sent.\n\n" +
       "Please check your Email!" 
     );
   };

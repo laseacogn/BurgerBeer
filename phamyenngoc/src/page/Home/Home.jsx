@@ -102,7 +102,7 @@ const Home = () => {
           <Link to="/booking">
             <Button className="w-[250px]" color="dark">
               <RiTableAltFill className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
-              <p class="text-lg font-sans font-bold justify-center items-center">Reservate Now</p>
+              <p class="text-lg font-sans font-bold justify-center items-center">Reservations</p>
             </Button>
           </Link>
         </div>
