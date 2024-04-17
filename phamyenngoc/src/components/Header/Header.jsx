@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Dropdown, Navbar, Button } from "flowbite-react";
 import avatar from "../../assets/image/avatar/avatar.png";
 import { BsInstagram } from "react-icons/bs";
@@ -90,9 +90,11 @@ function Header() {
               <img src={require(`./web_logo.png`)} alt="" />
             </div>
           </div>
+          <Link to ="/">
           <span className="self-center whitespace-nowrap font-bold text-black text-xl">
             BURGER N' BEER
           </span>
+          </Link>
         </Navbar.Brand>
   
         <div className="flex md:order-2">
@@ -160,21 +162,30 @@ function Header() {
             }
           >
             <Dropdown.Header>
-              <span className="flex items-center justify-center text-xl m-2 ">
+              <span className="flex items-center justify-center text-xl font-sans font-semibold m-2 ">
                 Pham Thi Yen Ngoc
               </span>
               <span className="block truncate text-sm font-medium">
                 phamyenngoc.02@gmail.com
               </span>
             </Dropdown.Header>
-            <Link to="/admin">
-              <Dropdown.Item>DASHBOARD</Dropdown.Item>
+            <Link to="/myaccount">
+              <Dropdown.Item className="text-sm font-sans font-medium">MY ACCOUNT</Dropdown.Item>
             </Link>
-            <Link to="/user">
-              <Dropdown.Item>PROFILE</Dropdown.Item>
+            <Link to="">
+              <Dropdown.Item className="text-sm font-sans font-medium">ORDER TRACKING</Dropdown.Item>
+            </Link>
+            <Link to="">
+              <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Dropdown.Item>Sign out</Dropdown.Item>
+            <Link to="">
+            <Dropdown.Item className="text-sm font-sans font-medium">CORPORATE ACCOUNT</Dropdown.Item>
+            </Link>
+            <Dropdown.Divider />
+            <Link to="">
+            <Dropdown.Item className="text-sm font-sans font-medium">SIGN OUT</Dropdown.Item>
+            </Link>
           </Dropdown>
           <Navbar.Toggle />
         </div>

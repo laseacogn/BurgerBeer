@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { MdEmail } from "react-icons/md";
-import { IoMdClose } from "react-icons/io";
 import { Alert } from "flowbite-react";
 
 const ForgotPassword = () => {
@@ -15,16 +14,8 @@ const ForgotPassword = () => {
   return (
     <div>
       <div className="w-full mx-auto justify-center items-center">
-        <div className="w-full mb-[20px] shadow-xl rounded-lg">
-          <div className="w-[90%] border-b border-zinc-400 ml-[30px] mb-[15px] flex justify-between items-center">
-            <p className="font-sans font-extrabold text-xl text-black pt-[15px] pb-[15px] ">
-              RESET PASSWORD
-            </p>
-            <button>
-              <IoMdClose className="ml-2 cursor-pointer shrink-0 fill-black hover:fill-red-500 text-2xl" />
-            </button>
-          </div>
-          <div className="w-[90%] ml-[30px]">
+        <div className="w-full mb-[20px]">
+          <div className="w-full">
             <div className="max-w">
               <div className="mb-2 block">
                 <Label

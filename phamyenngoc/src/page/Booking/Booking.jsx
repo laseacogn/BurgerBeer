@@ -1,16 +1,14 @@
 import React from "react";
-import { Dropdown } from "flowbite-react";
-import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
+import { Button, Label, TextInput } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { FaPhone, FaComments } from "react-icons/fa6";
-import { FaClock, FaPenSquare } from "react-icons/fa";
 
 const Booking = () => {
   const showAlert = () => {
     alert(
       "Your reservation at Burger N' Beer has been successful.\n\n" +
-      "Thank you!"
+        "Thank you!"
     );
   };
   const Branch = [
@@ -204,10 +202,18 @@ const Booking = () => {
         </div>
 
         <div className="w-[90%] mx-auto mt-[20px] ">
-          <p className="font-sans font-bold text-xl text-black pt-[20px] text-center border-t border-zinc-400">Find the table for you</p>
-          <p className="font-sans font-semibold text-lg text-black pt-[10px] text-center">Specify your prefer and search to find the proper table for you</p>
-          <p className="font-sans font-bold text-xl text-black pt-[10px] text-center">Or</p>
-          <p className="font-sans font-semibold text-lg text-black pt-[10px] text-center">Reservation support</p>
+          <p className="font-sans font-bold text-xl text-black pt-[20px] text-center border-t border-zinc-400">
+            Find the table for you
+          </p>
+          <p className="font-sans font-semibold text-lg text-black pt-[10px] text-center">
+            Specify your prefer and search to find the proper table for you
+          </p>
+          <p className="font-sans font-bold text-xl text-black pt-[10px] text-center">
+            Or
+          </p>
+          <p className="font-sans font-semibold text-lg text-black pt-[10px] text-center">
+            Reservation support
+          </p>
           <p className="font-sans font-bold text-xl text-black pt-[10px] text-center">
             Domestic number: 1900 1900 <br />
             International number: (+84) 564751400

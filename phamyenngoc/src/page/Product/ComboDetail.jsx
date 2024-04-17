@@ -357,7 +357,7 @@ export default function ComboDetail() {
                                     </p>
                                     
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -413,7 +413,7 @@ export default function ComboDetail() {
                                       USD
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -469,7 +469,7 @@ export default function ComboDetail() {
                                       USD
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
 
                               </Tabs.Item>
@@ -533,7 +533,8 @@ export default function ComboDetail() {
                                       </span>
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[25px]"/>
+                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
+                                
                                 </div>
 
                                  <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -589,7 +590,7 @@ export default function ComboDetail() {
                                       </span>
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[25px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -645,7 +646,7 @@ export default function ComboDetail() {
                                       </span>
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[25px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -701,7 +702,7 @@ export default function ComboDetail() {
                                       </span>
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[25px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
                                 </div>
                             </div>
 
@@ -767,7 +768,7 @@ export default function ComboDetail() {
                                     </p>
                                     
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -823,7 +824,7 @@ export default function ComboDetail() {
                                       USD
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -879,7 +880,7 @@ export default function ComboDetail() {
                                       USD
                                     </p>
                                   </div>
-                                  <IoAddCircleSharp className="text-right w-[35px] h-[35px] mt-[15px]"/>
+                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
                                 </div>
                               </Tabs.Item>
                             </Tabs>

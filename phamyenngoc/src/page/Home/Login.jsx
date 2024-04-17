@@ -72,17 +72,28 @@ const Login = () => {
                     </Label>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-[13px] text-black hover:text-red-500 " onClick={() => setOpenModal2(true)}>
+                    <p
+                      className="font-sans font-medium text-[13px] text-black hover:text-red-500 "
+                      onClick={() => setOpenModal2(true)}
+                    >
                       {" "}
                       Forgot your password?{" "}
                     </p>
-                    <Modal show={openModal2} onClose={() => setOpenModal2(false)}>
-                      <div className="space-y-6 bg-[#FFFEFE]">
+
+                    <Modal
+                      show={openModal2}
+                      onClose={() => setOpenModal2(false)}
+                    >
+                      <Modal.Header className="h-[70px]">
+                        <p className="font-sans font-extrabold text-xl text-black pt-[5px] pb-[15px] ">
+                          RESET PASSWORD
+                        </p>
+                      </Modal.Header>
+                      <Modal.Body>
                         <ForgotPassword />
-                      </div>
+                      </Modal.Body>
                     </Modal>
                   </div>
-                    
                 </div>
                 <Link to="">
                   <Button className="w-full mt-[20px]" color="dark">
@@ -119,6 +130,7 @@ const Login = () => {
                 </div>
                 <div className="border-t border-zinc-400 mb-[15px] pb-[15px]">
                   <div>
+                    
                     <Button
                       onClick={() => setOpenModal(true)}
                       className="w-full mt-[20px] mb-[20px]"
@@ -129,10 +141,20 @@ const Login = () => {
                         REGITER{" "}
                       </p>
                     </Button>
-                    <Modal show={openModal} onClose={() => setOpenModal(false)}>
-                      <div className="space-y-6 bg-[#FFFEFE]">
+                    <Modal
+                      show={openModal}
+                      onClose={() => setOpenModal(false)}
+                    >
+                      <Modal.Header className="h-[70px]">
+                        <p className="font-sans font-extrabold text-xl text-black pt-[5px] pb-[15px] ">
+                          CREATE AN ACCOUNT
+                        </p>
+                      </Modal.Header>
+                      <Modal.Body>
+                        <div className="space-y-6 bg-[#FFFEFE]">
                         <Register />
                       </div>
+                      </Modal.Body>
                     </Modal>
                   </div>
                 </div>
@@ -141,10 +163,10 @@ const Login = () => {
           </div>
           <div>
             <img
-                    className="w-full self-center h-[565px]"
-                    
-                    src={require(`../../page/Home/login.png`)}
-                    alt={''} />
+              className="w-full self-center h-[565px]"
+              src={require(`../../page/Home/login.png`)}
+              alt={""}
+            />
           </div>
         </div>
       </div>

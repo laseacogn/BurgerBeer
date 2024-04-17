@@ -3,6 +3,7 @@
 export { ContactUs } from './ContactUs/ContactUs';
 export { Admin } from './Admin/Admin';
 
+export { default as MyAccount } from './MyAccount/MyAccount';
 
 export { default as AboutUs } from './AboutUs/AboutUs';
 export { default as Home } from './Home/Home';

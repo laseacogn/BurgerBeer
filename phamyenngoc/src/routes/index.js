@@ -1,6 +1,6 @@
 import { Home, Admin, ContactUs, Product, Login,
   Register, ComboDetail,  Cart, Cart2, ProductDetail,
-  AboutUs, Booking
+  AboutUs, Booking, MyAccount, 
 } from '../page';
 import { LayoutDefault, Layout } from '../layout';
 
@@ -19,6 +19,9 @@ const router = [
 
   { path: '/product/:productId', layout:Layout, component:ProductDetail  },
   { path: '/booking', layout:Layout, component: Booking },
+
+
+  { path: '/myaccount', layout:Layout, component: MyAccount },
 
 
 ];
