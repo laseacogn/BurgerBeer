@@ -91,7 +91,7 @@ const Booking = () => {
                       className="font-sans font-semibold text-[17px] text-black"
                     />
                   </div>
-                  <TextInput id="phone" type="phone" icon={FaPhone} required />
+                  <TextInput id="email" type="email" icon={FaPhone} required />
                 </div>
 
                 <div className="mt-[20px]">
@@ -178,8 +178,8 @@ const Booking = () => {
                     />
                   </div>
                   <TextInput
-                    id="recomment"
-                    type="recomment"
+                    id="email"
+                    type="email"
                     icon={FaComments}
                     required
                   />
