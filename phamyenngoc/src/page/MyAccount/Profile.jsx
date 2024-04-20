@@ -10,7 +10,7 @@ import { MdDriveFileRenameOutline, MdCameraAlt } from "react-icons/md";
 
 const Profile = () => {
   const showAlert = () => {
-    alert("Your information has been updated.\n\n" + "Thank you!");
+    alert("Your profile has been updated.\n\n" + "Thank you!");
   };
   const [hovered, setHovered] = useState(false);
   const [showInput, setShowInput] = useState(false);
@@ -72,8 +72,8 @@ const Profile = () => {
               />
             </div>
             <TextInput
-              id="id"
-              type="id"
+              id="email"
+              type="email"
               icon={MdDriveFileRenameOutline}
               required
             />
@@ -87,8 +87,8 @@ const Profile = () => {
               />
             </div>
             <TextInput
-              id="name"
-              type="name"
+              id="email"
+              type="email"
               icon={MdDriveFileRenameOutline}
               required
             />

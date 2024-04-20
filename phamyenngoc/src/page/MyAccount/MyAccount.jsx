@@ -4,6 +4,7 @@ import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
 import Profile from "./Profile";
 import AccountSetting from "./AccountSetting";
+import Order from "./Order";
 
 const MyAccount = () => {
   return (
@@ -25,7 +26,7 @@ const MyAccount = () => {
                  <AccountSetting/>
                 </Tabs.Item>
                 <Tabs.Item title="Order" icon={HiAdjustments}>
-                  <p></p>
+                  <Order/>
                 </Tabs.Item>
                 <Tabs.Item title="My Review" icon={HiClipboardList}>
                   <p></p>

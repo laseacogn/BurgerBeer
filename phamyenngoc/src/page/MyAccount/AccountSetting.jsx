@@ -9,7 +9,7 @@ import districtData from "../../data/District.json";
 
 const AccountSetting = () => {
   const showAlert = () => {
-    alert("Your information has been updated.\n\n" + "Thank you!");
+    alert("Your account has been updated.\n\n" + "Thank you!");
   };
 
   const [ward, setWard] = useState([]);

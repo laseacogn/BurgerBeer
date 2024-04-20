@@ -1,0 +1,29 @@
+[
+  {
+    "orderID": "hd001",
+    "userId": "us001",
+    "orderDate": "12/01/2022",
+    "totalAmount": 120,
+    "deliveryId": 1,
+    "paymentId": 1,
+    "status": "delivered"
+  },
+  {
+    "orderID": "hd002",
+    "userId": "us001",
+    "orderDate": "13/01/2022",
+    "totalAmount": 11,
+    "deliveryId": 1,
+    "paymentId": 1,
+    "status": "delivered"
+  },
+  {
+    "orderID": "hd003",
+    "userId": "us001",
+    "orderDate": "14/01/2022",
+    "totalAmount": 20,
+    "deliveryId": 1,
+    "paymentId": 1,
+    "status": "delivered"
+  }
+]
