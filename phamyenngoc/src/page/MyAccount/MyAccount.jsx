@@ -5,6 +5,7 @@ import { MdDashboard } from "react-icons/md";
 import Profile from "./Profile";
 import AccountSetting from "./AccountSetting";
 import Order from "./Order";
+import Review from "./Review";
 
 const MyAccount = () => {
   return (
@@ -29,10 +30,7 @@ const MyAccount = () => {
                   <Order/>
                 </Tabs.Item>
                 <Tabs.Item title="My Review" icon={HiClipboardList}>
-                  <p></p>
-                </Tabs.Item>
-                <Tabs.Item title="My Question" icon={HiClipboardList}>
-                  <p></p>
+                  <Review/>
                 </Tabs.Item>
               </Tabs>
             </div>

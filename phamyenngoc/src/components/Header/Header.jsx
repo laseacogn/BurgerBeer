@@ -183,7 +183,7 @@ function Header() {
             <Dropdown.Item className="text-sm font-sans font-medium">CORPORATE ACCOUNT</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Link to="">
+            <Link to="/login">
             <Dropdown.Item className="text-sm font-sans font-medium">SIGN OUT</Dropdown.Item>
             </Link>
           </Dropdown>

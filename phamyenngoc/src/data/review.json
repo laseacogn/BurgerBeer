@@ -1,0 +1,57 @@
+
+[
+  {
+    "reviewID": "rv001",
+    "userId": "us001",
+    "productID": 18,
+    "image": "8.jpg",
+    "reviewDate": "12/02/2024",
+    "rating": "5.jpg",
+    "content": "Double Cheese Burger là một sự kết hợp tuyệt vời giữa hai miếng thịt bò tươi ngon và hai lớp phô mai đậm đà, tạo nên một trải nghiệm ẩm ướt và ngon miệng không thể cưỡng lại. Vị ngon đặc trưng của phô mai tan chảy hòa quện với hương vị đậm đà của thịt bò, cùng với độ giòn của bánh mì, tạo nên một món ăn thú vị và đầy đặn. Tuy nhiên, sản phẩm này có thể không phù hợp cho những ai có hạn chế đạm trong khẩu phần ăn hoặc tuân thực ăn chay."
+  },
+  {
+    "reviewID": "rv002",
+    "userId": "us001",
+    "productID": 16,
+    "image": "6.jpg",
+    "reviewDate": "13/02/2024",
+    "rating": "5.jpg",
+    "content": "Burger BBQ Pulled Pork là một sự kết hợp độc đáo giữa thịt lợn nướng mềm mại và sốt BBQ thơm ngon, tạo nên một trải nghiệm ẩm ướt và đậm đà. Thịt lợn được nấu chậm trong gia vị và sốt BBQ cho đến khi mềm và thấm đều, sau đó được đặt lên bánh mì và kèm theo các loại rau tươi. Với vị ngọt của sốt BBQ, vị béo của thịt lợn, và độ giòn của rau, mỗi miếng burger đều là một cú hit về hương vị. Đây là lựa chọn tuyệt vời cho những người yêu thích thực phẩm BBQ và muốn thưởng thức một loại burger độc đáo và đầy đặn. Tuy nhiên, cần lưu ý rằng sản phẩm này có thể không phù hợp cho những ai có hạn chế đạm trong khẩu phần ăn hoặc tuân thực ăn chay."
+  },
+  {
+    "reviewID": "rv003",
+    "userId": "us001",
+    "productID": 22,
+        "image": "12.jpg",
+    "reviewDate": "14/02/2024",
+    "rating": "5.jpg",
+    "content": "Burger gà kiểu Nhật Bản mang đến một sự kết hợp tinh tế giữa hương vị truyền thống của Nhật Bản và khẩu vị phương Tây. Thường được làm từ thịt gà tươi ngon, burger này thường được nướng hoặc chiên và kèm theo các thành phần như xà lách, cà chua, và sốt mayonnaise hoặc sốt teriyaki. Với vị ngọt dịu của sốt teriyaki và vị béo của thịt gà, burger gà kiểu Nhật Bản mang lại một trải nghiệm hương vị đa dạng và thú vị. Sự kết hợp giữa các thành phần đặc trưng của Nhật Bản và khẩu vị phương Tây tạo ra một burger độc đáo và hấp dẫn. Đây là lựa chọn tuyệt vời cho những ai muốn thưởng thức hương vị mới mẻ và độc đáo trong burger, đồng thời vẫn giữ được sự ngon miệng và thú vị."
+  },
+  {
+    "reviewID": "rv004",
+    "userId": "us001",
+    "productID": 25,
+        "image": "15.jpg",
+    "reviewDate": "16/02/2024",
+    "rating": "5.jpg",
+    "content": "Bacon & Egg Grilled Cheese Sandwich là một sự kết hợp tuyệt vời giữa vị béo ngậy của bơ, vị ngọt của bánh mì nướng giòn và hương vị đặc trưng của trứng và thịt ba rội. Khi ba rội được nướng giòn và trứng được chiên vừa đủ, chúng được đặt giữa hai lớp phô mai tan chảy, tạo ra một trải nghiệm thú vị đầy đặn. Với vị béo của bơ và phô mai, kết hợp với hương vị thơm ngon của thịt ba rội và lòng trắng trứng, mỗi miếng sandwich là một cú hit về hương vị. Đây là một lựa chọn tuyệt vời cho bữa sáng hoặc bữa ăn nhẹ, mang lại sự no nê và thỏa mãn vị giác. Tuy nhiên, cần lưu ý rằng sản phẩm này có thể có lượng calo và chất béo cao, vì vậy cần được tiêu thụ với sự cân nhắc đối với khẩu phần ăn hàng ngày."
+  },
+  {
+    "reviewID": "rv005",
+    "userId": "us001",
+    "productID": 14,
+        "image": "4.jpg",
+    "reviewDate": "17/02/2024",
+    "rating": "5.jpg",
+    "content": "Chicken nugget là một loại món ăn phổ biến, được làm từ thịt gà cắt nhỏ, bọc với lớp vỏ giòn và sau đó chiên hoặc nướng cho đến khi chín vàng và giòn. Với vị bên trong là thịt gà mềm mại và hấp dẫn, kết hợp với lớp vỏ giòn ngon miệng ở bên ngoài, chicken nugget là một lựa chọn ưa thích của nhiều người, đặc biệt là trẻ em. Chicken nugget thường được kèm theo sốt mayonnaise, sốt BBQ hoặc các loại sốt khác để tăng thêm hương vị. Đây là một món ăn nhẹ và tiện lợi, thích hợp cho bữa ăn sáng, bữa ăn nhẹ hoặc bữa ăn vặt. Tuy nhiên, cần lưu ý rằng chicken nugget có thể chứa một lượng chất béo và calo cao, nên cần được tiêu thụ một cách cân nhắc khi tính toán khẩu phần ăn hàng ngày."
+  },
+  {
+    "reviewID": "rv006",
+    "userId": "us001",
+    "productID": 20,
+        "image": "10.jpg",
+    "reviewDate": "29/02/2024",
+    "rating": "5.jpg",
+    "content": "The Classic Burger là biểu tượng của ẩm thực phương Tây, một lựa chọn vô cùng quen thuộc và được nhiều người ưa thích trên khắp thế giới. Một Classic Burger thường bao gồm một miếng thịt bò tươi ngon, được nướng hoặc chiên đến khi chín vàng, và được đặt giữa hai miếng bánh mì hamburger. Với vị thịt bò mềm mại, đậm đà, kết hợp với các loại rau, cà chua, cà rốt và hành tây, mỗi miếng burger là một biểu tượng của sự ngon miệng và đa dạng về hương vị. Sự kết hợp giữa thịt bò, rau và sốt, thường được kèm theo với phô mai tan chảy, tạo nên một trải nghiệm ẩm thực phong phú và thú vị. The Classic Burger thường được kèm theo các loại sốt như sốt mayo, sốt BBQ hoặc mustard để tăng thêm hương vị. Đây là một lựa chọn phổ biến cho bữa ăn trưa, tối hoặc bất kỳ dịp tiệc nào, và luôn là một món ăn thú vị và đầy đặn."
+  }
+]

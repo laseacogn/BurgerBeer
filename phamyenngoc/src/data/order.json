@@ -6,7 +6,7 @@
     "totalAmount": 120,
     "deliveryId": 1,
     "paymentId": 1,
-    "status": "delivered"
+    "status": "in transit"
   },
   {
     "orderID": "hd002",
@@ -15,7 +15,7 @@
     "totalAmount": 11,
     "deliveryId": 1,
     "paymentId": 1,
-    "status": "delivered"
+    "status": "canceled"
   },
   {
     "orderID": "hd003",
