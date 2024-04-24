@@ -173,9 +173,6 @@ function Header() {
               <Dropdown.Item className="text-sm font-sans font-medium">MY ACCOUNT</Dropdown.Item>
             </Link>
             <Link to="">
-              <Dropdown.Item className="text-sm font-sans font-medium">ORDER TRACKING</Dropdown.Item>
-            </Link>
-            <Link to="">
               <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>
             <Dropdown.Divider />

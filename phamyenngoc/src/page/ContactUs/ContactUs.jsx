@@ -82,24 +82,23 @@ export function ContactUs() {
             <div className="mt-[20px]">
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Full Name" className="font-sans font-medium text-[15px] text-black"/>
+                
               </div>
               <TextInput
-                id="name"
-                type="name"
+                id="email"
+                type="email"
                 icon={MdDriveFileRenameOutline }
                 placeholder="Enter your full name here..."
                 required
               />
             </div>
 
-            <div className="mt-[20px]">
-              <div className="mb-2 block">
-                <Label htmlFor="content" value="Content" className="font-sans font-medium text-[15px] text-black"/>
-              </div>
+            <div className="mt-[15px]">
+
               <TextInput
-                id="content"
-                type="content"
-                icon={ AiTwotoneMessage}
+                id="email"
+                type="email"
+                icon={""}
                 placeholder="Enter your content here..."
                 required
               />

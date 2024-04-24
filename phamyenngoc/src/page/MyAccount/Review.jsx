@@ -6,6 +6,7 @@ import { HiOutlineExclamationCircle } from "react-icons/hi";
 const Review = () => {
   const [openModal1, setOpenModal1] = useState(true);
   const [openModal2, setOpenModal2] = useState(true);
+  
 
   return (
     <div className="max-w-[1200px] mx-auto no-scrollbar">
