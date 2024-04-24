@@ -14,25 +14,33 @@ const Product = () => {
   const [categorieID, setCategoryID] = useState("");
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const totalProducts = dataProduct.length;
-        const itemsPerPage = 12;
+        const itemsPerPage = 10;
         const pages = Math.ceil(totalProducts / itemsPerPage);
         setTotalPages(pages);
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = Math.min(startIndex + itemsPerPage, totalProducts);
-        const productsForPage = dataProduct.slice(startIndex, endIndex);
-        setProducts(productsForPage);
+        let filteredProducts = dataProduct.slice(startIndex, endIndex);
+
+        if (searchTerm) {
+          filteredProducts = dataProduct.filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+
+        setProducts(filteredProducts);
       } catch (error) {
         console.log(error);
       }
     };
 
     fetchData();
-  }, [categorieID, currentPage]);
+  }, [categorieID, currentPage, searchTerm]);
 
   useEffect(() => {
     if (categorieID === "") {
@@ -44,6 +52,10 @@ const Product = () => {
       setProducts(filteredProducts);
     }
   }, [categorieID]);
+
+  const handleSearch = (value) => {
+    setSearchTerm(value);
+  };
 
   return (
     <div>
@@ -67,7 +79,7 @@ const Product = () => {
             </Link>
           </div>
 
-          <Search/>
+          <Search handleSearch={handleSearch} />
         </div>
 
         <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">

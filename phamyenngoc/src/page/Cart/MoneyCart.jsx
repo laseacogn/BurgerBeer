@@ -14,6 +14,13 @@ const MoneyCart = ({ product }) => {
     }
   };
 
+  const showAlert = () => {
+    alert(
+      "You've placed the order successfully.\n\n" +
+      "Thank you!"
+    );
+  };
+
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
     if (
       typeof originalPrice !== "number" ||
@@ -59,7 +66,9 @@ const MoneyCart = ({ product }) => {
       </div>
       <Button
         className="w-[350px] mt-[20px] ml-[100px] font-sans font-medium text-lg "
-        color="dark"
+        color="dark"  onClick={() => {
+                  showAlert();
+                }}
       >
         Submit
       </Button>

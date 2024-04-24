@@ -98,7 +98,7 @@ function Header() {
         </Navbar.Brand>
   
         <div className="flex md:order-2">
-          <Link to="/love">
+          <Link to="/wishlist">
             <div className="w-10 h-10 rounded-full border border-black flex items-center justify-center mr-3 mt-2 hover:bg-btnprimary hover:text-[#B4E9D6] ">
               <FaHeart />
             </div>

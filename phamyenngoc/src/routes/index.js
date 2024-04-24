@@ -1,12 +1,15 @@
 import { Home, Admin, ContactUs, Product, Login,
   Register, ComboDetail,  Cart, Cart2, ProductDetail,
-  AboutUs, Booking, MyAccount, 
+  AboutUs, Booking, MyAccount, Productt, Category,
+  Wishlist
 } from '../page';
 import { LayoutDefault, Layout } from '../layout';
 
 const router = [
   { path: '/contact', layout:Layout, component: ContactUs },
   { path: '/admin', component: Admin },
+  { path: '/productt', component: Productt },
+    { path: '/category', component: Category },
   { path: '/', layout:Layout, component: Home },
   { path: '/login', layout:Layout, component: Login },
   { path: '/register', component: Register },
@@ -23,6 +26,7 @@ const router = [
 
   { path: '/myaccount', layout:Layout, component: MyAccount },
 
+  { path: '/wishlist', layout:Layout, component: Wishlist },
 
 ];
 

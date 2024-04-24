@@ -1,7 +1,10 @@
 
 
+
 export { ContactUs } from './ContactUs/ContactUs';
 export { Admin } from './Admin/Admin';
+export { Productt } from './Admin/Product';
+export { Category } from './Admin/Category';
 
 export { default as MyAccount } from './MyAccount/MyAccount';
 
@@ -18,6 +21,7 @@ export { default as ComboDetail } from './Product/ComboDetail';
 export { default as ProductDetail } from './Product/ProductDetail';
 export { default as Booking } from './Booking/Booking';
 
+export { default as Wishlist } from './Wishlist/wishlist';
 
 // export { Product } from './Admin/Product';
 // export { Category } from './Admin/Category';

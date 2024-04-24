@@ -8,7 +8,8 @@ import { TiTicket } from 'react-icons/ti';
 import { Button, Modal, Checkbox, Table } from 'flowbite-react';
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
-export function Product() {
+export function Productt() {
+  
   const [openModal, setOpenModal] = useState(false);
 
   const [ID, setID] = useState('');

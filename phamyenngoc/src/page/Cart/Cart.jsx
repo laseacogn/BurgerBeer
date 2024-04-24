@@ -47,7 +47,7 @@ const Cart = () => {
               Delivery
             </Button>
           </Link>
-          <Link to="/cartt">
+          <Link to="/cart2">
             <Button className="w-[300px]" color="light">
               Self Pick-up
             </Button>

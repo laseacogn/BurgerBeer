@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { Button } from "flowbite-react";
 import { RiDeleteBinLine } from "react-icons/ri";
+import cartData from "../../data/cart.json"
 
-const ItemCart = ({ product }) => {
+const ItemCart = ({ product, index }) => {
+
+  const [products, setProducts] = useState([cartData]);
   const [quantity, setQuantity] = useState(1);
+
+  const handleDelete = (index) => {
+    const updatedProducts = products.filter((_, i) => i !== index);
+    setProducts(updatedProducts);
+  };
 
   const handleIncrease = () => {
     setQuantity(quantity + 1);
@@ -25,7 +33,7 @@ const ItemCart = ({ product }) => {
   };
 
   const totalPrice = (calculateDiscountedPrice(product.originalPrice, product.discountPercent) * quantity).toFixed(2);
-
+  
   return (
     <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
       <img
@@ -105,6 +113,7 @@ const ItemCart = ({ product }) => {
             id="decrement-button"
             data-input-counter-decrement="counter-input"
             className="bg-gray-100 h-7 px-3 rounded flex items-center hover:text-white hover:bg-red-500 mr-4"
+            onClick={() => handleDelete(index)}
           >
             <RiDeleteBinLine className="mr-2" />
             Delete

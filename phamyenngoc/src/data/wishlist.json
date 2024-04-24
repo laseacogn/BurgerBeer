@@ -1,0 +1,164 @@
+[
+    {
+        "id": 16,
+        "name": "BBQ Pull Pork Burger",
+        "categoryId": 3,
+        "image": "6.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"The BBQ Pulled Pork Burger from Burger N' Beer is a mouthwatering delight that brings together the smoky, savory flavors of barbecue pulled pork with the satisfying indulgence of a burger. Here's a description: Imagine sinking your teeth into a soft, toasted brioche bun, perfectly holding together a generous heap of tender, slow-cooked pulled pork, bathed in rich, tangy barbecue sauce. The pork is so tender it practically melts in your mouth, with every bite bursting with a harmonious blend of sweet and savory flavors. Topping off this masterpiece are crisp, fresh lettuce leaves and slices of juicy tomatoes, adding a refreshing crunch and a burst of freshness that perfectly complements the hearty richness of the pork. Each bite is a journey through layers of flavor and texture, from the succulent pork to the crisp vegetables, all held together by the buttery bun. Whether you're a barbecue aficionado or a burger enthusiast, the BBQ Pulled Pork Burger from Burger N' Beer is sure to satisfy your cravings and leave you craving for more."
+    },
+    {
+        "id": 17,
+        "name": "Cheese Burger",
+        "categoryId": 3,
+        "image": "7.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"At Burger N' Beer, the Cheeseburger is an iconic classic promising to delight your taste buds with its unbeatable combination of juicy beef, gooey cheese, and fresh ingredients. Imagine a soft, golden-brown brioche bun sandwiching a perfectly grilled, tender, and flavorful beef patty, meticulously seasoned and grilled to perfection. As you sink your teeth into the first bite, you'll experience the aromatic blend of beef mingling with the enticing aroma of the grill. But the star of the show is undoubtedly the cheese – warm, melted, enveloping and embracing every inch of the beef patty in a velvety layer of creaminess. Whether it's classic American cheese, sharp cheddar, or soft mozzarella, the cheese adds a rich flavor that elevates the burger to new heights of perfection."
+    },
+    {
+        "id": 18,
+        "name": "Double Cheese Burger",
+        "categoryId": 3,
+        "image": "8.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 10,
+        "description":"As you step into Burger N' Beer, prepare yourself for a culinary adventure like no other. Our menu boasts an array of mouthwatering delights, each crafted with the finest ingredients and a passion for flavor. Whether you're craving the classic simplicity of a Cheeseburger or the bold indulgence of a Double Cheeseburger, we've got something to satisfy every appetite. Each bite is a journey through layers of taste and texture, leaving you craving more with every mouthful. So come on in, take a seat, and prepare to experience burger perfection at Burger N' Beer."
+    },
+    {
+        "id": 19,
+        "name": "Bacon & Egg Burger",
+        "categoryId": 3,
+        "image": "9.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"Sink your teeth into the savory goodness of the Bacon & Egg Burger at Burger N' Beer, where breakfast meets burger in a delicious fusion of flavors. Picture a perfectly grilled beef patty topped with crispy bacon strips, a golden sunny-side-up egg, and a slice of gooey melted cheese, all nestled between two fluffy brioche buns. With each bite, you'll experience the smoky saltiness of the bacon, the richness of the egg yolk, and the juicy tenderness of the beef, all coming together in a symphony of taste. Whether you're starting your day off right or craving breakfast for dinner, the Bacon & Egg Burger is sure to satisfy your hunger and leave you craving for more."
+    },
+    {
+        "id": 20,
+        "name": "The Classic Burger",
+        "categoryId": 3,
+        "image": "10.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15,
+        "description":"Indulge in the timeless deliciousness of the Classic Burger at Burger N' Beer, where simplicity meets perfection. Imagine sinking your teeth into a juicy beef patty, grilled to perfection and nestled between two soft, toasted brioche buns. Each bite is a celebration of flavor, with the savory richness of the beef complemented by the fresh crunch of lettuce, slices of ripe tomato, and tangy pickles. Topped off with a dollop of our signature Burger N' Beer sauce, this burger is a true classic that never goes out of style. Whether you're a burger connoisseur or simply craving a taste of nostalgia, the Classic Burger is sure to hit the spot every time."
+    },
+    {
+        "id": 21,
+        "name": "Fries Fish Burger",
+        "categoryId": 3,
+        "image": "11.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15,
+        "description":"Dive into a delightful combination of flavors with the Fries Fish Burger from Burger N' Beer. Picture a crispy, golden-brown fish fillet, fried to perfection and nestled between two soft brioche buns. Each bite offers a symphony of textures, from the crunch of the batter to the tender flakiness of the fish inside. But what sets this burger apart is the addition of a generous helping of thick-cut fries right inside the bun, adding a delightful crunch and an extra layer of indulgence. Topped with crisp lettuce, juicy tomato slices, and a tangy tartar sauce, this burger is a seafood lover's dream come true. Whether you're craving a taste of the coast or simply looking for something a little different, the Fries Fish Burger is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 22,
+        "name": "Japanese Chicken Burger",
+        "categoryId": 3,
+        "image": "12.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5,
+        "description":"Transport your taste buds to the vibrant streets of Japan with Burger N' Beer's Japanese Chicken Burger. This culinary masterpiece combines the bold flavors of Japanese cuisine with the comforting indulgence of a classic burger. Picture a tender, juicy chicken patty, marinated in a savory blend of soy sauce, ginger, and garlic, perfectly grilled to seal in all the delicious flavors. Nestled between two fluffy brioche buns, the chicken patty is accompanied by a symphony of toppings inspired by Japanese cuisine. Crisp lettuce, slices of fresh cucumber, and tangy pickled ginger add a refreshing crunch, while a drizzle of creamy Japanese-style mayonnaise and a sprinkle of sesame seeds elevate the burger to new heights of flavor. With each bite, you'll be transported to the bustling streets of Tokyo, where bold flavors and culinary innovation reign supreme. Whether you're a fan of Japanese cuisine or simply looking to tantalize your taste buds with something new, the Japanese Chicken Burger is sure to delight and satisfy."
+    },
+    {
+        "id": 23,
+        "name": "Black Bean Burger",
+        "categoryId": 3,
+        "image": "13.jpg",
+        "originalPrice": 70.00,
+        "discountPercent": 10,
+        "description":"Savor the wholesome goodness of the Black Bean Burger at Burger N' Beer, a delicious option that's perfect for vegetarians and burger enthusiasts alike. Imagine sinking your teeth into a hearty black bean patty, crafted from a flavorful blend of black beans, spices, and herbs, all held together in a perfectly grilled brioche bun. Each bite offers a symphony of flavors and textures, with the earthy richness of the black beans complemented by the subtle heat of spices and the savory goodness of the grill. Topped with crisp lettuce, juicy tomato slices, and creamy avocado, this burger is a celebration of fresh ingredients and bold flavors. Whether you're a devoted vegetarian or simply looking to expand your culinary horizons, the Black Bean Burger is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 24,
+        "name": "Chicken Club Sandwich",
+        "categoryId": 4,
+        "image": "14.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 15,
+        "description":"Get ready to indulge in the ultimate comfort food experience with the Chicken Club Sandwich at Burger N' Beer. This iconic sandwich combines tender, juicy grilled chicken breast with crispy bacon, fresh lettuce, ripe tomato slices, and creamy mayonnaise, all layered between slices of toasted bread. Each bite offers a perfect balance of flavors and textures, with the smoky saltiness of the bacon complementing the savory goodness of the chicken. The crisp lettuce and juicy tomatoes add a refreshing crunch, while the creamy mayonnaise brings everything together in a symphony of taste. Whether you're craving a satisfying lunch or a hearty dinner, the Chicken Club Sandwich is sure to hit the spot every time."
+    },
+    {
+        "id": 25,
+        "name": "Bacon & Egg Grilled Cheese Sandwich",
+        "categoryId": 4,
+        "image": "15.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5,
+        "description":"Elevate your breakfast game with the Bacon & Egg Grilled Cheese Sandwich from Burger N' Beer. This mouthwatering creation combines the classic comfort of a grilled cheese sandwich with the indulgent flavors of bacon and eggs. Imagine biting into a perfectly grilled sandwich oozing with melted cheese, crispy bacon, and a golden, gooey fried egg. Each bite offers a heavenly combination of savory, smoky, and creamy flavors that will tantalize your taste buds. Whether you're starting your day off right or craving a satisfying brunch, the Bacon & Egg Grilled Cheese Sandwich is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 26,
+        "name": "Carnitas & Corn Pizza",
+        "categoryId": 5,
+        "image": "16.jpg",
+        "originalPrice": 130.00,
+        "discountPercent": 10,
+        "description":"Treat your taste buds to a fiesta of flavors with the Carnitas & Corn Pizza from Burger N' Beer. This tantalizing creation brings together the savory goodness of carnitas with the sweetness of corn for a pizza experience like no other. Picture a crispy, golden crust topped with tender, slow-cooked carnitas, juicy corn kernels, and a blend of melted cheeses. Each slice is a symphony of flavors, with the rich, savory pork complemented by the sweet pop of corn and the gooey goodness of melted cheese. Whether you're enjoying it as a meal on its own or sharing it with friends, the Carnitas & Corn Pizza is sure to be a hit at any gathering."
+    },
+    {
+        "id": 27,
+        "name": "Hawaiian Pizza",
+        "categoryId": 5,
+        "image": "17.jpg",
+        "originalPrice": 130.00,
+        "discountPercent": 10,
+        "description":"Indulge in a taste of the tropics with the Hawaiian Pizza from Burger N' Beer. This classic favorite combines the savory flavors of ham and bacon with the sweetness of pineapple for a truly delightful culinary experience. Picture a crispy, golden crust topped with tangy tomato sauce, gooey melted cheese, savory ham, crispy bacon, and juicy pineapple chunks. Each bite is a perfect balance of sweet and savory, with the tropical sweetness of the pineapple complementing the salty richness of the ham and bacon. Whether you're enjoying it as a meal on its own or sharing it with friends, the Hawaiian Pizza is sure to transport your taste buds to paradise."
+    },
+    {
+        "id": 28,
+        "name": "Cheese Pizza",
+        "categoryId": 5,
+        "image": "18.jpg",
+        "originalPrice": 160.00,
+        "discountPercent": 15,
+        "description":"Savor the simplicity and timeless appeal of the Cheese Pizza at Burger N' Beer. This classic favorite celebrates the beauty of minimalism, allowing the quality of the ingredients to shine. Picture a golden-brown crust topped with a generous layer of tangy tomato sauce and a melty blanket of gooey mozzarella cheese. Each bite is a symphony of flavors, with the savory richness of the cheese perfectly complementing the bright acidity of the tomato sauce. Whether you're a purist who appreciates the classics or simply craving a delicious slice of pizza, the Cheese Pizza at Burger N' Beer is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 29,
+        "name": "Carnitas Hotdog",
+        "categoryId": 6,
+        "image": "19.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5,
+        "description":"Treat your taste buds to a flavor-packed fiesta with the Carnitas Hotdog from Burger N' Beer. This mouthwatering creation combines the smoky richness of carnitas with the classic comfort of a hotdog. Imagine sinking your teeth into a juicy hotdog nestled in a soft, toasted bun, topped with tender, slow-cooked carnitas. Each bite bursts with savory goodness, with the bold flavors of the carnitas blending perfectly with the juicy hotdog. Topped with your favorite condiments and served with a side of crispy fries or crunchy coleslaw, the Carnitas Hotdog is a delicious twist on a classic favorite that's sure to leave you craving more."
+    },
+    {
+        "id": 30,
+        "name": "Meaty & Bacon Cheese Hotdog",
+        "categoryId": 6,
+        "image": "20.jpg",
+        "originalPrice": 100.00,
+        "discountPercent": 10,
+        "description":"Prepare your taste buds for a flavor explosion with the Meaty & Bacon Cheese Hotdog from Burger N' Beer. This indulgent creation takes the classic hotdog to new heights with a hearty dose of meaty goodness and crispy bacon. Imagine sinking your teeth into a juicy hotdog nestled in a warm, toasted bun, generously topped with savory meats like pepperoni, sausage, and bacon. Each bite is a symphony of flavors, with the smoky richness of the bacon complementing the bold, meaty goodness of the toppings. And let's not forget about the gooey melted cheese that ties everything together in a blanket of creamy deliciousness. Served with your choice of condiments and a side of crispy fries or crunchy coleslaw, the Meaty & Bacon Cheese Hotdog is a carnivore's dream come true."
+    },
+    {
+        "id": 31,
+        "name": "Vietnamese Baguette Chasiu",
+        "categoryId": 7,
+        "image": "21.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 5,
+        "description":"Experience the fusion of Vietnamese and Chinese flavors with the Vietnamese Baguette Chasiu at Burger N' Beer. This delectable creation combines the iconic Vietnamese baguette with the savory sweetness of chasiu, a traditional Chinese barbecued pork. Imagine sinking your teeth into a crispy, flaky baguette, generously filled with succulent slices of tender chasiu pork, marinated in a blend of aromatic spices and sauces. Each bite is a harmony of flavors, with the smoky richness of the pork complemented by the freshness of pickled vegetables, fragrant herbs, and a drizzle of tangy sauce. Whether you're craving a taste of Vietnam or simply looking for a delicious and satisfying meal, the Vietnamese Baguette Chasiu is sure to tantalize your taste buds and leave you craving for more."
+    },
+    {
+        "id": 32,
+        "name": "Vietnamese Baguette Grilled Pork",
+        "categoryId": 7,
+        "image": "22.jpg",
+        "originalPrice": 30.00,
+        "discountPercent": 5,
+        "description":"Indulge in the tantalizing flavors of Vietnam with the Vietnamese Baguette Grilled Pork at Burger N' Beer. This mouthwatering creation combines the crispy texture of a traditional Vietnamese baguette with the savory goodness of grilled pork. Picture sinking your teeth into a warm, crusty baguette, filled with succulent slices of tender grilled pork, marinated in a blend of aromatic spices and herbs. Each bite is a symphony of flavors, with the smoky richness of the pork complemented by the freshness of crisp vegetables, fragrant herbs, and a drizzle of tangy sauce. Whether you're craving a taste of Vietnam or simply looking for a delicious and satisfying meal, the Vietnamese Baguette Grilled Pork is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 33,
+        "name": "Vietnamese Baguette Mixed",
+        "categoryId": 7,
+        "image": "23.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5,
+        "description":"Delight in the diverse flavors of Vietnam with the Vietnamese Baguette Mixed at Burger N' Beer. This culinary masterpiece combines the best of Vietnamese cuisine into one irresistible package. Imagine sinking your teeth into a crispy, golden-brown baguette, generously filled with an array of savory delights. From tender grilled pork and succulent chasiu to flavorful slices of Vietnamese sausage and crunchy pickled vegetables, each bite offers a symphony of flavors and textures. Fragrant herbs, crisp lettuce, and a drizzle of tangy sauce complete this culinary adventure, transporting your taste buds to the bustling streets of Vietnam. Whether you're a fan of grilled meats, crave the sweetness of chasiu, or savor the tangy pickles, the Vietnamese Baguette Mixed is sure to satisfy your cravings and leave you craving for more."
+    }
+]
