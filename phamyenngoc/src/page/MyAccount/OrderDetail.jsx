@@ -9,11 +9,12 @@ import { GiAlarmClock } from "react-icons/gi";
 import { BiSolidDiscount } from "react-icons/bi";
 import AddReview from "./AddReview";
 import { MdCheckCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const OrderDetail = () => {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
-  const [openModal2, setOpenModal2] = useState(true);
+  const [openModal2, setOpenModal2] = useState(false);
 
   const [deliveryStatus, setDeliveryStatus] = useState(
     "Order Has Been Completed"
@@ -132,7 +133,7 @@ const OrderDetail = () => {
                                   shopping experience to our customers.
                                   <br />
                                   <p className="flex">
-                                    <BiSolidDiscount className="w-[15px] h-[15px] text-gray-700" />
+                                    <BiSolidDiscount className="w-[15px] h-[15px] mt-[2.5px] text-gray-700" />
                                     Receive a Voucher worth $10.00 if your order
                                     is deliveried to you after 11:59 p.m on
                                     April 20, 2024.
@@ -157,8 +158,8 @@ const OrderDetail = () => {
                     >
                       Evaluate
                     </Button>
-                    <Modal show={openModal} onClose={() => setOpenModal(false)}>
-                      <Modal.Header>Terms of Service</Modal.Header>
+                    <Modal show={openModal} onClose={() => setOpenModal(false)} >
+                      <Modal.Header className="h-[50px] pt-[10px]">Product Reviews</Modal.Header>
                       <Modal.Body className="no-scrollbar">
                         <AddReview />
                       </Modal.Body>
@@ -195,12 +196,14 @@ const OrderDetail = () => {
                         </Button>
                       </Modal.Footer>
                     </Modal>
+                    <Link to="/product">
                     <Button
                       className="w-[150px] h-[35px] font-sans text-[25px] font-semibold rounded-none mt-[10px] justify-center items-center"
                       color={"light"}
                     >
                       Repurchase
                     </Button>
+                    </Link>
                   </div>
                 </div>
 

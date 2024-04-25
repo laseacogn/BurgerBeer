@@ -94,7 +94,10 @@ export function ContactUs() {
             </div>
 
             <div className="mt-[15px]">
-
+              <div className="mb-2 block">
+                <Label htmlFor="name" value="Content" className="font-sans font-medium text-[15px] text-black"/>
+                
+              </div>
               <TextInput
                 id="email"
                 type="email"

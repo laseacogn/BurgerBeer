@@ -4,8 +4,8 @@ import { Accordion } from "flowbite-react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 const Review = () => {
-  const [openModal1, setOpenModal1] = useState(true);
-  const [openModal2, setOpenModal2] = useState(true);
+  const [openModal1, setOpenModal1] = useState(false);
+  const [openModal2, setOpenModal2] = useState(false);
   
 
   return (

@@ -1,118 +1,121 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Carousel, Button} from "flowbite-react";
+import { Carousel, Button } from "flowbite-react";
 import { HiShoppingCart } from "react-icons/hi";
 import { RiTableAltFill } from "react-icons/ri";
-
 
 const Home = () => {
   return (
     <>
       <div className="max-w-[1200px] mx-auto ">
         <div className="w-full h-724 sm:h-[724px] xl:h-[724px] 2xl:h-[724px]">
-          <Carousel slide={false}>
+          <Carousel slide={true}>
+            <div
+              style={{
+                position: "relative",
+                width: "1200px",
+                height: "724px",
+                zIndex: "1",
+                marginLeft: "0px",
+              }}
+            >
+              <img
+                src={require(`./pic1.jpg`)}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
+              />
               <div
                 style={{
-                  position: "relative",
-                  width: "1200px",
-                  height: "724px",
-                  zIndex: "1",
-                  marginLeft: "0px",
+                  position: "absolute",
+                  top: "-15px",
+                  left: "-15px",
+                  zIndex: "2",
                 }}
               >
                 <img
-                  src={require(`./pic1.jpg`)}
+                  src={require(`./web_logo.png`)}
                   alt=""
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "300px" }}
                 />
-                <div
+                <p
                   style={{
-                    position: "absolute",
-                    top: "-15px",
-                    left: "-15px",
-                    zIndex: "2",
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: "200",
+                    fontStyle: "italic",
+                    fontSize: "80px",
+                    textAlign: "center",
+                    marginTop: "-230px",
+                    marginLeft: "555px",
+                    color: "#FFFFFF",
                   }}
                 >
-                  <img
-                    src={require(`./web_logo.png`)}
-                    alt=""
-                    style={{ width: "300px" }}
-                  />
+                  Burger n’ Beer
+                </p>
+                <div
+                  style={{
+                    top: "200px",
+                    left: "165px",
+                    width: "890px",
+                    height: "90px",
+                    position: "relative",
+                    zIndex: "1",
+                    backgroundColor: "#171916",
+                    opacity: "0.65",
+                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
                   <p
                     style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontWeight: "200",
-                      fontStyle: "italic",
-                      fontSize: "80px",
-                      textAlign: "center",
-                      marginTop: "-230px",
-                      marginLeft: "555px",
-                      color: "#FFFFFF",
-                    }}
-                  >
-                    Burger n’ Beer
-                  </p>
-                  <div
-                    style={{
-                      top: "200px",
-                      left: "165px",
-                      width: "890px",
+                      width: "830px",
                       height: "90px",
-                      position: "relative",
-                      zIndex: "1",
-                      backgroundColor: "#171916",
-                      opacity: "0.65",
-                      boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                      fontWeight: "600",
+                      fontSize: "20px",
+                      textAlign: "center",
+                      lineHeight: "1.5",
+                      color: "#fff",
+                      position: "absolute",
+                      top: "65%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
                     }}
                   >
-                    <p
-                      style={{
-                        width: "830px",
-                        height: "90px",
-                        fontWeight: "600",
-                        fontSize: "20px",
-                        textAlign: "center",
-                        lineHeight: "1.5",
-                        color: "#fff",
-                        position: "absolute",
-                        top: "65%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    >
-                      {" "}
-                      A restaurant in 31 An Thuong 4, Da Nang, specializing in
-                      burgers, sandwiches, hotdogs, pizza, and fried, is proudly
-                      family-owned and centrally situated in the heart of the
-                      city.
-                    </p>
-                  </div>
-                    
-                   
-                  
+                    {" "}
+                    A restaurant in 31 An Thuong 4, Da Nang, specializing in
+                    burgers, sandwiches, hotdogs, pizza, and fried, is proudly
+                    family-owned and centrally situated in the heart of the
+                    city.
+                  </p>
+                </div>
 
                 <div>
                   <div className="flex mt-[225px] ml-[355px]">
-          <Link to="/product">
-            <Button className="w-[250px] mr-[20px]" color="dark">
-              <HiShoppingCart className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
-              <p class="text-lg font-sans font-bold justify-center items-center">Order Now</p>
-            </Button>
-          </Link>
-          <Link to="/booking">
-            <Button className="w-[250px]" color="dark">
-              <RiTableAltFill className="mr-2 h-7 w-7" style={{ cursor: "pointer" }} />
-              <p class="text-lg font-sans font-bold justify-center items-center">Reservations</p>
-            </Button>
-          </Link>
-        </div>
-                </div>
+                    <Link to="/product">
+                      <Button className="w-[250px] mr-[20px]" color="dark">
+                        <HiShoppingCart
+                          className="mr-2 h-7 w-7"
+                          style={{ cursor: "pointer" }}
+                        />
+                        <p class="text-lg font-sans font-bold justify-center items-center">
+                          Order Now
+                        </p>
+                      </Button>
+                    </Link>
+                    <Link to="/booking">
+                      <Button className="w-[250px]" color="dark">
+                        <RiTableAltFill
+                          className="mr-2 h-7 w-7"
+                          style={{ cursor: "pointer" }}
+                        />
+                        <p class="text-lg font-sans font-bold justify-center items-center">
+                          Reservations
+                        </p>
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            <img
-              src={require(`../../assets/image/home/1.jpg`)}
-              alt="..."
-            />
+            </div>
+            <img className="w-[1200px] h-[724px]" src={require(`../../assets/image/home/1.jpg`)} alt="..." />
             <img
               src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
               alt="..."
@@ -317,7 +320,8 @@ const Home = () => {
           </div>
           <div className="mb-4 w-[960px] h-[200px] relative bg-[#b81a1acf] rounded-2xl mt-36">
             <div>
-              <p style={{
+              <p
+                style={{
                   position: "absolute",
                   width: "960px",
                   height: "200px",
@@ -332,11 +336,13 @@ const Home = () => {
                   alignItems: "center",
                   textAlign: "center",
                   color: "#FFFFFF",
-                }}>
+                }}
+              >
                 {" "}
                 OUR HAPPY CUSTOMERS
               </p>
-              <p style={{
+              <p
+                style={{
                   position: "absolute",
                   width: "750px",
                   height: "200px",
@@ -351,7 +357,8 @@ const Home = () => {
                   alignItems: "center",
                   textAlign: "center",
                   color: "#FFFFFF",
-                }}>
+                }}
+              >
                 {" "}
                 Have been there several times now. I am always impressed with
                 the service and food quality. All of the employees are young but

@@ -8,7 +8,7 @@ import { Pagination } from "flowbite-react";
 const Wishlist = () => {
   const [products, setProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 

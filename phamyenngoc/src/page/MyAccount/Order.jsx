@@ -6,7 +6,7 @@ import OrderDetail from "./OrderDetail";
 
 const Order = () => {
   const [order, setOrder] = useState(orderData);
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal10, setOpenModal10] = useState(false);
   return (
     <div className="max-w-[1200px] mx-auto no-scrollbar">
       <div className="w-[95%] ml-[30px] bg-white border-b-[1px] border-[#ffffff] mb-2 mljustify-center items-center">
@@ -23,7 +23,7 @@ const Order = () => {
             </ol>
             {order.map((value) => {
               return (
-                <div onClick={() => setOpenModal(true)}>
+                <div onClick={() => setOpenModal10(true)}>
                   <ol className=" border-b hover:bg-sky-200  ease-in duration-200 grid grid-cols-7 gap-4 justify-center items-center text-center px-4 py-1 uppercase">
                     <li>{value.orderID}</li>
                     <li>{value.deliveryId}</li>
@@ -39,8 +39,8 @@ const Order = () => {
                 </div>
               );
             })}
-            <Modal show={openModal} onClose={() => setOpenModal(false)} className="no-scrollbar">
-              <Modal.Header className="h-[50px] text-center mb-[-10px]">Order Detail</Modal.Header>
+            <Modal show={openModal10} onClose={() => setOpenModal10(false)} className="no-scrollbar">
+              <Modal.Header className="h-[50px] pt-[10px]">Order Tracking</Modal.Header>
               <Modal.Body className="no-scrollbar">
                 <OrderDetail/>
               </Modal.Body>

@@ -5,7 +5,7 @@ import dataProduct from "../../data/product.json";
 import { Pagination } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
 
 const Product = () => {
@@ -63,20 +63,20 @@ const Product = () => {
         <div className="w-full flex justify-between items-center">
           <div className="flex">
             <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <Link to="./">
+            <NavLink to="/">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Home{" "}
               </p>
-            </Link>
+            </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <Link to="./product">
+            <NavLink to="/product">
               <p className="font-inter font-bold text-[20px] mb-[20px]">
                 {" "}
                 Products
               </p>
-            </Link>
+            </NavLink>
           </div>
 
           <Search handleSearch={handleSearch} />

@@ -17,6 +17,7 @@ const ItemProduct = (product) => {
   };
   const [showButtons, setShowButtons] = useState(false);
 
+
   return (
     <div
       className="w-60 flex item-center flex-col mx-auto "

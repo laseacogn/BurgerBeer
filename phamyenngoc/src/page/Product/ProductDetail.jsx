@@ -8,8 +8,9 @@ import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
+import Revieww from "./Revieww";
 
 export default function ProductDT() {
   const [products, setProducts] = useState([]);
@@ -56,28 +57,26 @@ export default function ProductDT() {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <Link to="./">
+            <NavLink to="/">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Home{" "}
               </p>
-            </Link>
+            </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <Link to="./product">
+            <NavLink to="/product">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Products
               </p>
-            </Link>
+            </NavLink>
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
             {prd && (
-              <Link to="./product">
                 <p className="font-inter font-bold text-[20px] mb-[20px]">
                   {" "}
                   {prd.name}
                 </p>
-              </Link>
             )}
             </div>
             <Search/>
@@ -136,7 +135,7 @@ export default function ProductDT() {
               borderRadius: "15px",
             }}
           >
-            <div className="w-full flex pt-[5px]">
+            <div className="w-full flex pt-[-15px]">
               {prd && (
                 <img
                   src={require(`../../assets/image/Burger/${prd.image}`)}
@@ -150,7 +149,7 @@ export default function ProductDT() {
                 style={{
                   marginLeft: "auto",
                   marginRight: "auto",
-                  marginTop: "50px",
+                  marginTop: "20px",
                 }}
               >
                 {prd && (
@@ -426,6 +425,7 @@ export default function ProductDT() {
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
               >
+                <Revieww/>
                 <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"></p>
               </Tabs.Item>
             </Tabs>
