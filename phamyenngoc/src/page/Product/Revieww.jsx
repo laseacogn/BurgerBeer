@@ -11,6 +11,16 @@ const Revieww = () => {
     const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [enlargedImage, setEnlargedImage] = useState(null);
+  
+  const handleImageClick = (imageSrc) => {
+    setEnlargedImage(imageSrc);
+  };
+
+  const handleCloseEnlargedImage = () => {
+    setEnlargedImage(null);
+  };
+
    useEffect(() => {
     const fetchData = async () => {
       try {
@@ -59,18 +69,34 @@ const Revieww = () => {
                     <img
                       src={require(`../../assets/image/Review/${review.image1}`)}
                       alt={review.name}
+                       onClick={() => handleImageClick(review.image1)}
+                style={{ cursor: 'pointer' }}
                     />
                     <img
                       className='ml-[15px]'
                       src={require(`../../assets/image/Review/${review.image2}`)}
                       alt={review.name}
+                       onClick={() => handleImageClick(review.image2)}
+                style={{ cursor: 'pointer' }}
                     />
                     <img
                       className='ml-[15px]'
                       src={require(`../../assets/image/Review/${review.image3}`)}
                       alt={review.name}
+                       onClick={() => handleImageClick(review.image3)}
+                style={{ cursor: 'pointer' }}
                     />
                 </div>
+              {enlargedImage && (
+   
+      <img
+        src={require(`../../assets/image/Review/${enlargedImage}`)}
+        alt="Enlarged Image"
+        className="w-[300px] h-[300px] mt-[-20px] ml-[100px]"
+        onClick={handleCloseEnlargedImage}
+        style={{ cursor: 'pointer' }}
+      />
+  )}
                 
             </div>
               ))}
@@ -85,6 +111,7 @@ const Revieww = () => {
       </div>
 
         </div>
+         
     </div>
   )
 }

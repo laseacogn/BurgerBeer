@@ -1,10 +1,19 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { toast } from "react-toastify";
+import {
+    ref,
+    uploadBytes,
+    getDownloadURL,
+    deleteObject,
+} from "firebase/storage";
+import { storage } from "../config/firebase.config";
+import { v4 } from "uuid";
 
 
 const MethodContext = createContext({});
 
 export const MethodProvider = ({ children }) => {
+    const [location, setLocation] = useState("");
     const formatDateTime = (dateTimeString) => {
         if (!dateTimeString) {
             return "Không có thời gian";
@@ -114,6 +123,44 @@ export const MethodProvider = ({ children }) => {
     //         console.error("Error writing file:", error);
     //     }
     // };
+    //upload file
+    const uploadFile = async (imageUploads) => {
+        try {
+            const imageIds = [];
+            const imageURLs = [];
+            for (const imageUpload of imageUploads) {
+                const imageId = v4();
+                const imageRef = ref(storage, `/Blog2/${imageId}`);
+                const snapshot = await uploadBytes(imageRef, imageUpload);
+                const url = await getDownloadURL(snapshot.ref);
+                imageIds.push(imageId);
+                imageURLs.push(url);
+            }
+            return { imageIds, imageURLs };
+        } catch (error) {
+            console.error("Error uploading images: ", error);
+            throw error;
+        }
+        console.log(location); 
+    };
+    const deleteImage = async (imageIds) => {
+        try {
+            const deletePromises = imageIds.map(async (imageId) => {
+                const imageRef = ref(storage, `/Blog2/${imageId.id}`);
+                await deleteObject(imageRef);
+                // console.log(`Image ${imageId.id} deleted successfully.`);
+                return imageId.id;
+            });
+
+            const deletedImageIds = await Promise.all(deletePromises);
+            console.log("Deleted Image IDs:", deletedImageIds);
+
+            return deletedImageIds;
+        } catch (error) {
+            console.error("Error deleting images: ", error);
+            throw error;
+        }
+    };
 
     return (
         <MethodContext.Provider
@@ -124,6 +171,8 @@ export const MethodProvider = ({ children }) => {
                 notify,
                 toastLoadingId,
                 toastUpdateLoadingId,
+                uploadFile,
+                deleteImage
                 // readFile,
                 // writeFile,
             }}

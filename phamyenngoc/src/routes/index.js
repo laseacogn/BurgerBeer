@@ -1,7 +1,8 @@
 import { Home, Admin, ContactUs, Product, Login,
   Register, ComboDetail,  Cart, Cart2, ProductDetail,
   AboutUs, Booking, MyAccount, Productt, Category,
-  Wishlist
+  Wishlist, 
+  Adminn, Categoryy, ItemList, UserManage, OrderManage, Voucherr
 } from '../page';
 import { LayoutDefault, Layout } from '../layout';
 
@@ -27,6 +28,13 @@ const router = [
   { path: '/myaccount', layout:Layout, component: MyAccount },
 
   { path: '/wishlist', layout:Layout, component: Wishlist },
+
+  { path: '/corporate_account', layout:Layout, component: Adminn },
+  { path: '/user_manage', layout:Layout, component: UserManage },
+  { path: '/category_manage', layout:Layout, component: Categoryy },
+  { path: '/item_list', layout:Layout, component: ItemList },
+  { path: '/voucher_manage', layout:Layout, component: Voucherr },
+  { path: '/order_manage', layout:Layout, component: OrderManage },
 
 ];
 

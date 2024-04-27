@@ -8,15 +8,26 @@ import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
 import Revieww from "./Revieww";
+
 
 export default function ProductDT() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const showAlert1 = () => {
+    alert(
+      "The product has been added to cart!"
+    );
+  };
+  const showAlert2 = () => {
+    alert(
+      "The product has been added to wishlist!"
+    );
+  };
 
   useEffect(() => {
     if (categorieID === "") {
@@ -305,7 +316,7 @@ export default function ProductDT() {
                 )}
                 {prd && (
                   <div className="flex mt-3">
-                    <div
+                    <Button className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -317,11 +328,14 @@ export default function ProductDT() {
                         lineHeight: "42.5px",
                         cursor: "pointer",
                       }}
+                       onClick={() => {
+              showAlert1();
+            }}
                     >
                       {" "}
                       ADD TO CART{" "}
-                    </div>
-                    <div
+                    </Button>
+                    <Button className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -335,10 +349,13 @@ export default function ProductDT() {
                         cursor: "pointer",
                         marginLeft: "30px",
                       }}
+                      onClick={() => {
+              showAlert2();
+            }}
                     >
                       {" "}
                       ADD TO WISH LIST{" "}
-                    </div>
+                    </Button>
                   </div>
                 )}
                 {prd && (

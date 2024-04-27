@@ -23,6 +23,14 @@ export { default as Booking } from './Booking/Booking';
 
 export { default as Wishlist } from './Wishlist/wishlist';
 
+export { default as Adminn } from './Corporate_Account/Adminn';
+export { default as Categoryy } from './Corporate_Account/Categoryy';
+export { ItemList } from './Corporate_Account/ItemList';
+export { default as OrderManage } from './Corporate_Account/OrderManage';
+export { default as UserManage } from './Corporate_Account/UserManage';
+export { default as Voucherr } from './Corporate_Account/Voucherr';
+
+
 // export { Product } from './Admin/Product';
 // export { Category } from './Admin/Category';
 // export { Category_Baguette } from './Admin/Category';

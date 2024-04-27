@@ -176,7 +176,7 @@ function Header() {
               <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Link to="">
+            <Link to="/corporate_account">
             <Dropdown.Item className="text-sm font-sans font-medium">CORPORATE ACCOUNT</Dropdown.Item>
             </Link>
             <Dropdown.Divider />

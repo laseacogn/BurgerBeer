@@ -1,0 +1,98 @@
+[
+    {
+        "id": "acc001",
+        "name": "Pham Yen Ngoc",
+        "email": "lasea02@gmail.com",
+        "phone": "0564751400",
+        "address": "26 An Thuong 4",
+        "role": "admin"
+    },
+    {
+        "id": "acc002",
+        "name": "Nguyen Van A",
+        "email": "nguyenvana@gmail.com",
+        "phone": "0123456789",
+        "address": "123 ABC Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc003",
+        "name": "Tran Thi B",
+        "email": "tranthib@gmail.com",
+        "phone": "0987654321",
+        "address": "456 XYZ Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc004",
+        "name": "Le Van C",
+        "email": "levanc@gmail.com",
+        "phone": "0369852147",
+        "address": "789 QWE Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc005",
+        "name": "Hoang Thi D",
+        "email": "hoangthid@gmail.com",
+        "phone": "0123478965",
+        "address": "321 ZXC Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc006",
+        "name": "Vo Van E",
+        "email": "vovane@gmail.com",
+        "phone": "0456789123",
+        "address": "987 RTY Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc007",
+        "name": "Do Thi F",
+        "email": "dothif@gmail.com",
+        "phone": "0987654321",
+        "address": "654 TYU Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc008",
+        "name": "Nguyen Van G",
+        "email": "nguyenvang@gmail.com",
+        "phone": "0123456789",
+        "address": "123 ASD Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc009",
+        "name": "Tran Van H",
+        "email": "tranvanh@gmail.com",
+        "phone": "0369852147",
+        "address": "456 FGH Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc010",
+        "name": "Le Thi I",
+        "email": "lethii@gmail.com",
+        "phone": "0123478965",
+        "address": "321 HJK Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc011",
+        "name": "Hoang Van J",
+        "email": "hoangvanj@gmail.com",
+        "phone": "0456789123",
+        "address": "987 LKJ Street",
+        "role": "customer"
+    },
+    {
+        "id": "acc012",
+        "name": "Vo Thi K",
+        "email": "vothik@gmail.com",
+        "phone": "0987654321",
+        "address": "654 POI Street",
+        "role": "customer"
+    }
+]
