@@ -23,7 +23,6 @@ import { v4 } from "uuid";
 export function ItemList() {
   const [originalPrd, setOriginalPrd] = useState([]);
   const [products, setProducts] = useState([]);
-  const [productNew, setProductNew] = useState([]);
 
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -158,15 +157,6 @@ export function ItemList() {
     };
 
     setProducts([...products, newItem]);
-
-    //   setID("");
-    //   setName("");
-    //   setImageUploads([]);
-    //   setCategory("");
-    //   setBasisPrice("");
-    //   setSalePrice("");
-    //   setDiscount("");
-    //   setDescription("");
   };
 
 

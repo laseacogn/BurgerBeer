@@ -7,23 +7,33 @@ import { Pagination } from "flowbite-react";
 
 const Wishlist = () => {
   const [products, setProducts] = useState([]);
-  const [quantity, setQuantity] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     setProducts(wishlistData);
+    console.log(products);
   }, []);
 
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
+  const handleIncrease = (productId) => {
+    const updatedProducts = products.map(product => {
+      if (product.id === productId) {
+        return { ...product, quantity: product.quantity + 1 };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  }
 
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
+  const handleDecrease = (productId) => {
+    const updatedProducts = products.map(product => {
+      if (product.id === productId && product.quantity > 1) {
+        return { ...product, quantity: product.quantity - 1 };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
   };
 
   const handleDelete = (index) => {
@@ -31,7 +41,7 @@ const Wishlist = () => {
     setProducts(updatedProducts);
   };
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const totalProducts = wishlistData.length;
@@ -49,7 +59,7 @@ const Wishlist = () => {
 
     fetchData();
   }, [currentPage]);
-  
+
   return (
     <div className="max-w-[1200px] mx-auto">
       <div className="w-full mt-[10px] mb-[20px] bg-[#FFFEFE] shadow-md rounded-lg">
@@ -125,16 +135,16 @@ const Wishlist = () => {
                       <div className="flex justify-center items-center">
                         <Button
                           color="gray"
-                          onClick={handleDecrease}
+                          onClick={() => handleDecrease(product.id)}
                           className="font-sans font-medium text-[15px] text-gray-900"
                         >
                           {" "}
                           -{" "}
                         </Button>
-                        <Button color="gray"> {quantity} </Button>
+                        <Button color="gray"> {product.quantity} </Button>
                         <Button
                           color="gray"
-                          onClick={handleIncrease}
+                          onClick={() => handleIncrease(product.id)}
                           className="font-sans font-medium text-[15px] text-gray-900"
                         >
                           {" "}
@@ -147,22 +157,13 @@ const Wishlist = () => {
                         {" "}
                         ${" "}
                         {(
-                          ((product.originalPrice *
-                            (100 - product.discountPercent)) /
-                            100) *
-                          quantity
-                        ).toFixed(2)}
+                          ((product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(2)}
                       </p>
                       <p>
                         {" "}
                         You saved $
                         {(
-                          (product.originalPrice -
-                            (product.originalPrice *
-                              (100 - product.discountPercent)) /
-                              100) *
-                          quantity
-                        ).toFixed(2)}{" "}
+                          (product.originalPrice - (product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(2)}{" "}
                       </p>
                     </Table.Cell>
                     <Table.Cell>
@@ -179,14 +180,14 @@ const Wishlist = () => {
               </Table.Body>
             </Table>
           </div>
-           <div className="flex overflow-x-auto sm:justify-center">
-        <Pagination
-          totalPages={totalPages}
-          currentPage={currentPage}
-          onPageChange={setCurrentPage}
-          showIcons
-        />
-      </div>
+          <div className="flex overflow-x-auto sm:justify-center">
+            <Pagination
+              totalPages={totalPages}
+              currentPage={currentPage}
+              onPageChange={setCurrentPage}
+              showIcons
+            />
+          </div>
           <Button
             className=" w-[200px] font-sans font-semibold text-[17px] ml-[440px] mt-[10px]"
             color="dark"
