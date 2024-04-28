@@ -9,15 +9,22 @@ import { HiTemplate } from "react-icons/hi";
 import { BiSolidDiscount } from "react-icons/bi";
 import prdData from "../../data/product.json";
 import { FaPen } from "react-icons/fa6";
-import MethodContext from "../../Context/methodProvider";
 import Search2 from "../../components/Search Product/Search2";
 import Search5 from "../../components/Search Product/Search5";
 import Search6 from "../../components/Search Product/Search6";
-
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+} from "firebase/storage";
+import { storage } from "../../config/firebase.config";
+import { v4 } from "uuid";
 
 export function ItemList() {
   const [originalPrd, setOriginalPrd] = useState([]);
   const [products, setProducts] = useState([]);
+  const [productNew, setProductNew] = useState([]);
+
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -39,72 +46,88 @@ export function ItemList() {
   };
 
   useEffect(() => {
-     const totalPrd = originalPrd.length;
+    const totalPrd = originalPrd.length;
     const itemsPerPage = 6;
     const pages = Math.ceil(totalPrd / itemsPerPage);
     setTotalPages(pages);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, totalPrd);
-    
+
     let filteredPrd = originalPrd.filter(prd => {
-            const idMatch = prd.id.toString().toLowerCase().includes(searchTerm.toLowerCase());
-            const nameMatch = prd.name && prd.name.toLowerCase().includes(searchTerm2.toLowerCase());
-            const categoryMatch = selectedCategory ? prd.categoryName === selectedCategory : true;
+      const idMatch = prd.id.toString().toLowerCase().includes(searchTerm.toLowerCase());
+      const nameMatch = prd.name && prd.name.toLowerCase().includes(searchTerm2.toLowerCase());
+      const categoryMatch = selectedCategory ? prd.categoryName === selectedCategory : true;
 
-            if (searchTerm !== "" && idMatch) {
-                return true;
-            } else if (searchTerm2 !== "" && nameMatch) {
-                return true;
-            } else if (selectedCategory && categoryMatch) {
-                return true;
-            } else if (searchTerm === "" && searchTerm2 === "" && !selectedCategory) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+      if (searchTerm !== "" && idMatch) {
+        return true;
+      } else if (searchTerm2 !== "" && nameMatch) {
+        return true;
+      } else if (selectedCategory && categoryMatch) {
+        return true;
+      } else if (searchTerm === "" && searchTerm2 === "" && !selectedCategory) {
+        return true;
+      } else {
+        return false;
+      }
+    });
 
-        setProducts(filteredPrd.slice(startIndex, endIndex));
+    setProducts(filteredPrd.slice(startIndex, endIndex));
   }, [currentPage, searchTerm, searchTerm2, selectedCategory, originalPrd]);
 
-    const handleSearch = (value) => {
-        setSearchTerm(value);
-    };
-
-    const handleSearch2 = (value) => {
-        setSearchTerm2(value);
-    };
-
-    const handleSearch3 = (value) => {
-        setSelectedCategory(value);
-    };
-
-
-
-  const { uploadFile } = useContext(MethodContext);
-
-  const [imageUploads, setImageUploads] = useState([]);
-  const handleChange = (e) => {
-    const images = Array.from(e.target.files);
-    setImageUploads(images);
+  const handleSearch = (value) => {
+    setSearchTerm(value);
   };
 
-  const updateImageToFirebase = async () => {
-    const validImages = imageUploads.filter((image) => image !== null);
-    if (validImages.length > 0) {
-      const imagesFb = await uploadFile(validImages);
-      return imagesFb;
-    } else {
-      console.log('No images to upload');
-      return [];
+  const handleSearch2 = (value) => {
+    setSearchTerm2(value);
+  };
+
+  const handleSearch3 = (value) => {
+    setSelectedCategory(value);
+  };
+
+
+
+  const [imageUploads, setImageUploads] = useState()
+  const [imageUrl, setImageUrl] = useState()
+
+
+  const uploadFile = async () => {
+    try {
+      const imageId = v4();
+      const imageRef = ref(storage, `/Blog2/${imageId}`);
+      const snapshot = await uploadBytes(imageRef, imageUploads);
+      const url = await getDownloadURL(snapshot.ref);
+      return url;
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      throw error;
     }
   };
 
+  const handleChange = e => {
+    const file = e.target.files[0];
+    setImageUploads(file);
+  };
+
+  const handleUpload = async () => {
+    try {
+      const url = await uploadFile();
+      setImageUrl(url)
+      return url
+    } catch (error) {
+      console.error('Error uploading file to Firebase:', error);
+    }
+  };
+
+
   const AddItem = async () => {
+    const img = await handleUpload();
+    console.log(img);
     if (
       !ID ||
       !Name ||
-      !imageUploads.length ||
+      !img ||
       !Category ||
       !BasisPrice ||
       !SalePrice ||
@@ -123,13 +146,12 @@ export function ItemList() {
       return;
     }
 
-    const img = await updateImageToFirebase();
-
+    console.log(ID);
     const newItem = {
       id: ID,
       name: Name,
       image: img,
-      category: Category,
+      categoryName: Category,
       originalPrice: parsedPrice1,
       discountPercent: Discount,
       description: Description,
@@ -137,15 +159,16 @@ export function ItemList() {
 
     setProducts([...products, newItem]);
 
-    setID("");
-    setName("");
-    setImageUploads([]);
-    setCategory("");
-    setBasisPrice("");
-    setSalePrice("");
-    setDiscount("");
-    setDescription("");
+    //   setID("");
+    //   setName("");
+    //   setImageUploads([]);
+    //   setCategory("");
+    //   setBasisPrice("");
+    //   setSalePrice("");
+    //   setDiscount("");
+    //   setDescription("");
   };
+
 
   const [ID, setID] = useState("");
   const [Name, setName] = useState("");
@@ -252,7 +275,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setID(e.target.value) }}
+                        onChange={(e) => { setID(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -267,7 +290,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setName(e.target.value) }}
+                        onChange={(e) => { setName(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -282,7 +305,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setCategory(e.target.value) }}
+                        onChange={(e) => { setCategory(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -296,11 +319,11 @@ export function ItemList() {
                           className="font-sans font-medium text-[15px] text-black"
                         />
                       </div>
-                      
+
                       <input type="file"
-            className="file-input file-input-bordered w-full max-w-xs"
-            multiple
-            onChange={handleChange} />
+                        className="file-input file-input-bordered w-full max-w-xs"
+                        multiple
+                        onChange={handleChange} />
                     </div>
                   </div>
                   <div className="w-[95%] mt-[-5px]">
@@ -313,7 +336,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setBasisPrice(e.target.value) }}
+                        onChange={(e) => { setBasisPrice(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -328,7 +351,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setDiscount(e.target.value) }}
+                        onChange={(e) => { setDiscount(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -343,7 +366,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setSalePrice(e.target.value) }}
+                        onChange={(e) => { setSalePrice(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -358,7 +381,7 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                      onChange={(e) => { setDescription(e.target.value) }}
+                        onChange={(e) => { setDescription(e.target.value) }}
                         id="email"
                         type="email"
                         required
@@ -377,8 +400,8 @@ export function ItemList() {
           </div>
 
           <div className="flex justify-center items-center mt-[20px] gap-16">
-            <Search5 handleSearch={handleSearch}/>
-            <Search2 handleSearch={handleSearch2}/>
+            <Search5 handleSearch={handleSearch} />
+            <Search2 handleSearch={handleSearch2} />
             <Search6 handleSearch={handleSearch3} />
           </div>
 
@@ -421,18 +444,32 @@ export function ItemList() {
                       </Table.Cell>
                       <Table.Cell className="flex items-center w-[250px]">
                         <div className="flex items-center">
-                        <img
-                          className="w-[50px] h-[50px] self-center mr-[10px]"
-                          style={{ borderRadius: "10px" }}
-                          src={require(`../../assets/image/Burger/${product.image}`)}
-                          alt={product.name}
-                        />
-                        <p className="font-sans font-medium text-[17px] text-gray-900 dark:text-white">
-                          {" "}
-                          {product.name}{" "}
-                        </p></div>
+                          {parseInt(product.id) > 69 ? (
+                            <div>
+                              <img
+                                className="w-[50px] h-[50px] self-center mr-[10px]"
+                                style={{ borderRadius: "10px" }}
+                                src={product.image}
+                                alt={product.name}
+                              />
+                            </div>
+                          ) : (
+                            <div>
+                              <img
+                                className="w-[50px] h-[50px] self-center mr-[10px]"
+                                style={{ borderRadius: "10px" }}
+                                src={require(`../../assets/image/Burger/${product.image}`)}
+                                alt={product.name}
+                              />
+                            </div>
+                          )}
+
+                          <p className="font-sans font-medium text-[17px] text-gray-900 dark:text-white">
+                            {" "}
+                            {product.name}{" "}
+                          </p></div>
                       </Table.Cell>
-                       <Table.Cell>
+                      <Table.Cell>
                         <p className="font-sans font-medium text-[17px] text-gray-900 text-center">
                           {product.categoryName}
                         </p>
@@ -476,7 +513,7 @@ export function ItemList() {
                           <Modal.Header className="h-[50px] pt-[10px]">
                             Edit Product
                           </Modal.Header>
-                        
+
                           <Modal.Body className="no-scrollbar">
                             <editItem />
                           </Modal.Body>
