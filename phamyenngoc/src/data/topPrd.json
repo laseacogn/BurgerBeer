@@ -1,0 +1,72 @@
+[
+    {
+        "id": 16,
+        "name": "BBQ Pulled Pork Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "6.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"The BBQ Pulled Pork Burger from Burger N' Beer is a mouthwatering delight that brings together the smoky, savory flavors of barbecue pulled pork with the satisfying indulgence of a burger. Here's a description: Imagine sinking your teeth into a soft, toasted brioche bun, perfectly holding together a generous heap of tender, slow-cooked pulled pork, bathed in rich, tangy barbecue sauce. The pork is so tender it practically melts in your mouth, with every bite bursting with a harmonious blend of sweet and savory flavors. Topping off this masterpiece are crisp, fresh lettuce leaves and slices of juicy tomatoes, adding a refreshing crunch and a burst of freshness that perfectly complements the hearty richness of the pork. Each bite is a journey through layers of flavor and texture, from the succulent pork to the crisp vegetables, all held together by the buttery bun. Whether you're a barbecue aficionado or a burger enthusiast, the BBQ Pulled Pork Burger from Burger N' Beer is sure to satisfy your cravings and leave you craving for more."
+    },
+    {
+        "id": 17,
+        "name": "Cheese Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "7.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"At Burger N' Beer, the Cheeseburger is an iconic classic promising to delight your taste buds with its unbeatable combination of juicy beef, gooey cheese, and fresh ingredients. Imagine a soft, golden-brown brioche bun sandwiching a perfectly grilled, tender, and flavorful beef patty, meticulously seasoned and grilled to perfection. As you sink your teeth into the first bite, you'll experience the aromatic blend of beef mingling with the enticing aroma of the grill. But the star of the show is undoubtedly the cheese – warm, melted, enveloping and embracing every inch of the beef patty in a velvety layer of creaminess. Whether it's classic American cheese, sharp cheddar, or soft mozzarella, the cheese adds a rich flavor that elevates the burger to new heights of perfection."
+    },
+    {
+        "id": 18,
+        "name": "Double Cheese Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "8.jpg",
+        "originalPrice": 140.00,
+        "discountPercent": 10,
+        "description":"As you step into Burger N' Beer, prepare yourself for a culinary adventure like no other. Our menu boasts an array of mouthwatering delights, each crafted with the finest ingredients and a passion for flavor. Whether you're craving the classic simplicity of a Cheeseburger or the bold indulgence of a Double Cheeseburger, we've got something to satisfy every appetite. Each bite is a journey through layers of taste and texture, leaving you craving more with every mouthful. So come on in, take a seat, and prepare to experience burger perfection at Burger N' Beer."
+    },
+    {
+        "id": 19,
+        "name": "Bacon & Egg Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "9.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "description":"Sink your teeth into the savory goodness of the Bacon & Egg Burger at Burger N' Beer, where breakfast meets burger in a delicious fusion of flavors. Picture a perfectly grilled beef patty topped with crispy bacon strips, a golden sunny-side-up egg, and a slice of gooey melted cheese, all nestled between two fluffy brioche buns. With each bite, you'll experience the smoky saltiness of the bacon, the richness of the egg yolk, and the juicy tenderness of the beef, all coming together in a symphony of taste. Whether you're starting your day off right or craving breakfast for dinner, the Bacon & Egg Burger is sure to satisfy your hunger and leave you craving for more."
+    },
+    {
+        "id": 20,
+        "name": "The Classic Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "10.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15,
+        "description":"Indulge in the timeless deliciousness of the Classic Burger at Burger N' Beer, where simplicity meets perfection. Imagine sinking your teeth into a juicy beef patty, grilled to perfection and nestled between two soft, toasted brioche buns. Each bite is a celebration of flavor, with the savory richness of the beef complemented by the fresh crunch of lettuce, slices of ripe tomato, and tangy pickles. Topped off with a dollop of our signature Burger N' Beer sauce, this burger is a true classic that never goes out of style. Whether you're a burger connoisseur or simply craving a taste of nostalgia, the Classic Burger is sure to hit the spot every time."
+    },
+    {
+        "id": 21,
+        "name": "Fries Fish Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "11.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 15,
+        "description":"Dive into a delightful combination of flavors with the Fries Fish Burger from Burger N' Beer. Picture a crispy, golden-brown fish fillet, fried to perfection and nestled between two soft brioche buns. Each bite offers a symphony of textures, from the crunch of the batter to the tender flakiness of the fish inside. But what sets this burger apart is the addition of a generous helping of thick-cut fries right inside the bun, adding a delightful crunch and an extra layer of indulgence. Topped with crisp lettuce, juicy tomato slices, and a tangy tartar sauce, this burger is a seafood lover's dream come true. Whether you're craving a taste of the coast or simply looking for something a little different, the Fries Fish Burger is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 22,
+        "name": "Japanese Chicken Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "12.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5,
+        "description":"Transport your taste buds to the vibrant streets of Japan with Burger N' Beer's Japanese Chicken Burger. This culinary masterpiece combines the bold flavors of Japanese cuisine with the comforting indulgence of a classic burger. Picture a tender, juicy chicken patty, marinated in a savory blend of soy sauce, ginger, and garlic, perfectly grilled to seal in all the delicious flavors. Nestled between two fluffy brioche buns, the chicken patty is accompanied by a symphony of toppings inspired by Japanese cuisine. Crisp lettuce, slices of fresh cucumber, and tangy pickled ginger add a refreshing crunch, while a drizzle of creamy Japanese-style mayonnaise and a sprinkle of sesame seeds elevate the burger to new heights of flavor. With each bite, you'll be transported to the bustling streets of Tokyo, where bold flavors and culinary innovation reign supreme. Whether you're a fan of Japanese cuisine or simply looking to tantalize your taste buds with something new, the Japanese Chicken Burger is sure to delight and satisfy."
+    }
+]

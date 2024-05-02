@@ -4,89 +4,59 @@ import { Link } from "react-router-dom";
 import { AiFillHome, AiFillDelete } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
-import { IoReorderFour } from "react-icons/io5";
+import { IoReorderFour, IoChevronBackCircle } from "react-icons/io5";
 import { HiTemplate } from "react-icons/hi";
 import { BiSolidDiscount } from "react-icons/bi";
-import prdData from "../../data/product.json";
+import prdData from "../../../data/product.json";
 import { FaPen } from "react-icons/fa6";
-import Search2 from "../../components/Search Product/Search2";
-import Search5 from "../../components/Search Product/Search5";
-import Search6 from "../../components/Search Product/Search6";
 import {
   ref,
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
-import { storage } from "../../config/firebase.config";
+import { storage } from "../../../config/firebase.config";
 import { v4 } from "uuid";
-import categoryData from "../../data/category.json"
+import categoryData from "../../../data/category.json";
+import { useParams } from "react-router-dom";
 
-export function ItemList() {
-  const [categories, setCategories] = useState([]);
+export function CategoryDetail() {
+  const [categories, setCategories] = useState([categoryData]);
   const [originalPrd, setOriginalPrd] = useState([]);
   const [products, setProducts] = useState([]);
+  const { categoryID } = useParams();
 
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(7);
 
   const [openModal1, setOpenModal1] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchTerm2, setSearchTerm2] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  useEffect(() => {
-    setOriginalPrd(prdData);
-    setProducts(prdData);
+   useEffect(() => {
+    const filteredProducts = prdData.filter(
+      (product) => product.categoryId === parseInt(categoryID)
+    );
+    setProducts(filteredProducts);
+    setOriginalPrd(filteredProducts);
     setCategories(categoryData)
-  }, []);
+  }, [categoryID]);
 
   const handleDelete = (index) => {
     const updatedProducts = products.filter((_, i) => i !== index);
     setProducts(updatedProducts);
   };
-
-  useEffect(() => {
+useEffect(() => {
     const totalPrd = originalPrd.length;
-    const itemsPerPage = 6;
     const pages = Math.ceil(totalPrd / itemsPerPage);
     setTotalPages(pages);
+  }, [itemsPerPage, originalPrd]);
+  useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, totalPrd);
-
-    let filteredPrd = originalPrd.filter(prd => {
-      const idMatch = prd.id.toString().toLowerCase().includes(searchTerm.toLowerCase());
-      const nameMatch = prd.name && prd.name.toLowerCase().includes(searchTerm2.toLowerCase());
-      const categoryMatch = selectedCategory ? prd.categoryName === selectedCategory : true;
-
-      if (searchTerm !== "" && idMatch) {
-        return true;
-      } else if (searchTerm2 !== "" && nameMatch) {
-        return true;
-      } else if (selectedCategory && categoryMatch) {
-        return true;
-      } else if (searchTerm === "" && searchTerm2 === "" && !selectedCategory) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-
-    setProducts(filteredPrd.slice(startIndex, endIndex));
-  }, [currentPage, searchTerm, searchTerm2, selectedCategory, originalPrd]);
-
-  const handleSearch = (value) => {
-    setSearchTerm(value);
-  };
-
-  const handleSearch2 = (value) => {
-    setSearchTerm2(value);
-  };
-
-  const handleSearch3 = (value) => {
-    setSelectedCategory(value);
-  };
+    const endIndex = startIndex + itemsPerPage;
+    const displayedProducts = originalPrd.slice(startIndex, endIndex);
+    setProducts(displayedProducts);
+  }, [currentPage, itemsPerPage, originalPrd]);
+ 
 
 
 
@@ -179,7 +149,7 @@ export function ItemList() {
         <div className="w-[200px] h-full bg-[#FFFFFF] drop-shadow-lg justify-center items-center">
           <img
             className="w-[100px] h-[100px] ml-[55px] mt-[15px]"
-            src={require(`../../page/Home/lgburger.jpg`)}
+            src={require(`../../../page/Home/lgburger.jpg`)}
             alt=""
           />
           <p className="font-sans font-black text-[20px] text-gray-900 text-center">
@@ -202,7 +172,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/category_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[20px] drop-shadow">
               <MdCategory className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 CATEGORY
@@ -210,7 +180,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/item_list">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
               <HiTemplate className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 PRODUCT
@@ -235,9 +205,12 @@ export function ItemList() {
           </Link>
         </div>
         <div className="w-[1000px] no-scrollbar justify-center items-center">
-          <div className="w-full flex justify-between items-center">
-            <p className="font-sans font-black text-[20px] text-gray-900 ml-[395px] mt-[15px]">
-              PRODUCT MANAGE
+          <div className="w-full flex justify-between items-center mb-[15px]">
+            <Link to="/category_manage">
+            <IoChevronBackCircle className="w-[25px] h-[25px] text-gray-700 ml-[25px] mt-[15px]"/>
+            </Link>
+            <p className="font-sans font-black text-[20px] text-gray-900 ml-[150px] mt-[15px]">
+              PRODUCT LIST
             </p>
             <Button
               onClick={() => setOpenModal1(true)}
@@ -402,13 +375,9 @@ export function ItemList() {
             </Modal>
           </div>
 
-          <div className="flex justify-center items-center mt-[20px] gap-16">
-            <Search5 handleSearch={handleSearch} />
-            <Search2 handleSearch={handleSearch2} />
-            <Search6 handleSearch={handleSearch3} />
-          </div>
+          
 
-          <div className="w-[950px] h-[700px] bg-[#FFFFFF] drop-shadow-lg ml-[25px] no-scrollbar">
+          <div className="w-[950px] h-[760px] bg-[#FFFFFF] drop-shadow-lg ml-[25px] no-scrollbar">
             <div className="w-full overflow-x-auto no-scrollbar">
               <Table hoverable>
                 <Table.Head>
@@ -461,7 +430,7 @@ export function ItemList() {
                               <img
                                 className="w-[50px] h-[50px] self-center mr-[10px]"
                                 style={{ borderRadius: "10px" }}
-                                src={require(`../../assets/image/Burger/${product.image}`)}
+                                src={require(`../../../assets/image/Burger/${product.image}`)}
                                 alt={product.name}
                               />
                             </div>
@@ -479,9 +448,8 @@ export function ItemList() {
                       </Table.Cell>
 
                       <Table.Cell>
-                        <p className="whitespace-nowrap font-sans font-medium text-[17px] text-gray-900 text-center">
-                        
-                          {product.originalPrice.toFixed(3)} VND
+                        <p className="font-sans font-medium text-[17px] text-gray-900 text-center">
+                          {product.originalPrice.toFixed(2)}$
                         </p>
                       </Table.Cell>
                       <Table.Cell>
@@ -491,13 +459,14 @@ export function ItemList() {
                           </p>
                         </div>
                       </Table.Cell>
-                      <Table.Cell className="whitespace-nowrap font-sans font-medium text-[17px] text-center">
+                      <Table.Cell className="font-sans font-medium text-[17px] text-center">
                         <p className=" text-gray-900">
                           {(
                             (product.originalPrice *
                               (100 - product.discountPercent)) /
                             100
-                          ).toFixed(3)} VND
+                          ).toFixed(2)}
+                          $
                         </p>
                       </Table.Cell>
                       <Table.Cell className="flex ">
@@ -534,7 +503,7 @@ export function ItemList() {
                 </Table.Body>
               </Table>
             </div>
-            <div className="flex overflow-x-auto sm:justify-center">
+            <div className="flex overflow-x-auto sm:justify-center mt-[-7px]">
               <Pagination
                 totalPages={totalPages}
                 currentPage={currentPage}

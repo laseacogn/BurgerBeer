@@ -196,7 +196,7 @@ export default function ComboDetail() {
                               }}
                             >
                               {" "}
-                              126.00 USD{" "}
+                              126.000 VND{" "}
                             </span>
                             &nbsp;&nbsp;&nbsp;
                             <span
@@ -218,9 +218,9 @@ export default function ComboDetail() {
                         <td style={{ paddingTop: "10px" }}>
                           <span style={{ textDecoration: "line-through" }}>
                             {" "}
-                            140.00 USD{" "}
+                            140.000 VND{" "}
                           </span>
-                          ( You saved 14.00 USD )
+                          ( You saved 14.000 VND)
                         </td>
                       </tr>
                       <tr>
@@ -270,10 +270,10 @@ export default function ComboDetail() {
                     }}
                   >
                     {" "}
-                    &nbsp;&nbsp;&nbsp; {(126 * quantity).toFixed(2)} USD
+                    &nbsp;&nbsp;&nbsp; {(126 * quantity).toFixed(3)} VND
                     &nbsp;&nbsp;&nbsp;{" "}
                   </p>
-                  <p> ( You saved {(14 * quantity).toFixed(2)} USD ) </p>
+                  <p> ( You saved {(14 * quantity).toFixed(3)} VND ) </p>
                 </div>
 
                 <div className="flex mt-3">
@@ -331,7 +331,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(140 * quantity).toFixed(2)}
+                                        {(140 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -341,7 +341,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $12.60
+                                        12.600 VND
                                       </span>
                                     </p>
                                     <p
@@ -352,8 +352,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(14 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(14 * quantity).toFixed(3)} VND
                                     </p>
                                     
                                   </div>
@@ -388,7 +387,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(140 * quantity).toFixed(2)}
+                                        {(140 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -397,8 +396,9 @@ export default function ComboDetail() {
                                           fontSize: "18px",
                                           fontWeight: "600",
                                         }}
+                                      
                                       >
-                                        $12.60
+                                        12.600 VND
                                       </span>
                                     </p>
                                     <p
@@ -409,8 +409,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(14 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(14 * quantity).toFixed(2)} VND
                                     </p>
                                   </div>
                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
@@ -444,7 +443,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(140 * quantity).toFixed(2)}
+                                        {(140 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -454,7 +453,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $12.60
+                                        12.600 VND
                                       </span>
                                     </p>
                                     <p
@@ -465,8 +464,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(14 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(14 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
@@ -519,7 +517,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(80 * quantity).toFixed(2)}
+                                        {(80 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -529,7 +527,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $72.00
+                                        72.000 VND
                                       </span>
                                     </p>
                                   </div>
@@ -576,7 +574,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(80 * quantity).toFixed(2)}
+                                        {(80 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -586,7 +584,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $64.00
+                                        64.000 VND
                                       </span>
                                     </p>
                                   </div>
@@ -632,7 +630,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(80 * quantity).toFixed(2)}
+                                        {(80 * quantity).toFixed(2)} VND
                                       </p>
                                       <span
                                         style={{
@@ -642,7 +640,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $76.00
+                                        76.000 VND
                                       </span>
                                     </p>
                                   </div>
@@ -688,7 +686,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(80 * quantity).toFixed(2)}
+                                        {(80 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -698,7 +696,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $68.00
+                                        68.000 VND
                                       </span>
                                     </p>
                                   </div>
@@ -742,7 +740,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(20 * quantity).toFixed(2)}
+                                      {(20 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -752,7 +750,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $19.00
+                                        19.000 VND
                                       </span>
                                     </p>
                                     <p
@@ -763,8 +761,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(1 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
                                     
                                   </div>
@@ -799,7 +796,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(20 * quantity).toFixed(2)}
+                                        {(20 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -809,7 +806,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $19.00
+                                        19.000 VND
                                       </span>
                                     </p>
                                     <p
@@ -820,8 +817,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(1 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
@@ -855,7 +851,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        ${(20 * quantity).toFixed(2)}
+                                        {(20 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -865,7 +861,7 @@ export default function ComboDetail() {
                                           fontWeight: "600",
                                         }}
                                       >
-                                        $19.00
+                                        19.000 VND
                                       </span>
                                     </p>
                                     <p
@@ -876,8 +872,7 @@ export default function ComboDetail() {
                                         color: "#707070",
                                       }}
                                     >
-                                      You saved ${(1 * quantity).toFixed(2)}{" "}
-                                      USD
+                                      You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />

@@ -308,23 +308,23 @@
     },
     {
         "id": 29,
-        "name": "Carnitas Hotdog",
+        "name": "Carnitas HotDog",
         "categoryId": 6,
-        "categoryName":"Hotdog",
+        "categoryName":"HotDog",
         "image": "19.jpg",
         "originalPrice": 80.00,
         "discountPercent": 5,
-        "description":"Treat your taste buds to a flavor-packed fiesta with the Carnitas Hotdog from Burger N' Beer. This mouthwatering creation combines the smoky richness of carnitas with the classic comfort of a hotdog. Imagine sinking your teeth into a juicy hotdog nestled in a soft, toasted bun, topped with tender, slow-cooked carnitas. Each bite bursts with savory goodness, with the bold flavors of the carnitas blending perfectly with the juicy hotdog. Topped with your favorite condiments and served with a side of crispy fries or crunchy coleslaw, the Carnitas Hotdog is a delicious twist on a classic favorite that's sure to leave you craving more."
+        "description":"Treat your taste buds to a flavor-packed fiesta with the Carnitas HotDog from Burger N' Beer. This mouthwatering creation combines the smoky richness of carnitas with the classic comfort of a HotDog. Imagine sinking your teeth into a juicy HotDog nestled in a soft, toasted bun, topped with tender, slow-cooked carnitas. Each bite bursts with savory goodness, with the bold flavors of the carnitas blending perfectly with the juicy HotDog. Topped with your favorite condiments and served with a side of crispy fries or crunchy coleslaw, the Carnitas HotDog is a delicious twist on a classic favorite that's sure to leave you craving more."
     },
     {
         "id": 30,
-        "name": "Meaty & Bacon Cheese Hotdog",
+        "name": "Meaty & Bacon Cheese HotDog",
         "categoryId": 6,
-        "categoryName":"Hotdog",
+        "categoryName":"HotDog",
         "image": "20.jpg",
         "originalPrice": 100.00,
         "discountPercent": 10,
-        "description":"Prepare your taste buds for a flavor explosion with the Meaty & Bacon Cheese Hotdog from Burger N' Beer. This indulgent creation takes the classic hotdog to new heights with a hearty dose of meaty goodness and crispy bacon. Imagine sinking your teeth into a juicy hotdog nestled in a warm, toasted bun, generously topped with savory meats like pepperoni, sausage, and bacon. Each bite is a symphony of flavors, with the smoky richness of the bacon complementing the bold, meaty goodness of the toppings. And let's not forget about the gooey melted cheese that ties everything together in a blanket of creamy deliciousness. Served with your choice of condiments and a side of crispy fries or crunchy coleslaw, the Meaty & Bacon Cheese Hotdog is a carnivore's dream come true."
+        "description":"Prepare your taste buds for a flavor explosion with the Meaty & Bacon Cheese HotDog from Burger N' Beer. This indulgent creation takes the classic HotDog to new heights with a hearty dose of meaty goodness and crispy bacon. Imagine sinking your teeth into a juicy HotDog nestled in a warm, toasted bun, generously topped with savory meats like pepperoni, sausage, and bacon. Each bite is a symphony of flavors, with the smoky richness of the bacon complementing the bold, meaty goodness of the toppings. And let's not forget about the gooey melted cheese that ties everything together in a blanket of creamy deliciousness. Served with your choice of condiments and a side of crispy fries or crunchy coleslaw, the Meaty & Bacon Cheese HotDog is a carnivore's dream come true."
     },
     {
         "id": 31,
@@ -390,6 +390,7 @@
         "id": 37,
         "name": "Orange Juice",
         "categoryId": 8,
+        "categoryName":"Drink",
         "image": "27.jpg",
         "originalPrice": 40.00,
         "discountPercent": 5,

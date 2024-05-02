@@ -105,6 +105,7 @@ const OrderDetail = () => {
                             </div>
                           </div>
                         }
+                    
                       >
                         <p className="ml-[2px] underline">30-04-2024.</p>
                       </Popover>
@@ -112,7 +113,7 @@ const OrderDetail = () => {
                     <p className="mt-[5px] flex">
                       <GiAlarmClock className="w-[20px] h-[20px] mr-[5px]" />
                       <p className="mr-[5px]">
-                        Fast delivery on time: receive a Voucher worth $10.00 if
+                        Fast delivery on time: receive a Voucher worth 10.000 VND if
                         the order is delivered to you after 11:59 p.m on April
                         20, 2024.
                         <Popover
@@ -134,7 +135,7 @@ const OrderDetail = () => {
                                   <br />
                                   <p className="flex">
                                     <BiSolidDiscount className="w-[15px] h-[15px] mt-[2.5px] text-gray-700" />
-                                    Receive a Voucher worth $10.00 if your order
+                                    Receive a Voucher worth 10.000 VND if your order
                                     is deliveried to you after 11:59 p.m on
                                     April 20, 2024.
                                   </p>
@@ -224,7 +225,7 @@ const OrderDetail = () => {
                   </div>
                   <div className="flex flex-col items-center font-medium">
                     <p className=" text-[#5D5D5D]">Price</p>
-                    <p className="text-[#969696] mt-4">$ 75.00</p>
+                    <p className="text-[#969696] mt-4"> 75.000 VND</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-4 border-b-2 py-4">
@@ -242,7 +243,7 @@ const OrderDetail = () => {
                   </div>
                   <div className="flex flex-col items-center font-medium">
                     <p className=" text-[#5D5D5D]">Price</p>
-                    <p className="text-[#969696] mt-4">$ 80.00</p>
+                    <p className="text-[#969696] mt-4">80.000 VND</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-4 border-b-2 py-4">
@@ -260,7 +261,7 @@ const OrderDetail = () => {
                   </div>
                   <div className="flex flex-col items-center font-medium">
                     <p className=" text-[#5D5D5D]">Price</p>
-                    <p className="text-[#969696] mt-4">$ 99.00</p>
+                    <p className="text-[#969696] mt-4">99.000 VND</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 border-b-2 py-4">
@@ -339,19 +340,19 @@ const OrderDetail = () => {
                     <div className="flex flex-col">
                       <div className="flex justify-between mt-4">
                         <p className="text-[#969696]">Product Price</p>
-                        <p className="mr-10 text-[#5D5D5D]">$ 200.00</p>
+                        <p className="mr-10 text-[#5D5D5D]">200.000 VND</p>
                       </div>
                       <div className="flex justify-between mt-1">
                         <p className="text-[#969696]">Delivery Price</p>
-                        <p className="mr-10 text-[#5D5D5D]">$ 200.00</p>
+                        <p className="mr-10 text-[#5D5D5D]">200.000 VND</p>
                       </div>
                       <div className="flex justify-between mt-1">
                         <p className="text-[#969696]">Tax Fee</p>
-                        <p className="mr-10 text-[#5D5D5D]">$ 200.00</p>
+                        <p className="mr-10 text-[#5D5D5D]">200.000 VND</p>
                       </div>
                       <div className="flex justify-between mt-4 font-bold text-[#5D5D5D] border-t-2 pt-4 border-slate-400">
                         <p>Total Price</p>
-                        <p className="mr-10">$ 600.00</p>
+                        <p className="mr-10">600.000 VND</p>
                       </div>
                     </div>
                   </div>

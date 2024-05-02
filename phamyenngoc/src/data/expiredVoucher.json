@@ -1,0 +1,112 @@
+[
+    {
+        "id": "VC001",
+        "title": "Spring Sale",
+        "discount": "15",
+        "quantity": "50",
+        "quantityUsed": "0",
+        "minOrd": "100.000",
+        "maxDis": "30.000",
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-31"
+    },
+    {
+        "id": "VC002",
+        "title": "Easter Weekend",
+        "discount": "20",
+        "quantity": "30",
+        "quantityUsed": "10",
+        "minOrd": "150.000",
+        "maxDis": "50.000",
+        "startDate": "2024-04-01",
+        "endDate": "2024-04-07"
+    },
+    {
+        "id": "VC003",
+        "title": "May Day Madness",
+        "discount": "10",
+        "quantity": "40",
+        "quantityUsed": "0",
+        "minOrd": "120.000",
+        "maxDis": "25.000",
+        "startDate": "2024-05-01",
+        "endDate": "2024-05-05"
+    },
+    {
+        "id": "VC004",
+        "title": "Mid-Spring Special",
+        "discount": "18",
+        "quantity": "25",
+        "quantityUsed": "5",
+        "minOrd": "110.000",
+        "maxDis": "35.000",
+        "startDate": "2024-03-10",
+        "endDate": "2024-03-20"
+    },
+    {
+        "id": "VC005",
+        "title": "End of Winter Clearance",
+        "discount": "22",
+        "quantity": "60",
+        "quantityUsed": "10",
+        "minOrd": "90.000",
+        "maxDis": "40.000",
+        "startDate": "2024-03-15",
+        "endDate": "2024-03-25"
+    },
+    {
+        "id": "VC006",
+        "title": "Mother's Day Special",
+        "discount": "12",
+        "quantity": "35",
+        "quantityUsed": "0",
+        "minOrd": "130.000",
+        "maxDis": "20.000",
+        "startDate": "2024-05-05",
+        "endDate": "2024-05-10"
+    },
+    {
+        "id": "VC007",
+        "title": "Early Summer Sale",
+        "discount": "25",
+        "quantity": "45",
+        "quantityUsed": "15",
+        "minOrd": "160.000",
+        "maxDis": "60.000",
+        "startDate": "2024-04-15",
+        "endDate": "2024-04-30"
+    },
+    {
+        "id": "VC008",
+        "title": "Spring Break Blowout",
+        "discount": "30",
+        "quantity": "20",
+        "quantityUsed": "5",
+        "minOrd": "170.000",
+        "maxDis": "70.000",
+        "startDate": "2024-03-20",
+        "endDate": "2024-03-25"
+    },
+    {
+        "id": "VC009",
+        "title": "Memorial Day Weekend",
+        "discount": "18",
+        "quantity": "40",
+        "quantityUsed": "0",
+        "minOrd": "140.000",
+        "maxDis": "30.000",
+        "startDate": "2024-05-25",
+        "endDate": "2024-05-28"
+    },
+    {
+        "id": "VC010",
+        "title": "Cinco de Mayo Fiesta",
+        "discount": "20",
+        "quantity": "30",
+        "quantityUsed": "10",
+        "minOrd": "150.000",
+        "maxDis": "50.000",
+        "startDate": "2024-05-03",
+        "endDate": "2024-05-06"
+    }
+]

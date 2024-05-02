@@ -1,0 +1,112 @@
+[
+    {
+        "id": "VC011",
+        "title": "Spring Cleaning Sale",
+        "discount": "15",
+        "quantity": "35",
+        "quantityUsed": "5",
+        "minOrd": "120.000",
+        "maxDis": "25.000",
+        "startDate": "2024-04-01",
+        "endDate": "2024-04-15"
+    },
+    {
+        "id": "VC012",
+        "title": "St. Patrick's Day Special",
+        "discount": "17",
+        "quantity": "25",
+        "quantityUsed": "0",
+        "minOrd": "110.000",
+        "maxDis": "30.000",
+        "startDate": "2024-03-17",
+        "endDate": "2024-03-19"
+    },
+    {
+        "id": "VC013",
+        "title": "April Showers Sale",
+        "discount": "12",
+        "quantity": "40",
+        "quantityUsed": "5",
+        "minOrd": "130.000",
+        "maxDis": "20.000",
+        "startDate": "2024-04-10",
+        "endDate": "2024-04-20"
+    },
+    {
+        "id": "VC014",
+        "title": "Father's Day Special",
+        "discount": "15",
+        "quantity": "30",
+        "quantityUsed": "0",
+        "minOrd": "140.000",
+        "maxDis": "30.000",
+        "startDate": "2024-05-30",
+        "endDate": "2024-06-01"
+    },
+    {
+        "id": "VC015",
+        "title": "Spring Into Savings",
+        "discount": "20",
+        "quantity": "50",
+        "quantityUsed": "10",
+        "minOrd": "150.000",
+        "maxDis": "40.000",
+        "startDate": "2024-03-25",
+        "endDate": "2024-03-31"
+    },
+    {
+        "id": "VC016",
+        "title": "Summer Kickoff Sale",
+        "discount": "25",
+        "quantity": "45",
+        "quantityUsed": "20",
+        "minOrd": "160.000",
+        "maxDis": "60.000",
+        "startDate": "2024-05-15",
+        "endDate": "2024-05-31"
+    },
+    {
+        "id": "VC017",
+        "title": "Graduation Celebration",
+        "discount": "18",
+        "quantity": "35",
+        "quantityUsed": "5",
+        "minOrd": "170.000",
+        "maxDis": "50.000",
+        "startDate": "2024-05-10",
+        "endDate": "2024-05-20"
+    },
+    {
+        "id": "VC018",
+        "title": "Summer Solstice Special",
+        "discount": "25",
+        "quantity": "20",
+        "quantityUsed": "20",
+        "minOrd": "200.000",
+        "maxDis": "80.000",
+        "startDate": "2024-03-16",
+        "endDate": "2024-03-30"
+    },
+    {
+        "id": "VC019",
+        "title": "Back to School Bash",
+        "discount": "20",
+        "quantity": "40",
+        "quantityUsed": "0",
+        "minOrd": "180.000",
+        "maxDis": "60.000",
+        "startDate": "2024-05-15",
+        "endDate": "2024-05-25"
+    },
+    {
+        "id": "VC020",
+        "title": "Labor Day Blowout",
+        "discount": "30",
+        "quantity": "50",
+        "quantityUsed": "10",
+        "minOrd": "200.000",
+        "maxDis": "70.000",
+        "startDate": "2024-05-01",
+        "endDate": "2024-05-07"
+    }
+]

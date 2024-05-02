@@ -137,7 +137,7 @@ const UserManage = () => {
           <p className="font-sans font-black text-[20px] text-gray-900 text-center mt-[15px]">
             USERS MANAGE
           </p>
-          <div className="flex justify-center items-center mt-[20px] gap-16">
+          <div className="flex justify-center items-center mt-[15px] gap-16">
             <Search2 handleSearch={handleSearch}/>
             <Search3 handleSearch={handleSearch2}/>
             <Search4 handleSearch={handleSearch3} />

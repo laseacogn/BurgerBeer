@@ -1,0 +1,222 @@
+[
+    {
+        "id": "VC001",
+        "title": "Summer Sale Spectacular",
+        "discount": "30",
+        "quantity": "100",
+        "quantityUsed": "50",
+        "minOrd": "200.000",
+        "maxDis": "80.000",
+        "startDate": "2024-06-01",
+        "endDate": "2024-06-15"
+    },
+    {
+        "id": "VC002",
+        "title": "Back to School Bonanza",
+        "discount": "20",
+        "quantity": "80",
+        "quantityUsed": "40",
+        "minOrd": "150.000",
+        "maxDis": "60.000",
+        "startDate": "2024-08-01",
+        "endDate": "2024-08-15"
+    },
+    {
+        "id": "VC003",
+        "title": "Spring Fling Sale",
+        "discount": "25",
+        "quantity": "120",
+        "quantityUsed": "60",
+        "minOrd": "180.000",
+        "maxDis": "75.000",
+        "startDate": "2024-03-15",
+        "endDate": "2024-03-30"
+    },
+    {
+        "id": "VC004",
+        "title": "Holiday Extravaganza",
+        "discount": "40",
+        "quantity": "150",
+        "quantityUsed": "75",
+        "minOrd": "250.000",
+        "maxDis": "100.000",
+        "startDate": "2024-11-20",
+        "endDate": "2024-12-05"
+    },
+    {
+        "id": "VC005",
+        "title": "Winter Wonderland Sale",
+        "discount": "35",
+        "quantity": "110",
+        "quantityUsed": "55",
+        "minOrd": "220.000",
+        "maxDis": "85.000",
+        "startDate": "2024-12-10",
+        "endDate": "2024-12-25"
+    },
+    {
+        "id": "VC006",
+        "title": "New Year Blowout",
+        "discount": "50",
+        "quantity": "200",
+        "quantityUsed": "100",
+        "minOrd": "300.000",
+        "maxDis": "120.000",
+        "startDate": "2024-12-26",
+        "endDate": "2025-01-05"
+    },
+    {
+        "id": "VC007",
+        "title": "Valentine's Day Special",
+        "discount": "15",
+        "quantity": "90",
+        "quantityUsed": "45",
+        "minOrd": "130.000",
+        "maxDis": "50.000",
+        "startDate": "2024-02-01",
+        "endDate": "2024-02-14"
+    },
+    {
+        "id": "VC008",
+        "title": "Cyber Monday Madness",
+        "discount": "45",
+        "quantity": "50",
+        "quantityUsed": "25",
+        "minOrd": "280.000",
+        "maxDis": "90.000",
+        "startDate": "2024-04-25",
+        "endDate": "2024-05-05"
+    },
+    {
+        "id": "VC009",
+        "title": "Easter Eggstravaganza",
+        "discount": "30",
+        "quantity": "100",
+        "quantityUsed": "50",
+        "minOrd": "200.000",
+        "maxDis": "80.000",
+        "startDate": "2024-04-01",
+        "endDate": "2024-04-15"
+    },
+    {
+        "id": "VC010",
+        "title": "Independence Day Blowout",
+        "discount": "35",
+        "quantity": "120",
+        "quantityUsed": "60",
+        "minOrd": "220.000",
+        "maxDis": "85.000",
+        "startDate": "2024-07-01",
+        "endDate": "2024-07-15"
+    },
+    {
+        "id": "VC011",
+        "title": "Spring Clearance Sale",
+        "discount": "25",
+        "quantity": "90",
+        "quantityUsed": "45",
+        "minOrd": "170.000",
+        "maxDis": "70.000",
+        "startDate": "2024-05-20",
+        "endDate": "2024-06-05"
+    },
+    {
+        "id": "VC012",
+        "title": "Autumn Harvest Festival",
+        "discount": "40",
+        "quantity": "130",
+        "quantityUsed": "65",
+        "minOrd": "240.000",
+        "maxDis": "95.000",
+        "startDate": "2024-09-15",
+        "endDate": "2024-09-30"
+    },
+    {
+        "id": "VC013",
+        "title": "Halloween Spooktacular",
+        "discount": "35",
+        "quantity": "100",
+        "quantityUsed": "50",
+        "minOrd": "180.000",
+        "maxDis": "70.000",
+        "startDate": "2024-10-15",
+        "endDate": "2024-10-31"
+    },
+    {
+        "id": "VC014",
+        "title": "Midsummer Madness Sale",
+        "discount": "30",
+        "quantity": "110",
+        "quantityUsed": "55",
+        "minOrd": "190.000",
+        "maxDis": "75.000",
+        "startDate": "2024-07-15",
+        "endDate": "2024-07-31"
+    },
+    {
+        "id": "VC015",
+        "title": "Black Friday Blowout",
+        "discount": "50",
+        "quantity": "180",
+        "quantityUsed": "90",
+        "minOrd": "280.000",
+        "maxDis": "110.000",
+        "startDate": "2024-11-15",
+        "endDate": "2024-11-30"
+    },
+    {
+        "id": "VC016",
+        "title": "Spring Break Special",
+        "discount": "20",
+        "quantity": "70",
+        "quantityUsed": "35",
+        "minOrd": "140.000",
+        "maxDis": "55.000",
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-15"
+    },
+    {
+        "id": "VC017",
+        "title": "St. Patrick's Day Sale",
+        "discount": "15",
+        "quantity": "80",
+        "quantityUsed": "40",
+        "minOrd": "160.000",
+        "maxDis": "60.000",
+        "startDate": "2024-03-16",
+        "endDate": "2024-03-31"
+    },
+    {
+        "id": "VC018",
+        "title": "Summer Solstice Special",
+        "discount": "25",
+        "quantity": "120",
+        "quantityUsed": "60",
+        "minOrd": "200.000",
+        "maxDis": "80.000",
+        "startDate": "2024-06-16",
+        "endDate": "2024-06-30"
+    },
+    {
+        "id": "VC019",
+        "title": "Fall Fashion Frenzy",
+        "discount": "35",
+        "quantity": "140",
+        "quantityUsed": "70",
+        "minOrd": "230.000",
+        "maxDis": "90.000",
+        "startDate": "2024-09-01",
+        "endDate": "2024-09-15"
+    },
+    {
+        "id": "VC020",
+        "title": "Christmas in July Sale",
+        "discount": "40",
+        "quantity": "160",
+        "quantityUsed": "80",
+        "minOrd": "240.000",
+        "maxDis": "100.000",
+        "startDate": "2024-07-01",
+        "endDate": "2024-07-15"
+    }
+]

@@ -5,7 +5,7 @@ import dataProduct from "../../data/product.json";
 import { Pagination } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
 
 const Product = () => {
@@ -103,7 +103,7 @@ const Product = () => {
                 <button
                   className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
                   onClick={() => {
-                    setCategoryID(item.id);
+                    setCategoryID(item.ID);
                   }}
                 >
                   <img

@@ -63,7 +63,7 @@ const ItemCart = ({ product, index }) => {
               color: "#707070",
             }}
           >
-            ${(product.originalPrice * quantity).toFixed(2)}
+            {(product.originalPrice * quantity).toFixed(3)} VND
           </p>
           <span
             style={{
@@ -73,7 +73,7 @@ const ItemCart = ({ product, index }) => {
               fontWeight: "600",
             }}
           >
-            $ {totalPrice}
+             {totalPrice}0 VND
           </span>
         </p>
         <p
@@ -84,7 +84,7 @@ const ItemCart = ({ product, index }) => {
             color: "#707070",
           }}
         >
-          You saved ${((product.originalPrice - calculateDiscountedPrice(product.originalPrice, product.discountPercent)) * quantity).toFixed(2)} USD
+          You saved {((product.originalPrice - calculateDiscountedPrice(product.originalPrice, product.discountPercent)) * quantity).toFixed(3)} VND
         </p>
         <div className="w-full mx-auto flex justify-between">
           <div className="flex items-center">

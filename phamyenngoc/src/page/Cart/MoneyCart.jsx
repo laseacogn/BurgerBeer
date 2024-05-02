@@ -45,7 +45,8 @@ const MoneyCart = ({ product }) => {
           Total
         </div>
         <div className="font-sans font-medium text-lg text-black ml-[220px]">
-          250.000 $
+        
+          250.000 VND
         </div>
       </div>
       <div className="w-550 h-77 border-b border-zinc-300 flex items-center pt-[10px] pb-[10px]">
@@ -53,15 +54,15 @@ const MoneyCart = ({ product }) => {
           Shipping Fee (0km)
         </div>
         <div className="font-sans font-medium text-lg text-black ml-[160px]">
-          0 $
+          0 VND
         </div>
       </div>
       <div className="w-550 h-77 border-b border-zinc-300 flex items-center pt-[20px] pb-[10px]">
         <div className="font-sans font-medium text-lg text-black ml-[100px]">
           MONEY TO PAID
         </div>
-        <div className="font-sans font-medium text-lg text-black ml-[180px]">
-          0 $
+        <div className="font-sans font-medium text-lg text-black ml-[127px]">
+          250.000 VND
         </div>
       </div>
       <Button

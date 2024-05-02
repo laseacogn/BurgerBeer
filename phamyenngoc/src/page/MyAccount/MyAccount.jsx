@@ -2,10 +2,12 @@ import React from "react";
 import { Tabs } from "flowbite-react";
 import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
+import { BiSolidDiscount } from "react-icons/bi";
 import Profile from "./Profile";
 import AccountSetting from "./AccountSetting";
 import Order from "./Order";
 import Review from "./Review";
+import Voucherrr from "./Voucherrr"
 
 const MyAccount = () => {
   return (
@@ -31,6 +33,9 @@ const MyAccount = () => {
                 </Tabs.Item>
                 <Tabs.Item title="My Review" icon={HiClipboardList}>
                   <Review/>
+                </Tabs.Item>
+                <Tabs.Item title="Voucher Warehouse" icon={BiSolidDiscount}>
+                  <Voucherrr/>
                 </Tabs.Item>
               </Tabs>
             </div>

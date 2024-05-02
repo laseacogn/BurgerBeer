@@ -13,9 +13,10 @@ const ItemProduct = (product) => {
       return null;
     }
     const discountAmount = (originalPrice * discountPercent) / 100;
-    return (originalPrice - discountAmount).toFixed(2);
+    return (originalPrice - discountAmount).toFixed(3);
   };
   const [showButtons, setShowButtons] = useState(false);
+
 
 
   return (
@@ -68,8 +69,9 @@ const ItemProduct = (product) => {
               fontWeight: "400",
               color: "#707070",
             }}
+          
           >
-            ${product?.product?.originalPrice?.toFixed(2)}
+           {product?.product?.originalPrice?.toFixed(3)} VND
           </p>
           <div className="flex justify-center text-center">
             <p
@@ -91,11 +93,11 @@ const ItemProduct = (product) => {
                 fontWeight: "600",
               }}
             >
-              ${" "}
+              
               {calculateDiscountedPrice(
                 product?.product?.originalPrice,
                 product?.product?.discountPercent
-              )}
+              )} VND
             </p>
           </div>
         </div>

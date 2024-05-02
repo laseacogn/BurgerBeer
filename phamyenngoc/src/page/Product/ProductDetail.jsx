@@ -210,8 +210,7 @@ export default function ProductDT() {
                                   (prd.originalPrice *
                                     (100 - prd.discountPercent)) /
                                   100
-                                ).toFixed(2)}{" "}
-                                USD{" "}
+                                ).toFixed(3)} VND{" "}
                               </span>
                               &nbsp;&nbsp;&nbsp;
                               <span
@@ -233,7 +232,7 @@ export default function ProductDT() {
                           <td style={{ paddingTop: "10px" }}>
                             <span style={{ textDecoration: "line-through" }}>
                               {" "}
-                              {prd.originalPrice}.00 USD{" "}
+                              {prd.originalPrice}.000 VND{" "}
                             </span>
                             ( You saved{" "}
                             {(
@@ -241,8 +240,7 @@ export default function ProductDT() {
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
                                 100
-                            ).toFixed(2)}{" "}
-                            USD )
+                            ).toFixed(3)} VND )
                           </td>
                         </tr>
                         <tr>
@@ -298,8 +296,7 @@ export default function ProductDT() {
                         ((prd.originalPrice * (100 - prd.discountPercent)) /
                           100) *
                         quantity
-                      ).toFixed(2)}{" "}
-                      USD &nbsp;&nbsp;&nbsp;{" "}
+                      ).toFixed(3)} VND &nbsp;&nbsp;&nbsp;{" "}
                     </p>
                     <p>
                       {" "}
@@ -309,8 +306,8 @@ export default function ProductDT() {
                           (prd.originalPrice * (100 - prd.discountPercent)) /
                             100) *
                         quantity
-                      ).toFixed(2)}{" "}
-                      USD ){" "}
+                      ).toFixed(3)}{" "}
+                      VND ){" "}
                     </p>
                   </div>
                 )}

@@ -115,15 +115,15 @@ const Wishlist = () => {
                     <Table.Cell>
                       <div className="flex justify-center items-center">
                         <p className="line-through font-sans font-medium text-[15px] text-gray-700 mr-[20px]">
-                          $ {product.originalPrice.toFixed(2)}
+                          {product.originalPrice.toFixed(3)} VND
                         </p>
                         <p className="font-sans font-medium text-[15px] text-gray-900">
-                          ${" "}
+                          
                           {(
                             (product.originalPrice *
                               (100 - product.discountPercent)) /
                             100
-                          ).toFixed(2)}
+                          ).toFixed(3)} VND
                         </p>
                       </div>
                       <p className="font-sans font-medium text-[15px] text-center">
@@ -154,16 +154,14 @@ const Wishlist = () => {
                     </Table.Cell>
                     <Table.Cell className="font-sans font-medium text-[15px] text-center">
                       <p className=" text-gray-900">
-                        {" "}
-                        ${" "}
                         {(
-                          ((product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(2)}
+                          ((product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(3)} VND
                       </p>
                       <p>
                         {" "}
-                        You saved $
+                        You saved{" "}
                         {(
-                          (product.originalPrice - (product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(2)}{" "}
+                          (product.originalPrice - (product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(3)} VND
                       </p>
                     </Table.Cell>
                     <Table.Cell>

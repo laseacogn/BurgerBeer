@@ -1,0 +1,112 @@
+[
+    {
+        "id": "VC021",
+        "title": "Spring Fling Sale",
+        "discount": "18",
+        "quantity": "40",
+        "quantityUsed": "5",
+        "minOrd": "120.000",
+        "maxDis": "30.000",
+        "startDate": "2024-03-05",
+        "endDate": "2024-03-15"
+    },
+    {
+        "id": "VC022",
+        "title": "April Fool's Day Special",
+        "discount": "10",
+        "quantity": "30",
+        "quantityUsed": "0",
+        "minOrd": "150.000",
+        "maxDis": "40.000",
+        "startDate": "2024-04-01",
+        "endDate": "2024-04-01"
+    },
+    {
+        "id": "VC023",
+        "title": "Springtime Savings",
+        "discount": "20",
+        "quantity": "50",
+        "quantityUsed": "10",
+        "minOrd": "100.000",
+        "maxDis": "35.000",
+        "startDate": "2024-03-15",
+        "endDate": "2024-03-31"
+    },
+    {
+        "id": "VC024",
+        "title": "Carnival Celebration",
+        "discount": "15",
+        "quantity": "25",
+        "quantityUsed": "0",
+        "minOrd": "110.000",
+        "maxDis": "25.000",
+        "startDate": "2024-05-01",
+        "endDate": "2024-05-05"
+    },
+    {
+        "id": "VC025",
+        "title": "Spring Fever Sale",
+        "discount": "25",
+        "quantity": "60",
+        "quantityUsed": "20",
+        "minOrd": "130.000",
+        "maxDis": "50.000",
+        "startDate": "2024-04-10",
+        "endDate": "2024-04-20"
+    },
+    {
+        "id": "VC026",
+        "title": "Easter Extravaganza",
+        "discount": "20",
+        "quantity": "35",
+        "quantityUsed": "5",
+        "minOrd": "140.000",
+        "maxDis": "30.000",
+        "startDate": "2024-04-15",
+        "endDate": "2024-04-25"
+    },
+    {
+        "id": "VC027",
+        "title": "Spring Renewal Sale",
+        "discount": "18",
+        "quantity": "40",
+        "quantityUsed": "10",
+        "minOrd": "160.000",
+        "maxDis": "60.000",
+        "startDate": "2024-05-01",
+        "endDate": "2024-05-10"
+    },
+    {
+        "id": "VC028",
+        "title": "Springtime Surprise",
+        "discount": "15",
+        "quantity": "30",
+        "quantityUsed": "0",
+        "minOrd": "120.000",
+        "maxDis": "20.000",
+        "startDate": "2024-03-20",
+        "endDate": "2024-03-25"
+    },
+    {
+        "id": "VC029",
+        "title": "Mother's Day Mayhem",
+        "discount": "25",
+        "quantity": "50",
+        "quantityUsed": "15",
+        "minOrd": "150.000",
+        "maxDis": "40.000",
+        "startDate": "2024-05-05",
+        "endDate": "2024-05-15"
+    },
+    {
+        "id": "VC030",
+        "title": "Spring Break Bonanza",
+        "discount": "30",
+        "quantity": "20",
+        "quantityUsed": "5",
+        "minOrd": "170.000",
+        "maxDis": "70.000",
+        "startDate": "2024-04-05",
+        "endDate": "2024-04-10"
+    }
+]

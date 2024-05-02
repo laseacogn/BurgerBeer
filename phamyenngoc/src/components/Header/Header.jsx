@@ -200,6 +200,12 @@ function Header() {
             SHOP
           </Navbar.Link>
           <Navbar.Link
+            href="/voucher"
+            className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
+          >
+            VOUCHER
+          </Navbar.Link>
+          <Navbar.Link
             href="/aboutus"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >

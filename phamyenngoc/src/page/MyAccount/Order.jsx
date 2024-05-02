@@ -29,7 +29,7 @@ const Order = () => {
                     <li>{value.deliveryId}</li>
                     <li>{value.paymentId}</li>
                     <li>{value.orderDate}</li>
-                    <li>{value.totalAmount}$</li>
+                    <li>{value.totalAmount}.000 VND</li>
                     <li>{value.status}</li>
                     <li className="pl-[70px]">
                       {" "}
