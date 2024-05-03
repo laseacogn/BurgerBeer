@@ -1,0 +1,47 @@
+[
+    {
+        "userID":"acc001",
+        "name":"Pham Yen Ngoc",
+        "phone":"564751400",
+        "city":"Da Nang City",
+        "district":"Ngu Hanh Son District",
+        "ward":"An Thuong Ward",
+        "specificAdd":"26 An Thuong 4"
+    },
+    {
+        "userID":"acc001",
+        "name":"Nguyen Thu Huyen",
+        "phone":"987654321",
+        "city":"Da Nang City",
+        "district":"Ngu Hanh Son District",
+        "ward":"An Thuong Ward",
+        "specificAdd":"30 An Thuong 36"
+    },
+    {
+        "userID":"acc001",
+        "name":"Nguyen Anh Thu",
+        "phone":"123456789",
+        "city":"Da Nang City",
+        "district":"Son Tra District",
+        "ward":"Tho Quang Ward",
+        "specificAdd":"01 Vu Dinh Long"
+    },
+    {
+        "userID":"acc001",
+        "name":"Hoang Nguyen Linh Chi",
+        "phone":"369852147",
+        "city":"Da Nang City",
+        "district":"Hai Chau District",
+        "ward":"Hoa Cuong I Ward",
+        "specificAdd":"789 DEF Street"
+    },
+    {
+        "userID":"acc001",
+        "name":"Pham Xuan Truong",
+        "phone":"321654987",
+        "city":"Da Nang City",
+        "district":"Lien Chieu District",
+        "ward":"Hoa Minh Ward",
+        "specificAdd":"987 GHI Street"
+    }
+]

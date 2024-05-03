@@ -13,20 +13,24 @@ const AccountSetting = () => {
   };
 
   const [ward, setWard] = useState([]);
-  const [district, setDistrict] = useState(districtData);
-  const [districtID, setDistrictID] = useState("");
-  const filteredWards = ward.filter((item) => item.districtID === districtID);
+  const [district, setDistrict] = useState([]);
+  const [DistrictID, setDistrictID] = useState([])
+  const [filteredWards, setFilteredWards] = useState([]);
 
   useEffect(() => {
-    if (districtID === "") {
-      setWard(wardData);
+    setDistrict(districtData);
+  }, []);
+
+  useEffect(() => {
+    if (DistrictID === "") {
+      setFilteredWards([]);
     } else {
       const filteredWard = wardData.filter(
-        (ward) => ward.districtID === districtID
+        (ward) => ward.DistrictID === DistrictID
       );
-      setWard(filteredWard);
+      setFilteredWards(filteredWard);
     }
-  }, [districtID]);
+  }, [DistrictID]);
 
   return (
     <div className="max-w-[1200px] mx-auto no-scrollbar">
@@ -50,8 +54,8 @@ const AccountSetting = () => {
               />
             </div>
             <TextInput
-              id="current pw"
-              type="current pw"
+              id="email"
+              type="email"
               icon={RiLockPasswordFill}
               required
             />
@@ -102,10 +106,9 @@ const AccountSetting = () => {
               type="email"
               icon={FaCity}
               required
-              class="form-select w-full border-slate-300 rounded-lg bg-slate-50"
+              className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
             >
               <option disabled selected>
-                {" "}
                 -- Select City --
               </option>
               <option className="font-sans font-medium text-[15px] text-black">
@@ -135,7 +138,7 @@ const AccountSetting = () => {
                 -- Select District --
               </option>
               {district.map((item, index) => (
-                <option value={item.id} key={index}>
+                <option value={item.DistrictID} key={index}>
                   {item.name}
                 </option>
               ))}
@@ -156,12 +159,14 @@ const AccountSetting = () => {
               icon={FaCity}
               required
               className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
+              value={ward}
+              onChange={(e) => setWard(e.target.value)}
             >
               <option disabled selected>
                 -- Select Ward --
               </option>
               {filteredWards.map((item, index) => (
-                <option value={item.id} key={index}>
+                <option value={item.DistrictID} key={index}>
                   {item.name}
                 </option>
               ))}

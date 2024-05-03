@@ -1,26 +1,26 @@
 [
     { 
-        "id":"1",
+        "DistrictID":"1",
         "name": "Lien Chieu District" },
     { 
-        "id":"2",
+        "DistrictID":"2",
         "name": "Hai Chau District" },
     { 
-        "id":"3",
+        "DistrictID":"3",
         "name": "Ngu Hanh Son District" },
     { 
-        "id":"4",
+        "DistrictID":"4",
         "name": "Son Tra District" },
     { 
-        "id":"5",
+        "DistrictID":"5",
         "name": "Cam Le District" },
     { 
-        "id":"6",
+        "DistrictID":"6",
         "name": "Thanh Khe District" },
     { 
-        "id":"7",
+        "DistrictID":"7",
         "name": "Hoa Vang District" },
     { 
-        "id":"1",
+        "DistrictID":"1",
         "name": "Hoang Sa District" }
   ]

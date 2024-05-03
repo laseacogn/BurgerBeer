@@ -26,6 +26,7 @@ function Header() {
       }
     };
 
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -156,7 +157,7 @@ function Header() {
             label={
               <div className="avatar">
                 <div className="w-14 rounded-full">
-                  <img src={avatar} alt="" />
+                  <img src={require("../../assets/image/avatar/avatar.jpg")} alt="" />
                 </div>
               </div>
             }

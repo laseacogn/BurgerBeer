@@ -3,11 +3,14 @@ import { Tabs } from "flowbite-react";
 import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
 import { BiSolidDiscount } from "react-icons/bi";
+import { FaAddressBook } from "react-icons/fa";
 import Profile from "./Profile";
 import AccountSetting from "./AccountSetting";
 import Order from "./Order";
 import Review from "./Review";
-import Voucherrr from "./Voucherrr"
+import Voucherrr from "./Voucherrr";
+import Address from "./Address";
+
 
 const MyAccount = () => {
   return (
@@ -27,6 +30,9 @@ const MyAccount = () => {
                 </Tabs.Item>
                 <Tabs.Item title="Account Setting" icon={MdDashboard}>
                  <AccountSetting/>
+                </Tabs.Item>
+                <Tabs.Item title="My Address" icon={FaAddressBook}>
+                  <Address/>
                 </Tabs.Item>
                 <Tabs.Item title="Order" icon={HiAdjustments}>
                   <Order/>

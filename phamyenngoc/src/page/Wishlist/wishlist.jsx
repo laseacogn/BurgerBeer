@@ -69,7 +69,7 @@ const Wishlist = () => {
           </p>
         </div>
         <div className="w-[90%] mx-auto pb-[20px] ">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto no-scrollbar">
             <Table hoverable>
               <Table.Head>
                 <Table.HeadCell className="p-4">
@@ -100,24 +100,25 @@ const Wishlist = () => {
                     <Table.Cell className="p-4">
                       <Checkbox />
                     </Table.Cell>
-                    <Table.Cell className="flex items-center w-[250px]">
+                    <Table.Cell className="flex items-center w-[280px]">
                       <img
                         className="w-[50px] h-[50px] self-center mr-[10px]"
                         style={{ borderRadius: "10px" }}
                         src={require(`../../assets/image/Burger/${product.image}`)}
                         alt={product.name}
                       />
-                      <p className="whitespace-nowrap font-sans font-medium text-[15px] text-gray-900 dark:text-white">
+          
+                      <p className="font-sans font-medium text-[15px] text-gray-900 dark:text-white">
                         {" "}
                         {product.name}{" "}
                       </p>
                     </Table.Cell>
                     <Table.Cell>
                       <div className="flex justify-center items-center">
-                        <p className="line-through font-sans font-medium text-[15px] text-gray-700 mr-[20px]">
+                        <p className=" whitespace-nowrap line-through font-sans font-medium text-[15px] text-gray-700 mr-[20px]">
                           {product.originalPrice.toFixed(3)} VND
                         </p>
-                        <p className="font-sans font-medium text-[15px] text-gray-900">
+                        <p className=" whitespace-nowrap font-sans font-medium text-[15px] text-gray-900">
                           
                           {(
                             (product.originalPrice *
@@ -126,7 +127,7 @@ const Wishlist = () => {
                           ).toFixed(3)} VND
                         </p>
                       </div>
-                      <p className="font-sans font-medium text-[15px] text-center">
+                      <p className="whitespace-nowrap font-sans font-medium text-[15px] text-center">
                         {" "}
                         Discount {product.discountPercent}%{" "}
                       </p>
@@ -157,7 +158,7 @@ const Wishlist = () => {
                         {(
                           ((product.originalPrice * (100 - product.discountPercent)) / 100) * product.quantity).toFixed(3)} VND
                       </p>
-                      <p>
+                      <p className="whitespace-nowrap">
                         {" "}
                         You saved{" "}
                         {(

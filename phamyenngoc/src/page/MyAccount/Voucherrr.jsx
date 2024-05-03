@@ -178,16 +178,13 @@ const Voucherrr = () => {
                   <p className="w-[100px] font-sans font-semibold text-[13px] text-gray-900 ml-[165px] mt-[15px]">
                     EXP: {voucherItem.endDate}
                   </p>
-
-                  <Button
-                    color={buttonStates[index].color}
-                    className="rounded-none w-[91px] ml-[170px] h-[30px] "
-                    onClick={() => handleClick(index)}
-                  >
+                  <Link to="/product">
+                  <Button  className="rounded-none w-[91px] ml-[170px] h-[30px] " color="light">
                     <p className="font-sans font-semibold text-[13px] mt-[-6px]">
-                      {buttonStates[index].text}
+                      Buy Now
                     </p>
                   </Button>
+                  </Link>
                 </div>
               </div>
               <div style={{ position: "absolute", zIndex: "4" }}>

@@ -9,7 +9,6 @@ import { MdDescription } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
-import Search from "../../components/Search Product/Search";
 import Revieww from "./Revieww";
 
 
@@ -90,7 +89,6 @@ export default function ProductDT() {
                 </p>
             )}
             </div>
-            <Search/>
           </div>
 
           <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
