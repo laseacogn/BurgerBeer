@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button, Modal, Label, TextInput, Pagination } from "flowbite-react";
+import {
+  Table,
+  Button,
+  Modal,
+  Label,
+  TextInput,
+  Pagination,
+} from "flowbite-react";
 import { Link } from "react-router-dom";
 import { AiFillHome, AiFillDelete } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
@@ -12,14 +19,12 @@ import { FaPen } from "react-icons/fa6";
 import Search2 from "../../components/Search Product/Search2";
 import Search5 from "../../components/Search Product/Search5";
 import Search6 from "../../components/Search Product/Search6";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-} from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../../config/firebase.config";
 import { v4 } from "uuid";
-import categoryData from "../../data/category.json"
+import categoryData from "../../data/category.json";
+import { IoSettingsSharp } from "react-icons/io5";
+import { TbBrandBooking } from "react-icons/tb";
 
 export function ItemList() {
   const [categories, setCategories] = useState([]);
@@ -36,10 +41,14 @@ export function ItemList() {
   const [searchTerm2, setSearchTerm2] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const showAlert3 = () => {
+    alert("Delete product successfully !");
+  };
+
   useEffect(() => {
     setOriginalPrd(prdData);
     setProducts(prdData);
-    setCategories(categoryData)
+    setCategories(categoryData);
   }, []);
 
   const handleDelete = (index) => {
@@ -55,10 +64,16 @@ export function ItemList() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, totalPrd);
 
-    let filteredPrd = originalPrd.filter(prd => {
-      const idMatch = prd.id.toString().toLowerCase().includes(searchTerm.toLowerCase());
-      const nameMatch = prd.name && prd.name.toLowerCase().includes(searchTerm2.toLowerCase());
-      const categoryMatch = selectedCategory ? prd.categoryName === selectedCategory : true;
+    let filteredPrd = originalPrd.filter((prd) => {
+      const idMatch = prd.id
+        .toString()
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const nameMatch =
+        prd.name && prd.name.toLowerCase().includes(searchTerm2.toLowerCase());
+      const categoryMatch = selectedCategory
+        ? prd.categoryName === selectedCategory
+        : true;
 
       if (searchTerm !== "" && idMatch) {
         return true;
@@ -88,11 +103,8 @@ export function ItemList() {
     setSelectedCategory(value);
   };
 
-
-
-  const [imageUploads, setImageUploads] = useState()
-  const [imageUrl, setImageUrl] = useState()
-
+  const [imageUploads, setImageUploads] = useState();
+  const [imageUrl, setImageUrl] = useState();
 
   const uploadFile = async () => {
     try {
@@ -102,12 +114,12 @@ export function ItemList() {
       const url = await getDownloadURL(snapshot.ref);
       return url;
     } catch (error) {
-      console.error('Error uploading file:', error);
+      console.error("Error uploading file:", error);
       throw error;
     }
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const file = e.target.files[0];
     setImageUploads(file);
   };
@@ -115,13 +127,12 @@ export function ItemList() {
   const handleUpload = async () => {
     try {
       const url = await uploadFile();
-      setImageUrl(url)
-      return url
+      setImageUrl(url);
+      return url;
     } catch (error) {
-      console.error('Error uploading file to Firebase:', error);
+      console.error("Error uploading file to Firebase:", error);
     }
   };
-
 
   const AddItem = async () => {
     const img = await handleUpload();
@@ -139,13 +150,15 @@ export function ItemList() {
       alert("Please fill in all fields");
       return;
     }
-
     const parsedPrice1 = parseFloat(BasisPrice);
     const parsedPrice2 = parseFloat(SalePrice);
+    const parsedPrice3 = parseFloat(Discount);
 
-    if (isNaN(parsedPrice1) || isNaN(parsedPrice2)) {
+    if (isNaN(parsedPrice1) || isNaN(parsedPrice2) || isNaN(parsedPrice3)) {
       alert("Please enter valid prices");
       return;
+    } else {
+      alert("Add new product successfully!");
     }
 
     console.log(ID);
@@ -162,7 +175,6 @@ export function ItemList() {
     setProducts([...products, newItem]);
   };
 
-
   const [ID, setID] = useState("");
   const [Name, setName] = useState("");
   const [Category, setCategory] = useState("");
@@ -171,7 +183,78 @@ export function ItemList() {
   const [Discount, setDiscount] = useState("");
   const [Description, setDescription] = useState("");
 
+  
+  const [ID2, setID2] = useState("");
+  const [Name2, setName2] = useState("");
+  const [Category2, setCategory2] = useState("");
+  const [BasisPrice2, setBasisPrice2] = useState("");
+  const [SalePrice2, setSalePrice2] = useState("");
+  const [Discount2, setDiscount2] = useState("");
+  const [Description2, setDescription2] = useState("");
 
+  const [editIndex, setEditIndex] = useState(null);
+  const [editInfo, setEditInfo] = useState({
+    ID2: "",
+    Name2: "",
+    Category2: "",
+    BasisPrice2: "",
+    Discount2: "",
+    SalePrice2: "",
+    Description2: "",
+  });
+
+  const openEditModal = (index) => {
+    setEditIndex(index);
+    const { ID2, Name2, Category2, BasisPrice2, Discount2, SalePrice2, Description2 } =
+      products[index];
+    setID(ID2);
+    setName(Name2);
+    setCategory(Category2);
+    setBasisPrice(BasisPrice2);
+    setDiscount(Discount2);
+    setSalePrice2(SalePrice2);
+    setDescription(Description2);
+    setOpenModal2(true);
+  };
+
+  const updatedProducts = async() => {
+    const img = await handleUpload();
+    if (
+      !ID2 ||
+      !Name2 ||
+      !img ||
+      !Category2 ||
+      !BasisPrice2 ||
+      !SalePrice2 ||
+      !Discount2 ||
+      !Description2
+    ) {
+      alert("Please fill in all fields");
+      return;
+    }
+    const parsedPrice4 = parseFloat(BasisPrice2);
+    const parsedPrice5 = parseFloat(SalePrice2);
+    const parsedPrice6 = parseFloat(Discount2);
+
+    if (isNaN(parsedPrice4) || isNaN(parsedPrice5) || isNaN(parsedPrice6)) {
+      alert("Please enter valid prices");
+      return;
+    } else {
+      alert("Update product successfully!");
+    }
+    const updatedProducts = [...products];
+    updatedProducts[editIndex] = {
+      id: ID2,
+      name: Name2,
+      image: img,
+      categoryName: Category2,
+      originalPrice: parsedPrice4,
+      discountPercent: parsedPrice6,
+      description: Description2,
+    };
+    setProducts(updatedProducts);
+    setOpenModal2(false);
+  };
 
   return (
     <div className="max-w-[1200px] mx-auto bg-[#FFDADA] mt-[-10px]">
@@ -186,7 +269,7 @@ export function ItemList() {
             BURGER N' BEER
           </p>
           <Link to="/corporate_account">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[30px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
               <AiFillHome className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 DASHBOARD
@@ -194,7 +277,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/user_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <FaUserAlt className="w-[20px] h-[20px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 USER MANAGE
@@ -202,7 +285,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/category_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <MdCategory className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 CATEGORY
@@ -210,7 +293,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/item_list">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[15px] drop-shadow">
               <HiTemplate className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 PRODUCT
@@ -218,7 +301,7 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/voucher_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <BiSolidDiscount className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 VOUCHER
@@ -226,10 +309,26 @@ export function ItemList() {
             </Button>
           </Link>
           <Link to="/order_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <IoReorderFour className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 ORDER
+              </p>
+            </Button>
+          </Link>
+          <Link to="/reserve_manage">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <TbBrandBooking className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                RESERVATION
+              </p>
+            </Button>
+          </Link>
+          <Link to="/system_setting">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <IoSettingsSharp className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                SETTING
               </p>
             </Button>
           </Link>
@@ -268,7 +367,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setID(e.target.value) }}
+                        onChange={(e) => {
+                          setID(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -283,7 +384,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setName(e.target.value) }}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -298,21 +401,23 @@ export function ItemList() {
                         />
                       </div>
                       <select
-                        onChange={(e) => { setCategory(e.target.value) }}
+                        onChange={(e) => {
+                          setCategory(e.target.value);
+                        }}
                         id="email"
                         name="email"
                         required
                         className="form-select border-slate-300 rounded-lg bg-slate-50 w-full h-[43px]"
-                    >
+                      >
                         <option disabled selected>
-                            --Select Category--
+                          --Select Category--
                         </option>
                         {categories.map((item, index) => (
-                            <option value={item.name} key={index}>
-                                {item.name}
-                            </option>
+                          <option value={item.name} key={index}>
+                            {item.name}
+                          </option>
                         ))}
-                    </select>
+                      </select>
                     </div>
                     <div className="mt-2">
                       <div className="mb-2 block">
@@ -323,10 +428,12 @@ export function ItemList() {
                         />
                       </div>
 
-                      <input type="file"
+                      <input
+                        type="file"
                         className="file-input file-input-bordered w-full max-w-xs"
                         multiple
-                        onChange={handleChange} />
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                   <div className="w-[95%] mt-[-5px]">
@@ -339,7 +446,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setBasisPrice(e.target.value) }}
+                        onChange={(e) => {
+                          setBasisPrice(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -354,7 +463,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setDiscount(e.target.value) }}
+                        onChange={(e) => {
+                          setDiscount(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -369,7 +480,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setSalePrice(e.target.value) }}
+                        onChange={(e) => {
+                          setSalePrice(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -384,7 +497,9 @@ export function ItemList() {
                         />
                       </div>
                       <TextInput
-                        onChange={(e) => { setDescription(e.target.value) }}
+                        onChange={(e) => {
+                          setDescription(e.target.value);
+                        }}
                         id="email"
                         type="email"
                         required
@@ -394,7 +509,15 @@ export function ItemList() {
                 </div>
               </Modal.Body>
               <Modal.Footer>
-                <Button onClick={() => { setOpenModal1(false); AddItem() }} color="dark">I accept</Button>
+                <Button
+                  onClick={() => {
+                    setOpenModal1(false);
+                    AddItem();
+                  }}
+                  color="dark"
+                >
+                  I accept
+                </Button>
                 <Button color="gray" onClick={() => setOpenModal1(false)}>
                   Decline
                 </Button>
@@ -470,7 +593,8 @@ export function ItemList() {
                           <p className="font-sans font-medium text-[17px] text-gray-900 dark:text-white">
                             {" "}
                             {product.name}{" "}
-                          </p></div>
+                          </p>
+                        </div>
                       </Table.Cell>
                       <Table.Cell>
                         <p className="font-sans font-medium text-[17px] text-gray-900 text-center">
@@ -480,8 +604,7 @@ export function ItemList() {
 
                       <Table.Cell>
                         <p className="whitespace-nowrap font-sans font-medium text-[17px] text-gray-900 text-center">
-                        
-                          {product.originalPrice.toFixed(3)} VND
+                          {product.originalPrice}.000 VND
                         </p>
                       </Table.Cell>
                       <Table.Cell>
@@ -493,36 +616,23 @@ export function ItemList() {
                       </Table.Cell>
                       <Table.Cell className="whitespace-nowrap font-sans font-medium text-[17px] text-center">
                         <p className=" text-gray-900">
-                          {(
-                            (product.originalPrice *
-                              (100 - product.discountPercent)) /
-                            100
-                          ).toFixed(3)} VND
+                          {((product.originalPrice *(100 - product.discountPercent)) /100).toFixed(3)}{" "}VND
                         </p>
                       </Table.Cell>
                       <Table.Cell className="flex ">
                         <Button
-                          onClick={() => setOpenModal2(true)}
+                          onClick={() => {
+                            setOpenModal2(true);
+                            openEditModal(index);
+                          }}
                           className="w-[20px] text-gray-900 border-transparent hover-text-red mr-[20px]"
                           color="light"
                         >
                           <FaPen className="w-[17px] h-[17px]" />
                         </Button>
-                        <Modal
-                          show={openModal2}
-                          onClose={() => setOpenModal2(false)}
-                          className="no-scrollbar"
-                        >
-                          <Modal.Header className="h-[50px] pt-[10px]">
-                            Edit Product
-                          </Modal.Header>
 
-                          <Modal.Body className="no-scrollbar">
-                            <editItem />
-                          </Modal.Body>
-                        </Modal>
                         <Button
-                          onClick={() => handleDelete(index)}
+                          onClick={() => {handleDelete(index); showAlert3()}}
                           className="w-[20px] text-gray-900 border-transparent hover-text-red"
                           color="light"
                         >
@@ -542,9 +652,197 @@ export function ItemList() {
                 showIcons
               />
             </div>
+
+            <Modal
+              show={openModal2}
+              onClose={() => setOpenModal2(false)}
+              className="no-scrollbar"
+            >
+              <Modal.Header className="h-[50px] pt-[10px]">
+                Edit Product
+              </Modal.Header>
+
+              <Modal.Body className="no-scrollbar">
+                <div className="w-full mx-auto flex grid grid-cols-2 justify-between items-center">
+                  <div className="w-[95%]">
+                    <div className="max-w">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Product ID"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setID2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Product Name"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setName2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Category"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <select
+                        onChange={(e) => {
+                          setCategory2(e.target.value);
+                        }}
+                        id="email"
+                        name="email"
+                        required
+                        className="form-select border-slate-300 rounded-lg bg-slate-50 w-full h-[43px]"
+                      >
+                        <option disabled selected>
+                          --Select Category--
+                        </option>
+                        {categories.map((item, index) => (
+                          <option value={item.name} key={index}>
+                            {item.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Product Image"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+
+                      <input
+                        type="file"
+                        className="file-input file-input-bordered w-full max-w-xs"
+                        multiple
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="w-[95%] mt-[-5px]">
+                    <div className="max-w">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Basis Price"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setBasisPrice2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Discount (%)"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setDiscount2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Quantity"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setSalePrice2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Description"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => {
+                          setDescription2(e.target.value);
+                        }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Modal.Body>
+
+              <Modal.Footer className="h-[60px]">
+                <Button
+                  onClick={() => {
+                    updatedProducts();
+                  }}
+                  color="dark"
+                  className="rounded-none"
+                >
+                  <p className="font-sans font-semibold text-[15px] text-white">
+                    Accept
+                  </p>
+                </Button>
+                <Button
+                  className="rounded-none"
+                  color="light"
+                  onClick={() => setOpenModal2(false)}
+                >
+                  <p className="font-sans font-semibold text-[15px] text-gray-900">
+                    Decline
+                  </p>
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}

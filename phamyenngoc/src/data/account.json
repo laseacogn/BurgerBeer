@@ -5,7 +5,8 @@
         "email": "lasea02@gmail.com",
         "phone": "0564751400",
         "address": "26 An Thuong 4",
-        "role": "admin"
+        "role": "admin",
+        "roleID": "001"
     },
     {
         "id": "acc002",
@@ -13,7 +14,8 @@
         "email": "nguyenvana@gmail.com",
         "phone": "0123456789",
         "address": "123 ABC Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc003",
@@ -21,7 +23,8 @@
         "email": "tranthib@gmail.com",
         "phone": "0987654321",
         "address": "456 XYZ Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc004",
@@ -29,7 +32,8 @@
         "email": "levanc@gmail.com",
         "phone": "0369852147",
         "address": "789 QWE Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc005",
@@ -37,7 +41,8 @@
         "email": "hoangthid@gmail.com",
         "phone": "0123478965",
         "address": "321 ZXC Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc006",
@@ -45,7 +50,8 @@
         "email": "vovane@gmail.com",
         "phone": "0456789123",
         "address": "987 RTY Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc007",
@@ -53,7 +59,8 @@
         "email": "dothif@gmail.com",
         "phone": "0987654321",
         "address": "654 TYU Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc008",
@@ -61,7 +68,8 @@
         "email": "nguyenvang@gmail.com",
         "phone": "0123456789",
         "address": "123 ASD Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc009",
@@ -69,7 +77,8 @@
         "email": "tranvanh@gmail.com",
         "phone": "0369852147",
         "address": "456 FGH Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc010",
@@ -77,7 +86,8 @@
         "email": "lethii@gmail.com",
         "phone": "0123478965",
         "address": "321 HJK Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc011",
@@ -85,7 +95,8 @@
         "email": "hoangvanj@gmail.com",
         "phone": "0456789123",
         "address": "987 LKJ Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     },
     {
         "id": "acc012",
@@ -93,6 +104,7 @@
         "email": "vothik@gmail.com",
         "phone": "0987654321",
         "address": "654 POI Street",
-        "role": "customer"
+        "role": "customer",
+        "roleID": "002"
     }
 ]

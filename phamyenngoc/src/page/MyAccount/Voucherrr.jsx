@@ -112,10 +112,6 @@ const Voucherrr = () => {
             </Tabs>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={() => setOpenModal(false)}>I accept</Button>
-            <Button color="gray" onClick={() => setOpenModal(false)}>
-              Decline
-            </Button>
           </Modal.Footer>
         </Modal>
       </div>

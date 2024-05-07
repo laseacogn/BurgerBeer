@@ -7,11 +7,11 @@ import { FaGooglePlus } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Register from "./Register";
 import ForgotPassword from "./ForgotPassword";
-import userData from "../../data/user.json";
+import userData from "../../data/adminAccount.json";
 import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+const LoginAdmin = () => {
   const [openModal, setOpenModal] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
   const [email, setEmail] = useState("");
@@ -20,11 +20,14 @@ const Login = () => {
 
   //Gọi hàm khi user đăng nhập   
   const handleLogin = () => {
+    if (email === "" || password === "") {
+      alert("Please fill in all fields.");
+    }
     // Kiểm tra xem email và password có trong dữ liệu userData không
     const user = userData.find((user) => user.email === email && user.password === password);
     if (user) {
       // Nếu tìm thấy người dùng, điều hướng đến trang chính
-      navigate("/home");
+      navigate("/corporate_account");
       alert("Welcome To Burger N' Beer!");
     } else {
       // Nếu không tìm thấy, hiển thị thông báo lỗi
@@ -193,4 +196,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginAdmin;

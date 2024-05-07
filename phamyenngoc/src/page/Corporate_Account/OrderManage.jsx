@@ -14,6 +14,8 @@ import { FaEye } from "react-icons/fa";
 import Search9 from "../../components/Search Product/Search9";
 import Search8 from "../../components/Search Product/Search8";
 import Search7 from "../../components/Search Product/Search7";
+import { IoSettingsSharp } from "react-icons/io5";
+import { TbBrandBooking } from "react-icons/tb";
 
 const OrderManage = () => {
   const [ord, setOrd] = useState([]);
@@ -92,7 +94,7 @@ const OrderManage = () => {
             BURGER N' BEER
           </p>
           <Link to="/corporate_account">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[30px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
               <AiFillHome className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 DASHBOARD
@@ -100,7 +102,7 @@ const OrderManage = () => {
             </Button>
           </Link>
           <Link to="/user_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <FaUserAlt className="w-[20px] h-[20px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 USER MANAGE
@@ -108,7 +110,7 @@ const OrderManage = () => {
             </Button>
           </Link>
           <Link to="/category_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <MdCategory className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 CATEGORY
@@ -116,7 +118,7 @@ const OrderManage = () => {
             </Button>
           </Link>
           <Link to="/item_list">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <HiTemplate className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 PRODUCT
@@ -124,7 +126,7 @@ const OrderManage = () => {
             </Button>
           </Link>
           <Link to="/voucher_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <BiSolidDiscount className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 VOUCHER
@@ -132,10 +134,26 @@ const OrderManage = () => {
             </Button>
           </Link>
           <Link to="/order_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[15px] drop-shadow">
               <IoReorderFour className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 ORDER
+              </p>
+            </Button>
+          </Link>
+          <Link to="/reserve_manage">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <TbBrandBooking className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                RESERVATION
+              </p>
+            </Button>
+          </Link>
+          <Link to="/system_setting">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <IoSettingsSharp className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                SETTING
               </p>
             </Button>
           </Link>
@@ -229,6 +247,7 @@ const OrderManage = () => {
                       </Table.Cell>
                     </Table.Row>
                   ))}
+              
                 </Table.Body>
               </Table>
             </div>

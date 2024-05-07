@@ -5,7 +5,12 @@ import { Pagination, Button, Modal } from "flowbite-react";
 import SearchVoucher from "../../components/Search Product/SearchVoucher";
 import { useNavigate, Link } from "react-router-dom";
 
-const Voucher = () => {
+const Voucher2 = () => {
+    const showAlert1 = () => {
+    alert(
+      "Please log in to save voucher!"
+    );
+  };
   const [topPrd, setTopPrd] = useState([]);
   const [voucher, setVoucher] = useState([]);
   const [originalVoucher, setOriginalVoucher] = useState([]);
@@ -46,27 +51,13 @@ const Voucher = () => {
     setSearchTerm(value);
   };
 
-  const handleClick = (index) => {
-    setButtonStates((prevButtonStates) => {
-      const newButtonStates = [...prevButtonStates];
-      if (newButtonStates[index].text === "Save") {
-        newButtonStates[index] = { text: "Buy Now", color: "light" };
-      } else {
-        navigate("/product");
-      }
-      return newButtonStates;
-    });
-  };
+ 
 
   const handleClick2 = (index) => {
     setSelectedVoucherIndex(index);
     setOpenModal(true);
   };
 
-
-  
-
-  
   return (
     <div className="max-w-[1200px] max-h-[860px] mx-auto grid grid-cols-2 ">
       <div className="w-[320px] h-[860px] bg-[#FEFFFF] shadow-lg">
@@ -79,7 +70,7 @@ const Voucher = () => {
         </p>
         {topPrd.map((topPrd, index) => (
           <div className="w-[280px] ml-[20px] mt-[10px]" key={index}>
-            <Link to={`/product/${topPrd.id}`}>
+            <Link to={`/producttt/${topPrd.id}`}>
               <div className="w-full flex justify-center items-center mb-[15px] bg-[#FEFFFF] shadow-md pb-[15px]">
                 <img
                   className="w-[70px] h-[70px] self-center"
@@ -166,13 +157,12 @@ const Voucher = () => {
                 </p>
 
                 <Button
-                  color={buttonStates[index].color}
+                  color="dark"
                   className="rounded-none w-[91px] ml-[80px] h-[30px]"
-                  onClick={() => handleClick(index)}
+                  onClick={() => showAlert1()}
                 >
-                  
-                  <p className="whitespace-nowrap font-sans font-semibold text-[13px] mt-[-6px]">
-                    {buttonStates[index].text}
+                  <p className="font-sans font-semibold text-[13px] mt-[-6px]">
+                    Save
                   </p>
                 </Button>
               </div>
@@ -274,7 +264,7 @@ const Voucher = () => {
               <p className="font-normal text-gray-700">
                 Applies to all products in our store.
                 <span className="ml-[5px] font-sans text-[17px] font-normal text-blue-500">
-                  <Link to="/product">Buy now.</Link>
+                  <Link to="/producttt">Buy now.</Link>
                 </span>
               </p>
 
@@ -305,4 +295,4 @@ const Voucher = () => {
     </div>
   );
 };
-export default Voucher;
+export default Voucher2;

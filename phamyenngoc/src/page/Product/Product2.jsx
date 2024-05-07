@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import categorieData from "../../data/category.json";
-import ItemProduct from "./ItemProduct";
+import ItemProduct2 from "./ItemProduct2";
 import dataProduct from "../../data/product.json";
 import { Pagination } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
@@ -8,14 +8,13 @@ import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
 
-const Product = () => {
+const Product2 = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -126,7 +125,7 @@ const Product = () => {
       >
         <div className="grid grid-cols-3 gap-4 text-center">
           {products.map((product, index) => (
-            <ItemProduct key={index} product={product} />
+            <ItemProduct2 key={index} product={product} />
           ))}
         </div>
       </div>
@@ -142,4 +141,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Product2;

@@ -144,7 +144,7 @@ const OrderDetail = () => {
                             </div>
                           }
                         >
-                          <p className="ml-[150px] underline mt-[-15px] text-blue-600">
+                          <p className="ml-[170px] underline mt-[-15px] text-blue-600">
                             See more...
                           </p>
                         </Popover>

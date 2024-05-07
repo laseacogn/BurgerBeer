@@ -12,19 +12,19 @@ import { NavLink } from "react-router-dom";
 import Revieww from "./Revieww";
 
 
-export default function ProductDT() {
+export default function ProductDT2() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
   const showAlert1 = () => {
     alert(
-      "The product has been added to cart!"
+      "Please log in to add products to cart!"
     );
   };
   const showAlert2 = () => {
     alert(
-      "The product has been added to wishlist!"
+      "Please log in to add products to wishlist!"
     );
   };
 
@@ -67,7 +67,7 @@ export default function ProductDT() {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <NavLink to="/home">
+            <NavLink to="/">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Home{" "}
@@ -75,7 +75,7 @@ export default function ProductDT() {
             </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/product">
+            <NavLink to="/producttt">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Products

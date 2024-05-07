@@ -24,7 +24,7 @@ const Register = () => {
     );
   };
   return (
-          <div className="w-full mx-auto justify-center items-center">
+          <div className="w-full mx-auto justify-center items-center no-scrollbar">
             <div className="w-full">
               <div className="w-full">
                 <div className="max-w">

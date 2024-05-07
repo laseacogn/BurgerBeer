@@ -25,6 +25,12 @@ const Cart = () => {
     setModalOpenCustomer(true)
   }
 
+   const handleDelete = (productId) => {
+    // Xử lý logic xóa sản phẩm ở đây
+    console.log("Xóa sản phẩm có ID:", productId);
+  };
+
+
   return (
     <div className="max-w-[1200px] mx-auto grid grid-cols-2">
       <div className="h-[700px] overflow-auto no-scrollbar">
@@ -265,7 +271,7 @@ const Cart = () => {
           </div>
           <div className="">
             {cart.map((product, index) => (
-              <ItemCart key={index} product={product} />
+              <ItemCart key={index} product={product} index={index} onDelete={handleDelete}/>
             ))}
           </div>
         </div>

@@ -13,7 +13,7 @@ import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Search from "../../components/Search Product/Search";
-
+import Revieww from "./Revieww";
 
 export default function ComboDetail() {
   const [products, setProducts] = useState([]);
@@ -69,7 +69,7 @@ export default function ComboDetail() {
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
             <Link to="./product">
-              <p className="font-inter font-bold text-[20px] mb-[20px]">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Products
               </p>
@@ -84,7 +84,6 @@ export default function ComboDetail() {
                 </p>
               </Link>
               </div>
-             <Search/>
             
           </div>
           <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
@@ -288,7 +287,7 @@ export default function ComboDetail() {
                     <Modal.Header className="w-full h-[65px] text-justify align-center">
                       COMBO SINGLE 2
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className="no-scrollbar">
                       <div className="w-full mx-auto no-scrollbar">
                         <div>
                           <div className="overflow-x-auto mt-[-30px] mb-[-20px] no-scrollbar">
@@ -471,7 +470,7 @@ export default function ComboDetail() {
                                 </div>
 
                               </Tabs.Item>
-                              <Tabs.Item
+                              <Tabs.Item className="no-scrollbar"
                                 title={
                                   <p className="font-bold text-lg">Main Dish</p>
                                 }
@@ -1001,7 +1000,7 @@ export default function ComboDetail() {
               <Tabs.Item
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
-              >
+              ><Revieww/>
                 <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"> </p>
               </Tabs.Item>
             </Tabs>

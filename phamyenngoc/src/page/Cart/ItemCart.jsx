@@ -3,15 +3,9 @@ import { Button } from "flowbite-react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import cartData from "../../data/cart.json"
 
-const ItemCart = ({ product, index }) => {
+const ItemCart = ({ product, index, onDelete }) => {
 
-  const [products, setProducts] = useState([cartData]);
   const [quantity, setQuantity] = useState(1);
-
-  const handleDelete = (index) => {
-    const updatedProducts = products.filter((_, i) => i !== index);
-    setProducts(updatedProducts);
-  };
 
   const handleIncrease = () => {
     setQuantity(quantity + 1);
@@ -21,6 +15,10 @@ const ItemCart = ({ product, index }) => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
+  };
+
+  const handleDelete = () => {
+    onDelete(product.id); // Gọi hàm xử lý xóa và truyền ID của sản phẩm cần xóa
   };
 
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
@@ -113,7 +111,7 @@ const ItemCart = ({ product, index }) => {
             id="decrement-button"
             data-input-counter-decrement="counter-input"
             className="bg-gray-100 h-7 px-3 rounded flex items-center hover:text-white hover:bg-red-500 mr-4"
-            onClick={() => handleDelete(index)}
+            onClick={handleDelete} // Gọi hàm xử lý xóa khi nút "Delete" được nhấn
           >
             <RiDeleteBinLine className="mr-2" />
             Delete
@@ -124,5 +122,5 @@ const ItemCart = ({ product, index }) => {
   );
 };
 
-
 export default ItemCart;
+

@@ -13,6 +13,7 @@ const Search10 = ({ handleSearch }) => {
       <div>
         <div>
           <input
+          type="date"
             className="input input-bordered join-item border-gray-950 w-[200px] rounded-none"
             placeholder="Search By Date"
             value={searchTerm}

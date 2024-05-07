@@ -17,9 +17,16 @@ import {
 } from "firebase/storage";
 import { storage } from "../../config/firebase.config";
 import { v4 } from "uuid";
+import { IoSettingsSharp } from "react-icons/io5";
+import { TbBrandBooking } from "react-icons/tb";
 
 
 const Categoryy = () => {
+
+  const showAlert3 = () => {
+    alert("Delete category successfully !");
+  };
+
   const [categorys, setCategorys] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -88,6 +95,7 @@ const Categoryy = () => {
   };
 
   const AddCategory = async () => {
+    
     const img = await handleUpload();
     console.log(img);
     if (
@@ -98,7 +106,7 @@ const Categoryy = () => {
     ) {
       alert("Please fill in all fields");
       return;
-    }
+    } else {alert("Add new category successfully !");}
 
     const newItem = {
       ID: ID,
@@ -115,6 +123,56 @@ const Categoryy = () => {
   const [Name, setName] = useState("");
   const [Quantity, setQuantity] = useState("");
 
+  
+   const [openModal2, setOpenModal2] = useState(false);
+
+   const [ID2, setID2] = useState("");
+  const [Name2, setName2] = useState("");
+  const [Quantity2, setQuantity2] = useState("");
+
+   const [editIndex, setEditIndex] = useState(null);
+  const [editInfo, setEditInfo] = useState({
+    ID2: "",
+    Name2: "",
+    Quantity2: "",
+    
+  });
+
+  const openEditModal = (index) => {
+    setEditIndex(index);
+    const { ID2, Name2, Quantity2 } =
+      categorys[index];
+    setID(ID2);
+    setName(Name2);
+    setQuantity2(Quantity2)
+    setOpenModal2(true);
+  };
+
+  const updatedCategory = async() => {
+    
+    const img = await handleUpload();
+     if (
+      !ID2 ||
+      !Name2 ||
+      !img ||
+      !Quantity2
+    ) {
+      alert("Please fill in all fields");
+      return;
+    } else {alert("Update category successfully !");}
+
+    const updatedCategory = [...categorys];
+    updatedCategory[editIndex] = {
+      ID: ID2,
+      name: Name2,
+      image: img,
+      quantity: Quantity2,
+    };
+    setCategorys(updatedCategory);
+    setOpenModal2(false);
+  };
+
+
   return (
    <div className="max-w-[1200px] mx-auto bg-[#FFDADA] mt-[-10px]">
       <div className="w-full h-[850px] flex mb-[20px]">
@@ -128,7 +186,7 @@ const Categoryy = () => {
             BURGER N' BEER
           </p>
           <Link to="/corporate_account">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[30px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
               <AiFillHome className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 DASHBOARD
@@ -136,7 +194,7 @@ const Categoryy = () => {
             </Button>
           </Link>
           <Link to="/user_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <FaUserAlt className="w-[20px] h-[20px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 USER MANAGE
@@ -144,7 +202,7 @@ const Categoryy = () => {
             </Button>
           </Link>
           <Link to="/category_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFC0C0] mt-[15px] drop-shadow">
               <MdCategory className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 CATEGORY
@@ -152,7 +210,7 @@ const Categoryy = () => {
             </Button>
           </Link>
           <Link to="/item_list">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <HiTemplate className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 PRODUCT
@@ -160,7 +218,7 @@ const Categoryy = () => {
             </Button>
           </Link>
           <Link to="/voucher_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <BiSolidDiscount className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 VOUCHER
@@ -168,10 +226,26 @@ const Categoryy = () => {
             </Button>
           </Link>
           <Link to="/order_manage">
-            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[20px] drop-shadow">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
               <IoReorderFour className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
               <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
                 ORDER
+              </p>
+            </Button>
+          </Link>
+          <Link to="/reserve_manage">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <TbBrandBooking className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                RESERVATION
+              </p>
+            </Button>
+          </Link>
+          <Link to="/system_setting">
+            <Button className="w-full h-[70px] flex rounded-none bg-[#FFFFFF] mt-[15px] drop-shadow">
+              <IoSettingsSharp className="w-[25px] h-[25px] text-gray-900 mr-[7px] mt-[10px]" />
+              <p className="font-sans font-extrabold text-[17px] text-gray-900 mt-[13px]">
+                SETTING
               </p>
             </Button>
           </Link>
@@ -340,12 +414,15 @@ const Categoryy = () => {
                       <Table.Cell className="flex justify-center items-center">
                         <Button
                           className="w-[20px] text-gray-900 border-transparent hover-text-red mr-[20px]" 
-                          color="light"
+                          color="light" onClick={() => {
+                            setOpenModal2(true);
+                            openEditModal(index);
+                          }}
                         >
                           <FaPen className="w-[17px] h-[17px]"/>
                         </Button>
                         <Button
-                          onClick={() => handleDelete(index)}
+                          onClick={() => {handleDelete(index); showAlert3()}}
                           className="w-[20px] text-gray-900 border-transparent hover-text-red"
                           color="light"
                         >
@@ -367,6 +444,105 @@ const Categoryy = () => {
                 showIcons
               />
             </div>
+             <Modal
+              show={openModal2}
+              onClose={() => setOpenModal2(false)}
+              className="no-scrollbar"
+            >
+              <Modal.Header className="h-[50px] pt-[10px]">
+                Edit Category
+              </Modal.Header>
+              <Modal.Body className="no-scrollbar">
+                <div className="w-full mx-auto justify-between items-center">
+                  <div className="w-[95%]">
+                    <div className="max-w">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Category ID"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => { setID2(e.target.value) }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Category Name"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => { setName2(e.target.value) }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Quantity Products"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+                      <TextInput
+                        onChange={(e) => { setQuantity2(e.target.value) }}
+                        id="email"
+                        type="email"
+                        required
+                      />
+                     
+                    </div>
+                    <div className="mt-2">
+                      <div className="mb-2 block">
+                        <Label
+                          htmlFor="email"
+                          value="Category Image"
+                          className="font-sans font-medium text-[15px] text-black"
+                        />
+                      </div>
+
+                      <input type="file"
+                        className="file-input file-input-bordered w-full"
+                        multiple
+                        onChange={handleChange} />
+                    </div>
+                  </div>
+                  
+                  </div>
+              </Modal.Body>
+              <Modal.Footer className="h-[60px]">
+                <Button
+                  onClick={() => {
+                    updatedCategory();
+                  
+                  }}
+                  color="dark"
+                  className="rounded-none"
+                >
+                  <p className="font-sans font-semibold text-[15px] text-white">
+                    Accept
+                  </p>
+                </Button>
+                <Button
+                  className="rounded-none"
+                  color="light"
+                  onClick={() => setOpenModal2(false)}
+                >
+                  <p className="font-sans font-semibold text-[15px] text-gray-900">
+                    Decline
+                  </p>
+                </Button>
+              </Modal.Footer>
+              </Modal>
           </div>
         </div>
       </div>

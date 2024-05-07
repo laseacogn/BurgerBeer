@@ -1,0 +1,10 @@
+[
+    {
+        "roleID":"001",
+        "role":"admin"
+    },
+    {
+        "roleID":"002",
+        "role":"customer"
+    }
+]

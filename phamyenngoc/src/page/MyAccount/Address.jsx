@@ -4,7 +4,6 @@ import addData from "../../data/myAddress.json";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { PiAddressBookFill } from "react-icons/pi";
-import { FaCity } from "react-icons/fa6";
 import wardData from "../../data/Ward.json";
 import districtData from "../../data/District.json";
 
@@ -15,19 +14,24 @@ const Address = () => {
   const showAlert2 = () => {
     alert("Update your address successfully !");
   };
+  const showAlert3 = () => {
+    alert("Delete your address successfully !");
+  };
 
   const [address, setAddress] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-
   const [openModal2, setOpenModal2] = useState(false);
-
   const [DistrictID, setDistrictID] = useState("");
   const [filteredWards, setFilteredWards] = useState([]);
-  const [district, setDistrict] = useState([]);
+  const [district, setDistrict] = useState({});
 
   useEffect(() => {
     if (Array.isArray(districtData)) {
-      setDistrict(districtData);
+      const districtObj = {};
+      districtData.forEach(item => {
+        districtObj[item.DistrictID] = item;
+      });
+      setDistrict(districtObj);
     }
   }, []);
 
@@ -60,13 +64,16 @@ const Address = () => {
       name: fullname,
       phone: phone,
       city: city,
-      district: district.name,
+      district: district[DistrictID].name,
       ward: ward,
       specificAdd: specificAdd,
     };
 
     setAddress([...address, newItem]);
+    setOpenModal(false);
+    showAlert();
   };
+
 
   const [fullname, setFullname] = useState("");
   const [phone, setPhone] = useState("");
@@ -101,12 +108,13 @@ const Address = () => {
       name: fullname,
       phone: phone,
       city: city,
-      district: district.name,
+      district: district[DistrictID].name,
       ward: ward,
       specificAdd: specificAdd,
     };
     setAddress(updatedAddress);
     setOpenModal2(false);
+    showAlert2();
   };
 
   return (
@@ -149,8 +157,8 @@ const Address = () => {
                     onChange={(e) => {
                       setFullname(e.target.value);
                     }}
-                    id="email"
-                    type="email"
+                    id="fullname"
+                    type="text"
                     icon={MdDriveFileRenameOutline}
                     required
                   />
@@ -167,19 +175,14 @@ const Address = () => {
                     onChange={(e) => {
                       setCity(e.target.value);
                     }}
-                    id="email"
-                    type="email"
-                    icon={FaCity}
+                    id="city"
                     required
                     className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
                   >
                     <option disabled selected>
                       -- Select City --
                     </option>
-                    <option className="font-sans font-medium text-[15px] text-black">
-                      {" "}
-                      Da Nang City
-                    </option>
+                    <option value="Da Nang City"> Da Nang City</option>
                   </select>
                 </div>
 
@@ -193,7 +196,6 @@ const Address = () => {
                   </div>
                   <select
                     id="District"
-                    name="District"
                     required
                     className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
                     onChange={(e) => {
@@ -203,7 +205,7 @@ const Address = () => {
                     <option value="" disabled defaultValue>
                       -- Select District --
                     </option>
-                    {district.map((item) => (
+                    {Object.values(district).map((item) => (
                       <option value={item.DistrictID} key={item.DistrictID}>
                         {item.name}
                       </option>
@@ -225,8 +227,8 @@ const Address = () => {
                     onChange={(e) => {
                       setPhone(e.target.value);
                     }}
-                    id="email"
-                    type="email"
+                    id="phone"
+                    type="tel"
                     icon={FaPhoneAlt}
                     required
                   />
@@ -241,10 +243,8 @@ const Address = () => {
                   </div>
                   <select
                     id="Ward"
-                    name="Ward"
                     required
                     className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
-                    value={ward}
                     onChange={(e) => setWard(e.target.value)}
                   >
                     <option value="" disabled defaultValue>
@@ -270,8 +270,8 @@ const Address = () => {
                     onChange={(e) => {
                       setSpecificAdd(e.target.value);
                     }}
-                    id="email"
-                    type="email"
+                    id="specificAdd"
+                    type="text"
                     icon={PiAddressBookFill}
                     required
                   />
@@ -282,9 +282,7 @@ const Address = () => {
           <Modal.Footer className="h-[60px]">
             <Button
               onClick={() => {
-                setOpenModal(false);
                 AddAddress();
-                showAlert();
               }}
               color="dark"
               className="rounded-none"
@@ -338,7 +336,7 @@ const Address = () => {
                 <Button
                   className="w-[70px] h-[30px] rounded-none border-black"
                   color="light"
-                  onClick={() => handleDelete(index)}
+                  onClick={() => {handleDelete(index); showAlert3()}}
                 >
                   <p className="font-sans font-medium text-[15px] text-gray-900 mt-[-5px]">
                     {" "}
@@ -417,6 +415,7 @@ const Address = () => {
                   id="District"
                   required
                   className="form-select w-full border-slate-300 rounded-lg bg-slate-50"
+                  value={DistrictID}
                   onChange={(e) => {
                     setDistrictID(e.target.value);
                   }}
@@ -424,7 +423,7 @@ const Address = () => {
                   <option value="" disabled defaultValue>
                     -- Select District --
                   </option>
-                  {district.map((item) => (
+                  {Object.values(district).map((item) => (
                     <option value={item.DistrictID} key={item.DistrictID}>
                       {item.name}
                     </option>
@@ -501,13 +500,12 @@ const Address = () => {
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="h-[60px]">
           <Button
             onClick={() => {
-              setOpenModal2(false);
               updateAddress();
-              showAlert2();
             }}
+            color="dark"
             className="rounded-none"
           >
             <p className="font-sans font-semibold text-[15px] text-white">
@@ -515,9 +513,9 @@ const Address = () => {
             </p>
           </Button>
           <Button
+            className="rounded-none"
             color="light"
             onClick={() => setOpenModal2(false)}
-            className="rounded-none"
           >
             <p className="font-sans font-semibold text-[15px] text-gray-900">
               Decline

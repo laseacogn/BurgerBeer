@@ -6,16 +6,34 @@ import { FaCity } from "react-icons/fa6";
 import { FaStreetView } from "react-icons/fa";
 import wardData from "../../data/Ward.json";
 import districtData from "../../data/District.json";
+import userData from "../../data/user.json";
 
 const AccountSetting = () => {
-  const showAlert = () => {
-    alert("Your account has been updated.\n\n" + "Thank you!");
-  };
 
   const [ward, setWard] = useState([]);
   const [district, setDistrict] = useState([]);
   const [DistrictID, setDistrictID] = useState([])
   const [filteredWards, setFilteredWards] = useState([]);
+
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const showAlert = () => {
+    if (currentPassword === "" || newPassword === "" || confirmPassword === "") {
+      alert("Please fill in all fields.");
+    } else {
+      const user = userData.find((user) => user.password === currentPassword);
+      if (!user) {
+        alert("Current password is incorrect.\n\n" + " Please try again.");
+      } else if (newPassword !== confirmPassword) {
+        alert("New password and confirm password do not match.\n\n" + "Please try again.");
+      } else {
+        alert("Your account has been updated.\n\n" + "Thank you!");
+      }
+    }
+  };
+
 
   useEffect(() => {
     setDistrict(districtData);
@@ -55,9 +73,12 @@ const AccountSetting = () => {
             </div>
             <TextInput
               id="email"
-              type="email"
+          
+              type="password"
               icon={RiLockPasswordFill}
               required
+                value={currentPassword}
+              onChange={(e) => setCurrentPassword(e.target.value)}
             />
           </div>
           <div className="mt-[20px]">
@@ -70,9 +91,11 @@ const AccountSetting = () => {
             </div>
             <TextInput
               id="email"
-              type="email"
+              type="password"
               icon={RiLockPasswordFill}
               required
+               value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
             />
           </div>
           <div className="mt-[20px]">
@@ -85,9 +108,11 @@ const AccountSetting = () => {
             </div>
             <TextInput
               id="email"
-              type="email"
+              type="password"
               icon={RiLockPasswordFill}
               required
+               value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
         </div>
