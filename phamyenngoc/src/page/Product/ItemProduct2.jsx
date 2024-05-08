@@ -4,6 +4,13 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 
 const ItemProduct2 = (product) => {
+   const showAlert1 = () => {
+    alert("Please log in to add products to wishlist!");
+  };
+
+  const showAlert2 = () => {
+    alert("Please log in to add products to cart!");
+  };
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
     if (
       typeof originalPrice !== "number" ||
@@ -26,7 +33,7 @@ const ItemProduct2 = (product) => {
       onMouseEnter={() => setShowButtons(true)}
       onMouseLeave={() => setShowButtons(false)}
     >
-      <Link to={`/producttt/${product?.product?.id}`}>
+      
         <div className="relative">
           <img
             className="w-full self-center"
@@ -36,12 +43,12 @@ const ItemProduct2 = (product) => {
           />
           {showButtons && (
             <div className="absolute inset-0 flex justify-around items-center">
-              <button onClick={() => console.log("Add to Wishlist")}>
+              <button onClick={() => showAlert1()}>
                 <div className="w-[70px] h-[70px] rounded-full bg-white justify-center items-center">
                     <IoHeartOutline className="w-[65px] h-[65px] text-red-600 ml-[2px] pt-[13px]" />
                 </div>
               </button>
-               <button onClick={() => console.log("Add to Cart")}>
+               <button onClick={() => showAlert2()}>
                 <div className="w-[70px] h-[70px] rounded-full bg-gray-900 justify-center items-center">
                     <HiOutlineShoppingCart className="w-[65px] h-[65px] text-white ml-[2px] pt-[10px]" />
                 </div>
@@ -50,7 +57,7 @@ const ItemProduct2 = (product) => {
             </div>
           )}
         </div>
-
+<Link to={`/producttt/${product?.product?.id}`}>
         <div className="flex flex-col justify-center text-center">
           <p
             style={{

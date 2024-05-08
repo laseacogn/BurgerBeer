@@ -25,9 +25,13 @@ const Cart = () => {
     setModalOpenCustomer(true)
   }
 
-   const handleDelete = (productId) => {
-    // Xử lý logic xóa sản phẩm ở đây
-    console.log("Xóa sản phẩm có ID:", productId);
+  const [products, setProducts] = useState(cart);
+
+  const handleDelete = (productId) => {
+    const updatedProducts = products.filter(
+      (product) => product.id !== productId
+    );
+    setProducts(updatedProducts);
   };
 
 
@@ -244,18 +248,12 @@ const Cart = () => {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            width: "600px",
-            background: "#FFFFFF",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-            borderRadius: "15px",
-          }}
+        <div className="w-[600px] bg-[#FEFFFF] shadow-lg rounded-2xl"
         >
           <div className="mt-[20px] ml-[13px]">
-            <p
+            <div className="w-full flex justify-between items-center mt-[15px]">
+              <p
               style={{
-                marginTop: "15px",
                 marginLeft: "10px",
                 fontStyle: "normal",
                 fontWeight: "500",
@@ -268,11 +266,22 @@ const Cart = () => {
             >
               Order Summary
             </p>
+            <Link to="/product">
+            <Button className="w-[120px] h-[35px] rounded-none mr-[17px]"color="dark">
+              <p className="font-sans text-[17px] font-medium mt-[-3px]">Add More</p>
+            </Button>
+            </Link>
+            </div>
+            
           </div>
           <div className="">
-            {cart.map((product, index) => (
-              <ItemCart key={index} product={product} index={index} onDelete={handleDelete}/>
-            ))}
+           {products.map((product, index) => (
+          <ItemCart
+            key={index}
+            product={product}
+            onDelete={handleDelete}
+          />
+        ))}
           </div>
         </div>
 

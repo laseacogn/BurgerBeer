@@ -131,10 +131,16 @@ const Voucherr = () => {
     ) {
       alert("Please fill in all fields");
       return;
-    } else if (isNaN(parsedPrice1) || isNaN(parsedPrice2) || isNaN(parsedPrice3) || isNaN(parsedPricee) || isNaN(parsedPriceee)) {
+    } else if (
+      isNaN(parsedPrice1) ||
+      isNaN(parsedPrice2) ||
+      isNaN(parsedPrice3) ||
+      isNaN(parsedPricee) ||
+      isNaN(parsedPriceee)
+    ) {
       alert("Please enter valid prices, discount, and quantity");
       return;
-    }else if (parsedPrice3 > parsedPrice2) {
+    } else if (parsedPrice3 > parsedPrice2) {
       alert("Quantity used cannot be greater than quantity");
       return;
     } else if (
@@ -199,8 +205,17 @@ const Voucherr = () => {
 
   const openEditModal = (index) => {
     setEditIndex(index);
-    const { ID2, Title2, Discount2, Quantity2, QuantityUsed2, MinOrd2, MaxDis2, StartDate2, EndDate2 } =
-      voucher[index];
+    const {
+      ID2,
+      Title2,
+      Discount2,
+      Quantity2,
+      QuantityUsed2,
+      MinOrd2,
+      MaxDis2,
+      StartDate2,
+      EndDate2,
+    } = voucher[index];
     setID(ID2);
     setTitle2(Title2);
     setDiscount2(Discount2);
@@ -214,17 +229,17 @@ const Voucherr = () => {
     setOpenModal2(true);
   };
 
-  const updatedProducts = async() => {
+  const updatedProducts = async () => {
     if (
       !ID2 ||
-      !Title2||
+      !Title2 ||
       !Discount2 ||
       !Quantity2 ||
       !QuantityUsed2 ||
       !MaxDis2 ||
       !MinOrd2 ||
       !StartDate2 ||
-      !EndDate2 
+      !EndDate2
     ) {
       alert("Please fill in all fields");
       return;
@@ -249,7 +264,13 @@ const Voucherr = () => {
     const formattedStartDate = formatDateString(startDatee);
     const formattedEndDate = formatDateString(endDatee);
 
-    if (isNaN(parsedDiscount) || isNaN(parsedQuantity) || isNaN(parsedQuantityUsed) || isNaN(parsedMinOrd) || isNaN(parsedMaxDis)) {
+    if (
+      isNaN(parsedDiscount) ||
+      isNaN(parsedQuantity) ||
+      isNaN(parsedQuantityUsed) ||
+      isNaN(parsedMinOrd) ||
+      isNaN(parsedMaxDis)
+    ) {
       alert("Please enter valid prices, discount, and quantity");
       return;
     } else if (parsedQuantityUsed > parsedQuantity) {
@@ -263,7 +284,7 @@ const Voucherr = () => {
       alert("Please enter valid dates");
       return;
     } else {
-      alert("Update product successfully!");
+      alert("Update voucher successfully!");
     }
     const updatedProducts = [...voucher];
     updatedProducts[editIndex] = {
@@ -646,12 +667,12 @@ const Voucherr = () => {
                       </Table.Cell>
                       <Table.Cell>
                         <p className="font-sans font-medium text-[17px] text-gray-900 text-center">
-                          {voucher.minOrd} VND
+                          {voucher.minOrd}.000 VND
                         </p>
                       </Table.Cell>
                       <Table.Cell>
                         <p className="font-sans font-medium text-[17px] text-gray-900 text-center">
-                          {voucher.maxDis} VND
+                          {voucher.maxDis}.000 VND
                         </p>
                       </Table.Cell>
                       <Table.Cell>
@@ -670,7 +691,7 @@ const Voucherr = () => {
                         </p>
                       </Table.Cell>
                       <Table.Cell className="flex ">
-                         <Button
+                        <Button
                           onClick={() => {
                             setOpenModal2(true);
                             openEditModal(index);
@@ -704,8 +725,8 @@ const Voucherr = () => {
 
             <Modal
               show={openModal2}
-       onClose={() => setOpenModal2(false)}
-        className="no-scrollbar"
+              onClose={() => setOpenModal2(false)}
+              className="no-scrollbar"
             >
               <Modal.Header className="h-[50px] pt-[10px]">
                 Edit Voucher
@@ -774,7 +795,7 @@ const Voucherr = () => {
                         />
                       </div>
                       <TextInput
-                       onChange={(e) => {
+                        onChange={(e) => {
                           setStartDate2(e.target.value);
                         }}
                         id="email"
@@ -861,7 +882,7 @@ const Voucherr = () => {
                         />
                       </div>
                       <TextInput
-                       onChange={(e) => {
+                        onChange={(e) => {
                           setMaxDis2(e.target.value);
                         }}
                         id="email"

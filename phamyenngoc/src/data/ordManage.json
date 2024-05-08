@@ -53,7 +53,7 @@
     },
     {
         "ID": "HD005",
-        "status": "CANCELLED",
+        "status": "CANCELED",
         "userID": "acc005",
         "custName": "Emily Brown",
         "custPhone": "0123456789",
@@ -131,7 +131,7 @@
     },
     {
         "ID": "HD011",
-        "status": "CANCELLED",
+        "status": "CANCELED",
         "userID": "acc011",
         "custName": "Mary Johnson",
         "custPhone": "0123456789",
@@ -196,7 +196,7 @@
     },
     {
         "ID": "HD016",
-        "status": "CANCELLED",
+        "status": "CANCELED",
         "userID": "acc016",
         "custName": "Daniel Davis",
         "custPhone": "0123456789",

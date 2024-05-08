@@ -27,7 +27,7 @@ const LoginAdmin = () => {
     const user = userData.find((user) => user.email === email && user.password === password);
     if (user) {
       // Nếu tìm thấy người dùng, điều hướng đến trang chính
-      navigate("/corporate_account");
+      navigate("/homee");
       alert("Welcome To Burger N' Beer!");
     } else {
       // Nếu không tìm thấy, hiển thị thông báo lỗi
@@ -48,7 +48,7 @@ const LoginAdmin = () => {
       >
         <div className="w-[90%] border-b border-zinc-400 ml-[60px]">
           <p className="font-sans font-extrabold text-xl text-black pt-[20px] pb-[10px] ">
-            MEMBER LOGIN
+            CORPORATE ACCOUNT
           </p>
         </div>
         <div className="w-[90%] mx-auto grid grid-cols-2">
@@ -97,14 +97,7 @@ const LoginAdmin = () => {
                     </Label>
                   </div>
                   <div>
-                    <p
-                      className="font-sans font-medium text-[13px] text-black hover:text-red-500 "
-                      onClick={() => setOpenModal2(true)}
-                    >
-                      {" "}
-                      Forgot your password?{" "}
-                    </p>
-
+                    
                     <Modal
                       show={openModal2}
                       onClose={() => setOpenModal2(false)}
@@ -152,33 +145,18 @@ const LoginAdmin = () => {
                   </Button>
                 </div>
                 <div className="border-t border-zinc-400 mb-[15px] pb-[15px]">
-                  <div>
+                  <Link to='/login'>
                     <Button
-                      onClick={() => setOpenModal(true)}
                       className="w-full mt-[20px] mb-[20px]"
                       color="dark"
                     >
                       <p className="font-sans font-medium text-[20px] text-white">
                         {" "}
-                        REGITER{" "}
+                        LOG IN AS MEMBER USERS{" "}
                       </p>
                     </Button>
-                    <Modal
-                      show={openModal}
-                      onClose={() => setOpenModal(false)}
-                    >
-                      <Modal.Header className="h-[70px]">
-                        <p className="font-sans font-extrabold text-xl text-black pt-[5px] pb-[15px] ">
-                          CREATE AN ACCOUNT
-                        </p>
-                      </Modal.Header>
-                      <Modal.Body className="no-scrollbar">
-                        <div className="space-y-6 bg-[#FFFEFE]">
-                          <Register />
-                        </div>
-                      </Modal.Body>
-                    </Modal>
-                  </div>
+                    
+                  </Link>
                 </div>
               </div>
             </div>

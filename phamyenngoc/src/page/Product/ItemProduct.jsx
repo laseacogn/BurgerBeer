@@ -4,6 +4,14 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 
 const ItemProduct = (product) => {
+  const showAlert1 = () => {
+    alert("The product has been added to wishlist!");
+  };
+
+  const showAlert2 = () => {
+    alert("The product has been added to cart!");
+  };
+
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
     if (
       typeof originalPrice !== "number" ||
@@ -26,7 +34,6 @@ const ItemProduct = (product) => {
       onMouseEnter={() => setShowButtons(true)}
       onMouseLeave={() => setShowButtons(false)}
     >
-      <Link to={`/product/${product?.product?.id}`}>
         <div className="relative">
           <img
             className="w-full self-center"
@@ -36,12 +43,12 @@ const ItemProduct = (product) => {
           />
           {showButtons && (
             <div className="absolute inset-0 flex justify-around items-center">
-              <button onClick={() => console.log("Add to Wishlist")}>
+              <button onClick={() => showAlert1()}>
                 <div className="w-[70px] h-[70px] rounded-full bg-white justify-center items-center">
                     <IoHeartOutline className="w-[65px] h-[65px] text-red-600 ml-[2px] pt-[13px]" />
                 </div>
               </button>
-               <button onClick={() => console.log("Add to Cart")}>
+               <button onClick={() => showAlert2()}>
                 <div className="w-[70px] h-[70px] rounded-full bg-gray-900 justify-center items-center">
                     <HiOutlineShoppingCart className="w-[65px] h-[65px] text-white ml-[2px] pt-[10px]" />
                 </div>
@@ -51,6 +58,7 @@ const ItemProduct = (product) => {
           )}
         </div>
 
+      <Link to={`/product/${product?.product?.id}`}>
         <div className="flex flex-col justify-center text-center">
           <p
             style={{
@@ -100,8 +108,8 @@ const ItemProduct = (product) => {
               )} VND
             </p>
           </div>
-        </div>
-      </Link>
+        </div></Link>
+      
     </div>
   );
 };

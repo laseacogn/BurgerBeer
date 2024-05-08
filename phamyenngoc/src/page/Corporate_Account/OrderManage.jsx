@@ -45,9 +45,13 @@ const OrderManage = () => {
     const endIndex = Math.min(startIndex + itemsPerPage, totalOrd);
 
     let filteredOrd = originalOrd.filter((prd) => {
-      const idMatch = prd.ID && prd.ID.toString().toLowerCase().includes(searchTerm.toLowerCase());
-      const nameMatch = prd.userID && prd.userID.toLowerCase().includes(searchTerm2.toLowerCase());
-      const categoryMatch = selectedCategory ? prd.categoryName === selectedCategory : true;
+      const idMatch =
+        prd.ID &&
+        prd.ID.toString().toLowerCase().includes(searchTerm.toLowerCase());
+      const nameMatch =
+        prd.userID &&
+        prd.userID.toLowerCase().includes(searchTerm2.toLowerCase());
+      const categoryMatch = selectedCategory ? prd.status === selectedCategory : true;
 
       if (searchTerm !== "" && idMatch) {
         return true;
@@ -80,6 +84,7 @@ const OrderManage = () => {
   const handleStatusChange = (orderId, value) => {
     setStatusValues({ ...statusValues, [orderId]: value });
   };
+
 
   return (
     <div className="max-w-[1200px] mx-auto bg-[#FFDADA] mt-[-10px]">
@@ -162,11 +167,10 @@ const OrderManage = () => {
           <p className="font-sans font-black text-[20px] text-gray-900 text-center mt-[15px]">
             ORDER MANAGE
           </p>
-            <div className="flex justify-center items-center mt-[15px] gap-16">
+          <div className="flex justify-center items-center mt-[15px] gap-16">
             <Search8 handleSearch={handleSearch} />
             <Search9 handleSearch={handleSearch2} />
             <Search7 handleSearch={handleSearch3} />
-            
           </div>
           <div className="w-[950px] h-[700px] bg-[#FFFFFF] drop-shadow-lg ml-[25px] mt-[10px] no-scrollbar">
             <div className="w-full overflow-x-auto">
@@ -178,7 +182,6 @@ const OrderManage = () => {
                   <Table.HeadCell className="font-sans text-semibold text-[17px] text-center ">
                     Created Time
                   </Table.HeadCell>
-
                   <Table.HeadCell className="font-sans text-semibold text-[17px] text-center">
                     User ID
                   </Table.HeadCell>
@@ -192,62 +195,55 @@ const OrderManage = () => {
                     <span className="sr-only">Edit</span>
                   </Table.HeadCell>
                 </Table.Head>
-
                 <Table.Body className="divide-y">
-                  {ord.map((ord, index) => (
+                  {ord.map((ordItem, index) => (
                     <Table.Row
                       key={index}
                       className="bg-white dark:border-gray-700 dark:bg-gray-800"
                     >
                       <Table.Cell className="p-4">
                         <p className="whitespace-nowrap font-sans font-medium text-[17px] text-gray-900 dark:text-white text-center">
-                          {ord.ID}
+                          {ordItem.ID}
                         </p>
                       </Table.Cell>
                       <Table.Cell>
                         <p className="whitespace-nowrap text-center font-sans font-medium text-[17px] text-gray-900 dark:text-white">
-                          {" "}
-                          {ord.creatAt}{" "}
+                          {ordItem.creatAt}
                         </p>
                       </Table.Cell>
                       <Table.Cell className="font-sans font-medium text-[17px] text-center">
-                        <p className=" text-gray-900">{ord.userID}</p>
+                        <p className=" text-gray-900">{ordItem.userID}</p>
                       </Table.Cell>
                       <Table.Cell className="font-sans font-medium text-[17px] text-center">
-                        <p className=" text-gray-900">{ord.total}</p>
+                        <p className=" text-gray-900">{ordItem.total}</p>
                       </Table.Cell>
                       <Table.Cell className="font-sans font-medium text-[17px] text-center">
                         <select
-                          value={statusValues[ord.ID] || ord.status}
+                          value={statusValues[ordItem.ID] || ordItem.status}
                           onChange={(e) =>
-                            handleStatusChange(ord.ID, e.target.value)
+                            handleStatusChange(ordItem.ID, e.target.value)
                           }
                           className="text-gray-900 font-sans font-medium text-[17px] text-center border-none"
                         >
-                          {status.map((status, index) => (
-                            <option value={status.name}>
-                            {" "}
-                            <p className="font-sans font-medium text-[17px] text-center">
-                              {status.name}
-                            </p>
-                          </option>
+                          {status.map((statusItem, statusIndex) => (
+                            <option key={statusIndex} value={statusItem.name}>
+                              {statusItem.name}
+                            </option>
                           ))}
                         </select>
                       </Table.Cell>
                       <Table.Cell className="flex justify-center items-center">
-                        <Link to ={`/order_manage/${ord.ID}`}>
-                        <Button
-                          className="w-[20px] text-gray-900 border-transparent hover-text-red"
-                          color="light"
-                        >
-                          
-                          <FaEye className="w-[17px] h-[17px]" />
-                        </Button>
+                        <Link to={`/order_manage/${ordItem.ID}`}>
+                          <Button
+                            className="w-[20px] text-gray-900 border-transparent hover-text-red"
+                            color="light"
+                          >
+                            <FaEye className="w-[17px] h-[17px]" />
+                          </Button>
                         </Link>
                       </Table.Cell>
                     </Table.Row>
                   ))}
-              
                 </Table.Body>
               </Table>
             </div>

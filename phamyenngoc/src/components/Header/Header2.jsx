@@ -181,7 +181,7 @@ function Header2() {
               </Link>
             </Dropdown.Header>
               <Dropdown.Item className="text-sm font-sans font-medium" onClick={() => showAlert3()}>MY ACCOUNT</Dropdown.Item>
-            <Link to="">
+            <Link to="/customer_servicee">
               <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
@@ -220,7 +220,7 @@ function Header2() {
             ABOUT US
           </Navbar.Link>
           <Navbar.Link
-            href="/contact"
+            href="/contactt"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             CONTACT US

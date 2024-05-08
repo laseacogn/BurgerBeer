@@ -103,7 +103,7 @@ const Voucher2 = () => {
         ))}
       </div>
 
-      <div className="w-[880px] h-[810px] grid grid-cols-2 gap-4">
+      <div className="w-[880px] grid grid-cols-2 gap-0">
         {voucher.map((voucherItem, index) => (
           <div
             style={{
@@ -114,7 +114,6 @@ const Voucher2 = () => {
               marginLeft: "-245px",
             }}
             key={index}
-            onClick={() => handleClick2(index)}
           >
             <img
               src={require(`../../assets/image/voucher/1.jpg`)}
@@ -133,6 +132,7 @@ const Voucher2 = () => {
                 className="w-[90px] h-[90px] rounded-full ml-[25px] mt-[20px]"
                 src={require(`../../assets/image/voucher/lg_bg.jpg.png`)}
                 alt=""
+            onClick={() => handleClick2(index)}
               />
               <p className="font-sans font-bold text-[20px] text-white ml-[52px] mt-[-15px]">
                 {" "}
@@ -146,10 +146,10 @@ const Voucher2 = () => {
               </p>
               <p className="font-sans font-semibold text-[13px] text-gray-900 ml-[115px] mt-[5px]">
                 {voucherItem.discount}% off Maximum discount{" "}
-                {voucherItem.maxDis}VND
+                {voucherItem.maxDis}.000VND
               </p>
               <p className="font-sans font-semibold text-[13px] text-gray-900 ml-[115px] mt-[5px]">
-                Minimum Order {voucherItem.minOrd}VND
+                Minimum Order {voucherItem.minOrd}.000VND
               </p>
               <div className="flex">
                 <p className="font-sans font-semibold text-[13px] text-gray-900 ml-[115px] mt-[10px]">

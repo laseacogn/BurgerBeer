@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from "flowbite-react";
 import { RiDeleteBinLine } from "react-icons/ri";
-import cartData from "../../data/cart.json"
 
-const ItemCart = ({ product, index, onDelete }) => {
-
+const ItemCart = ({ product, onDelete }) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrease = () => {
@@ -18,7 +16,7 @@ const ItemCart = ({ product, index, onDelete }) => {
   };
 
   const handleDelete = () => {
-    onDelete(product.id); // Gọi hàm xử lý xóa và truyền ID của sản phẩm cần xóa
+    onDelete(product.id);
   };
 
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
@@ -40,79 +38,23 @@ const ItemCart = ({ product, index, onDelete }) => {
         alt={product.name}
       />
       <div className="w-full flex flex-col justify-between">
-        <p
-          className="block"
-          style={{
-            fontSize: "15px",
-            fontWeight: "600",
-            fontFamily: '"Inter", sans-serif',
-          }}
-        >
+        <p className="block" style={{fontSize: "15px", fontWeight: "600"}}>
           {product.name}
         </p>
         <p className="block flex">
-          <p
-            style={{
-              marginRight: "12px",
-              textDecoration: "line-through",
-              fontFamily: '"Inter", sans-serif',
-              fontSize: "15px",
-              fontWeight: "400",
-              color: "#707070",
-            }}
-          >
-            {(product.originalPrice * quantity).toFixed(3)} VND
-          </p>
-          <span
-            style={{
-              color: "#000000",
-              fontFamily: '"Inter", sans-serif',
-              fontSize: "15px",
-              fontWeight: "600",
-            }}
-          >
-             {totalPrice}0 VND
-          </span>
+          <p style={{marginRight: "12px", textDecoration: "line-through", color: "#707070"}}>{(product.originalPrice * quantity).toFixed(3)} VND</p>
+          <span style={{color: "#000000", fontWeight: "600"}}>{totalPrice}0 VND</span>
         </p>
-        <p
-          style={{
-            fontFamily: '"Inter", sans-serif',
-            fontSize: "15px",
-            fontWeight: "400",
-            color: "#707070",
-          }}
-        >
-          You saved {((product.originalPrice - calculateDiscountedPrice(product.originalPrice, product.discountPercent)) * quantity).toFixed(3)} VND
-        </p>
+        <p style={{color: "#707070"}}>You saved {((product.originalPrice - calculateDiscountedPrice(product.originalPrice, product.discountPercent)) * quantity).toFixed(3)} VND</p>
         <div className="w-full mx-auto flex justify-between">
           <div className="flex items-center">
             <Button.Group>
-              <Button
-                onClick={handleDecrease}
-                color="gray"
-                className="text-sm"
-              >
-                {" "}
-                -{" "}
-              </Button>
-              <Button color="gray"> {quantity} </Button>
-              <Button
-                onClick={handleIncrease}
-                color="gray"
-                className="text-sm"
-              >
-                {" "}
-                +{" "}
-              </Button>
+              <Button onClick={handleDecrease} color="gray" className="text-sm">-</Button>
+              <Button color="gray">{quantity}</Button>
+              <Button onClick={handleIncrease} color="gray" className="text-sm">+</Button>
             </Button.Group>
           </div>
-          <button
-            type="button"
-            id="decrement-button"
-            data-input-counter-decrement="counter-input"
-            className="bg-gray-100 h-7 px-3 rounded flex items-center hover:text-white hover:bg-red-500 mr-4"
-            onClick={handleDelete} // Gọi hàm xử lý xóa khi nút "Delete" được nhấn
-          >
+          <button type="button" className="bg-gray-100 h-7 px-3 rounded flex items-center hover:text-white hover:bg-red-500 mr-4" onClick={handleDelete}>
             <RiDeleteBinLine className="mr-2" />
             Delete
           </button>
@@ -123,4 +65,5 @@ const ItemCart = ({ product, index, onDelete }) => {
 };
 
 export default ItemCart;
+
 

@@ -1,18 +1,18 @@
 [
     {
         "id":"1",
-        "name":"Pending"
+        "name":"PENDING"
     },
     {
         "id":"2",
-        "name":"Processing"
+        "name":"PROCESSING"
     },
     {
         "id":"3",
-        "name":"Deliveried"
+        "name":"DELIVERED"
     },
     {
         "id":"4",
-        "name":"Canceled"
+        "name":"CANCELED"
     }
 ]

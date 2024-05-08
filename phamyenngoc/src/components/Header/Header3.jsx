@@ -10,9 +10,20 @@ import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 
-function Header() {
+function Header3() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+   const showAlert1 = () => {
+    alert(
+      "Please login member account to view wishlist!"
+    );
+  };
+  const showAlert2 = () => {
+    alert(
+      "Please login member account to view cart!"
+    );
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,11 +110,9 @@ function Header() {
         </Navbar.Brand>
   
         <div className="flex md:order-2">
-          <Link to="/wishlist">
-            <div className="w-10 h-10 rounded-full border border-black flex items-center justify-center mr-3 mt-2 hover:bg-btnprimary hover:text-[#B4E9D6] ">
-              <FaHeart />
+          <div className="w-10 h-10 rounded-full border border-black flex items-center justify-center mr-3 mt-2 hover:bg-btnprimary hover:text-[#B4E9D6] ">
+              <FaHeart  onClick={() => showAlert1()}/>
             </div>
-          </Link>
 
 
           <div className="dropdown dropdown-end mt-[5px] mr-3">
@@ -115,7 +124,7 @@ function Header() {
               <div className="indicator">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7 "
+                  className="h-8 w-8 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -127,7 +136,6 @@ function Header() {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <span className="badge badge-sm indicator-item">8</span>
               </div>
             </div>
             <div
@@ -135,16 +143,14 @@ function Header() {
               className="mt-3 z-[1] card card-compact dropdown-content w-60 bg-[#FFFEFE] shadow"
             >
               <div className=" w-full card-body justify-center items-center">
-                <span className="font-semibold text-[17px]">8 Items</span>
+                <span className="font-semibold text-[17px]">... Items</span>
                 <span className="font-semibold text-[17px] text-cyan-500">
-                  Subtotal: $999
+                  Subtotal: ...VND
                 </span>
                 <div className="card-actions">
-                  <Link to="/cart">
-                    <Button className="w-[200px]" color="dark">
+                    <Button className="w-[200px]" color="dark" onClick={() => showAlert2()}>
                       <p className="font-bold text-[17px]">View Cart</p>
                     </Button>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -156,28 +162,29 @@ function Header() {
             label={
               <div className="avatar">
                 <div className="w-14 rounded-full">
-                  <img src={require("../../assets/image/avatar/avatar.jpg")} alt="" />
+                  <img src={require("../../assets/image/avatar/admin.jpg")} alt="" />
                 </div>
               </div>
             }
           >
             <Dropdown.Header>
               <span className="flex items-center justify-center text-xl font-sans font-semibold m-2 ">
-                Pham Thi Yen Ngoc
+                201121521128
               </span>
               <span className="block truncate text-sm font-medium">
-                phamyenngoc.02@gmail.com
+                lasea02@gmail.com
               </span>
             </Dropdown.Header>
-            <Link to="/myaccount">
-              <Dropdown.Item className="text-sm font-sans font-medium">MY ACCOUNT</Dropdown.Item>
-            </Link>
-            <Link to="/customer_service">
-              <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
+            <Link to="/corporate_account">
+            <Dropdown.Item className="text-sm font-sans font-medium">DASH BOARD</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Link to="/login_corporate_account">
-            <Dropdown.Item className="text-sm font-sans font-medium">CORPORATE ACCOUNT</Dropdown.Item>
+            <Link to="/admin_account">
+              <Dropdown.Item className="text-sm font-sans font-medium">MY ACCOUNT</Dropdown.Item>
+            </Link>
+             <Dropdown.Divider />
+            <Link to="/customer_serviceee">
+              <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
             <Link to="/">
@@ -188,31 +195,31 @@ function Header() {
         </div>
         <Navbar.Collapse>
           <Navbar.Link
-            href="/home"
+            href="/homee"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             HOME
           </Navbar.Link>
           <Navbar.Link
-            href="/product"
+            href="/productt_manage"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             SHOP
           </Navbar.Link>
           <Navbar.Link
-            href="/voucher"
+            href="/voucherr_manage"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             VOUCHER
           </Navbar.Link>
           <Navbar.Link
-            href="/aboutuss"
+            href="/corporate_account"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
-            ABOUT US
+            DASHBOARD
           </Navbar.Link>
           <Navbar.Link
-            href="/contact"
+            href="/contacttt"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             CONTACT US
@@ -222,4 +229,4 @@ function Header() {
     </div>
   );
 }
-export default Header;
+export default Header3;

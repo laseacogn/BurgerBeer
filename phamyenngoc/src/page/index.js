@@ -42,3 +42,12 @@ export { OrdManageDetail } from './Corporate_Account/OrdMangeDetail';
 // export { Category_Pizza } from './Admin/Category';
 export { default as Voucher} from './Voucher/Voucher.jsx';
 export { default as Voucherrr} from './Voucher/Voucher2.jsx';
+export { default as VoucherAdmin} from './Voucher/VoucherAdmin.jsx';
+export { default as PrdManage} from './Product/PrdManage.jsx';
+
+export { default as AdminAccount} from './MyAccount/AdminAccount.jsx';
+export { default as CustomerService} from './CustomerService/CustomerService.jsx'
+export { default as CustomerServicee} from './CustomerService/CustomerServicee.jsx'
+export { default as CustomerServiceee} from './CustomerService/CustomerServiceee.jsx'
+
+export { default as Pay } from './Cart/Pay.jsx';

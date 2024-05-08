@@ -3,7 +3,7 @@ import { Button, Label, TextInput } from "flowbite-react";
 import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail, MdDriveFileRenameOutline  } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
-import { AiTwotoneMessage } from "react-icons/ai";
+
 export function ContactUs() {
   const showAlert = () => {
     alert(
