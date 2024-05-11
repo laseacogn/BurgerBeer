@@ -24,6 +24,7 @@ export default function ProductDT3() {
   const [editIndex, setEditIndex] = useState(null);
 
   useEffect(() => {
+    
     if (categorieID === "") {
       setProducts(dataProduct);
     } else {
@@ -42,6 +43,7 @@ export default function ProductDT3() {
       setQuantity(quantity - 1);
     }
   };
+
 
   const params = useParams();
   const productId = params.productId;
@@ -65,6 +67,7 @@ export default function ProductDT3() {
   const [imageUrl, setImageUrl] = useState();
 
   const uploadFile = async () => {
+    
     try {
       const imageId = v4();
       const imageRef = ref(storage, `/Blog2/${imageId}`);
@@ -136,7 +139,7 @@ export default function ProductDT3() {
     updatedProductsList[updatedProductIndex] = updatedProduct;
     setProducts(updatedProductsList);
     setOpenModal(false);
-    
+
     console.log(updatedProduct);
   };
 
