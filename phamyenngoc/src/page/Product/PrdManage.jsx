@@ -19,7 +19,10 @@ const PrdManage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const handleDelete = (productId) => {
     const updatedProducts = products.filter(
       (product) => product.id !== productId
@@ -677,17 +680,17 @@ const PrdManage = () => {
               <div className="mt-2">
                 <div className="mb-2 block">
                   <Label
-                    htmlFor="email"
+                    htmlFor="Description"
                     value="Description"
                     className="font-sans font-medium text-[15px] text-black"
                   />
                 </div>
                 <TextInput
-                 value={prevDescription}
+                 value={Description2}
                   onChange={(e) => {
                     setDescription2(e.target.value);
                   }}
-                  id="email"
+                  id="Description"
                   type="email"
                   required
                 />

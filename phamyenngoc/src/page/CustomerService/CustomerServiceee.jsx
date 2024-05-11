@@ -93,7 +93,7 @@ const CustomerServiceee = () => {
                     </TableRow>
                   </TableBody>
                 </Table>
-                <p className="mb-2 font-sans font-medium text-[16px] text-gray-700">
+                <p className="mb-2 font-sans font-medium text-[16px] text-gray-700 mt-[15px]">
                   Free shipping events are often run for other occasion, so
                   please visit our homepage{" "}
                   <Link to="/homee">

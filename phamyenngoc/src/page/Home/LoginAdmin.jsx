@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link} from "react-router-dom";
 import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
@@ -12,6 +12,10 @@ import { useNavigate } from "react-router-dom";
 
 
 const LoginAdmin = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const [openModal, setOpenModal] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
   const [email, setEmail] = useState("");

@@ -1,12 +1,10 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import React from 'react';
 import { IoMdClose } from 'react-icons/io';
-import MethodContext from '../../Context/methodProvider';
 
 const ModalPaymentMethod = ({ modalOpen, setPayment }) => {
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
-    const { notify } = useContext(MethodContext)
     const listPaymentMethod = [
         'Pay on delivery',
         'Pay on card',
@@ -17,7 +15,7 @@ const ModalPaymentMethod = ({ modalOpen, setPayment }) => {
         if (selectedPaymentMethod) {
             setPayment(selectedPaymentMethod); modalOpen(false);
         } else {
-            notify('Please select a payment method.');
+            alert('Please select a payment method.');
         }
     };
 

@@ -1,11 +1,11 @@
 import { Home, Admin, ContactUs, Product, Login, LoginAdmin,
   Register, ComboDetail,  Cart, Cart2, ProductDetail,
   AboutUs, Booking, MyAccount, Productt, Category,
-  Wishlist, Voucher,
+  Wishlist, Voucher, ProductDetail3,
   Adminn, Categoryy, ItemList, UserManage, OrderManage, Voucherr,
   CategoryDetail, OrdManageDetail, Reservation, System,
   ProductDetail2, Product2, Voucherrr, VoucherAdmin, PrdManage,
-  AdminAccount, CustomerService, CustomerServicee, CustomerServiceee, Pay
+  AdminAccount, CustomerService, CustomerServicee, CustomerServiceee, Pay,
 } from '../page';
 import { LayoutDefault, Layout, LayoutAdmin } from '../layout';
 
@@ -45,6 +45,7 @@ const router = [
   { path: '/productt_manage', layout:LayoutAdmin, component: PrdManage },
   { path: '/homee', layout:LayoutAdmin, component: Home },
   { path: '/admin_account', layout:LayoutAdmin, component: AdminAccount },
+  { path: '/productttt/:productId', layout:LayoutAdmin, component: ProductDetail3 },
 
 
   { path: '/category_manage/:categoryID', layout:Layout, component: CategoryDetail },

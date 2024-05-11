@@ -29,7 +29,10 @@ const OrderManage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [statusValues, setStatusValues] = useState({});
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     setOriginalOrd(ordData);
     setOrd(ordData);

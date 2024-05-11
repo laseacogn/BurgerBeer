@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { FaPhone, FaComments } from "react-icons/fa6";
 
 const Booking = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const showAlert = () => {
     alert(
       "Your reservation at Burger N' Beer has been successful.\n\n" +

@@ -35,7 +35,10 @@ const Voucherr = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchTerm2, setSearchTerm2] = useState("");
   const [searchTerm3, setSearchTerm3] = useState("");
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     setVoucher(voucherData);
     setOriginalVoucher(voucherData);

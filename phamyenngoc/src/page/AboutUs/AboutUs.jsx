@@ -1,6 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 const AboutUs = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <div className="max-w-[1200px] mx-auto  bg-[#FFFEFE] shadow-md rounded-lg">
       <div class="w-full mt-[5px] mb-[20px] ">

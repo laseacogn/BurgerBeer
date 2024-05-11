@@ -11,6 +11,8 @@ const Wishlist = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [selectAll, setSelectAll] = useState(false);
+
   useEffect(() => {
     setProducts(wishlistData);
     console.log(products);
@@ -40,7 +42,10 @@ const Wishlist = () => {
     const updatedProducts = products.filter((_, i) => i !== index);
     setProducts(updatedProducts);
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -60,6 +65,21 @@ const Wishlist = () => {
     fetchData();
   }, [currentPage]);
 
+  const toggleSelectAll = () => {
+    setSelectAll(!selectAll); 
+    const updatedProducts = products.map(product => {
+      return { ...product, selected: !selectAll };
+    });
+    setProducts(updatedProducts);
+  };
+
+  const toggleSelectProduct2 = (index) => {
+  const updatedProducts = [...products];
+  updatedProducts[index].selected = !updatedProducts[index].selected;
+  setProducts(updatedProducts);
+}
+
+
   return (
     <div className="max-w-[1200px] mx-auto">
       <div className="w-full mt-[10px] mb-[20px] bg-[#FFFEFE] shadow-md rounded-lg">
@@ -73,7 +93,7 @@ const Wishlist = () => {
             <Table hoverable>
               <Table.Head>
                 <Table.HeadCell className="p-4">
-                  <Checkbox />
+                   <Checkbox checked={selectAll} onChange={toggleSelectAll} />
                 </Table.HeadCell>
                 <Table.HeadCell className="font-sans text-semibold text-[17px] ">
                   PRODUCT
@@ -98,7 +118,7 @@ const Wishlist = () => {
                     className="bg-white dark:border-gray-700 dark:bg-gray-800"
                   >
                     <Table.Cell className="p-4">
-                      <Checkbox />
+                      <Checkbox checked={product.selected} onChange={() => toggleSelectProduct2(index)} />
                     </Table.Cell>
                     <Table.Cell className="flex items-center w-[280px]">
                       <img

@@ -25,7 +25,10 @@ const UserManage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchTerm2, setSearchTerm2] = useState("");
   const [searchTerm3, setSearchTerm3] = useState("");
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     setOriginalUser(userData);
     setUser(userData);

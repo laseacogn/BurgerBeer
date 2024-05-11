@@ -40,7 +40,10 @@ export function ItemList() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchTerm2, setSearchTerm2] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const showAlert3 = () => {
     alert("Delete product successfully !");
   };
@@ -103,6 +106,7 @@ export function ItemList() {
     setSelectedCategory(value);
   };
 
+  
   const [imageUploads, setImageUploads] = useState();
   const [imageUrl, setImageUrl] = useState();
 

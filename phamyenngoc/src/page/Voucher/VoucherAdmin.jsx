@@ -21,7 +21,10 @@ const VoucherAdmin = () => {
   const [openModal, setOpenModal] = useState(false);
   const [openModal1, setOpenModal1] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     setTopPrd(topPrdData);
     setOriginalVoucher(voucherData);
@@ -288,7 +291,7 @@ const VoucherAdmin = () => {
         </p>
         {topPrd.map((topPrd, index) => (
           <div className="w-[280px] ml-[20px] mt-[10px]" key={index}>
-            <Link to={`/product/${topPrd.id}`}>
+            <Link to={`/productttt/${topPrd.id}`}>
               <div className="w-full flex justify-center items-center mb-[15px] bg-[#FEFFFF] shadow-md pb-[15px]">
                 <img
                   className="w-[70px] h-[70px] self-center"

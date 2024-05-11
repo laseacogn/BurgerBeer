@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Button } from "flowbite-react";
 import { AiFillHome } from "react-icons/ai";
@@ -10,6 +10,10 @@ import { BiSolidDiscount } from "react-icons/bi";
 import { TbBrandBooking } from "react-icons/tb";
 
 const Adminn = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <div className="max-w-[1200px] mx-auto bg-[#FFDADA] mt-[-10px]">
       <div className="w-full h-[850px] flex mb-[20px]">

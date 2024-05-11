@@ -22,7 +22,10 @@ import { TbBrandBooking } from "react-icons/tb";
 
 
 const Categoryy = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const showAlert3 = () => {
     alert("Delete category successfully !");
   };

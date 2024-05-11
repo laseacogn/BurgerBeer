@@ -15,7 +15,10 @@ const Product = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   useEffect(() => {
     const fetchData = async () => {

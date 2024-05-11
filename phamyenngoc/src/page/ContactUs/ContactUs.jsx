@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail, MdDriveFileRenameOutline  } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 
 export function ContactUs() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const showAlert = () => {
     alert(
       "Your message has been sent. We'll respond to you as soon as possible.\n\n" +

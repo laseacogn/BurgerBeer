@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Button, Timeline, TextInput } from "flowbite-react";
 import { Link } from "react-router-dom";
@@ -10,6 +10,10 @@ import cart from "../../data/cart.json";
 import ModalPaymentMethod from "./ModalPaymentMethod";
 import ModalCustomer from "./ModalCustomer";
 const Cart2 = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const money = [1];
   const [modalOpen, setModalOpen] = useState(false);
   const [modalOpenCustomer, setModalOpenCustomer] = useState(false);
@@ -32,6 +36,10 @@ const Cart2 = () => {
       (product) => product.id !== productId
     );
     setProducts(updatedProducts);
+  };
+
+  const handlePaymentSelection = (selectedMethod) => {
+    setPayment(selectedMethod);
   };
 
   return (
@@ -330,7 +338,7 @@ const Cart2 = () => {
           }}
         >
           {money.map((product, index) => (
-            <MoneyCart key={index} product={product} />
+            <MoneyCart key={index} product={product}  selectedPaymentMethod={payment} />
           ))}
         </div>
       </div>

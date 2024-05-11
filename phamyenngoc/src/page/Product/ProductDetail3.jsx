@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
-import { Button, Tabs } from "flowbite-react";
+import { Button, Tabs, Modal, Label, TextInput } from "flowbite-react";
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
@@ -10,27 +10,19 @@ import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import Revieww from "./Revieww";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { storage } from "../../config/firebase.config";
+import { v4 } from "uuid";
 
-
-export default function ProductDT() {
+export default function ProductDT3() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const showAlert1 = () => {
-    alert(
-      "The product has been added to cart!"
-    );
-  };
-  const showAlert2 = () => {
-    alert(
-      "The product has been added to wishlist!"
-    );
-  };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  
+
+  const [openModal, setOpenModal] = useState(false);
+  const [editIndex, setEditIndex] = useState(null);
+
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);
@@ -41,13 +33,6 @@ export default function ProductDT() {
       setProducts(filteredProducts);
     }
   }, [categorieID]);
-
-  const params = useParams();
-  const productId = params.productId;
-  const prd = products.find((prd) => prd.id === +productId);
-
-  const accessToken = localStorage.getItem("token");
-
   const handleIncrease = () => {
     setQuantity(quantity + 1);
   };
@@ -58,9 +43,114 @@ export default function ProductDT() {
     }
   };
 
+  const params = useParams();
+  const productId = params.productId;
+  const prd = Array.isArray(products)
+    ? products.find((prd) => prd && prd.id === +productId)
+    : null;
+
   const navigate = useNavigate();
   const handleTextClick = () => {
     navigate(-1);
+  };
+
+  const [ID, setID] = useState("");
+  const [Name, setName] = useState("");
+  const [Category, setCategory] = useState("");
+  const [BasisPrice, setBasisPrice] = useState("");
+  const [SalePrice, setSalePrice] = useState("");
+  const [Discount, setDiscount] = useState("");
+  const [Description, setDescription] = useState("");
+  const [imageUploads, setImageUploads] = useState();
+  const [imageUrl, setImageUrl] = useState();
+
+  const uploadFile = async () => {
+    try {
+      const imageId = v4();
+      const imageRef = ref(storage, `/Blog2/${imageId}`);
+      const snapshot = await uploadBytes(imageRef, imageUploads);
+      const url = await getDownloadURL(snapshot.ref);
+      return url;
+    } catch (error) {
+      console.error("Error uploading file:", error);
+      throw error;
+    }
+  };
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    setImageUploads(file);
+  };
+
+  const handleUpload = async () => {
+    try {
+      const url = await uploadFile();
+      setImageUrl(url);
+      return url;
+    } catch (error) {
+      console.error("Error uploading file to Firebase:", error);
+    }
+  };
+
+  const updatedProducts = async () => {
+    if (
+      !ID ||
+      !Name ||
+      !Category ||
+      !BasisPrice ||
+      !SalePrice ||
+      !Discount ||
+      !Description
+    ) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    const img = await handleUpload();
+    const parsedPrice4 = parseFloat(BasisPrice);
+    const parsedPrice5 = parseFloat(SalePrice);
+    const parsedPrice6 = parseFloat(Discount);
+
+    if (isNaN(parsedPrice4) || isNaN(parsedPrice5) || isNaN(parsedPrice6)) {
+      alert("Please enter valid prices");
+      return;
+    } else {
+      alert("Update product successfully!");
+    }
+
+    const updatedProductIndex = products.findIndex(
+      (prd) => prd && prd.id === parseInt(products[editIndex].id)
+    );
+    const updatedProduct = {
+      ...products[updatedProductIndex],
+      id: ID,
+      name: Name,
+      category: Category,
+      originalPrice: parsedPrice4,
+      discountPercent: parsedPrice6,
+      description: Description,
+      image: img,
+    };
+
+    const updatedProductsList = [...products];
+    updatedProductsList[updatedProductIndex] = updatedProduct;
+    setProducts(updatedProductsList);
+    setOpenModal(false);
+    
+    console.log(updatedProduct);
+  };
+
+  const openEditModal = (index) => {
+    setEditIndex(index);
+    const { id, name, category, originalPrice, discountPercent, description } =
+      products[index];
+    setID(id);
+    setName(name);
+    setCategory(category);
+    setBasisPrice(originalPrice);
+    setDiscount(discountPercent);
+    setDescription(description);
+    setOpenModal(true);
   };
 
   return (
@@ -70,27 +160,27 @@ export default function ProductDT() {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <NavLink to="/home">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Home{" "}
-              </p>
-            </NavLink>
+              <NavLink to="/">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Home{" "}
+                </p>
+              </NavLink>
 
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/product">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Products
-              </p>
-            </NavLink>
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            {prd && (
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <NavLink to="/producttt">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Products
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              {prd && (
                 <p className="font-inter font-bold text-[20px] mb-[20px]">
                   {" "}
                   {prd.name}
                 </p>
-            )}
+              )}
             </div>
           </div>
 
@@ -149,14 +239,29 @@ export default function ProductDT() {
           >
             <div className="w-full flex pt-[-15px]">
               {prd && (
-                <img
-                  src={require(`../../assets/image/Burger/${prd.image}`)}
-                  alt=""
-                  width={405}
-                  height={405}
-                  className="ml-24 pt-12 pb-12 rounded-lg"
-                />
+                <div>
+                  {parseInt(prd.id) > 69 ? (
+                    <div>
+                      <img
+                        className="w-[405px] h-[405px] ml-24 pt-12 pb-12 rounded-lg"
+                        src={prd.image}
+                        alt={prd.name}
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <img
+                        src={require(`../../assets/image/Burger/${prd.image}`)}
+                        alt=""
+                        width={405}
+                        height={405}
+                        className="ml-24 pt-12 pb-12 rounded-lg"
+                      />
+                    </div>
+                  )}
+                </div>
               )}
+
               <div
                 style={{
                   marginLeft: "auto",
@@ -211,7 +316,8 @@ export default function ProductDT() {
                                   (prd.originalPrice *
                                     (100 - prd.discountPercent)) /
                                   100
-                                ).toFixed(3)} VND{" "}
+                                ).toFixed(3)}{" "}
+                                VND{" "}
                               </span>
                               &nbsp;&nbsp;&nbsp;
                               <span
@@ -241,7 +347,8 @@ export default function ProductDT() {
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
                                 100
-                            ).toFixed(3)} VND )
+                            ).toFixed(3)}{" "}
+                            VND )
                           </td>
                         </tr>
                         <tr>
@@ -297,7 +404,8 @@ export default function ProductDT() {
                         ((prd.originalPrice * (100 - prd.discountPercent)) /
                           100) *
                         quantity
-                      ).toFixed(3)} VND &nbsp;&nbsp;&nbsp;{" "}
+                      ).toFixed(3)}{" "}
+                      VND &nbsp;&nbsp;&nbsp;{" "}
                     </p>
                     <p>
                       {" "}
@@ -312,50 +420,33 @@ export default function ProductDT() {
                     </p>
                   </div>
                 )}
-                {prd && (
-                  <div className="flex mt-3">
-                    <Button className="rounded-none"
-                      style={{
-                        width: "238px",
-                        height: "42.5px",
-                        backgroundColor: "#ee2f49",
-                        color: "#FFFFFF",
-                        textAlign: "center",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        lineHeight: "42.5px",
-                        cursor: "pointer",
-                      }}
-                       onClick={() => {
-              showAlert1();
-            }}
-                    >
-                      {" "}
-                      ADD TO CART{" "}
-                    </Button>
-                    <Button className="rounded-none"
-                      style={{
-                        width: "238px",
-                        height: "42.5px",
-                        backgroundColor: "white",
-                        color: "black",
-                        border: "0.5px solid black",
-                        textAlign: "center",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        lineHeight: "42.5px",
-                        cursor: "pointer",
-                        marginLeft: "30px",
-                      }}
-                      onClick={() => {
-              showAlert2();
-            }}
-                    >
-                      {" "}
-                      ADD TO WISH LIST{" "}
-                    </Button>
-                  </div>
-                )}
+
+                <div className="flex mt-3">
+                  <Button
+                    className="rounded-none"
+                    style={{
+                      width: "510px",
+                      height: "42.5px",
+                      backgroundColor: "#ee2f49",
+                      color: "#FFFFFF",
+                      textAlign: "center",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                      lineHeight: "42.5px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      if (products.length > 0) {
+                        const index = 0; // Chọn chỉ mục của sản phẩm để chỉnh sửa
+                        setOpenModal(true);
+                        openEditModal(index);
+                      }
+                    }}
+                  >
+                    {" "}
+                    EDIT PRODUCT{" "}
+                  </Button>
+                </div>
                 {prd && (
                   <div style={{ display: "flex", paddingTop: "12px" }}>
                     <p
@@ -363,7 +454,7 @@ export default function ProductDT() {
                         fontFamily: '"Roboto", sans-serif',
                         color: "#323232",
                         fontSize: "13px",
-                        marginBottom:"20px"
+                        marginBottom: "20px",
                       }}
                     >
                       {" "}
@@ -440,13 +531,188 @@ export default function ProductDT() {
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
               >
-                <Revieww/>
+                <Revieww />
                 <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"></p>
               </Tabs.Item>
             </Tabs>
           </div>
         </div>
       </div>
+
+      <Modal
+        show={openModal}
+        onClose={() => setOpenModal(false)}
+        className="no-scrollbar"
+      >
+        <Modal.Header className="h-[50px] pt-[10px]">Edit Product</Modal.Header>
+        <Modal.Body className="no-scrollbar">
+          <div className="w-full mx-auto flex grid grid-cols-2 justify-between items-center">
+            <div className="w-[95%]">
+              <div className="max-w">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="productId"
+                    value="Product ID"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="productId"
+                  onChange={(e) => {
+                    setID(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="productName"
+                    value="Product Name"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="productName"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="category"
+                    value="Category"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <select
+                  id="category"
+                  onChange={(e) => {
+                    setCategory(e.target.value);
+                  }}
+                  required
+                  className="form-select border-slate-300 rounded-lg bg-slate-50 w-full h-[43px]"
+                >
+                  <option disabled value="">
+                    --Select Category--
+                  </option>
+                  {categories.map((item, index) => (
+                    <option value={item.name} key={index}>
+                      {item.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="productImage"
+                    value="Product Image"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <input
+                  id="productImage"
+                  type="file"
+                  className="file-input file-input-bordered w-full max-w-xs"
+                  multiple
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="w-[95%] mt-[-5px]">
+              <div className="max-w">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="basisPrice"
+                    value="Basis Price"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="basisPrice"
+                  onChange={(e) => {
+                    setBasisPrice(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="discount"
+                    value="Discount (%)"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="discount"
+                  onChange={(e) => {
+                    setDiscount(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="quantity"
+                    value="Quantity"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="quantity"
+                  onChange={(e) => {
+                    setSalePrice(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <div className="mb-2 block">
+                  <Label
+                    htmlFor="productDescription"
+                    value="Description"
+                    className="font-sans font-medium text-[15px] text-black"
+                  />
+                </div>
+                <TextInput
+                  id="productDescription"
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+        <Modal.Footer className="h-[60px]">
+          <Button
+            onClick={updatedProducts}
+            color="dark"
+            className="rounded-none"
+          >
+            <p className="font-sans font-semibold text-[15px] text-white">
+              Accept
+            </p>
+          </Button>
+          <Button
+            onClick={() => setOpenModal(false)}
+            className="rounded-none"
+            color="light"
+          >
+            <p className="font-sans font-semibold text-[15px] text-gray-900">
+              Decline
+            </p>
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

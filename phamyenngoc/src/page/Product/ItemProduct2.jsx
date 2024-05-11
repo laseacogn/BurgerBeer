@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 
@@ -57,7 +57,7 @@ const ItemProduct2 = (product) => {
             </div>
           )}
         </div>
-<Link to={`/producttt/${product?.product?.id}`}>
+<NavLink to={`/producttt/${product?.product?.id}`}>
         <div className="flex flex-col justify-center text-center">
           <p
             style={{
@@ -108,7 +108,7 @@ const ItemProduct2 = (product) => {
             </p>
           </div>
         </div>
-      </Link>
+      </NavLink>
     </div>
   );
 };

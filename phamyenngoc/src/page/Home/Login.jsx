@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { Button, Modal, Label, TextInput, Checkbox } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { FaFacebook } from "react-icons/fa6";
@@ -12,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const [openModal, setOpenModal] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
   const [email, setEmail] = useState("");
@@ -26,6 +29,9 @@ const Login = () => {
       // Nếu tìm thấy người dùng, điều hướng đến trang chính
       navigate("/home");
       alert("Welcome To Burger N' Beer!");
+    } else if (!email || !password ){ 
+      // Nếu không tìm thấy, hiển thị thông báo lỗi
+      alert("Please fill in all fields");
     } else {
       // Nếu không tìm thấy, hiển thị thông báo lỗi
       alert("Email or password is incorrect.");

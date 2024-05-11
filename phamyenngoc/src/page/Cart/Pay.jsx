@@ -1,14 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GiCancel } from "react-icons/gi";
 import { Button, Modal } from "flowbite-react";
-import { useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const Pay = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [openModal, setOpenModal] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
+  const [minutes, setMinutes] = useState(14);
+  const [seconds, setSeconds] = useState(59);
+  const [countdown, setCountdown] = useState(29);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(intervalId);
+          alert('Transaction has been expired.');
+          window.location.href = '/home';
+        } else {
+          setMinutes(prevMinutes => prevMinutes - 1);
+          setSeconds(59);
+        }
+      } else {
+        setSeconds(prevSeconds => prevSeconds - 1);
+      }
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [minutes, seconds]);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (openModal2 && countdown === 0) {
+        clearInterval(intervalId);
+        window.location.href = '/home';
+      } else if (openModal2) {
+        setCountdown(prevCountdown => prevCountdown - 1);
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [openModal2, countdown]);
+  
   return (
     <div className="max-w-[1200px] mx-auto">
       <div class="w-full mt-[10px] mb-[20px] bg-[#FFFEFE] shadow-md rounded-lg">
@@ -134,7 +170,7 @@ const Pay = () => {
                   <div className="w-[40px] h-[40px] bg-white">
                     <p className="font-sans text-[20px] font-bold text-black text-center mt-[5px]">
                       {" "}
-                      14
+                      {minutes < 10 ? `0${minutes}` : minutes}
                     </p>
                   </div>
                   <p className="font-sans text-[20px] font-bold text-black text-center ml-[5px]">
@@ -143,8 +179,7 @@ const Pay = () => {
                   </p>
                   <div className="w-[40px] h-[40px] bg-white ml-[5px]">
                     <p className="font-sans text-[20px] font-bold text-black text-center mt-[5px]">
-                      {" "}
-                      59
+                      {seconds < 10 ? `0${seconds}` : seconds}
                     </p>
                   </div>
                 </div>
@@ -239,7 +274,7 @@ const Pay = () => {
                           Burger N' Beer
                         </span>
                       </Link>{" "}
-                      in <span className="text-green-500">29</span> seconds
+                      in <span className="text-green-500 font-semibold">{countdown}</span> seconds
                     </p>
                     <Link to="/home">
                       <p className=" underline font-sans text-[17px] mt-[10px] font-semibold text-blue-500">

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Button } from "flowbite-react";
 import { AiFillHome } from "react-icons/ai";
@@ -8,8 +8,13 @@ import { IoReorderFour, IoSettingsSharp } from "react-icons/io5";
 import { HiTemplate } from "react-icons/hi";
 import { BiSolidDiscount } from "react-icons/bi";
 import { TbBrandBooking } from "react-icons/tb";
+import { LiaLanguageSolid } from "react-icons/lia";
 
 const System = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <div className="max-w-[1200px] mx-auto bg-[#FFDADA] mt-[-10px]">
       <div className="w-full h-[850px] flex mb-[20px]">
@@ -91,7 +96,26 @@ const System = () => {
           <p className="font-sans font-black text-[20px] text-gray-900 text-center mt-[10px]">
             SYSTEM SETTING
           </p>
-          <div className="w-[950px] h-[780px] bg-[#FFFFFF] drop-shadow-lg ml-[25px] mt-[10px] no-scrollbar"></div>
+          <div className="w-[950px] h-[780px] flex justify-center items-center bg-[#FFFFFF] drop-shadow-lg ml-[25px] mt-[10px] no-scrollbar">
+            <div className="w-[212.5px] h-[760px] mt-[20px] shadow-lg">
+              <div className="w-full h-1/2 bg-[#FEFFFF] drop-shadow-xl border-solid border-2 border-indigo-600 ">
+                <div className="flex justify-center items-center mt-[20px]">
+                  <LiaLanguageSolid className="w-[30px] h-[30px]"/>
+                  <p className="font-sans font-extrabold text-[20px] text-gray-900"> LANGUAGE</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[212.5px] h-[760px] mt-[20px] ml-[20px] bg-[#FFC0C0] shadow-lg border-solid border-2 border-indigo-600">
+
+            </div>
+             <div className="w-[212.5px] h-[760px] mt-[20px] ml-[20px] bg-[#FFC0C0] shadow-lg border-solid border-2 border-indigo-600">
+
+            </div>
+             <div className="w-[212.5px] h-[760px] mt-[20px] ml-[20px] bg-[#FFC0C0] shadow-lg border-solid border-2 border-indigo-600">
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

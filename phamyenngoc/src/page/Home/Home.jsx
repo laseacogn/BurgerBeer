@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Carousel, Button } from "flowbite-react";
 import { HiShoppingCart } from "react-icons/hi";
 import { RiTableAltFill } from "react-icons/ri";
 
 const Home = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <>
       <div className="max-w-[1200px] mx-auto ">
@@ -115,19 +119,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <Link to='/producttt'>
+            <img className="w-[1200px] h-[724px]" src={require(`../../assets/image/home/3.jpg`)} alt="..." />
+            </Link>
+            
+            <Link to='/voucherrr'>
+            <img className="w-[1200px] h-[724px]" src={require(`../../assets/image/home/2.jpg`)} alt="..." />
+            </Link>
             <img className="w-[1200px] h-[724px]" src={require(`../../assets/image/home/1.jpg`)} alt="..." />
-            <img
-              src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-              alt="..."
-            />
-            <img
-              src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-              alt="..."
-            />
-            <img
-              src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-              alt="..."
-            />
+            
           </Carousel>
         </div>
 
@@ -146,7 +146,7 @@ const Home = () => {
               marginBottom: "30px",
             }}
           >
-            <Link to="/burger">
+            <Link to="/producttt">
               {" "}
               <span style={{ cursor: "pointer" }}>
                 <img
@@ -156,7 +156,7 @@ const Home = () => {
                 />
               </span>
             </Link>
-            <Link to="/sidedish">
+            <Link to="/producttt">
               <span style={{ cursor: "pointer" }}>
                 <img
                   src={require("./2.jpg")}
@@ -165,7 +165,7 @@ const Home = () => {
                 />
               </span>
             </Link>
-            <Link to="/sandwich">
+            <Link to="/producttt">
               <span style={{ cursor: "pointer" }}>
                 <img
                   src={require("./3.jpg")}
@@ -182,7 +182,7 @@ const Home = () => {
               marginBottom: "30px",
             }}
           >
-            <Link to="/hotdog">
+            <Link to="/producttt">
               <span style={{ cursor: "pointer" }}>
                 <img
                   src={require("./4.jpg")}
@@ -191,7 +191,7 @@ const Home = () => {
                 />
               </span>
             </Link>
-            <Link to="/sidedish">
+            <Link to="/producttt">
               <span style={{ cursor: "pointer" }}>
                 <img
                   src={require("./5.jpg")}
@@ -200,7 +200,7 @@ const Home = () => {
                 />
               </span>
             </Link>
-            <Link to="/pizza">
+            <Link to="/producttt">
               <span style={{ cursor: "pointer" }}>
                 <img
                   src={require("./6.jpg")}
@@ -217,7 +217,7 @@ const Home = () => {
               alt=""
               style={{ width: "114px", height: "114px" }}
             />
-            <Link to="/product">
+            <Link to="/producttt">
               <span>
                 <div
                   style={{

@@ -11,11 +11,6 @@ const ModalCustomer = ({ modalOpen, setFullName, setPhoneNumber, setAddress }) =
     const [address2, setAddress2] = useState('');
 
     const { notify } = useContext(MethodContext)
-    const listPaymentMethod = [
-        'Pay on delivery',
-        'Pay on card',
-        'Pay on Momo/ Zalo Pay/ VNPay',
-    ];
 
     const handleSubmit = () => {
         let address = address2 + ' ' + address1
@@ -24,7 +19,10 @@ const ModalCustomer = ({ modalOpen, setFullName, setPhoneNumber, setAddress }) =
             setAddress(address)
             setPhoneNumber(phoneNumber)
             modalOpen(false);
-        } else {
+        }   else if (!fullName || !address || !phoneNumber) {
+      alert("Please fill in all fields");
+      return;
+        }else {
             notify('Please fill all field.');
         }
     };

@@ -57,7 +57,10 @@ const Voucher2 = () => {
     setSelectedVoucherIndex(index);
     setOpenModal(true);
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="max-w-[1200px] max-h-[860px] mx-auto grid grid-cols-2 ">
       <div className="w-[320px] h-[860px] bg-[#FEFFFF] shadow-lg">

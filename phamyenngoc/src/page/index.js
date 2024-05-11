@@ -20,6 +20,7 @@ export { default as ComboDetail } from './Product/ComboDetail';
 export { default as Product2 } from './Product/Product2';
 
 export { default as ProductDetail2 } from './Product/Productdetail2';
+export { default as ProductDetail3 } from './Product/ProductDetail3';
 export { default as ProductDetail } from './Product/ProductDetail';
 export { default as Booking } from './Booking/Booking';
 

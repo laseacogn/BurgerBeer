@@ -107,7 +107,7 @@ const ItemProduct3 = ({ product, onDelete, onEdit, openModal2 }) => {
         )}
       </div>
 
-      <Link to={`/product/${product?.id}`}>
+      <Link to={`/productttt/${product?.id}`}>
         <div className="flex flex-col justify-center text-center">
           <p
             style={{

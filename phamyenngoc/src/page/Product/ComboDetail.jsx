@@ -21,7 +21,10 @@ export default function ComboDetail() {
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [openModal, setOpenModal] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);

@@ -3,10 +3,11 @@ import React,{useState} from 'react'
 const Search10 = ({ handleSearch }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
+
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-    handleSearch(event.target.value);
-  };
+  setSearchTerm(event.target.value);
+  handleSearch(event.target.value); 
+};
 
   return (
     <div className="join mb-[15px]">

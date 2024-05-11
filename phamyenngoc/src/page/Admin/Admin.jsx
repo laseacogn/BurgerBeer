@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaChartLine, FaUser } from 'react-icons/fa';
 import { IoBagHandle } from 'react-icons/io5';
@@ -7,6 +7,10 @@ import { TbBuildingWarehouse } from 'react-icons/tb';
 import { TiTicket } from 'react-icons/ti';
 
 export function Admin() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
     <div className="max-w-[1200px] mx-auto " >
     <div className="flex gap-2">

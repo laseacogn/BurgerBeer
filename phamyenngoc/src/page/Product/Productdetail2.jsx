@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
@@ -13,6 +13,14 @@ import Revieww from "./Revieww";
 
 
 export default function ProductDT2() {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
