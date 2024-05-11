@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
 import { Button, Tabs, Modal, Label, TextInput } from "flowbite-react";
+
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
+
 import { MdDescription } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
@@ -17,14 +19,16 @@ import { v4 } from "uuid";
 export default function ProductDT3() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
+
   const [categorieID, setCategoryID] = useState("");
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState([dataProduct]);
 
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  //lọc 
   useEffect(() => {
-    
     if (categorieID === "") {
       setProducts(dataProduct);
     } else {
@@ -34,6 +38,7 @@ export default function ProductDT3() {
       setProducts(filteredProducts);
     }
   }, [categorieID]);
+
   const handleIncrease = () => {
     setQuantity(quantity + 1);
   };
@@ -44,12 +49,17 @@ export default function ProductDT3() {
     }
   };
 
-
   const params = useParams();
   const productId = params.productId;
-  const prd = Array.isArray(products)
-    ? products.find((prd) => prd && prd.id === +productId)
-    : null;
+  const [prd, setPrd] = useState(null);
+
+  useEffect(() => {
+    if (Array.isArray(products)) {
+      const flagData = products.find((product) => product && product.id === +productId);
+      setPrd(flagData);
+    }
+  }, [products, productId]);
+
 
   const navigate = useNavigate();
   const handleTextClick = () => {
@@ -67,7 +77,6 @@ export default function ProductDT3() {
   const [imageUrl, setImageUrl] = useState();
 
   const uploadFile = async () => {
-    
     try {
       const imageId = v4();
       const imageRef = ref(storage, `/Blog2/${imageId}`);
@@ -121,11 +130,8 @@ export default function ProductDT3() {
       alert("Update product successfully!");
     }
 
-    const updatedProductIndex = products.findIndex(
-      (prd) => prd && prd.id === parseInt(products[editIndex].id)
-    );
+    console.log(prd);
     const updatedProduct = {
-      ...products[updatedProductIndex],
       id: ID,
       name: Name,
       category: Category,
@@ -134,13 +140,10 @@ export default function ProductDT3() {
       description: Description,
       image: img,
     };
-
-    const updatedProductsList = [...products];
-    updatedProductsList[updatedProductIndex] = updatedProduct;
-    setProducts(updatedProductsList);
+    setPrd(updatedProduct)
     setOpenModal(false);
 
-    console.log(updatedProduct);
+
   };
 
   const openEditModal = (index) => {
@@ -163,7 +166,7 @@ export default function ProductDT3() {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-              <NavLink to="/">
+              <NavLink to="/homee">
                 <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                   {" "}
                   Home{" "}
@@ -171,7 +174,7 @@ export default function ProductDT3() {
               </NavLink>
 
               <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-              <NavLink to="/producttt">
+              <NavLink to="/productt_manage">
                 <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                   {" "}
                   Products
@@ -246,7 +249,9 @@ export default function ProductDT3() {
                   {parseInt(prd.id) > 69 ? (
                     <div>
                       <img
-                        className="w-[405px] h-[405px] ml-24 pt-12 pb-12 rounded-lg"
+                        className="ml-24 pt-12 pb-12 rounded-lg"
+                        width={405}
+                        height={405}
                         src={prd.image}
                         alt={prd.name}
                       />
@@ -304,10 +309,22 @@ export default function ProductDT3() {
                           ></td>
                         </tr>
                         <tr>
-                          <td style={{ width: "70px" }}>PRICE</td>
+                          <td style={{ width: "70px" }}>CAT</td>
                           <td>
                             <div style={{ display: "inline" }}>
-                              <span
+                              <span>
+                                {" "}
+                                {prd.categoryName}{" "}
+                              </span>
+                            </div>
+                            <div style={{ clear: "both" }}></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ width: "70px" }} className="pt-[10px]">PRICE</td>
+                          <td>
+                            <div style={{ display: "inline" }} className="pt-[25px]">
+                              <span 
                                 style={{
                                   color: "#323232",
                                   fontSize: "24px",
@@ -338,7 +355,7 @@ export default function ProductDT3() {
                           </td>
                         </tr>
                         <tr>
-                          <td style={{ paddingTop: "10px" }}>RETAIL</td>
+                          <td style={{ paddingTop: "10px" }} >RETAIL</td>
                           <td style={{ paddingTop: "10px" }}>
                             <span style={{ textDecoration: "line-through" }}>
                               {" "}
@@ -349,41 +366,16 @@ export default function ProductDT3() {
                               prd.originalPrice -
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
-                                100
+                              100
                             ).toFixed(3)}{" "}
                             VND )
                           </td>
                         </tr>
+                        
                         <tr>
-                          <td>QTY</td>
-                          <td className="pt-[20px] flex ">
-                            <Button
-                              color="gray"
-                              onClick={handleDecrease}
-                              className="text-sm"
-                            >
-                              {" "}
-                              -{" "}
-                            </Button>
-                            <Button color="gray"> {quantity} </Button>
-                            <Button
-                              color="gray"
-                              onClick={handleIncrease}
-                              className="text-sm"
-                            >
-                              {" "}
-                              +{" "}
-                            </Button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>NOTE</td>
-                          <td className="pt-[20px] pb-[20px] flex ">
-                            <input
-                              type="text"
-                              placeholder="Enter your notes here..."
-                              className="input input-bordered border-stone-200 w-full max-w-xs"
-                            />
+                          <td className="pt-[10px] pb-[20px] ">QTY</td>
+                          <td className=" pt-[10px] pb-[20px] flex ">
+                            <p>{prd.quantity} items</p>
                           </td>
                         </tr>
                       </tbody>
@@ -392,35 +384,21 @@ export default function ProductDT3() {
                 )}
                 {prd && (
                   <div className="w-full flex text-right">
-                    <p>TOTAL PRICE</p>
+                    <p>STATUS</p>
                     <p
                       style={{
-                        color: "#323232",
                         fontSize: "24px",
                         fontWeight: "bold",
-                        marginTop: "-5px",
+                        marginTop: "-7px", marginLeft:"20px",
+                        color: prd.quantity > 10 ? "green" : "red",
                       }}
                     >
                       {" "}
-                      &nbsp;&nbsp;&nbsp;{" "}
-                      {(
-                        ((prd.originalPrice * (100 - prd.discountPercent)) /
-                          100) *
-                        quantity
-                      ).toFixed(3)}{" "}
-                      VND &nbsp;&nbsp;&nbsp;{" "}
-                    </p>
-                    <p>
+                       {prd.quantity > 10 ? "In Stock" : "Out of Stock"}{" "}
                       {" "}
-                      ( You saved{" "}
-                      {(
-                        (prd.originalPrice -
-                          (prd.originalPrice * (100 - prd.discountPercent)) /
-                            100) *
-                        quantity
-                      ).toFixed(3)}{" "}
-                      VND ){" "}
+                      
                     </p>
+                    
                   </div>
                 )}
 
@@ -440,7 +418,7 @@ export default function ProductDT3() {
                     }}
                     onClick={() => {
                       if (products.length > 0) {
-                        const index = 0; // Chọn chỉ mục của sản phẩm để chỉnh sửa
+                        const index = 0; 
                         setOpenModal(true);
                         openEditModal(index);
                       }

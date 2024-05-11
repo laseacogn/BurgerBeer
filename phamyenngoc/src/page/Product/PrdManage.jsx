@@ -266,7 +266,7 @@ const PrdManage = () => {
         <div className="w-full flex justify-between items-center">
           <div className="flex">
             <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <NavLink to="/">
+            <NavLink to="/homee">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
                 Home{" "}
@@ -274,7 +274,7 @@ const PrdManage = () => {
             </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/product">
+            <NavLink to="/productt_manage">
               <p className="font-inter font-bold text-[20px] mb-[20px]">
                 {" "}
                 Products

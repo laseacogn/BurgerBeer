@@ -6,6 +6,7 @@ import { Home, Admin, ContactUs, Product, Login, LoginAdmin,
   CategoryDetail, OrdManageDetail, Reservation, System,
   ProductDetail2, Product2, Voucherrr, VoucherAdmin, PrdManage,
   AdminAccount, CustomerService, CustomerServicee, CustomerServiceee, Pay,
+  OrderTracking,
 } from '../page';
 import { LayoutDefault, Layout, LayoutAdmin } from '../layout';
 
@@ -30,6 +31,8 @@ const router = [
   { path: '/product/:productId', layout:Layout, component:ProductDetail  },
 
   { path: '/myaccount', layout:Layout, component: MyAccount },
+
+  { path: '/order_tracking', layout:Layout, component: OrderTracking },
 
   { path: '/wishlist', layout:Layout, component: Wishlist },
 

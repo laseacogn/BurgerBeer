@@ -52,3 +52,4 @@ export { default as CustomerServicee} from './CustomerService/CustomerServicee.j
 export { default as CustomerServiceee} from './CustomerService/CustomerServiceee.jsx'
 
 export { default as Pay } from './Cart/Pay.jsx';
+export { default as OrderTracking} from './Order Tracking/OrderTracking.jsx';
