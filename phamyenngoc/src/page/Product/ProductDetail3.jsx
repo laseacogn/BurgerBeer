@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
 import { Button, Tabs, Modal, Label, TextInput } from "flowbite-react";
+
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
+
 import { MdDescription } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
@@ -17,12 +19,15 @@ import { v4 } from "uuid";
 export default function ProductDT3() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
+
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
 
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  //lọc 
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);
@@ -33,6 +38,7 @@ export default function ProductDT3() {
       setProducts(filteredProducts);
     }
   }, [categorieID]);
+
   const handleIncrease = () => {
     setQuantity(quantity + 1);
   };
@@ -45,9 +51,15 @@ export default function ProductDT3() {
 
   const params = useParams();
   const productId = params.productId;
-  const prd = Array.isArray(products)
-    ? products.find((prd) => prd && prd.id === +productId)
-    : null;
+  const [prd, setPrd] = useState(null);
+
+  useEffect(() => {
+    if (Array.isArray(products)) {
+      const flagData = products.find((product) => product && product.id === +productId);
+      setPrd(flagData);
+    }
+  }, [products, productId]);
+
 
   const navigate = useNavigate();
   const handleTextClick = () => {
@@ -118,11 +130,8 @@ export default function ProductDT3() {
       alert("Update product successfully!");
     }
 
-    const updatedProductIndex = products.findIndex(
-      (prd) => prd && prd.id === parseInt(products[editIndex].id)
-    );
+    console.log(prd);
     const updatedProduct = {
-      ...products[updatedProductIndex],
       id: ID,
       name: Name,
       category: Category,
@@ -131,13 +140,10 @@ export default function ProductDT3() {
       description: Description,
       image: img,
     };
-
-    const updatedProductsList = [...products];
-    updatedProductsList[updatedProductIndex] = updatedProduct;
-    setProducts(updatedProductsList);
+    setPrd(updatedProduct)
     setOpenModal(false);
-    
-    console.log(updatedProduct);
+
+
   };
 
   const openEditModal = (index) => {
@@ -346,7 +352,7 @@ export default function ProductDT3() {
                               prd.originalPrice -
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
-                                100
+                              100
                             ).toFixed(3)}{" "}
                             VND )
                           </td>
@@ -413,7 +419,7 @@ export default function ProductDT3() {
                       {(
                         (prd.originalPrice -
                           (prd.originalPrice * (100 - prd.discountPercent)) /
-                            100) *
+                          100) *
                         quantity
                       ).toFixed(3)}{" "}
                       VND ){" "}
