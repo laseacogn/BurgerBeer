@@ -827,7 +827,7 @@ const OrderTracking = () => {
                   </div>
                 </Tabs.Item>
                 <Tabs.Item title="Cancelled" icon={TbBasketCancel}>
-                  <div className="w-[95%] h-[590px] ml-[30px] bg-[#FEFFFF] drop-shadow-md mt-[20px] ">
+                  <div className="w-[95%] h-[590px] ml-[30px] bg-[#FEFFFF] drop-shadow-md  ">
                     <div className="font-sans font-semibold text-[17px] flex justify-between items-center border-b pb-[10px] pt-[10px]">
                       <p className="ml-[20px] text-gray-900">
                         Nguyen Anh Thu | (+84)858788888

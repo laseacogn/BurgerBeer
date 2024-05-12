@@ -1,0 +1,12 @@
+[
+    {
+        "id":"1",
+        "img":"ship1.jpeg",
+        "name":"Delivery (Our partners: Grab, Xanh SM, and Ahamove)"
+    },
+    {
+        "id":"2",
+        "img":"ship2.jpeg", 
+        "name":"Self Pick-up"
+    }
+]

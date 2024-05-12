@@ -169,7 +169,6 @@ const AccountSetting = () => {
               ))}
             </select>
           </div>
-
           <div className="mt-[20px]">
             <div className="mb-2 block">
               <Label

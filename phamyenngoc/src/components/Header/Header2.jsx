@@ -180,7 +180,7 @@ function Header2() {
               </p>
               </Link>
             </Dropdown.Header>
-              <Dropdown.Item className="text-sm font-sans font-medium" onClick={() => showAlert3()}>MY ACCOUNT</Dropdown.Item>
+             
             <Link to="/customer_servicee">
               <Dropdown.Item className="text-sm font-sans font-medium">CUSTOMER SERVICE</Dropdown.Item>
             </Link>

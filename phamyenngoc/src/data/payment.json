@@ -1,0 +1,17 @@
+[
+    {
+        "id":"1",
+        "img":"delivery.jpeg",
+        "name":"Pay on delivery"
+    },
+    {
+        "id":"2",
+        "img":"card.jpg", 
+        "name":"Pay on card"
+    },
+    {
+        "id":"3",
+        "img":"momo.webp",
+        "name":"Pay on Momo/ Zalo Pay/ VNPay"
+    }
+]
