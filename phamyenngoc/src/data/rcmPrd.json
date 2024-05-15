@@ -1,0 +1,62 @@
+[
+    {
+        "id": 60,
+        "name": "Coconut Coffee",
+        "categoryId": 8,
+        "categoryName":"Drink",
+        "image": "59.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 10,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Experience a unique twist on the classic with Salt Coffee at Burger N' Beer. Crafted with precision and creativity, our Salt Coffee offers a delightful combination of rich coffee flavor with a subtle hint of savory saltiness. Picture savoring a warm cup filled with the aromatic essence of freshly brewed coffee, perfectly balanced by a touch of salt that enhances its depth and complexity. Each sip tantalizes your taste buds with a harmonious blend of bold coffee notes and the subtle interplay of salt, creating a truly memorable drinking experience. Whether you're a coffee aficionado looking to explore new flavors or simply seeking a deliciously unconventional beverage, our Salt Coffee promises to surprise and delight, leaving you craving another sip."
+    },
+    {
+        "id": 40,
+        "name": "Avocado Smoothies",
+        "categoryId": 8,
+        "categoryName":"Drink",
+        "image": "30.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Indulge in creamy decadence with the Avocado Smoothie at Burger N' Beer. Crafted from ripe, velvety avocados, our smoothie is a luxurious blend of richness and freshness. Picture sipping on a tall glass filled with the smooth, creamy texture of avocado puree, each sip bursting with the delicate sweetness of this beloved fruit. Whether you're seeking a refreshing treat on a hot day or a satisfyingly wholesome beverage, our Avocado Smoothie is the perfect choice, offering a creamy delight that will tantalize your taste buds and leave you feeling refreshed and rejuvenated with every sip."
+    },
+    {
+        "id": 15,
+        "name": "Potato Cheese Balls",
+        "categoryId": 2,
+        "categoryName":"SideDish",
+        "image": "5.jpg",
+        "originalPrice": 50.00,
+        "discountPercent": 5,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Potato cheese balls from Burger N' Beer are delectable savory snacks crafted from a blend of creamy mashed potatoes and rich cheese, seasoned to perfection with a medley of herbs and spices. These delectable orbs are carefully shaped by hand, ensuring a uniform texture throughout, and then coated in a crispy golden shell that promises a satisfying crunch with every bite."
+    },
+    {
+        "id": 24,
+        "name": "Chicken Club Sandwich",
+        "categoryId": 4,
+        "categoryName":"Sandwich",
+        "image": "14.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 15,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Get ready to indulge in the ultimate comfort food experience with the Chicken Club Sandwich at Burger N' Beer. This iconic sandwich combines tender, juicy grilled chicken breast with crispy bacon, fresh lettuce, ripe tomato slices, and creamy mayonnaise, all layered between slices of toasted bread. Each bite offers a perfect balance of flavors and textures, with the smoky saltiness of the bacon complementing the savory goodness of the chicken. The crisp lettuce and juicy tomatoes add a refreshing crunch, while the creamy mayonnaise brings everything together in a symphony of taste. Whether you're craving a satisfying lunch or a hearty dinner, the Chicken Club Sandwich is sure to hit the spot every time."
+    },
+    {
+        "id": 45,
+        "name": "Passion Fruit Yogurt",
+        "categoryId": 8,
+        "categoryName":"Drink",
+        "image": "35.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 5,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Immerse yourself in tropical bliss with the Passion Fruit Yogurt at Burger N' Beer. Crafted with luxurious yogurt and exotic passion fruit, our yogurt offers a tantalizing fusion of tangy and sweet flavors. Envision spooning into a bowl of creamy yogurt adorned with swirls of vibrant passion fruit puree, each bite delivering a burst of tropical sunshine to your taste buds. Whether you're seeking a refreshing snack or a wholesome dessert option, our Passion Fruit Yogurt is the perfect choice, providing a creamy and indulgent treat that will transport you to a tropical paradise with every mouthful."
+    }
+]

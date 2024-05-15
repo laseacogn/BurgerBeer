@@ -6,20 +6,22 @@ import { Home, Admin, ContactUs, Product, Login, LoginAdmin,
   CategoryDetail, OrdManageDetail, Reservation, System,
   ProductDetail2, Product2, Voucherrr, VoucherAdmin, PrdManage,
   AdminAccount, CustomerService, CustomerServicee, CustomerServiceee, Pay,
-  OrderTracking,
+  OrderTracking, Card, 
+  Shop2, Shop, Shop3
 } from '../page';
 import { LayoutDefault, Layout, LayoutAdmin } from '../layout';
 
 const router = [
   { path: '/contact', layout:Layout, component: ContactUs },
   { path: '/admin', component: Admin },
-  { path: '/productt', component: Productt },
     { path: '/category', component: Category },
   { path: '/home', layout:Layout, component: Home },
   { path: '/login', layout:LayoutDefault, component: Login },
   { path: '/login_corporate_account', layout:LayoutDefault, component: LoginAdmin },
   { path: '/register', component: Register },
-  { path: '/product', layout:Layout, component: Product },
+  { path: '/shop', layout:Layout, component: Product },
+  { path: '/product', layout:Layout, component: Shop },
+
   { path: '/cart', layout:Layout, component: Cart },
   { path: '/cart2', layout:Layout, component: Cart2},
 
@@ -45,9 +47,12 @@ const router = [
   { path: '/reserve_manage', layout:LayoutAdmin, component: Reservation },
   { path: '/system_setting', layout:LayoutAdmin, component: System },
   { path: '/voucherr_manage', layout:LayoutAdmin, component: VoucherAdmin },
-  { path: '/productt_manage', layout:LayoutAdmin, component: PrdManage },
+  { path: '/productt_manage', layout:LayoutAdmin, component: Shop3 },
   { path: '/homee', layout:LayoutAdmin, component: Home },
   { path: '/admin_account', layout:LayoutAdmin, component: AdminAccount },
+
+  { path: '/shoppp', layout:LayoutAdmin, component: PrdManage },
+
   { path: '/productttt/:productId', layout:LayoutAdmin, component: ProductDetail3 },
 
 
@@ -59,7 +64,10 @@ const router = [
 
 
   { path: '/', layout:LayoutDefault, component: Home },
-  { path: '/producttt', layout:LayoutDefault, component: Product2 },
+  { path: '/shopp', layout:LayoutDefault, component: Product2 },
+
+{ path: '/productt', layout:LayoutDefault, component: Shop2 },
+
   { path: '/producttt/:productId', layout:LayoutDefault, component:ProductDetail2  },
   { path: '/voucherrr', layout: LayoutDefault, component: Voucherrr},
 
@@ -75,6 +83,7 @@ const router = [
   { path: '/aboutus', layout:LayoutDefault, component: AboutUs},
 
   { path: '/zalopay', layout:Layout, component: Pay },
+  { path: '/card', layout:Layout, component: Card },
 
 ];
 

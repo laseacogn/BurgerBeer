@@ -78,10 +78,17 @@ export default function ProductDT() {
             </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+            <NavLink to="/shop">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Shop
+              </p>
+            </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
             <NavLink to="/product">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
-                Products
+                Menu
               </p>
             </NavLink>
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
@@ -90,6 +97,7 @@ export default function ProductDT() {
                   {" "}
                   {prd.name}
                 </p>
+            
             )}
             </div>
           </div>

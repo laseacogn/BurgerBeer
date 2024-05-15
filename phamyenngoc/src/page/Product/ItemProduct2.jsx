@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { HiOutlineShoppingCart } from "react-icons/hi";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoHeartSharp } from "react-icons/io5";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 const ItemProduct2 = (product) => {
    const showAlert1 = () => {
@@ -27,89 +28,79 @@ const ItemProduct2 = (product) => {
 
 
   return (
-    <div
-      className="w-60 flex item-center flex-col mx-auto "
-      key={product.id}
-      onMouseEnter={() => setShowButtons(true)}
-      onMouseLeave={() => setShowButtons(false)}
-    >
-      
-        <div className="relative">
-          <img
-            className="w-full self-center"
-            style={{ borderRadius: "60px" }}
-            src={require(`../../assets/image/Burger/${product?.product?.image}`)}
+
+    <div className="w-full mx-auto h-full flex justify-center items-center py-4">
+        <div className="flex items-center justify-center gap-8">
+            <div
+              className="card w-[270px] h-[350px] bg-base-100 shadow-xl"
+              key={product.id}
+            >
+              <figure className="">
+                <NavLink to={`/producttt/${product?.product?.id}`}>
+                  <img
+                    className="w-[200px] h-[150px] self-center"
+                    style={{ borderRadius: "px" }}
+                    src={require(`../../assets/image/Burger/${product?.product?.image}`)}
             alt={product?.product?.name}
-          />
-          {showButtons && (
-            <div className="absolute inset-0 flex justify-around items-center">
-              <button onClick={() => showAlert1()}>
-                <div className="w-[70px] h-[70px] rounded-full bg-white justify-center items-center">
-                    <IoHeartOutline className="w-[65px] h-[65px] text-red-600 ml-[2px] pt-[13px]" />
-                </div>
-              </button>
-               <button onClick={() => showAlert2()}>
-                <div className="w-[70px] h-[70px] rounded-full bg-gray-900 justify-center items-center">
-                    <HiOutlineShoppingCart className="w-[65px] h-[65px] text-white ml-[2px] pt-[10px]" />
-                </div>
-                
-              </button>
-            </div>
-          )}
-        </div>
-<NavLink to={`/producttt/${product?.product?.id}`}>
-        <div className="flex flex-col justify-center text-center">
-          <p
-            style={{
-              fontSize: "17px",
-              fontWeight: "600",
-              fontFamily: '"Inter", sans-serif',
-            }}
-          >
-            {product?.product?.name}
-          </p>
-          <p
-            style={{
-              textDecoration: "line-through",
-              fontFamily: '"Inter", sans-serif',
-              fontSize: "17px",
-              fontWeight: "400",
-              color: "#707070",
-            }}
-          
-          >
-           {product?.product?.originalPrice?.toFixed(3)} VND
-          </p>
-          <div className="flex justify-center text-center">
-            <p
-              style={{
-                color: "#F00E0E",
-                fontFamily: '"Inter", sans-serif',
-                fontSize: "17px",
-                fontWeight: "600",
-                marginRight: "15px",
-              }}
-            >
-              {product?.product?.discountPercent}%
-            </p>
-            <p
-              style={{
-                color: "#000000",
-                fontFamily: '"Inter", sans-serif',
-                fontSize: "17px",
-                fontWeight: "600",
-              }}
-            >
-              
-              {calculateDiscountedPrice(
+                  />
+                </NavLink>
+              </figure>
+              <div className=" mt-[-20px] card-body items-center text-center">
+                <h2 className="font-sans text-[17px] font-semibold text-center">
+                   {product?.product?.name}
+                </h2>
+                <div className="w-[150px] mt-[-3px]">
+                  <div className="flex justify-between items-center">
+                    <button onClick={() => showAlert1()}>
+                      <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center mr-[30px] ml-[10px]">
+                        <IoHeartSharp className="w-[45px] h-[45px] text-gray-700 ml-[2.5px] pt-[9px]" />
+                      </div>
+                    </button>
+                    <button onClick={() => showAlert2()}>
+                      <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center">
+                        <FaShoppingCart className="w-[42px] h-[42px] text-gray-700 ml-[3px] pt-[15px]" />
+                      </div>
+                    </button>
+                  </div>
+                  <div className="w-[160px] font-sans font-medium text-[17px] justify-center text-center mb-[-20px]">
+                    <p className=" mt-[15px] text-center line-through text-[#707070]">
+                      {product?.product?.originalPrice?.toFixed(3)} VND
+                    </p>
+                    <div className="mt-[5px] flex justify-center text-center">
+                      <p
+                        style={{
+                          color: "#F00E0E",
+                          fontFamily: '"Inter", sans-serif',
+                          fontSize: "17px",
+                          fontWeight: "600",
+                          marginRight: "15px",
+                        }}
+                      >
+                        {product?.product?.discountPercent}%
+                      </p>
+                      <p
+                        style={{
+                          color: "#000000",
+                          fontFamily: '"Inter", sans-serif',
+                          fontSize: "17px",
+                          fontWeight: "600",
+                        }}
+                      >
+                        {calculateDiscountedPrice(
                 product?.product?.originalPrice,
                 product?.product?.discountPercent
               )} VND
-            </p>
-          </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-      </NavLink>
-    </div>
+      </div>
+
+
+    
   );
 };
 export default ItemProduct2;

@@ -174,12 +174,20 @@ export default function ProductDT3() {
               </NavLink>
 
               <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-              <NavLink to="/productt_manage">
-                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                  {" "}
-                  Products
-                </p>
-              </NavLink>
+              <NavLink to="/shoppp">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Shop
+              </p>
+            </NavLink>
+
+            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+            <NavLink to="/productt_manage">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Menu
+              </p>
+            </NavLink>
               <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
               {prd && (
                 <p className="font-inter font-bold text-[20px] mb-[20px]">

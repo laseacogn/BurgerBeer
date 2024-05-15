@@ -1,0 +1,62 @@
+[
+    {
+        "id": 29,
+        "name": "Carnitas HotDog",
+        "categoryId": 6,
+        "categoryName":"HotDog",
+        "image": "19.jpg",
+        "originalPrice": 80.00,
+        "discountPercent": 5,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Treat your taste buds to a flavor-packed fiesta with the Carnitas HotDog from Burger N' Beer. This mouthwatering creation combines the smoky richness of carnitas with the classic comfort of a HotDog. Imagine sinking your teeth into a juicy HotDog nestled in a soft, toasted bun, topped with tender, slow-cooked carnitas. Each bite bursts with savory goodness, with the bold flavors of the carnitas blending perfectly with the juicy HotDog. Topped with your favorite condiments and served with a side of crispy fries or crunchy coleslaw, the Carnitas HotDog is a delicious twist on a classic favorite that's sure to leave you craving more."
+    },
+     {
+        "id": 17,
+        "name": "Cheese Burger",
+        "categoryId": 3,
+        "categoryName":"Burger",
+        "image": "7.jpg",
+        "originalPrice": 99.00,
+        "discountPercent": 5,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"At Burger N' Beer, the Cheeseburger is an iconic classic promising to delight your taste buds with its unbeatable combination of juicy beef, gooey cheese, and fresh ingredients. Imagine a soft, golden-brown brioche bun sandwiching a perfectly grilled, tender, and flavorful beef patty, meticulously seasoned and grilled to perfection. As you sink your teeth into the first bite, you'll experience the aromatic blend of beef mingling with the enticing aroma of the grill. But the star of the show is undoubtedly the cheese – warm, melted, enveloping and embracing every inch of the beef patty in a velvety layer of creaminess. Whether it's classic American cheese, sharp cheddar, or soft mozzarella, the cheese adds a rich flavor that elevates the burger to new heights of perfection."
+    },
+    {
+        "id": 14,
+        "name": "Chicken Nugget",
+        "categoryId": 2,
+        "categoryName":"SideDish",
+        "image": "4.jpg",
+        "originalPrice": 60.00,
+        "discountPercent": 10,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Chicken nuggets are bite-sized pieces of chicken meat that are breaded and fried until golden brown and crispy. Typically made from chicken breast or thigh meat, they are seasoned with salt, pepper, and other spices for flavor. The breading can vary but often includes a mixture of flour, breadcrumbs, and sometimes cornmeal or other grains for added texture."
+    },
+    {
+        "id": 28,
+        "name": "Cheese Pizza",
+        "categoryId": 5,
+        "categoryName":"Pizza",
+        "image": "18.jpg",
+        "originalPrice": 160.00,
+        "discountPercent": 15,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"Savor the simplicity and timeless appeal of the Cheese Pizza at Burger N' Beer. This classic favorite celebrates the beauty of minimalism, allowing the quality of the ingredients to shine. Picture a golden-brown crust topped with a generous layer of tangy tomato sauce and a melty blanket of gooey mozzarella cheese. Each bite is a symphony of flavors, with the savory richness of the cheese perfectly complementing the bright acidity of the tomato sauce. Whether you're a purist who appreciates the classics or simply craving a delicious slice of pizza, the Cheese Pizza at Burger N' Beer is sure to satisfy your cravings and leave you wanting more."
+    },
+    {
+        "id": 38,
+        "name": "Watermelon Juice",
+        "categoryId": 8,
+        "categoryName":"Drink",
+        "image": "28.jpg",
+        "originalPrice": 40.00,
+        "discountPercent": 15,
+        "quantity":"100",
+        "status":" In Stock",
+        "description":"At Burger N' Beer, we believe in crafting culinary experiences that go beyond just a meal. With every dish we serve and every drink we pour, we aim to create moments of delight and satisfaction for our customers. From our juicy burgers to our refreshing beverages, each item on our menu is made with the finest ingredients and a passion for flavor. So come join us and indulge in a culinary journey like no other, where every bite and sip is a celebration of good food and great company."
+    }
+]

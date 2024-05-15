@@ -83,10 +83,17 @@ useEffect(() => {
             </NavLink>
 
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/producttt">
+            <NavLink to="/shopp">
               <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
                 {" "}
-                Products
+                Shop
+              </p>
+            </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+            <NavLink to="/productt">
+              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                {" "}
+                Menu
               </p>
             </NavLink>
             <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />

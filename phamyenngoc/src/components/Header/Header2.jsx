@@ -202,7 +202,7 @@ function Header2() {
             HOME
           </Navbar.Link>
           <Navbar.Link
-            href="/producttt"
+            href="/shopp"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             SHOP

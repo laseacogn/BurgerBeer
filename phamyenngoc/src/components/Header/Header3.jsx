@@ -201,7 +201,7 @@ function Header3() {
             HOME
           </Navbar.Link>
           <Navbar.Link
-            href="/productt_manage"
+            href="/shoppp"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
             SHOP
