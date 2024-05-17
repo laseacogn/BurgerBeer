@@ -198,7 +198,7 @@ export default function ProductDT3() {
             </div>
           </div>
 
-          <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
+          {/* <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
             <div className="flex items-center justify-center gap-14">
               <button
                 className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
@@ -233,11 +233,11 @@ export default function ProductDT3() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div
-          className="max-w-[1200px] mx-auto "
+          className="max-w-[1200px] mx-auto mt-[-45px]"
           style={{ paddingLeft: "-55px", paddingRight: "5rem" }}
         >
           <div
@@ -398,13 +398,14 @@ export default function ProductDT3() {
                         fontSize: "24px",
                         fontWeight: "bold",
                         marginTop: "-7px", marginLeft:"20px",
-                        color: prd.quantity > 10 ? "green" : "red",
+                        color: prd.quantity > 5 ? "green" : "red",
                       }}
                     >
                       {" "}
-                       {prd.quantity > 10 ? "In Stock" : "Out of Stock"}{" "}
+                       {prd.quantity > 5 ? "In Stock" : "Out of Stock"}{" "}
                       {" "}
                       
+                    
                     </p>
                     
                   </div>

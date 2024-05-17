@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
-import { Button, Tabs } from "flowbite-react";
+import { Button, Tabs, TextInput } from "flowbite-react";
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
@@ -11,26 +11,27 @@ import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import Revieww from "./Revieww";
 
-
 export default function ProductDT() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
   const showAlert1 = () => {
-    alert(
-      "The product has been added to cart!"
-    );
+    alert("The product has been added to cart!");
   };
   const showAlert2 = () => {
-    alert(
-      "The product has been added to wishlist!"
-    );
+    alert("The product has been added to wishlist!");
+  };
+  const showAlert3 = () => {
+    alert("Sorry! This product is out of stock for today!");
+  };
+  const showAlert4 = () => {
+    alert("Exceed the number of products in stock!");
   };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);
@@ -48,13 +49,25 @@ export default function ProductDT() {
 
   const accessToken = localStorage.getItem("token");
 
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
-
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const handleIncrease = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    // Check if the value is a number and greater than 0
+    if (/^\d+$/.test(value) && parseInt(value) > 0) {
+      setQuantity(parseInt(value));
+    } else if (value > prd.quantity) {
+      setQuantity(prd.quantity);
+    } else {
+      setQuantity(value);
     }
   };
 
@@ -70,39 +83,38 @@ export default function ProductDT() {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <NavLink to="/home">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Home{" "}
-              </p>
-            </NavLink>
+              <NavLink to="/home">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Home{" "}
+                </p>
+              </NavLink>
 
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/shop">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Shop
-              </p>
-            </NavLink>
               <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/product">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Menu
-              </p>
-            </NavLink>
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            {prd && (
+              <NavLink to="/shop">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Shop
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <NavLink to="/product">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Menu
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              {prd && (
                 <p className="font-inter font-bold text-[20px] mb-[20px]">
                   {" "}
                   {prd.name}
                 </p>
-            
-            )}
+              )}
             </div>
           </div>
 
-          <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
+          {/* <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
             <div className="flex items-center justify-center gap-14">
               <button
                 className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
@@ -137,11 +149,11 @@ export default function ProductDT() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div
-          className="max-w-[1200px] mx-auto "
+          className="max-w-[1200px] mx-auto mt-[-45px]"
           style={{ paddingLeft: "-55px", paddingRight: "5rem" }}
         >
           <div
@@ -219,7 +231,8 @@ export default function ProductDT() {
                                   (prd.originalPrice *
                                     (100 - prd.discountPercent)) /
                                   100
-                                ).toFixed(3)} VND{" "}
+                                ).toFixed(3)}{" "}
+                                VND{" "}
                               </span>
                               &nbsp;&nbsp;&nbsp;
                               <span
@@ -249,29 +262,62 @@ export default function ProductDT() {
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
                                 100
-                            ).toFixed(3)} VND )
+                            ).toFixed(3)}{" "}
+                            VND )
                           </td>
                         </tr>
                         <tr>
                           <td>QTY</td>
                           <td className="pt-[20px] flex ">
-                            <Button
-                              color="gray"
-                              onClick={handleDecrease}
-                              className="text-sm"
-                            >
-                              {" "}
-                              -{" "}
-                            </Button>
-                            <Button color="gray"> {quantity} </Button>
-                            <Button
-                              color="gray"
-                              onClick={handleIncrease}
-                              className="text-sm"
-                            >
-                              {" "}
-                              +{" "}
-                            </Button>
+                            <div className="w-full flex">
+                              <Button
+                                color="gray"
+                                onClick={handleDecrease}
+                                className="text-sm"
+                              >
+                                {" "}
+                                -{" "}
+                              </Button>
+                              <TextInput
+                                color="gray"
+                                value={quantity}
+                                min="1"
+                                max={prd.quantity}
+                                onChange={handleChange}
+                                className="text-center w-12 border-gray-300 rounded"
+                                style={{ textAlign: "center" }}
+                                inputProps={{ style: { textAlign: "center" } }}
+                              />
+                              <Button
+                                color="gray"
+                                onClick={handleIncrease}
+                                className="text-sm"
+                              >
+                                {" "}
+                                +{" "}
+                              </Button>
+                            </div>
+                            <div className="w-[182px] flex items-center justify-center ml-[-300px] mt-[15px] ">
+                              <p
+                                style={{
+                                  fontSize: "17px",
+                                  fontWeight: "bold",
+                                  marginTop: "=",
+                                  textAlign: "center",
+                                  color: prd.quantity > 0 ? "green" : "red",
+                                }}
+                                className="text-center"
+                              >
+                                {prd.quantity > 0
+                                  ? "In Stock :"
+                                  : "Out of Stock"}{" "}
+                                {prd.quantity > 0 && (
+                                  <span className="ml-[4px] font-bold text-[17px]">
+                                    {prd.quantity} items
+                                  </span>
+                                )}
+                              </p>
+                            </div>
                           </td>
                         </tr>
                         <tr>
@@ -280,7 +326,7 @@ export default function ProductDT() {
                             <input
                               type="text"
                               placeholder="Enter your notes here..."
-                              className="input input-bordered border-stone-200 w-full max-w-xs"
+                              className="w-full input input-bordered border-stone-200 max-w-xs"
                             />
                           </td>
                         </tr>
@@ -305,7 +351,8 @@ export default function ProductDT() {
                         ((prd.originalPrice * (100 - prd.discountPercent)) /
                           100) *
                         quantity
-                      ).toFixed(3)} VND &nbsp;&nbsp;&nbsp;{" "}
+                      ).toFixed(3)}{" "}
+                      VND &nbsp;&nbsp;&nbsp;{" "}
                     </p>
                     <p>
                       {" "}
@@ -322,7 +369,8 @@ export default function ProductDT() {
                 )}
                 {prd && (
                   <div className="flex mt-3">
-                    <Button className="rounded-none"
+                    <Button
+                      className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -334,14 +382,21 @@ export default function ProductDT() {
                         lineHeight: "42.5px",
                         cursor: "pointer",
                       }}
-                       onClick={() => {
-              showAlert1();
-            }}
+                      onClick={() => {
+                        if (prd.quantity > { quantity } > 0) {
+                          showAlert1();
+                        } else if (prd.quantity < { quantity }) {
+                          showAlert4();
+                        } else {
+                          showAlert3();
+                        }
+                      }}
                     >
                       {" "}
                       ADD TO CART{" "}
                     </Button>
-                    <Button className="rounded-none"
+                    <Button
+                      className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -356,8 +411,14 @@ export default function ProductDT() {
                         marginLeft: "30px",
                       }}
                       onClick={() => {
-              showAlert2();
-            }}
+                        if (prd.quantity < { quantity }) {
+                          showAlert4();
+                        } else if (prd.quantity > { quantity } > 0) {
+                          showAlert2();
+                        } else {
+                          showAlert3();
+                        }
+                      }}
                     >
                       {" "}
                       ADD TO WISH LIST{" "}
@@ -371,7 +432,7 @@ export default function ProductDT() {
                         fontFamily: '"Roboto", sans-serif',
                         color: "#323232",
                         fontSize: "13px",
-                        marginBottom:"20px"
+                        marginBottom: "20px",
                       }}
                     >
                       {" "}
@@ -448,7 +509,7 @@ export default function ProductDT() {
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
               >
-                <Revieww/>
+                <Revieww />
                 <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"></p>
               </Tabs.Item>
             </Tabs>

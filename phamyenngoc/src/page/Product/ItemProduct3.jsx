@@ -60,95 +60,94 @@ const ItemProduct3 = ({ product, onDelete, onEdit, openModal2 }) => {
     }
   };
 
-
   return (
-      <div className="w-full mx-auto h-full flex justify-center items-center py-4">
-        <div className="flex items-center justify-center gap-8">
-            <div
-              className="card w-[270px] h-[350px] bg-base-100 shadow-xl"
-              key={product.id}
-            >
-              <figure className="">
-                <Link to={`/productttt/${product?.id}`}>
-                  {parseInt(product.id) > 69 ? (
-          <div>
-            <img
-              className="w-[200px] h-[150px] self-center"
-              style={{ borderRadius: "px" }}
-              src={product.image}
-              alt={product.name}
-            />
-          </div>
-        ) : (
-          <div>
-            <img
-              className="w-[200px] h-[150px] self-center"
-              style={{ borderRadius: "px" }}
-              src={require(`../../assets/image/Burger/${product?.image}`)}
-              alt={product?.name}
-            />
-          </div>
-        )}
-
-                </Link>
-              </figure>
-              <div className=" mt-[-20px] card-body items-center text-center">
-                <h2 className="font-sans  text-[17px] font-semibold text-center">
-                   {product?.name}
-                </h2>
-                <div className="w-[150px] mt-[-3px]">
-                  <div className="flex justify-between items-center">
-                    <button onClick={handleEdit}>
-                      <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center mr-[30px] ml-[10px]">
-                        <FaPen className="w-[38px] h-[38px] text-gray-700 ml-[7px] pt-[15px]" onClick={onEdit}/>
-                      </div>
-                    </button>
-                    <button onClick={handleDelete}>
-                      <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center">
-                        <AiFillDelete className="w-[42px] h-[42px] text-gray-700 ml-[4px] pt-[12px]" />
-                      </div>
-                    </button>
+    <div className="w-full mx-auto h-full flex justify-center items-center py-4">
+      <div className="flex items-center justify-center gap-8">
+        <div
+          className="card w-[270px] h-[350px] bg-base-100 shadow-xl"
+          key={product.id}
+        >
+          <figure className="">
+            <Link to={`/productttt/${product?.id}`}>
+              {parseInt(product.id) > 69 ? (
+                <div>
+                  <img
+                    className="w-[180px] h-[180px] self-center"
+                    style={{ borderRadius: "px" }}
+                    src={product.image}
+                    alt={product.name}
+                  />
+                </div>
+              ) : (
+                <div>
+                  <img
+                    className="w-[180px] h-[180px] self-center"
+                    style={{ borderRadius: "px" }}
+                    src={require(`../../assets/image/Burger/${product?.image}`)}
+                    alt={product?.name}
+                  />
+                </div>
+              )}
+            </Link>
+          </figure>
+          <div className=" mt-[-20px] card-body items-center text-center">
+            <h2 className="font-sans  text-[17px] font-semibold text-center">
+              {product?.name}
+            </h2>
+            <div className="w-[150px] mt-[-3px]">
+              <div className="flex justify-between items-center">
+                <button onClick={handleEdit}>
+                  <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center mr-[30px] ml-[10px]">
+                    <FaPen
+                      className="w-[38px] h-[38px] text-gray-700 ml-[7px] pt-[15px]"
+                      onClick={onEdit}
+                    />
                   </div>
-                  <div className="w-[160px] font-sans font-medium text-[17px] justify-center text-center mb-[-20px]">
-                    <p className=" mt-[15px] text-center line-through text-[#707070]">
-                      {product?.originalPrice?.toFixed(3)} VND
-                    </p>
-                    <div className="mt-[5px] flex justify-center text-center">
-                      <p
-                        style={{
-                          color: "#F00E0E",
-                          fontFamily: '"Inter", sans-serif',
-                          fontSize: "17px",
-                          fontWeight: "600",
-                          marginRight: "15px",
-                        }}
-                      >
-                        {product?.discountPercent}%
-                      </p>
-                      <p
-                        style={{
-                          color: "#000000",
-                          fontFamily: '"Inter", sans-serif',
-                          fontSize: "17px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {(
-                (product?.originalPrice * (100 - product?.discountPercent)) /
-                100
-              ).toFixed(3)}{" "}
-              VND
-                      </p>
-                    </div>
+                </button>
+                <button onClick={handleDelete}>
+                  <div className="w-[50px] h-[50px] rounded-full bg-white shadow-md justify-center items-center">
+                    <AiFillDelete className="w-[42px] h-[42px] text-gray-700 ml-[4px] pt-[12px]" />
                   </div>
+                </button>
+              </div>
+              <div className="w-[160px] font-sans font-medium text-[17px] justify-center text-center mb-[-20px]">
+                <p className=" mt-[15px] text-center line-through text-[#707070]">
+                  {product?.originalPrice?.toFixed(3)} VND
+                </p>
+                <div className="mt-[5px] flex justify-center text-center">
+                  <p
+                    style={{
+                      color: "#F00E0E",
+                      fontFamily: '"Inter", sans-serif',
+                      fontSize: "17px",
+                      fontWeight: "600",
+                      marginRight: "15px",
+                    }}
+                  >
+                    {product?.discountPercent}%
+                  </p>
+                  <p
+                    style={{
+                      color: "#000000",
+                      fontFamily: '"Inter", sans-serif',
+                      fontSize: "17px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {(
+                      (product?.originalPrice *
+                        (100 - product?.discountPercent)) /
+                      100
+                    ).toFixed(3)}{" "}
+                    VND
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
-
-
-    
+    </div>
   );
 };
 

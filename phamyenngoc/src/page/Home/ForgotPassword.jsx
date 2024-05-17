@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { MdEmail } from "react-icons/md";
 import { Alert } from "flowbite-react";
+import userData from "../../data/user.json";
+import adminData from "../../data/adminAccount.json";
 
 const ForgotPassword = () => {
-  const showAlert = () => {
-    alert(
-      "Member ID and Password verification Email has been sent.\n\n" +
-      "Please check your Email!" 
-    );
+  const [email, setEmail] = useState("");
+  const handleSubmit = () => {
+    const userExists = userData.find((user) => user.email === email);
+    const adminExists = adminData.find((admin) => admin.email === email);
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (!email) {
+      alert("Please fill in fields");
+      return;
+    } else if (!emailRegex.test(email)) {
+      alert("Email must be a valid Gmail address");
+      return;
+    } else if (!userExists && !adminExists) {
+      alert(
+        "Your search did not return any results.\n\n" +
+          "Please try again with other information!"
+      );
+      return;
+    } else if (userExists || adminExists) {
+      alert(
+        "Member ID and Password verification Email has been sent.\n\n" +
+          "Please check your Email!"
+      );
+      return;
+    }
   };
-
   return (
     <div>
       <div className="w-full mx-auto justify-center items-center">
@@ -24,7 +44,13 @@ const ForgotPassword = () => {
                   className="font-sans font-medium text-[15px] text-black"
                 />
               </div>
-              <TextInput id="email" type="email" icon={MdEmail} required />
+              <TextInput
+                id="email"
+                type="email"
+                icon={MdEmail}
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className="mt-[20px]">
               <p>
@@ -50,7 +76,7 @@ const ForgotPassword = () => {
                 className="w-[580px] ml-[-20px] justify-center items-center"
                 color="dark"
                 onClick={() => {
-                  showAlert();
+                  handleSubmit();
                 }}
               >
                 <p className="font-sans font-medium text-[20px] text-white">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReCaptach from "../../components/Capcha/Captcha";
-import { Button, Label, TextInput, Checkbox, Alert } from "flowbite-react";
+import { Button, Label, TextInput, Checkbox } from "flowbite-react";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { FaFacebook } from "react-icons/fa6";
@@ -27,12 +27,15 @@ const Register = () => {
   const handleSubmit = () => {
     const userExists = userData.find((user) => user.email === email);
     const adminExists = adminData.find((admin) => admin.email === email);
-    // Check if any field is empty
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
     if (!email || !password || !confirmPassword) {
       alert("Please fill in all fields");
       return;
     } else if (userExists || adminExists) {
       alert("Email already exists");
+      return;
+    } else if (!emailRegex.test(email)) {
+      alert("Email must be a valid Gmail address");
       return;
     } else if (password !== confirmPassword) {
       alert("Passwords do not match");
@@ -43,9 +46,6 @@ const Register = () => {
     } else {
       alert("Register Successfully!");
     }
-
-
-    
   };
 
   return (
@@ -59,7 +59,12 @@ const Register = () => {
               className="font-sans font-medium text-[15px] text-black"
             />
           </div>
-          <TextInput id="name" type="name" icon={MdDriveFileRenameOutline} required />
+          <TextInput
+            id="name"
+            type="name"
+            icon={MdDriveFileRenameOutline}
+            required
+          />
         </div>
         <div className="mt-[20px]">
           <div className="mb-2 block">
@@ -69,7 +74,13 @@ const Register = () => {
               className="font-sans font-medium text-[15px] text-black"
             />
           </div>
-          <TextInput id="email" type="email" icon={HiMail} required onChange={(e) => setEmail(e.target.value)} />
+          <TextInput
+            id="email"
+            type="email"
+            icon={HiMail}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div className="mt-[20px]">
           <div className="mb-2 block">
@@ -80,7 +91,7 @@ const Register = () => {
             />
           </div>
           <TextInput
-            id="password"
+            id="email"
             type="password"
             icon={RiLockPasswordFill}
             required
@@ -96,7 +107,7 @@ const Register = () => {
             />
           </div>
           <TextInput
-            id="confirmPassword"
+            id="email"
             type="password"
             icon={RiLockPasswordFill}
             required
@@ -104,23 +115,32 @@ const Register = () => {
           />
         </div>
         <div className="items-center gap-2 mt-[20px] justify-between">
-          <p className="font-sans font-medium text-[15px] text-black">How did you get our website?</p>
+          <p className="font-sans font-medium text-[15px] text-black">
+            How did you get our website?
+          </p>
           <div className="grid grid-cols-4 gap-[10px]">
             {socialMediaPlatforms.map((platform, index) => (
-              <div key={index} className="flex items-center gap-2 mt-[10px] ml-[20px]">
+              <div
+                key={index}
+                className="flex items-center gap-2 mt-[10px] ml-[20px]"
+              >
                 <Checkbox
                   id={`platform-${index}`}
                   className="w-[15px] h-[15px]  border-slate-600 "
                 />
                 <Label htmlFor={`platform-${index}`}>
-                  <p className="font-sans font-normal text-[15px] text-black ">{platform.name}</p>
+                  <p className="font-sans font-normal text-[15px] text-black ">
+                    {platform.name}
+                  </p>
                 </Label>
               </div>
             ))}
           </div>
         </div>
         <div className="items-center gap-2 mt-[20px] justify-between">
-          <p className="font-sans font-medium text-[15px] text-black">Captcha</p>
+          <p className="font-sans font-medium text-[15px] text-black">
+            Captcha
+          </p>
           <ReCaptach />
         </div>
         <div className="flex w-full mt-[20px] justify-center items-center">
@@ -131,22 +151,35 @@ const Register = () => {
               handleSubmit();
             }}
           >
-            <p className="font-sans font-medium text-[20px] text-white">REGISTER</p>
+            <p className="font-sans font-medium text-[20px] text-white">
+              REGISTER
+            </p>
           </Button>
         </div>
-        <div className="flex w-full mt-[20px] justify-center items-center">
-          <Button className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600" color="light">
+        {/* <div className="flex w-full mt-[20px] justify-center items-center">
+          <Button
+            className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+            color="light"
+          >
             <FaFacebook className="w-[20px] h-[20px] mr-[5px]" />
-            <p className="font-sans font-medium text-[17px] text-black">Facebook</p>
+            <p className="font-sans font-medium text-[17px] text-black">
+              Facebook
+            </p>
           </Button>
           <div className="w-[50px] h-[40px] text-center pt-[7px]">OR</div>
-          <Button className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600" color="light">
+          <Button
+            className="w-[200px] h-[40px] flex border-solid rounded-lg border-slate-600"
+            color="light"
+          >
             <FaGooglePlus className="w-[20px] h-[20px] mr-[5px]" />
-            <p className="font-sans font-medium text-[17px] text-black">Google</p>
+            <p className="font-sans font-medium text-[17px] text-black">
+              Google
+            </p>
           </Button>
-        </div>
+        </div> */}
         <p className="font-sans font-medium text-[13px] text-black mt-[20px] pb-[20px] text-center">
-          By creating an account, you agree to burgernbeer.com's Terms of Use and Privacy Policy.
+          By creating an account, you agree to burgernbeer.com's Terms of Use
+          and Privacy Policy.
         </p>
       </div>
     </div>

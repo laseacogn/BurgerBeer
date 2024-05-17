@@ -176,7 +176,7 @@ const Login = () => {
                         </p>
                       </Modal.Header>
                       <Modal.Body className="no-scrollbar">
-                        <div className="space-y-6 bg-[#FFFEFE]">
+                        <div className="space-y-6 bg-[#FFFEFE] mt-[-10px]">
                           <Register />
                         </div>
                       </Modal.Body>

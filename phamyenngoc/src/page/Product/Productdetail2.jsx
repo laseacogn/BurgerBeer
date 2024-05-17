@@ -1,8 +1,8 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { FaCheckCircle, FaShippingFast, FaComments } from "react-icons/fa";
-import { Button, Tabs } from "flowbite-react";
+import { Button, Tabs, TextInput } from "flowbite-react";
 import categorieData from "../../data/category.json";
 import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
@@ -10,30 +10,27 @@ import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import Revieww from "./Revieww";
-
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 
 export default function ProductDT2() {
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
   const showAlert1 = () => {
-    alert(
-      "Please log in to add products to cart!"
-    );
+    alert("Please log in to add products to cart!");
   };
   const showAlert2 = () => {
-    alert(
-      "Please log in to add products to wishlist!"
-    );
+    alert("Please log in to add products to wishlist!");
   };
 
   useEffect(() => {
@@ -53,13 +50,25 @@ useEffect(() => {
 
   const accessToken = localStorage.getItem("token");
 
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
-
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const handleIncrease = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    // Check if the value is a number and greater than 0
+    if (/^\d+$/.test(value) && parseInt(value) > 0) {
+      setQuantity(parseInt(value));
+    } else if (value > prd.quantity) {
+      setQuantity(prd.quantity);
+    } else {
+      setQuantity(value);
     }
   };
 
@@ -75,38 +84,38 @@ useEffect(() => {
           <div className="w-full flex justify-between items-center">
             <div className="flex">
               <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <NavLink to="/">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Home{" "}
-              </p>
-            </NavLink>
+              <NavLink to="/">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Home{" "}
+                </p>
+              </NavLink>
 
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/shopp">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Shop
-              </p>
-            </NavLink>
               <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <NavLink to="/productt">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Menu
-              </p>
-            </NavLink>
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            {prd && (
+              <NavLink to="/shopp">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Shop
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <NavLink to="/productt">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Menu
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              {prd && (
                 <p className="font-inter font-bold text-[20px] mb-[20px]">
                   {" "}
                   {prd.name}
                 </p>
-            )}
+              )}
             </div>
           </div>
 
-          <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
+          {/* <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
             <div className="flex items-center justify-center gap-14">
               <button
                 className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
@@ -141,11 +150,11 @@ useEffect(() => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div
-          className="max-w-[1200px] mx-auto "
+          className="max-w-[1200px] mx-auto mt-[-45px] "
           style={{ paddingLeft: "-55px", paddingRight: "5rem" }}
         >
           <div
@@ -223,7 +232,8 @@ useEffect(() => {
                                   (prd.originalPrice *
                                     (100 - prd.discountPercent)) /
                                   100
-                                ).toFixed(3)} VND{" "}
+                                ).toFixed(3)}{" "}
+                                VND{" "}
                               </span>
                               &nbsp;&nbsp;&nbsp;
                               <span
@@ -253,12 +263,14 @@ useEffect(() => {
                               (prd.originalPrice *
                                 (100 - prd.discountPercent)) /
                                 100
-                            ).toFixed(3)} VND )
+                            ).toFixed(3)}{" "}
+                            VND )
                           </td>
                         </tr>
                         <tr>
                           <td>QTY</td>
                           <td className="pt-[20px] flex ">
+                            <div className="w-full flex">
                             <Button
                               color="gray"
                               onClick={handleDecrease}
@@ -267,7 +279,16 @@ useEffect(() => {
                               {" "}
                               -{" "}
                             </Button>
-                            <Button color="gray"> {quantity} </Button>
+                            <TextInput
+                              color="gray"
+                              value={quantity}
+                              min="1"
+                              max={prd.quantity}
+                              onChange={handleChange}
+                              className="text-center w-12 border-gray-300 rounded"
+                              style={{ textAlign: "center" }}
+                              inputProps={{ style: { textAlign: "center" } }}
+                            />
                             <Button
                               color="gray"
                               onClick={handleIncrease}
@@ -276,6 +297,28 @@ useEffect(() => {
                               {" "}
                               +{" "}
                             </Button>
+                            </div>
+                            <div className="w-[182px] flex items-center justify-center ml-[-300px] mt-[15px] ">
+                              <p
+                                style={{
+                                  fontSize: "17px",
+                                  fontWeight: "bold",
+                                  marginTop: "=",
+                                  textAlign: "center",
+                                  color: prd.quantity > 0 ? "green" : "red",
+                                }}
+                                className="text-center"
+                              >
+                                {prd.quantity > 0
+                                  ? "In Stock :"
+                                  : "Out of Stock"}{" "}
+                                {prd.quantity > 0 && (
+                                  <span className="ml-[4px] font-bold text-[17px]">
+                                    {prd.quantity} items
+                                  </span>
+                                )}
+                              </p>
+                            </div>
                           </td>
                         </tr>
                         <tr>
@@ -309,7 +352,8 @@ useEffect(() => {
                         ((prd.originalPrice * (100 - prd.discountPercent)) /
                           100) *
                         quantity
-                      ).toFixed(3)} VND &nbsp;&nbsp;&nbsp;{" "}
+                      ).toFixed(3)}{" "}
+                      VND &nbsp;&nbsp;&nbsp;{" "}
                     </p>
                     <p>
                       {" "}
@@ -326,7 +370,8 @@ useEffect(() => {
                 )}
                 {prd && (
                   <div className="flex mt-3">
-                    <Button className="rounded-none"
+                    <Button
+                      className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -338,14 +383,15 @@ useEffect(() => {
                         lineHeight: "42.5px",
                         cursor: "pointer",
                       }}
-                       onClick={() => {
-              showAlert1();
-            }}
+                      onClick={() => {
+                        showAlert1();
+                      }}
                     >
                       {" "}
                       ADD TO CART{" "}
                     </Button>
-                    <Button className="rounded-none"
+                    <Button
+                      className="rounded-none"
                       style={{
                         width: "238px",
                         height: "42.5px",
@@ -360,8 +406,8 @@ useEffect(() => {
                         marginLeft: "30px",
                       }}
                       onClick={() => {
-              showAlert2();
-            }}
+                        showAlert2();
+                      }}
                     >
                       {" "}
                       ADD TO WISH LIST{" "}
@@ -375,7 +421,7 @@ useEffect(() => {
                         fontFamily: '"Roboto", sans-serif',
                         color: "#323232",
                         fontSize: "13px",
-                        marginBottom:"20px"
+                        marginBottom: "20px",
                       }}
                     >
                       {" "}
@@ -452,7 +498,7 @@ useEffect(() => {
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
               >
-                <Revieww/>
+                <Revieww />
                 <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"></p>
               </Tabs.Item>
             </Tabs>
