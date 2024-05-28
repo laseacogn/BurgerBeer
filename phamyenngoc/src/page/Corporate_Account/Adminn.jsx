@@ -8,8 +8,33 @@ import { IoReorderFour, IoSettingsSharp } from "react-icons/io5";
 import { HiTemplate } from "react-icons/hi";
 import { BiSolidDiscount } from "react-icons/bi";
 import { TbBrandBooking } from "react-icons/tb";
+import { Line, Bar, PolarArea } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  RadialLinearScale,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-import { CChart } from "@coreui/react-chartjs";
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  RadialLinearScale,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const Adminn = () => {
   useEffect(() => {
@@ -169,69 +194,159 @@ const Adminn = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex justify-between items-center">
-            <div className="w-[450px] stats shadow rounded-none ml-[15px]">
-              <CChart
-                type="line"
+            <div className="w-full mx-auto flex justify-between items-center">
+              <div className="w-[500px] ml-[50px]">
+                <Bar
+                  height="250"
+                  width="500"
+                  data={{
+                    labels: ["January", "February", "March", "April", "May"],
+                    datasets: [
+                      {
+                        label: "Total Sale (millions)",
+                        backgroundColor: [
+                          "#3e95cd",
+                          "#8e5ea2",
+                          "#3cba9f",
+                          "#e8c3b9",
+                          "#c45850",
+                        ],
+                        data: [38.4, 70.2, 30.7, 45.5, 50.2],
+                      },
+                    ],
+                  }}
+                  options={{
+                    plugins: {
+                      legend: { display: false },
+                      title: {
+                        display: true,
+                        text: "Total sale (millions) in 2024",
+                        font: {
+                          size: 16,
+                        },
+                      },
+                    },
+                    scales: {
+                      xAxes: [{ beginAtZero: true }],
+                      yAxes: [{ beginAtZero: true }],
+                    },
+                  }}
+                />
+              </div>
+              <div className="w-[330px] mr-[20px]">
+                <PolarArea
+                  data={{
+                    labels: [
+                      "Combo",
+                      "SideDish",
+                      "Burger",
+                      "Sandwich",
+                      "Pizza",
+                      "HotDog",
+                      "Baguette",
+                      "Drink",
+                    ],
+                    datasets: [
+                      {
+                        label: " Product Quantity",
+                        data: [3120, 2600, 3730, 2810, 3142, 1582, 1329, 4476],
+                        backgroundColor: [
+                          "#087CE7",
+                          "#E70808",
+                          "#0ABC1C",
+                          "#830ABC",
+                          "#F24E1E",
+                          "#0DB6AC",
+                          "#89DC37",
+                          "#FFF500",
+                        ],
+                      },
+                    ],
+                  }}
+                  options={{
+                    plugins: {
+                      legend: { display: false },
+                      title: {
+                        display: true,
+                        text: "Gross Product in May, 2024",
+                        font: {
+                          size: 16,
+                        },
+                      },
+                    },
+                    scales: {
+                      xAxes: [{ beginAtZero: true }],
+                      yAxes: [{ beginAtZero: true }],
+                    },
+                  }}
+                />
+              </div>
+            </div>
+            <div className="w-[800px] h-[40%] mx-auto ml-[170px] mt-[-0px]">
+              <Line
                 data={{
                   labels: [
-                    "BBQ Pulled Pork",
                     "Cheese Burger",
+                    "BBQ Pulled Pork Burger",
                     "Double Cheese Burger",
                     "Bacon & Egg Burger",
                     "Classic Burger",
                     "Fries Fish Burger",
-                    "Chicken Burger",
-                    "Black Bean Burger"
+                    "Japanese Chicken Burger",
+                    "Black Bean Burger",
                   ],
                   datasets: [
                     {
+                      data: [
+                        1086, 3114, 4106, 2106, 1107, 3111, 1133, 1221, 2783,
+                        2478,
+                      ],
                       label: "April",
-                      backgroundColor: "rgba(220, 220, 220, 0.2)",
-                      borderColor: "rgba(220, 220, 220, 1)",
-                      pointBackgroundColor: "rgba(220, 220, 220, 1)",
-                      pointBorderColor: "#fff",
-                      data: [3.2, 1.5, 4.0 , 2.8, 2.3, 6.7, 1.8, 3.2, 1.1, 4.6],
+                      backgroundColor: "#E70858",
+                      borderColor: "#E70858",
+                      fill: false,
+                      tension: 0.4,
                     },
                     {
+                      data: [
+                        1282, 2350, 5211, 3502, 1635, 4809, 2947, 1402, 3700,
+                        5267,
+                      ],
                       label: "May",
-                      backgroundColor: "rgba(151, 187, 205, 0.2)",
-                      borderColor: "rgba(151, 187, 205, 1)",
-                      pointBackgroundColor: "rgba(151, 187, 205, 1)",
-                      pointBorderColor: "#fff",
-                      data: [4.0, 0.5, 5.2, 2.6, 4.6, 1.8, 5.1, 3.3, 2.1, 4.2 ],
+                      backgroundColor: "#087CE7",
+                      borderColor: "#087CE7",
+                      fill: false,
+                      tension: 0.4,
                     },
                   ],
                 }}
                 options={{
                   plugins: {
-                    legend: {
-                      labels: {
-                        color: getStyle("--cui-body-color"),
+                    title: {
+                      display: true,
+                      text: "Burger Sales Comparison (April vs May)",
+                      font: {
+                        size: 16,
                       },
+                    },
+                    legend: {
+                      display: true,
+                      position: "right",
+                      align: "center",
                     },
                   },
                   scales: {
                     x: {
-                      grid: {
-                        color: getStyle("--cui-border-color-translucent"),
-                      },
-                      ticks: {
-                        color: getStyle("--cui-body-color"),
-                      },
+                      beginAtZero: true,
                     },
                     y: {
-                      grid: {
-                        color: getStyle("--cui-border-color-translucent"),
-                      },
-                      ticks: {
-                        color: getStyle("--cui-body-color"),
-                      },
+                      beginAtZero: true,
                     },
                   },
                 }}
+                width={200}
+                height={100}
               />
-            </div>
             </div>
           </div>
         </div>

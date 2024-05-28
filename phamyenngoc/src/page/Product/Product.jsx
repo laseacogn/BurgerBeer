@@ -89,17 +89,16 @@ const Product = () => {
       setProducts(filteredProducts);
     }
   }, [categorieID]);
-
-  const handleSearch = (value) => {
-    setSearchTerm(value);
-    setCurrentPage(1);
-  };
+  
   const handleCategorySelect = (categoryId) => {
     setCategoryID(categoryId);
     setCurrentPage(1); 
   };
 
- 
+  const handleSearch = (value) => {
+    setSearchTerm(value);
+    setCurrentPage(1);
+  };
   const calculateDiscountedPrice = (originalPrice, discountPercent) => {
     if (
       typeof originalPrice !== "number" ||
@@ -138,13 +137,16 @@ const Product = () => {
 
       
          <div className="w-full flex justify-between items-center mt-[-50px] mb-[-40px]">
+           <NavLink to="/combo-detail">
       <Carousel className="w-[750px] h-56 sm:h-64 xl:h-80 2xl:h-96" leftControl=" " rightControl=" " >
+       
         <img src={require(`../../assets/image/aboutus/5.jpeg`)} alt="..." />
         <img src={require(`../../assets/image/aboutus/6.jpeg`)} alt="..." />
         <img src={require(`../../assets/image/aboutus/7.png`)} alt="..." />
         <img src={require(`../../assets/image/aboutus/8.png`)} alt="..." />
         <img src={require(`../../assets/image/aboutus/9.png`)} alt="..." />
-      </Carousel>
+        
+      </Carousel></NavLink>
       <div className="w-[420px] h-[285px] bg-[#FEFFFF] shadow-lg">
         <p className="text-center font-sans text-[20px] font-bold text-gray-900 mt-[22px]"> We welcome you to Burger N' Beer </p>
         <div className=" flex font-sans text-[18px] font-semibold text-gray-900 ml-[40px]"> 

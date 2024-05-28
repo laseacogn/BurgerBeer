@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import categorieData from "../../data/category.json";
-import ItemProduct2 from "./ItemProduct2";
 import dataProduct from "../../data/product.json";
-import { Carousel, Pagination } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
-import Search from "../../components/Search Product/Search";
 import popularPrdData from "../../data/popularPrd.json";
 import rcmData from "../../data/rcmPrd.json";
 

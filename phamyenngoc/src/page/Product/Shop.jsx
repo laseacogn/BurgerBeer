@@ -19,7 +19,6 @@ const Shop = () => {
     window.scrollTo(0, 0);
   }, []);
   
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,19 +29,16 @@ const Shop = () => {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = Math.min(startIndex + itemsPerPage, totalProducts);
         let filteredProducts = dataProduct.slice(startIndex, endIndex);
-
         if (searchTerm) {
           filteredProducts = dataProduct.filter((product) =>
             product.name.toLowerCase().includes(searchTerm.toLowerCase())
           );
         }
-
         setProducts(filteredProducts);
       } catch (error) {
         console.log(error);
       }
     };
-
     fetchData();
   }, [categorieID, currentPage, searchTerm]);
 
@@ -57,6 +53,7 @@ const Shop = () => {
     }
   }, [categorieID]);
 
+  
   const handleSearch = (value) => {
     setSearchTerm(value);
   };

@@ -81,6 +81,7 @@ const router = [
 
   { path: '/aboutuss', layout:Layout, component: AboutUs},
   { path: '/aboutus', layout:LayoutDefault, component: AboutUs},
+  { path: '/aboutusss', layout:LayoutAdmin, component: AboutUs},
 
   { path: '/zalopay', layout:Layout, component: Pay },
   { path: '/card', layout:Layout, component: Card },

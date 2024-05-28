@@ -6,7 +6,7 @@ const MoneyCart = ({ selectedPaymentMethod }) => {
     if (selectedPaymentMethod === "Pay on delivery") {
       showAlert();
     } else if (selectedPaymentMethod === "Pay on card") {
-      window.location.href = "/cardd";
+      window.location.href = "/card";
     } else if (selectedPaymentMethod === "Pay on Momo/ Zalo Pay/ VNPay") {
       window.location.href = "/zalopay";
     }

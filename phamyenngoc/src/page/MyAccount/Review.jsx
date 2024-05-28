@@ -6,7 +6,6 @@ import { HiOutlineExclamationCircle } from "react-icons/hi";
 const Review = () => {
   const [openModal1, setOpenModal1] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
-  
 
   return (
     <div className="max-w-[1200px] mx-auto no-scrollbar">
@@ -55,25 +54,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal show={openModal2} size="md" onClose={() => setOpenModal2(false)} popup>
-        <Modal.Header />
-        <Modal.Body>
-          <div className="text-center">
-            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-              Are you sure you want to delete this product?
-            </h3>
-            <div className="flex justify-center gap-4">
-              <Button color="dark" onClick={() => setOpenModal2(false)}>
-                {"Yes, I'm sure"}
-              </Button>
-              <Button color="gray" onClick={() => setOpenModal2(false)}>
-                No, cancel
-              </Button>
-            </div>
-          </div>
-        </Modal.Body>
-      </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -81,25 +62,6 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body className="space-y-6">
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
@@ -151,36 +113,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal
-                  show={openModal2}
-                  size="md"
-                  onClose={() => setOpenModal2(false)}
-                  popup
-                >
-                  <Modal.Header />
-                  <Modal.Body>
-                    <div className="text-center">
-                      <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                      <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Are you sure you want to delete this review?
-                      </h3>
-                      <div className="flex justify-center gap-4">
-                        <Button
-                          color="dark"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          {"Yes, I'm sure"}
-                        </Button>
-                        <Button
-                          color="gray"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          No, cancel
-                        </Button>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -188,24 +121,6 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
@@ -260,36 +175,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal
-                  show={openModal2}
-                  size="md"
-                  onClose={() => setOpenModal2(false)}
-                  popup
-                >
-                  <Modal.Header />
-                  <Modal.Body>
-                    <div className="text-center">
-                      <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                      <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Are you sure you want to delete this review?
-                      </h3>
-                      <div className="flex justify-center gap-4">
-                        <Button
-                          color="dark"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          {"Yes, I'm sure"}
-                        </Button>
-                        <Button
-                          color="gray"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          No, cancel
-                        </Button>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -297,24 +183,6 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
@@ -369,36 +237,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal
-                  show={openModal2}
-                  size="md"
-                  onClose={() => setOpenModal2(false)}
-                  popup
-                >
-                  <Modal.Header />
-                  <Modal.Body>
-                    <div className="text-center">
-                      <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                      <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Are you sure you want to delete this review?
-                      </h3>
-                      <div className="flex justify-center gap-4">
-                        <Button
-                          color="dark"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          {"Yes, I'm sure"}
-                        </Button>
-                        <Button
-                          color="gray"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          No, cancel
-                        </Button>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -406,24 +245,6 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
@@ -478,36 +299,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal
-                  show={openModal2}
-                  size="md"
-                  onClose={() => setOpenModal2(false)}
-                  popup
-                >
-                  <Modal.Header />
-                  <Modal.Body>
-                    <div className="text-center">
-                      <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                      <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Are you sure you want to delete this review?
-                      </h3>
-                      <div className="flex justify-center gap-4">
-                        <Button
-                          color="dark"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          {"Yes, I'm sure"}
-                        </Button>
-                        <Button
-                          color="gray"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          No, cancel
-                        </Button>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -515,24 +307,6 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
@@ -589,36 +363,7 @@ const Review = () => {
                 >
                   Delete
                 </Button>
-                <Modal
-                  show={openModal2}
-                  size="md"
-                  onClose={() => setOpenModal2(false)}
-                  popup
-                >
-                  <Modal.Header />
-                  <Modal.Body>
-                    <div className="text-center">
-                      <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                      <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Are you sure you want to delete this review?
-                      </h3>
-                      <div className="flex justify-center gap-4">
-                        <Button
-                          color="dark"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          {"Yes, I'm sure"}
-                        </Button>
-                        <Button
-                          color="gray"
-                          onClick={() => setOpenModal2(false)}
-                        >
-                          No, cancel
-                        </Button>
-                      </div>
-                    </div>
-                  </Modal.Body>
-                </Modal>
+
                 <Button
                   className="w-[100px]"
                   color="light"
@@ -626,31 +371,53 @@ const Review = () => {
                 >
                   Edit
                 </Button>
-                <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
-                  <Modal.Header>EDIT REVIEW</Modal.Header>
-                  <Modal.Body>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full"
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button onClick={() => setOpenModal1(false)} color="dark">
-                      UPDATE
-                    </Button>
-                    <Button color="gray" onClick={() => setOpenModal1(false)}>
-                      DECLINE
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
               </div>
             </Accordion.Content>
           </Accordion.Panel>
-
-          
         </Accordion>
       </div>
+      <Modal
+        show={openModal2}
+        size="md"
+        onClose={() => setOpenModal2(false)}
+        popup
+      >
+        <Modal.Header />
+        <Modal.Body>
+          <div className="text-center">
+            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+              Are you sure you want to delete this review?
+            </h3>
+            <div className="flex justify-center gap-4">
+              <Button color="dark" onClick={() => setOpenModal2(false)}>
+                {"Yes, I'm sure"}
+              </Button>
+              <Button color="gray" onClick={() => setOpenModal2(false)}>
+                No, cancel
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+      <Modal show={openModal1} onClose={() => setOpenModal1(false)}>
+        <Modal.Header>EDIT REVIEW</Modal.Header>
+        <Modal.Body>
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full"
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={() => setOpenModal1(false)} color="dark">
+            UPDATE
+          </Button>
+          <Button color="gray" onClick={() => setOpenModal1(false)}>
+            DECLINE
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

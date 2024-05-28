@@ -16,6 +16,8 @@ export default function ProductDT() {
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [stockQuantity, setStockQuantity] = useState(0);
+
   const showAlert1 = () => {
     alert("The product has been added to cart!");
   };
@@ -58,6 +60,33 @@ export default function ProductDT() {
   const handleIncrease = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
+
+  useEffect(() => {
+    if (prd) {
+      setStockQuantity(prd.quantity);
+    }
+  }, [prd]);
+
+  const handleAddToCart = () => {
+  if (stockQuantity === 0) {
+    showAlert3();
+  } else if (quantity <= stockQuantity) {
+    setStockQuantity(stockQuantity - quantity);
+    showAlert1();
+  } else {
+    showAlert4();
+  }
+};
+
+const handleAddToWishlist = () => {
+  if (stockQuantity === 0) {
+    showAlert3();
+  } else if (quantity <= stockQuantity) {
+    showAlert2();
+  } else {
+    showAlert4();
+  }
+};
 
   const handleChange = (event) => {
     const value = event.target.value;
@@ -113,43 +142,6 @@ export default function ProductDT() {
               )}
             </div>
           </div>
-
-          {/* <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
-            <div className="flex items-center justify-center gap-14">
-              <button
-                className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
-                onClick={() => {
-                  setCategoryID("");
-                }}
-              >
-                <img
-                  className="w-[70px] h-[70px] ml-[15px]"
-                  style={{ borderRadius: "20px" }}
-                  src={require(`../../assets/image/category/10.jpg`)}
-                  alt={""}
-                />
-                All Product
-              </button>
-              {categories?.map((item, index) => (
-                <div className="flex items-center justify-center" key={index}>
-                  <button
-                    className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
-                    onClick={() => {
-                      setCategoryID(item.id);
-                    }}
-                  >
-                    <img
-                      className="w-[70px] h-[70px] self-center"
-                      style={{ borderRadius: "20px" }}
-                      src={require(`../../assets/image/category/${item.image}`)}
-                      alt={item.name}
-                    />
-                    {item.name}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
 
         <div
@@ -304,16 +296,16 @@ export default function ProductDT() {
                                   fontWeight: "bold",
                                   marginTop: "=",
                                   textAlign: "center",
-                                  color: prd.quantity > 0 ? "green" : "red",
+                                  color: stockQuantity > 0 ? "green" : "red",
                                 }}
                                 className="text-center"
                               >
-                                {prd.quantity > 0
+                                {stockQuantity > 0
                                   ? "In Stock :"
                                   : "Out of Stock"}{" "}
-                                {prd.quantity > 0 && (
+                                {stockQuantity > 0 && (
                                   <span className="ml-[4px] font-bold text-[17px]">
-                                    {prd.quantity} items
+                                    {stockQuantity} items
                                   </span>
                                 )}
                               </p>
@@ -382,15 +374,7 @@ export default function ProductDT() {
                         lineHeight: "42.5px",
                         cursor: "pointer",
                       }}
-                      onClick={() => {
-                        if (prd.quantity > { quantity } > 0) {
-                          showAlert1();
-                        } else if (prd.quantity < { quantity }) {
-                          showAlert4();
-                        } else {
-                          showAlert3();
-                        }
-                      }}
+                      onClick={handleAddToCart}
                     >
                       {" "}
                       ADD TO CART{" "}
@@ -410,15 +394,7 @@ export default function ProductDT() {
                         cursor: "pointer",
                         marginLeft: "30px",
                       }}
-                      onClick={() => {
-                        if (prd.quantity < { quantity }) {
-                          showAlert4();
-                        } else if (prd.quantity > { quantity } > 0) {
-                          showAlert2();
-                        } else {
-                          showAlert3();
-                        }
-                      }}
+                      onClick={handleAddToWishlist}
                     >
                       {" "}
                       ADD TO WISH LIST{" "}

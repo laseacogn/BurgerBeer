@@ -10,8 +10,6 @@ import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import Revieww from "./Revieww";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
 
 export default function ProductDT2() {
   useEffect(() => {

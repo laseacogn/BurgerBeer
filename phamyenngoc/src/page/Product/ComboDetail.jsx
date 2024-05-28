@@ -8,14 +8,16 @@ import dataProduct from "../../data/product.json";
 import { MdDescription } from "react-icons/md";
 import { HiAdjustments, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
-import { IoAddCircleSharp } from "react-icons/io5";
 import { HiHome } from "react-icons/hi";
 import { GrNext } from "react-icons/gr";
-import { Link } from "react-router-dom";
-import Search from "../../components/Search Product/Search";
 import Revieww from "./Revieww";
 
+import { NavLink } from "react-router-dom";
+
 export default function ComboDetail() {
+  const showAlert1 = () => {
+    alert("The product has been added to cart!");
+  };
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(categorieData);
   const [categorieID, setCategoryID] = useState("");
@@ -24,7 +26,7 @@ export default function ComboDetail() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);
@@ -58,71 +60,35 @@ export default function ComboDetail() {
   return (
     <div className="">
       <div className="px-20">
-        <div className="max-w-[1200px] mx-auto pb-2">
-           
-            <div className="w-full flex justify-between items-center">
-          <div className="flex">
-            <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
-            <Link to="./">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Home{" "}
-              </p>
-            </Link>
-
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-            <Link to="./product">
-              <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
-                {" "}
-                Products
-              </p>
-            </Link>
-            
-            
-            
-            <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
-              <Link to="./product">
-                <p className="font-inter font-bold text-[20px] mb-[20px]">
-                  Combo Single 2
+        <div className="max-w-[1200px] mx-auto">
+          <div className="w-full flex justify-between items-center">
+            <div className="flex">
+              <HiHome className="w-[25px] h-[25px] mb-[20px] mr-[10px]" />
+              <NavLink to="/home">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Home{" "}
                 </p>
-              </Link>
-              </div>
-            
-          </div>
-          <div className="w-full mx-auto h-full flex justify-center items-center border shadow-md rounded-lg py-4">
-            <div className="flex items-center justify-center gap-14">
-              <button
-                className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
-                onClick={() => {
-                  setCategoryID("");
-                }}
-              >
-                <img
-                  className="w-[70px] h-[70px] ml-[15px]"
-                  style={{ borderRadius: "20px" }}
-                  src={require(`../../assets/image/category/10.jpg`)}
-                  alt={""}
-                />
-                All Product
-              </button>
-              {categories?.map((item, index) => (
-                <div className="flex items-center justify-center" key={index}>
-                  <button
-                    className="font-inter font-bold text-center text-[18px] hover:text-red-500 transition-all"
-                    onClick={() => {
-                      setCategoryID(item.id);
-                    }}
-                  >
-                    <img
-                      className="w-[70px] h-[70px] self-center"
-                      style={{ borderRadius: "20px" }}
-                      src={require(`../../assets/image/category/${item.image}`)}
-                      alt={item.name}
-                    />
-                    {item.name}
-                  </button>
-                </div>
-              ))}
+              </NavLink>
+
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <NavLink to="/shop">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Shop
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <NavLink to="/product">
+                <p className="font-inter font-bold text-[20px] mb-[20px] mr-[10px]">
+                  {" "}
+                  Menu
+                </p>
+              </NavLink>
+              <GrNext className="w-[15px] h-[15px] mt-[10px] mr-[10px]" />
+              <p className="font-inter font-bold text-[20px] mb-[20px]">
+                Combo Single 2
+              </p>
             </div>
           </div>
         </div>
@@ -135,7 +101,7 @@ export default function ComboDetail() {
             style={{
               position: "relative",
               width: "1200px",
-              marginTop: "20px",
+              marginTop: "0px",
               marginBottom: "20px",
               background: "#FFFEFE",
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
@@ -356,9 +322,12 @@ export default function ComboDetail() {
                                     >
                                       You saved {(14 * quantity).toFixed(3)} VND
                                     </p>
-                                    
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -398,7 +367,6 @@ export default function ComboDetail() {
                                           fontSize: "18px",
                                           fontWeight: "600",
                                         }}
-                                      
                                       >
                                         12.600 VND
                                       </span>
@@ -414,7 +382,11 @@ export default function ComboDetail() {
                                       You saved {(14 * quantity).toFixed(2)} VND
                                     </p>
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -469,35 +441,39 @@ export default function ComboDetail() {
                                       You saved {(14 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
-
                               </Tabs.Item>
-                              <Tabs.Item className="no-scrollbar"
+                              <Tabs.Item
+                                className="no-scrollbar"
                                 title={
                                   <p className="font-bold text-lg">Main Dish</p>
                                 }
                                 icon={MdDashboard}
                               >
-                                <div className="no-scrollbar"> 
-                               <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
-                                  <img
-                                    className="w-[95px] h-[95px] object-cover rounded-xl "
-                                    src={require(`../../assets/image/Burger/10.jpg`)}
-                                    alt={""}
-                                  />
-                                  <div className="w-full flex flex-col justify-between">
-                                    <p
-                                      className="block"
-                                      style={{
-                                        fontSize: "18px",
-                                        fontWeight: "600",
-                                        fontFamily: '"Inter", sans-serif',
-                                      }}
-                                    >
-                                      Classic Burger
-                                    </p>
-                                     <p
+                                <div className="no-scrollbar">
+                                  <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
+                                    <img
+                                      className="w-[95px] h-[95px] object-cover rounded-xl "
+                                      src={require(`../../assets/image/Burger/10.jpg`)}
+                                      alt={""}
+                                    />
+                                    <div className="w-full flex flex-col justify-between">
+                                      <p
+                                        className="block"
+                                        style={{
+                                          fontSize: "18px",
+                                          fontWeight: "600",
+                                          fontFamily: '"Inter", sans-serif',
+                                        }}
+                                      >
+                                        Classic Burger
+                                      </p>
+                                      <p
                                         style={{
                                           marginRight: "18px",
                                           fontFamily: '"Inter", sans-serif',
@@ -506,55 +482,59 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        Beef party, cheese, homemade pickle cucumber, lettuce, red onion, tomato
+                                        Beef party, cheese, homemade pickle
+                                        cucumber, lettuce, red onion, tomato
                                       </p>
-                                    <p className="block flex">
+                                      <p className="block flex">
+                                        <p
+                                          style={{
+                                            marginRight: "18px",
+                                            textDecoration: "line-through",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "400",
+                                            color: "#707070",
+                                          }}
+                                        >
+                                          {(80 * quantity).toFixed(3)} VND
+                                        </p>
+                                        <span
+                                          style={{
+                                            color: "#000000",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "600",
+                                          }}
+                                        >
+                                          72.000 VND
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <input
+                                      type="radio"
+                                      name="radio-1"
+                                      className="radio text-right w-[25px] h-[25px] mt-[25px]"
+                                    />
+                                  </div>
+
+                                  <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
+                                    <img
+                                      className="w-[95px] h-[95px] object-cover rounded-xl "
+                                      src={require(`../../assets/image/Burger/12.jpg`)}
+                                      alt={""}
+                                    />
+                                    <div className="w-full flex flex-col justify-between">
                                       <p
+                                        className="block"
                                         style={{
-                                          marginRight: "18px",
-                                          textDecoration: "line-through",
-                                          fontFamily: '"Inter", sans-serif',
-                                          fontSize: "18px",
-                                          fontWeight: "400",
-                                          color: "#707070",
-                                        }}
-                                      >
-                                        {(80 * quantity).toFixed(3)} VND
-                                      </p>
-                                      <span
-                                        style={{
-                                          color: "#000000",
-                                          fontFamily: '"Inter", sans-serif',
                                           fontSize: "18px",
                                           fontWeight: "600",
+                                          fontFamily: '"Inter", sans-serif',
                                         }}
                                       >
-                                        72.000 VND
-                                      </span>
-                                    </p>
-                                  </div>
-                                   <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
-                                
-                                </div>
-
-                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
-                                  <img
-                                    className="w-[95px] h-[95px] object-cover rounded-xl "
-                                    src={require(`../../assets/image/Burger/12.jpg`)}
-                                    alt={""}
-                                  />
-                                  <div className="w-full flex flex-col justify-between">
-                                    <p
-                                      className="block"
-                                      style={{
-                                        fontSize: "18px",
-                                        fontWeight: "600",
-                                        fontFamily: '"Inter", sans-serif',
-                                      }}
-                                    >
-                                      Japanese Chicken Burger
-                                    </p>
-                                     <p
+                                        Japanese Chicken Burger
+                                      </p>
+                                      <p
                                         style={{
                                           marginRight: "18px",
                                           fontFamily: '"Inter", sans-serif',
@@ -563,54 +543,59 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        Japanese style, marinated chicken things, iceberg, red onion, tomato
+                                        Japanese style, marinated chicken
+                                        things, iceberg, red onion, tomato
                                       </p>
-                                    <p className="block flex">
+                                      <p className="block flex">
+                                        <p
+                                          style={{
+                                            marginRight: "18px",
+                                            textDecoration: "line-through",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "400",
+                                            color: "#707070",
+                                          }}
+                                        >
+                                          {(80 * quantity).toFixed(3)} VND
+                                        </p>
+                                        <span
+                                          style={{
+                                            color: "#000000",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "600",
+                                          }}
+                                        >
+                                          64.000 VND
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <input
+                                      type="radio"
+                                      name="radio-1"
+                                      className="radio text-right w-[25px] h-[25px] mt-[25px]"
+                                    />
+                                  </div>
+
+                                  <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
+                                    <img
+                                      className="w-[95px] h-[95px] object-cover rounded-xl "
+                                      src={require(`../../assets/image/Burger/11.jpg`)}
+                                      alt={""}
+                                    />
+                                    <div className="w-full flex flex-col justify-between">
                                       <p
+                                        className="block"
                                         style={{
-                                          marginRight: "18px",
-                                          textDecoration: "line-through",
-                                          fontFamily: '"Inter", sans-serif',
-                                          fontSize: "18px",
-                                          fontWeight: "400",
-                                          color: "#707070",
-                                        }}
-                                      >
-                                        {(80 * quantity).toFixed(3)} VND
-                                      </p>
-                                      <span
-                                        style={{
-                                          color: "#000000",
-                                          fontFamily: '"Inter", sans-serif',
                                           fontSize: "18px",
                                           fontWeight: "600",
+                                          fontFamily: '"Inter", sans-serif',
                                         }}
                                       >
-                                        64.000 VND
-                                      </span>
-                                    </p>
-                                  </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
-                                </div>
-
-                                <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
-                                  <img
-                                    className="w-[95px] h-[95px] object-cover rounded-xl "
-                                    src={require(`../../assets/image/Burger/11.jpg`)}
-                                    alt={""}
-                                  />
-                                  <div className="w-full flex flex-col justify-between">
-                                    <p
-                                      className="block"
-                                      style={{
-                                        fontSize: "18px",
-                                        fontWeight: "600",
-                                        fontFamily: '"Inter", sans-serif',
-                                      }}
-                                    >
-                                      Fries Fish Burger
-                                    </p>
-                                     <p
+                                        Fries Fish Burger
+                                      </p>
+                                      <p
                                         style={{
                                           marginRight: "18px",
                                           fontFamily: '"Inter", sans-serif',
@@ -619,54 +604,60 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        Yellow tail catfish coleslaw, homemade pickle cucumber, lecttuce, red onion, tomato
+                                        Yellow tail catfish coleslaw, homemade
+                                        pickle cucumber, lecttuce, red onion,
+                                        tomato
                                       </p>
-                                    <p className="block flex">
+                                      <p className="block flex">
+                                        <p
+                                          style={{
+                                            marginRight: "18px",
+                                            textDecoration: "line-through",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "400",
+                                            color: "#707070",
+                                          }}
+                                        >
+                                          {(80 * quantity).toFixed(2)} VND
+                                        </p>
+                                        <span
+                                          style={{
+                                            color: "#000000",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "600",
+                                          }}
+                                        >
+                                          76.000 VND
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <input
+                                      type="radio"
+                                      name="radio-1"
+                                      className="radio text-right w-[25px] h-[25px] mt-[25px]"
+                                    />
+                                  </div>
+
+                                  <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
+                                    <img
+                                      className="w-[95px] h-[95px] object-cover rounded-xl "
+                                      src={require(`../../assets/image/Burger/15.jpg`)}
+                                      alt={""}
+                                    />
+                                    <div className="w-full flex flex-col justify-between">
                                       <p
+                                        className="block"
                                         style={{
-                                          marginRight: "18px",
-                                          textDecoration: "line-through",
-                                          fontFamily: '"Inter", sans-serif',
-                                          fontSize: "18px",
-                                          fontWeight: "400",
-                                          color: "#707070",
-                                        }}
-                                      >
-                                        {(80 * quantity).toFixed(2)} VND
-                                      </p>
-                                      <span
-                                        style={{
-                                          color: "#000000",
-                                          fontFamily: '"Inter", sans-serif',
                                           fontSize: "18px",
                                           fontWeight: "600",
+                                          fontFamily: '"Inter", sans-serif',
                                         }}
                                       >
-                                        76.000 VND
-                                      </span>
-                                    </p>
-                                  </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
-                                </div>
-
-                                <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
-                                  <img
-                                    className="w-[95px] h-[95px] object-cover rounded-xl "
-                                    src={require(`../../assets/image/Burger/15.jpg`)}
-                                    alt={""}
-                                  />
-                                  <div className="w-full flex flex-col justify-between">
-                                    <p
-                                      className="block"
-                                      style={{
-                                        fontSize: "18px",
-                                        fontWeight: "600",
-                                        fontFamily: '"Inter", sans-serif',
-                                      }}
-                                    >
-                                      Bacon & Egg Grilled Cheese Sandwich
-                                    </p>
-                                     <p
+                                        Bacon & Egg Grilled Cheese Sandwich
+                                      </p>
+                                      <p
                                         style={{
                                           marginRight: "18px",
                                           fontFamily: '"Inter", sans-serif',
@@ -675,38 +666,41 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                        Fries egg, bacon, caramelized onion, mozarella, cheddar cheese
+                                        Fries egg, bacon, caramelized onion,
+                                        mozarella, cheddar cheese
                                       </p>
-                                    <p className="block flex">
-                                      <p
-                                        style={{
-                                          marginRight: "18px",
-                                          textDecoration: "line-through",
-                                          fontFamily: '"Inter", sans-serif',
-                                          fontSize: "18px",
-                                          fontWeight: "400",
-                                          color: "#707070",
-                                        }}
-                                      >
-                                        {(80 * quantity).toFixed(3)} VND
+                                      <p className="block flex">
+                                        <p
+                                          style={{
+                                            marginRight: "18px",
+                                            textDecoration: "line-through",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "400",
+                                            color: "#707070",
+                                          }}
+                                        >
+                                          {(80 * quantity).toFixed(3)} VND
+                                        </p>
+                                        <span
+                                          style={{
+                                            color: "#000000",
+                                            fontFamily: '"Inter", sans-serif',
+                                            fontSize: "18px",
+                                            fontWeight: "600",
+                                          }}
+                                        >
+                                          68.000 VND
+                                        </span>
                                       </p>
-                                      <span
-                                        style={{
-                                          color: "#000000",
-                                          fontFamily: '"Inter", sans-serif',
-                                          fontSize: "18px",
-                                          fontWeight: "600",
-                                        }}
-                                      >
-                                        68.000 VND
-                                      </span>
-                                    </p>
+                                    </div>
+                                    <input
+                                      type="radio"
+                                      name="radio-1"
+                                      className="radio text-right w-[25px] h-[25px] mt-[25px]"
+                                    />
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[25px]" />
                                 </div>
-                            </div>
-
-                                
                               </Tabs.Item>
                               <Tabs.Item
                                 title={
@@ -742,7 +736,7 @@ export default function ComboDetail() {
                                           color: "#707070",
                                         }}
                                       >
-                                      {(20 * quantity).toFixed(3)} VND
+                                        {(20 * quantity).toFixed(3)} VND
                                       </p>
                                       <span
                                         style={{
@@ -765,9 +759,12 @@ export default function ComboDetail() {
                                     >
                                       You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
-                                    
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -822,7 +819,11 @@ export default function ComboDetail() {
                                       You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
 
                                 <div className="border-b-2 border-gray-200 flex gap-4 p-3 mb-3">
@@ -877,7 +878,11 @@ export default function ComboDetail() {
                                       You saved {(1 * quantity).toFixed(3)} VND
                                     </p>
                                   </div>
-                                  <input type="radio" name="radio-1" className="radio text-right w-[25px] h-[25px] mt-[15px]" />
+                                  <input
+                                    type="radio"
+                                    name="radio-1"
+                                    className="radio text-right w-[25px] h-[25px] mt-[15px]"
+                                  />
                                 </div>
                               </Tabs.Item>
                             </Tabs>
@@ -886,10 +891,17 @@ export default function ComboDetail() {
                       </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button type="button" color="dark" className="w-full" onClick={() => setOpenModal(false)}>
-                            <p className="text-lg"> ADD TO CART </p>
-                        </Button>
-                      
+                      <Button
+                        type="button"
+                        color="dark"
+                        className="w-full"
+                        onClick={() => {
+                          setOpenModal(false);
+                          showAlert1();
+                        }}
+                      >
+                        <p className="text-lg"> ADD TO CART </p>
+                      </Button>
                     </Modal.Footer>
                   </Modal>
 
@@ -919,7 +931,7 @@ export default function ComboDetail() {
                       fontFamily: '"Roboto", sans-serif',
                       color: "#323232",
                       fontSize: "13px",
-                        marginBottom:"20px"
+                      marginBottom: "20px",
                     }}
                   >
                     {" "}
@@ -1003,8 +1015,11 @@ export default function ComboDetail() {
               <Tabs.Item
                 title={<p className="font-bold text-lg">Review</p>}
                 icon={FaComments}
-              ><Revieww/>
-                <p className="ml-[20px] mr-[20px] font-normal text-base font-sans"> </p>
+              >
+                <Revieww />
+                <p className="ml-[20px] mr-[20px] font-normal text-base font-sans">
+                  {" "}
+                </p>
               </Tabs.Item>
             </Tabs>
           </div>

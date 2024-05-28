@@ -22,7 +22,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   //Gọi hàm khi user đăng nhập   
-  const handleLogin = () => {
+  const handleLogin = async() => {
     // Kiểm tra xem email và password có trong dữ liệu userData không
     const user = userData.find((user) => user.email === email && user.password === password);
     if (user) {

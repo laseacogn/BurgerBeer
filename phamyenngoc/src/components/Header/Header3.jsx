@@ -219,6 +219,12 @@ function Header3() {
             DASHBOARD
           </Navbar.Link>
           <Navbar.Link
+          href="/aboutusss"
+          className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
+          >
+            ABOUT US
+          </Navbar.Link>
+          <Navbar.Link
             href="/contacttt"
             className="font-semibold text-center text-[18px] hover:text-red-500 transition-all"
           >
