@@ -52,7 +52,7 @@ const Voucher = () => {
       if (newButtonStates[index].text === "Save") {
         newButtonStates[index] = { text: "Buy Now", color: "light" };
       } else {
-        navigate("/product");
+        navigate("/shop");
       }
       return newButtonStates;
     });

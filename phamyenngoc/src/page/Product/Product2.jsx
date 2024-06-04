@@ -16,8 +16,7 @@ import { FaShop, FaPhoneVolume } from "react-icons/fa6";
 const Product2 = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
+ useEffect(() => {
     const now = new Date();
     const currentHour = now.getHours();
     const openingHour = 7;

@@ -134,11 +134,12 @@ export default function ProductDT3() {
     const updatedProduct = {
       id: ID,
       name: Name,
-      category: Category,
+      categoryName: Category,
       originalPrice: parsedPrice4,
       discountPercent: parsedPrice6,
       description: Description,
       image: img,
+      quantity: SalePrice
     };
     setPrd(updatedProduct)
     setOpenModal(false);
@@ -317,7 +318,7 @@ export default function ProductDT3() {
                           ></td>
                         </tr>
                         <tr>
-                          <td style={{ width: "70px" }}>CAT</td>
+                          <td style={{ width: "70px" }}>CATE</td>
                           <td>
                             <div style={{ display: "inline" }}>
                               <span>

@@ -29,13 +29,13 @@ const Product = () => {
   }, []);
 
   const showAlert1 = () => {
-    alert("Please log in to add products to wishlist!");
+    alert("The product has been added to wishlist!");
   };
 
   const showAlert2 = () => {
-    alert("Please log in to add products to cart!");
+    alert("The product has been added to cart!");
   };
-
+ 
   const [products, setProducts] = useState([]);
   const [popularPrd, setPopularPrd] = useState([]);
   const [rcmPrd, setRcmPrd] = useState([]);
