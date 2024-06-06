@@ -19,7 +19,7 @@ const Product2 = () => {
  useEffect(() => {
     const now = new Date();
     const currentHour = now.getHours();
-    const openingHour = 7;
+    const openingHour = 6;
     const closingHour = 22;
 
     setIsOpen(currentHour >= openingHour && currentHour < closingHour);
@@ -72,10 +72,8 @@ const Product2 = () => {
         console.log(error);
       }
     };
-
     fetchData();
   }, [categorieID, currentPage, searchTerm]);
-
   useEffect(() => {
     if (categorieID === "") {
       setProducts(dataProduct);
